@@ -28,6 +28,7 @@ Ensure the essential product fundamentals are in place by guiding and assisting 
 
 This product exists to make effective feature validation possible by establishing a structured product definition.
 Most business impact is driven by downstream tools in the Gentlii suite.
+
 ---
 
 ## Product Vision
