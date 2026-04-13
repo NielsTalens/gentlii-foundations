@@ -1,7 +1,7 @@
 ---
 name: product-vision-extractor
-description: Extracts PRoduct Vision elements like target users, needs, features, business goals and differentiators.
-
+description: Extracts Product Vision elements like target users, needs, features, business goals and differentiators.
+---
 
 ## Product Vision Extractor Prompt
 
