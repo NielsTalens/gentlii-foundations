@@ -259,6 +259,23 @@ For each section, the system should provide:
 
 ---
 
+## Local CLI Implementation
+
+The first implementation phase is a local Python CLI. It will read source files from `product-definitions/foundations-input` and generate clean markdown artifacts in `product-definitions/product-description`.
+
+The implementation should stay simple, boring, and auditable:
+- pin exact dependency versions
+- keep the dependency set small
+- prefer mature libraries with narrow responsibilities
+- keep configuration in environment variables or a local `.env` file that is not committed
+- use `python-docx` for `.docx` extraction and `pypdf` for `.pdf` extraction in v1
+
+The local command target is:
+
+```bash
+python -m gentlii_foundations.cli build product-definitions
+```
+
 ## Output Example
 
 Each generated `.md` file in `/product-description` may contain:

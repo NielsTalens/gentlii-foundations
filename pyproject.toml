@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gentlii-foundations"
+version = "0.1.0"
+description = "Local CLI for generating Gentlii foundation artifacts"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "openai==2.31.0",
+    "python-docx==1.2.0",
+    "pypdf==6.7.2",
+]
+
+[project.scripts]
+gentlii-foundations = "gentlii_foundations.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.0.3",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
