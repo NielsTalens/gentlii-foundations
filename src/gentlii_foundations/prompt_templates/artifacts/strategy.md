@@ -23,17 +23,6 @@ Focus only on explicitly stated or clearly supported information related to:
 
 ---
 
-## Rules
-
-- Do NOT make up information.
-- Do NOT infer beyond what is reasonably supported by the text.
-- Only extract information that is backed by explicit or strongly implied evidence.
-- If information is missing, mark it as "Not found".
-- If information is weak or ambiguous, reflect that in your confidence.
-- You MAY provide suggestions, but they must be clearly marked as "Suggestion" and must not be mixed with extracted content.
-
----
-
 ## Output Structure
 
 ### Extracted Strategy
@@ -55,6 +44,39 @@ Focus only on explicitly stated or clearly supported information related to:
 
 ---
 
+### Completeness
+
+Assess whether all key strategic elements are present:
+
+- Company strategy
+- Product strategy
+- Value proposition
+- Strategic goals
+- Long-term direction
+
+Return:
+- Complete → all elements clearly present
+- Partial → some elements missing or weak
+- Incomplete → most elements missing
+
+---
+
+### Strength
+
+Assess how usable the strategic description is:
+
+Consider:
+- specificity (clear vs vague)
+- presence of strategic goals
+- presence of long-term direction
+
+Return:
+- High → clear, specific, actionable
+- Medium → partially defined, some ambiguity
+- Low → vague, generic, not actionable
+
+---
+
 ### Evidence
 
 For each extracted element, provide supporting evidence from the source text.
@@ -71,30 +93,3 @@ Format:
   - "<exact quote or close paraphrase>"
 - Long-term Direction:
   - "<exact quote or close paraphrase>"
-
-If no evidence is found for a section, omit it or mark as "No supporting evidence found".
-
----
-
-### Confidence
-
-Provide a qualitative confidence level:
-- High: clear, explicit, consistent evidence
-- Medium: partial or indirect evidence
-- Low: weak, ambiguous, or minimal evidence
-
----
-
-### Missing
-
-List which expected elements are not found or insufficiently supported.
-
----
-
-### Suggestions
-
-Provide concrete suggestions to improve the strategy definition.
-
-- Must be clearly labeled as "Suggestion"
-- Must not introduce fabricated facts
-- Should focus on missing or unclear elements

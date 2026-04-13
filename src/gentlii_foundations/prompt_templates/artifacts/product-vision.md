@@ -23,17 +23,6 @@ Focus only on explicitly stated or clearly supported information related to:
 
 ---
 
-## Rules
-
-- Do NOT make up information.
-- Do NOT infer beyond what is reasonably supported by the text.
-- Only extract information that is backed by explicit or strongly implied evidence.
-- If information is missing, mark it as "Not found".
-- If information is weak or ambiguous, reflect that in your confidence.
-- You MAY provide suggestions, but they must be clearly marked as "Suggestion" and must not be mixed with extracted content.
-
----
-
 ## Output Structure
 
 ### Extracted Product Vision
@@ -52,36 +41,6 @@ Focus only on explicitly stated or clearly supported information related to:
 
 #### Differentiators
 [Extracted content or "Not found"]
-
----
-
-### Evidence
-
-Provide supporting evidence for each extracted element.
-
-Format:
-
-- Target Groups:
-  - "<exact quote or close paraphrase>"
-- Needs:
-  - "..."
-- Product Features:
-  - "..."
-- Business Goals:
-  - "..."
-- Differentiators:
-  - "..."
-
-If no evidence is found for a section, omit it or mark as "No supporting evidence found".
-
----
-
-### Confidence
-
-Provide a qualitative confidence level:
-- High: clear, explicit, consistent evidence
-- Medium: partial or indirect evidence
-- Low: weak, ambiguous, or minimal evidence
 
 ---
 
@@ -119,16 +78,19 @@ Return:
 
 ---
 
-### Missing
+### Evidence
 
-List which elements are not found or insufficiently supported.
+Provide supporting evidence for each extracted element.
 
----
+Format:
 
-### Suggestions
-
-Provide concrete suggestions to improve the product vision.
-
-- Must be clearly labeled as "Suggestion"
-- Must not introduce fabricated facts
-- Should focus on missing or weak elements
+- Target Groups:
+  - "<exact quote or close paraphrase>"
+- Needs:
+  - "..."
+- Product Features:
+  - "..."
+- Business Goals:
+  - "..."
+- Differentiators:
+  - "..."

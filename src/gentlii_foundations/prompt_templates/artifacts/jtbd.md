@@ -1,7 +1,6 @@
 ---
 name: jtbd-extractor
 description: Extracts Jobs to Be Done and related user context from source material
-output_format: jtbd.md
 ---
 
 ## Purpose
@@ -25,16 +24,9 @@ Focus only on explicitly stated or clearly supported information related to:
 - User journeys
 - Other user-related context
 
----
+## Additional Rules
 
-## Rules
-
-- Do NOT make up information.
-- Do NOT infer beyond what is reasonably supported by the text.
-- Only extract information that is backed by explicit or strongly implied evidence.
-- If information is missing, mark it as "Not found".
-- If information is weak or ambiguous, reflect that in your confidence.
-- You MAY provide suggestions, but they must be clearly marked as "Suggestion" and must not be mixed with extracted content.
+- This document can contain multiple Jobs to Be Done.
 - Prefer user-centered language over internal product language.
 - If flows or journeys are found but no explicit JTBD is defined, extract them as supporting user context and mark JTBD as not explicitly found.
 
@@ -43,6 +35,8 @@ Focus only on explicitly stated or clearly supported information related to:
 ## Output Structure
 
 ### Extracted JTBD
+
+Per identified job describe the following:
 
 #### Job Name
 [Extracted content or "Not found"]
@@ -59,46 +53,11 @@ Focus only on explicitly stated or clearly supported information related to:
 #### Current Frictions
 [Extracted content or "Not found"]
 
-#### Existing Alternatives
+#### Existing Alternatives or Workarounds
 [Extracted content or "Not found"]
 
 #### User Flows or Journeys
 [Extracted content or "Not found"]
-
----
-
-### Evidence
-
-Provide supporting evidence for each extracted element.
-
-Format:
-
-- Job Name:
-  - "<exact quote or close paraphrase>"
-- Core Job Statement:
-  - "..."
-- Desired Outcomes:
-  - "..."
-- Emotional or Social Dimension:
-  - "..."
-- Current Frictions:
-  - "..."
-- Existing Alternatives:
-  - "..."
-- User Flows or Journeys:
-  - "..."
-
-If no evidence is found for a section, omit it or mark as "No supporting evidence found".
-
----
-
-### Confidence
-
-Provide a qualitative confidence level:
-
-- High: clear, explicit, consistent evidence
-- Medium: partial or indirect evidence
-- Low: weak, ambiguous, or minimal evidence
 
 ---
 
@@ -140,16 +99,23 @@ Return:
 
 ---
 
-### Missing
+### Evidence
 
-List which elements are not found or insufficiently supported.
+Provide supporting evidence for each extracted element.
 
----
+Format:
 
-### Suggestions
-
-Provide concrete suggestions to improve the JTBD definition.
-
-- Must be clearly labeled as "Suggestion"
-- Must not introduce fabricated facts
-- Should focus on missing or weak elements
+- Job Name:
+  - "<exact quote or close paraphrase>"
+- Core Job Statement:
+  - "..."
+- Desired Outcomes:
+  - "..."
+- Emotional or Social Dimension:
+  - "..."
+- Current Frictions:
+  - "..."
+- Existing Alternatives:
+  - "..."
+- User Flows or Journeys:
+  - "..."
