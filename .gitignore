@@ -4,3 +4,7 @@
 .pytest_cache/
 __pycache__/
 *.pyc
+product-definitions/foundations-input/*
+product-definitions/product-description/*
+!product-definitions/foundations-input/.gitkeep
+!product-definitions/product-description/.gitkeep
