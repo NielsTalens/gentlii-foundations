@@ -1,4 +1,4 @@
-# Gentlii Context Builder
+# Gentlii Foundations
 
 ## Gentlii (Suite Overview)
 
@@ -9,11 +9,11 @@ Product thinking requires time and headspace. Gentlii creates that space.
 The suite consists of:
 - **Product Guard** — validates alignment between strategy, business case, product vision, goals, and JTBD
 - **Feature Validator** — checks if feature requests align with the product definition
-- **Fundamentals** — helps define and maintain a clear, structured product definition
+- **Foundations** — helps define and maintain a clear, structured product definition
 
 ---
 
-## Product: Gentlii Fundamentals builder
+## Product: Gentlii Foundations builder
 
 ### Role within the Gentlii Suite
 
