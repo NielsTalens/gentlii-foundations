@@ -9,6 +9,7 @@ class FoundationsClient:
         self._client = OpenAI(api_key=api_key, timeout=timeout)
 
     def generate_markdown(self, prompt: str) -> str:
+        # Centralizing the API call here keeps model and timeout behavior out of the pipeline code.
         response = self._client.responses.create(
             model=self.model,
             input=prompt,

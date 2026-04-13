@@ -9,6 +9,7 @@ def target_artifacts() -> list[str]:
 
 
 def generate_artifacts(documents: list[ExtractedDocument], client) -> list[GeneratedArtifact]:
+    # Keep source titles in the prompt payload so the model can separate evidence by document.
     source_text = "\n\n".join(f"# Source: {document.title}\n{document.text}" for document in documents)
     artifacts: list[GeneratedArtifact] = []
     for artifact_name in target_artifacts():

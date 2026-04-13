@@ -25,5 +25,8 @@ dev = [
 [tool.setuptools]
 package-dir = {"" = "src"}
 
+[tool.setuptools.package-data]
+gentlii_foundations = ["prompt_templates/*.md", "prompt_templates/artifacts/*.md"]
+
 [tool.setuptools.packages.find]
 where = ["src"]

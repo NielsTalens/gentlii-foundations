@@ -16,7 +16,7 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     if args.command == "build":
-        build_foundations(args.root)
+        build_foundations(args.root, report=print)
         return 0
 
     parser.print_help()

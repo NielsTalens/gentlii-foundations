@@ -1,22 +1,22 @@
 from __future__ import annotations
 
+from importlib.resources import files
+from pathlib import Path
 
-ARTIFACT_INSTRUCTIONS = {
-    "strategy": "Extract the product strategy, value proposition, strategic goals, and long-term direction.",
-    "business-case": "Extract the business rationale, expected value, assumptions, and measurable business outcomes.",
-    "product-vision": "Extract target groups, needs, core features, business goals, and differentiators.",
-    "jtbd": "Extract jobs to be done, user problems, desired outcomes, and supporting journey context.",
-    "product-charter": "Extract principles, boundaries, behavioral rules, product character, and decision-making guidance.",
-}
+
+PROMPT_TEMPLATE_DIR = Path(files("gentlii_foundations").joinpath("prompt_templates"))
+
+
+def _read_template(relative_path: str) -> str:
+    return PROMPT_TEMPLATE_DIR.joinpath(relative_path).read_text(encoding="utf-8").strip()
 
 
 def build_artifact_prompt(artifact_name: str, source_text: str) -> str:
-    instruction = ARTIFACT_INSTRUCTIONS[artifact_name]
+    shared_rules = _read_template("shared.md")
+    instruction = _read_template(f"artifacts/{artifact_name}.md")
     return (
         f"You are extracting the '{artifact_name}' artifact.\n"
         f"{instruction}\n"
-        "Return clean markdown only.\n"
-        "Do not invent missing information.\n"
-        "If evidence is missing, omit the unsupported claim.\n\n"
+        f"{shared_rules}\n\n"
         f"Source material:\n{source_text}"
     )
