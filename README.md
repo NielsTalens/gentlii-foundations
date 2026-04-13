@@ -93,8 +93,7 @@ Prevents tool sprawl.
 
 ### Principle
 
-Build on tools and workflows already known and used within the company.  
-The system fits into the existing product repository and uses source material that teams already produce.
+Build on tools and workflows already known and used within the company like Git, boards and pipelins/workflows. The system fits into the existing product repository and uses source material that teams already produce.
 
 ---
 
@@ -124,6 +123,8 @@ The `foundations-input` folder accepts different types of source material, such 
 - Text files
 
 Users can add or update files at any time.
+
+(In a later version url's could be added as sources.)
 
 ---
 
