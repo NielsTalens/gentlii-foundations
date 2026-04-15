@@ -23,9 +23,13 @@ Focus only on explicitly stated or clearly supported information related to:
 
 ---
 
-## Output Structure
+## Output
 
-### Extracted Strategy
+For each subject below, use this inline structure:
+- extracted content or "Not found"
+- `Confidence: High | Medium | Low`
+- `Evidence: <exact quote, close paraphrase, or "No supporting evidence found">`
+- `Contradictions: <contradiction with evidence, or "No contradictory content found.">`
 
 #### Company Strategy
 [Extracted content or "Not found"]
@@ -44,7 +48,7 @@ Focus only on explicitly stated or clearly supported information related to:
 
 ---
 
-### Completeness
+## Completeness
 
 Assess whether all key strategic elements are present:
 
@@ -61,7 +65,7 @@ Return:
 
 ---
 
-### Strength
+## Strength
 
 Assess how usable the strategic description is:
 
@@ -74,22 +78,3 @@ Return:
 - High → clear, specific, actionable
 - Medium → partially defined, some ambiguity
 - Low → vague, generic, not actionable
-
----
-
-### Evidence
-
-For each extracted element, provide supporting evidence from the source text.
-
-Format:
-
-- Company Strategy:
-  - "<exact quote or close paraphrase>"
-- Product Strategy:
-  - "<exact quote or close paraphrase>"
-- Value Proposition:
-  - "<exact quote or close paraphrase>"
-- Strategic Goals:
-  - "<exact quote or close paraphrase>"
-- Long-term Direction:
-  - "<exact quote or close paraphrase>"

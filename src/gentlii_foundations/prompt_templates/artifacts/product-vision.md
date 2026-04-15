@@ -23,9 +23,13 @@ Focus only on explicitly stated or clearly supported information related to:
 
 ---
 
-## Output Structure
+## Output
 
-### Extracted Product Vision
+For each subject below, use this inline structure:
+- extracted content or "Not found"
+- `Confidence: High | Medium | Low`
+- `Evidence: <exact quote, close paraphrase, or "No supporting evidence found">`
+- `Contradictions: <contradiction with evidence, or "No contradictory content found.">`
 
 #### Target Groups
 [Extracted content or "Not found"]
@@ -44,7 +48,7 @@ Focus only on explicitly stated or clearly supported information related to:
 
 ---
 
-### Completeness
+## Completeness
 
 Assess whether all key product vision elements are present:
 
@@ -61,7 +65,7 @@ Return:
 
 ---
 
-### Strength
+## Strength
 
 Assess how usable the product vision is:
 
@@ -75,22 +79,3 @@ Return:
 - High → clear, specific, actionable
 - Medium → partially defined, some ambiguity
 - Low → vague, generic, not actionable
-
----
-
-### Evidence
-
-Provide supporting evidence for each extracted element.
-
-Format:
-
-- Target Groups:
-  - "<exact quote or close paraphrase>"
-- Needs:
-  - "..."
-- Product Features:
-  - "..."
-- Business Goals:
-  - "..."
-- Differentiators:
-  - "..."

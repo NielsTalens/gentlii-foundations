@@ -29,9 +29,13 @@ Focus only on explicitly stated or clearly supported information related to:
 
 ---
 
-## Output Structure
+## Output
 
-### Extracted Product Charter
+For each subject below, use this inline structure:
+- extracted content or "Not found"
+- `Confidence: High | Medium | Low`
+- `Evidence: <exact quote, close paraphrase, or "No supporting evidence found">`
+- `Contradictions: <contradiction with evidence, or "No contradictory content found.">`
 
 #### Core Principles
 [Extracted content or "Not found"]
@@ -59,7 +63,7 @@ Focus only on explicitly stated or clearly supported information related to:
 
 ---
 
-### Completeness
+## Completeness
 
 Assess whether key product charter elements are present:
 
@@ -76,7 +80,7 @@ Return:
 
 ---
 
-### Strength
+## Strength
 
 Assess how usable the product charter is.
 
@@ -93,28 +97,3 @@ Return:
 - High → clear, enforceable, actionable
 - Medium → partially defined, some ambiguity
 - Low → vague, generic, or not actionable
-
----
-
-### Evidence
-
-Provide supporting evidence for each extracted element.
-
-Format:
-
-- Core Principles:
-  - "<exact quote or close paraphrase>"
-- Product Boundaries:
-  - "..."
-- Behavioral Rules:
-  - "..."
-- Decision-Making Rules:
-  - "..."
-- Product Character:
-  - "..."
-- Language and Tone:
-  - "..."
-- Evolution Constraints:
-  - "..."
-- Integrity Checks:
-  - "..."

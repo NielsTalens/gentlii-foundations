@@ -16,9 +16,13 @@ Focus only on explicitly stated or clearly supported information related to:
 - Assumptions
 - Measurable business outcomes
 
-## Output Structure
+## Output
 
-### Extracted Business Case
+For each subject below, use this inline structure:
+- extracted content or "Not found"
+- `Confidence: High | Medium | Low`
+- `Evidence: <exact quote, close paraphrase, or "No supporting evidence found">`
+- `Contradictions: <contradiction with evidence, or "No contradictory content found.">`
 
 #### Business Rationale
 [Extracted content or "Not found"]
@@ -34,7 +38,7 @@ Focus only on explicitly stated or clearly supported information related to:
 
 ---
 
-### Completeness
+## Completeness
 
 Assess whether the key business case elements are present:
 
@@ -51,7 +55,7 @@ Return:
 
 ---
 
-### Strength
+## Strength
 
 Assess how usable the business case is:
 
@@ -65,21 +69,3 @@ Return:
 - High → clear, specific, actionable
 - Medium → partially defined, some ambiguity
 - Low → vague, generic, not actionable
-
----
-
-### Evidence
-
-Provide supporting evidence for each extracted element.
-
-Format:
-
-- Business Rationale:
-  - "<exact quote or close paraphrase>"
-- Expected Value:
-  - "..."
-- Assumptions:
-  - "..."
-- Measurable Business Outcomes:
-  - "..."
-

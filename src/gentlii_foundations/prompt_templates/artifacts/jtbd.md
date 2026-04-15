@@ -32,9 +32,13 @@ Focus only on explicitly stated or clearly supported information related to:
 
 ---
 
-## Output Structure
+## Output
 
-### Extracted JTBD
+For each subject below, use this inline structure:
+- extracted content or "Not found"
+- `Confidence: High | Medium | Low`
+- `Evidence: <exact quote, close paraphrase, or "No supporting evidence found">`
+- `Contradictions: <contradiction with evidence, or "No contradictory content found.">`
 
 Per identified job describe the following:
 
@@ -61,7 +65,7 @@ Per identified job describe the following:
 
 ---
 
-### Completeness
+## Completeness
 
 Assess whether the key JTBD elements are present:
 
@@ -79,7 +83,7 @@ Return:
 
 ---
 
-### Strength
+## Strength
 
 Assess how usable the JTBD definition is.
 
@@ -96,26 +100,3 @@ Return:
 - High → clear, specific, actionable
 - Medium → partially defined, some ambiguity
 - Low → vague, generic, or not actionable
-
----
-
-### Evidence
-
-Provide supporting evidence for each extracted element.
-
-Format:
-
-- Job Name:
-  - "<exact quote or close paraphrase>"
-- Core Job Statement:
-  - "..."
-- Desired Outcomes:
-  - "..."
-- Emotional or Social Dimension:
-  - "..."
-- Current Frictions:
-  - "..."
-- Existing Alternatives:
-  - "..."
-- User Flows or Journeys:
-  - "..."
