@@ -20,6 +20,8 @@ def load_settings(env_path: Path | None = None) -> Settings:
 
     # Explicit environment variables win so local shells and CI can override `.env` cleanly.
     openai_api_key = os.environ.get("OPENAI_API_KEY") or env_values.get("OPENAI_API_KEY", "")
+    if not openai_api_key:
+        raise ValueError("OPENAI_API_KEY is required")
     model = os.environ.get("GENTLII_MODEL") or env_values.get("GENTLII_MODEL") or DEFAULT_MODEL
 
     return Settings(openai_api_key=openai_api_key, model=model)
