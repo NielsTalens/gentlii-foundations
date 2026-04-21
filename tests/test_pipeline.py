@@ -7,7 +7,7 @@ from gentlii_foundations.pipeline import build_foundations
 def test_build_foundations_runs_pipeline(monkeypatch, tmp_path: Path):
     root = tmp_path / "product-definitions"
     (root / "foundations-input").mkdir(parents=True)
-    (root / "product-description").mkdir()
+    (tmp_path / "docs").mkdir()
 
     called = {"rendered": False}
 
@@ -29,7 +29,7 @@ def test_build_foundations_runs_pipeline(monkeypatch, tmp_path: Path):
 def test_build_foundations_reports_progress(monkeypatch, tmp_path: Path):
     root = tmp_path / "product-definitions"
     (root / "foundations-input").mkdir(parents=True)
-    (root / "product-description").mkdir()
+    (tmp_path / "docs").mkdir()
 
     messages: list[str] = []
 
