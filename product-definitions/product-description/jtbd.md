@@ -1,183 +1,183 @@
 ## JTBD 1
 
 #### Job Name
-Get the next best sales action without doing CRM admin  
-- **Confidence: High**  
-- **Evidence:** “they want to know what to do next, clearly”; “something that just… tells you what to do next”; “ask ‘what should I do now?’ and it gives you a straight answer”; “system just tells them immediately: ‘contact X’… ideally ranked / prioritized so no thinking required”  
-- **Contradictions:** No contradictory content found.
+Get the next best sales action without CRM admin  
+**Confidence: High**  
+**Evidence:** “they want to know what to do next, clearly”; “first question in their head is basically: what do I do first”; “something that just… tells you what to do next.”  
+**Contradictions:** No contradictory content found.
 
 #### Core Job Statement
-When I start my day (or check in during the day), I want the system to tell me what to do next and prioritize it, so I can move deals forward without hunting through tools or deciding from scratch.  
-- **Confidence: High**  
-- **Evidence:** “starting point (morning / opening laptop)… first question…: what do I do first”; “open system… ask (or it tells you without asking): ‘what should I do now?’ get list of actions already prioritized”; “No hunting around.”  
-- **Contradictions:** No contradictory content found.
+When I start my sales day (or check in on my pipeline), I want the system to tell me the next best action to take, so I can make progress on deals without wasting time searching, updating fields, or deciding what to do.  
+**Confidence: High**  
+**Evidence:** “what should I do now?”; “system just tells them immediately… ideally ranked / prioritized so no thinking required”; “remove searching… remove updating… remove deciding… replace it with… clear next action.”  
+**Contradictions:** No contradictory content found.
 
 #### Desired Outcomes
-- Clear prioritized next steps (ranked)  
-- Reduced searching/navigation (“no dashboards”, fewer screens)  
-- Less time/effort deciding what to do  
-- Faster execution from suggestion to action  
-- Increased follow-up consistency / fewer dropped follow-ups  
-- **Confidence: High**  
-- **Evidence:** “get list of actions already prioritized”; “they don’t want dashboards”; “remove searching… remove deciding”; “let you execute things quickly”; “follow-ups fall through cracks… desired… converts that into actions”  
-- **Contradictions:** No contradictory content found.
+- Clear, prioritized “next actions” (ranked)  
+- Faster input + output / less switching  
+- No hunting around / no dashboards  
+- Deals don’t fall through cracks  
+**Confidence: High**  
+**Evidence:** “gives you a straight answer. No hunting around”; “ideally ranked / prioritized so no thinking required”; “they want everything to be fast (input + output)”; “follow-ups fall through cracks” (current) vs “system flags… converts that into actions.”  
+**Contradictions:** No contradictory content found.
 
 #### Emotional or Social Dimension
 - Feel in control of pipeline  
-- Feel calm and clear (not overwhelmed)  
-- Reduce stress/guilt from CRM being behind  
-- Avoid feeling like doing admin work  
-- **Confidence: High**  
-- **Evidence:** “to feel in control of their pipeline”; “not feel overwhelmed”; “right now CRM = stress + guilt”; “ideal state = calm, clear”  
-- **Contradictions:** No contradictory content found.
+- Not overwhelmed  
+- Less stress/guilt from CRM being behind  
+- Calm/clear feeling; system is “decisive”  
+**Confidence: High**  
+**Evidence:** “to feel in control of their pipeline”; “not feel overwhelmed”; “right now CRM = stress + guilt”; “ideal state = calm, clear”; “product should feel like… calm… a bit decisive (almost telling you what to do).”  
+**Contradictions:** No contradictory content found.
 
 #### Current Frictions
-- Too much clicking/screen navigation; fragmented workflow across tools  
-- Manual updating of fields/pipeline; admin burden  
-- Switching between CRM, email, calendar, etc.  
-- Forgetting follow-ups; unclear what to do from dashboards/insights  
-- **Confidence: High**  
-- **Evidence:** “too much clicking around, updating fields, checking dashboards… feels like admin work”; “today they usually check like 3–5 things… → already fragmented”; “lots of switching + admin”; “often forget something”; “dashboards… still unclear what to do”  
-- **Contradictions:** No contradictory content found.
+- Too much clicking, field updates, dashboards; feels like admin  
+- Fragmented across CRM/email/calendar/Slack  
+- Manual deciding; forgetting follow-ups  
+- Lots of switching to execute; logging and stage updates often skipped  
+**Confidence: High**  
+**Evidence:** “too much clicking around, updating fields, checking dashboards… feels like admin work”; “today they usually check like 3–5 things… already fragmented”; “decide manually what to do… often forget something”; “→ lots of switching + admin”; “often skipped because too much effort.”  
+**Contradictions:** No contradictory content found.
 
 #### Existing Alternatives or Workarounds
-- Salesforce / HubSpot (traditional CRMs)  
-- Pipedrive  
+- Salesforce / HubSpot (current CRMs)  
+- Pipedrive (simpler but still manual)  
 - Spreadsheets  
-- Notes / reminders / calendar hacks  
-- **Confidence: High**  
-- **Evidence:** “open Salesforce / HubSpot”; “people are already hacking this with: Pipedrive… spreadsheets… notes / reminders / calendar hacks”  
-- **Contradictions:** No contradictory content found.
+- Notes/reminders/calendar hacks  
+- Manually recreating “next action” lists  
+**Confidence: High**  
+**Evidence:** “open Salesforce / HubSpot”; “Pipedrive (simpler but still manual)”; “spreadsheets (super manual, breaks easily)”; “notes / reminders / calendar hacks”; “trying to recreate ‘next action’ manually.”  
+**Contradictions:** No contradictory content found.
 
 #### User Flows or Journeys
-- Morning/opening laptop → (today) check multiple tools → (desired) system immediately provides prioritized actions  
+- Morning start: open app → ask/receive “what should I do first” with prioritized actions (vs checking multiple tools)  
 - Figuring out next action (current vs desired)  
-- Executing an action (current: find record → switch to email → write → maybe log → update stage; desired: chat command → executes → auto-log + auto-update)  
-- Staying on top of deals (current: dashboards → interpret → unclear; desired: flags → converted into executable actions)  
-- **Confidence: High**  
-- **Evidence:** “starting point (morning / opening laptop)… what do I do first”; “flow: figuring out next action (current vs desired)”; “flow: executing an action”; “flow: staying on top of deals”  
-- **Contradictions:** No contradictory content found.
+- Executing an action (current vs desired)  
+- Capturing activity (current vs desired)  
+- Staying on top of deals (current vs desired)  
+**Confidence: High**  
+**Evidence:** “starting point (morning / opening laptop)”; “flow: figuring out next action (current vs desired)”; “flow: executing an action”; “flow: capturing activity”; “flow: staying on top of deals.”  
+**Contradictions:** No contradictory content found.
 
 ---
 
 ## JTBD 2
 
 #### Job Name
-Capture sales activity and keep the pipeline updated automatically  
-- **Confidence: High**  
-- **Evidence:** “log stuff automatically (calls, emails etc.)”; “keep the pipeline updated without you touching it”; “automation by default… system should just capture stuff”; “emails + calls captured automatically… deal stage updated without asking user”  
-- **Contradictions:** No contradictory content found.
+Execute sales follow-ups fast while the system logs everything automatically  
+**Confidence: High**  
+**Evidence:** “let you execute things quickly (send follow-up, schedule, etc.)”; “log stuff automatically (calls, emails etc.)”; “everything logs automatically in background.”  
+**Contradictions:** No contradictory content found.
 
 #### Core Job Statement
-When I communicate with prospects (calls/emails) and deals progress, I want the system to capture the activity and update the pipeline automatically, so I can keep accurate records without extra “after work.”  
-- **Confidence: High**  
-- **Evidence:** “everything logs automatically in background”; “pipeline updates itself”; “no extra steps, no ‘after work’”; “basically zero data entry”  
-- **Contradictions:** No contradictory content found.
+When I need to follow up, call, or schedule the next step with a prospect, I want to trigger the action in one command and have the system automatically capture and update everything, so I can move deals forward without extra admin work.  
+**Confidence: High**  
+**Evidence:** “user clicks or replies in chat: ‘send this’ / ‘call now’ / ‘schedule’… action executes immediately”; “everything logs automatically in background”; “keep the pipeline updated without you touching it”; “quick actions (like one click or one command to send something).”  
+**Contradictions:** No contradictory content found.
 
 #### Desired Outcomes
-- Zero/near-zero data entry  
-- Accurate, up-to-date pipeline without manual management  
-- Suggested/generated notes  
-- Increased daily usage due to reduced burden  
-- **Confidence: High**  
-- **Evidence:** “basically zero data entry”; “pipeline updates happening in the background”; “notes generated or at least suggested”; “get reps to actually use the system daily”  
-- **Contradictions:** No contradictory content found.
+- Immediate execution of follow-ups/calls/scheduling  
+- Automatic logging of emails/calls  
+- Automatic pipeline/deal stage updates  
+- “No extra steps, no ‘after work’”  
+**Confidence: High**  
+**Evidence:** “action executes immediately”; “automatic logging of emails / calls”; “pipeline updates happening in the background”; “no extra steps, no ‘after work’.”  
+**Contradictions:** No contradictory content found.
 
 #### Emotional or Social Dimension
-- Reduced annoyance/fatigue from logging and updating  
-- Less stress/guilt from being “behind” on CRM hygiene  
-- **Confidence: High**  
-- **Evidence:** “flow: capturing activity (this is where people get annoyed)”; “reduce the general fatigue people have with CRM”; “CRM = stress + guilt (because it’s always behind)”  
-- **Contradictions:** No contradictory content found.
+- Avoid annoyance at logging/admin  
+- Maintain calm/clarity vs stress/guilt  
+**Confidence: Medium**  
+**Evidence:** “flow: capturing activity (this is where people get annoyed)”; “ideal state = calm, clear, just doing the next thing.”  
+**Contradictions:** No contradictory content found.
 
 #### Current Frictions
-- Logging notes after calls is effortful and often skipped  
-- Inconsistent auto-capture of emails  
-- Manual deal stage updates  
-- **Confidence: High**  
-- **Evidence:** “after call → user supposed to log notes… often skipped because too much effort”; “after email → sometimes auto, sometimes not”; “pipeline → needs manual update”  
-- **Contradictions:** No contradictory content found.
+- Switching between contact record and email; manual logging; manual stage updates  
+- Activity capture inconsistent; often skipped  
+**Confidence: High**  
+**Evidence:** “switch to email… write message… maybe log it (or forget)… update deal stage manually”; “after email → sometimes auto, sometimes not”; “often skipped because too much effort.”  
+**Contradictions:** No contradictory content found.
 
 #### Existing Alternatives or Workarounds
-- Manual logging in CRM; partial email auto-sync  
-- Notes/reminders/calendar hacks; spreadsheets  
-- **Confidence: Medium**  
-- **Evidence:** “after email → sometimes auto, sometimes not”; “notes / reminders / calendar hacks”; “spreadsheets (super manual, breaks easily)”  
-- **Contradictions:** No contradictory content found.
+- Manual logging in CRM; relying on partial auto-capture  
+- Notes/reminders/calendar hacks (as compensation for follow-ups/logging gaps)  
+**Confidence: Medium**  
+**Evidence:** “after email → sometimes auto, sometimes not”; “maybe log it (or forget)”; “notes / reminders / calendar hacks.”  
+**Contradictions:** No contradictory content found.
 
 #### User Flows or Journeys
-- Capturing activity flow (current vs desired)  
-- Execution flow includes auto-logging + background pipeline update  
-- **Confidence: High**  
-- **Evidence:** “flow: capturing activity… current reality… what we want”; “everything logs automatically in background pipeline updates itself”  
-- **Contradictions:** No contradictory content found.
+- Executing an action (current vs desired)  
+- Capturing activity (current vs desired): auto-capture, suggested notes, auto stage updates  
+**Confidence: High**  
+**Evidence:** “flow: executing an action”; “flow: capturing activity… emails + calls captured automatically… notes generated… deal stage updated without asking user.”  
+**Contradictions:** No contradictory content found.
 
 ---
 
 ## JTBD 3
 
 #### Job Name
-Execute follow-ups and sales actions quickly from one place  
-- **Confidence: High**  
-- **Evidence:** “let you execute things quickly (send follow-up, schedule, etc.)”; “quick actions (like one click or one command to send something)”; “user clicks or replies in chat: ‘send this’ / ‘call now’ / ‘schedule’”  
-- **Contradictions:** No contradictory content found.
+Stay on top of deals through actionable risk flags (not dashboards)  
+**Confidence: High**  
+**Evidence:** “flow: staying on top of deals”; “system flags… ‘this deal is going cold’… converts that into actions, not insights”; “actions > insights.”  
+**Contradictions:** No contradictory content found.
 
 #### Core Job Statement
-When I’m ready to act on a deal (follow up, call, schedule), I want to execute the action immediately from the system, so I can progress the sale without switching tools or doing extra admin.  
-- **Confidence: High**  
-- **Evidence:** “action executes immediately”; “→ lots of switching + admin” (current); “no extra steps” (desired)  
-- **Contradictions:** No contradictory content found.
+When deals are progressing (or stalling), I want the system to proactively flag risks and translate them into specific next steps I can execute, so I can prevent deals from going cold without interpreting dashboards.  
+**Confidence: High**  
+**Evidence:** “system flags… ‘this deal is going cold’… ‘you haven’t replied in 3 days’”; “converts that into actions, not insights”; “people don’t need more charts, they need to know what to do”; “avoid anything that looks like reporting.”  
+**Contradictions:** No contradictory content found.
 
 #### Desired Outcomes
-- One-command/one-click execution  
-- Reduced tool switching  
-- Suggested message/next step to speed response  
-- **Confidence: High**  
-- **Evidence:** “quick actions (like one click or one command)”; “each item includes… suggested message or next step”; “action executes immediately”  
-- **Contradictions:** No contradictory content found.
+- Proactive, actionable alerts tied to execution  
+- Less interpretation; more doing  
+- Follow-ups don’t fall through cracks  
+**Confidence: High**  
+**Evidence:** “still unclear what to do” (current) vs “always tied to something executable” (desired); “follow-ups fall through cracks.”  
+**Contradictions:** No contradictory content found.
 
 #### Emotional or Social Dimension
-- Less overwhelm; more sense of momentum (“just doing the next thing”)  
-- **Confidence: Medium**  
-- **Evidence:** “ideal state = calm, clear, just doing the next thing”  
-- **Contradictions:** No contradictory content found.
+- Feel in control; not overwhelmed  
+**Confidence: Medium**  
+**Evidence:** “to feel in control of their pipeline”; “not feel overwhelmed by too many things.”  
+**Contradictions:** No contradictory content found.
 
 #### Current Frictions
-- Switching between CRM record, notes, and email to send follow-up  
-- Forgetting to log/update after sending  
-- **Confidence: High**  
-- **Evidence:** “find contact… switch to email… write message… maybe log it (or forget)… update deal stage manually”; “lots of switching + admin”  
-- **Contradictions:** No contradictory content found.
+- Dashboards are static and “not that helpful”  
+- Requires interpreting data; still unclear what to do  
+**Confidence: High**  
+**Evidence:** “dashboards (static, not that helpful)”; “need to interpret data”; “still unclear what to do.”  
+**Contradictions:** No contradictory content found.
 
 #### Existing Alternatives or Workarounds
-- Using CRM + email/calendar separately; manual logging habits  
-- **Confidence: Medium**  
-- **Evidence:** “today they usually check like 3–5 things (CRM, email, calendar, maybe Slack)”  
-- **Contradictions:** No contradictory content found.
+- Dashboards/reporting in traditional CRMs  
+**Confidence: Medium**  
+**Evidence:** “open Salesforce / HubSpot… click through pipeline / tasks / dashboards”; “avoid anything that looks like reporting” (implying current reliance).  
+**Contradictions:** No contradictory content found.
 
 #### User Flows or Journeys
-- Executing an action (current vs desired)  
-- **Confidence: High**  
-- **Evidence:** “flow: executing an action… current… desired”  
-- **Contradictions:** No contradictory content found.
+- Staying on top of deals (current vs desired): dashboards → interpretation → unclear vs risk flags → executable actions  
+**Confidence: High**  
+**Evidence:** “flow: staying on top of deals… current… dashboards… desired… system flags… converts that into actions.”  
+**Contradictions:** No contradictory content found.
 
 ---
 
 ## Completeness
 **Complete**  
-- **Confidence: High**  
-- **Evidence:** Multiple explicit statements cover job, outcomes (“fast”, “next action”), frictions (“clicking”, “manual update”), and alternatives (“Salesforce/HubSpot”, “Pipedrive”, “spreadsheets”).  
-- **Contradictions:** No contradictory content found.
+**Confidence: High**  
+**Evidence:** The sources explicitly cover job intent (“what should I do now?”), outcomes (prioritized actions, fast execution, auto-logging), frictions (clicking, dashboards, manual updates, switching), alternatives (Salesforce/HubSpot/Pipedrive/spreadsheets/notes).  
+**Contradictions:** No contradictory content found.
 
 ## Strength
 **High**  
-- **Confidence: High**  
-- **Evidence:** Clear user progress framing (“what should I do now?”, “no admin overhead”), specific frictions and flows, explicit workarounds, and concrete desired behaviors (“action executes immediately”, “everything logs automatically”).  
-- **Contradictions:** No contradictory content found.
+**Confidence: High**  
+**Evidence:** Multiple concrete “current vs desired” flows; clear user progress framing (“next action”, “immediate execution”, “zero data entry”); explicit frictions and workarounds; strong emotional context (“stress + guilt” vs “calm, clear”).  
+**Contradictions:** No contradictory content found.
 
 ---
 
-## Suggestion (to improve the artifact)
-- Add explicit success metrics/outcomes users would recognize (e.g., “minutes saved per day,” “follow-ups not missed,” “time-to-next-action”) and tie them to each job.  
-- Clarify primary user segment first (reps vs founders) and note any differences in needs/constraints (e.g., founders may need lightweight pipeline vs reps need team/process alignment).  
-- Specify the “trigger moments” beyond morning (e.g., after a call, after an inbound email, after a meeting) to strengthen the job context and prioritization logic.
+## Suggestion
+- Add explicit success metrics per job (e.g., “time to first action in the morning,” “% activities auto-logged,” “follow-up SLA adherence,” “pipeline stage accuracy without manual edits”).  
+- Clarify priority logic expectations (“ranked/prioritized”) with examples (what inputs are used; how users can override).  
+- Specify edge cases where the system *must* ask the user (e.g., ambiguous deal stage, multiple stakeholders) to avoid overpromising “zero data entry.”
