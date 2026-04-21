@@ -7,11 +7,14 @@ from gentlii_foundations.pipeline import build_foundations
 def test_build_foundations_runs_pipeline(monkeypatch, tmp_path: Path):
     root = tmp_path / "product-definitions"
     (root / "foundations-input").mkdir(parents=True)
-    (tmp_path / "docs").mkdir()
+    (root / "product-description").mkdir()
 
-    called = {"rendered": False}
+    captured = {"output_dir": None}
 
-    monkeypatch.setattr("gentlii_foundations.pipeline.write_artifacts", lambda *args, **kwargs: called.__setitem__("rendered", True))
+    monkeypatch.setattr(
+        "gentlii_foundations.pipeline.write_artifacts",
+        lambda output_dir, artifacts: captured.__setitem__("output_dir", output_dir),
+    )
     monkeypatch.setattr("gentlii_foundations.pipeline.discover_source_files", lambda path: [])
     monkeypatch.setattr("gentlii_foundations.pipeline.extract_documents", lambda paths: [])
     monkeypatch.setattr(
@@ -23,13 +26,13 @@ def test_build_foundations_runs_pipeline(monkeypatch, tmp_path: Path):
 
     build_foundations(root)
 
-    assert called["rendered"] is True
+    assert captured["output_dir"] == root / "product-description"
 
 
 def test_build_foundations_reports_progress(monkeypatch, tmp_path: Path):
     root = tmp_path / "product-definitions"
     (root / "foundations-input").mkdir(parents=True)
-    (tmp_path / "docs").mkdir()
+    (root / "product-description").mkdir()
 
     messages: list[str] = []
 
