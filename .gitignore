@@ -5,7 +5,5 @@
 __pycache__/
 *.pyc
 docs/
-product-definitions/foundations-input/*
-product-definitions/product-description/*
 !product-definitions/foundations-input/.gitkeep
 !product-definitions/product-description/.gitkeep

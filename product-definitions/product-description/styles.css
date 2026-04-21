@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:wght@500;600&display=swap");
+
+:root {
+  --bg: #071423;
+  --bg-glow: #11294a;
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(222, 233, 250, 0.72);
+  --panel: rgba(10, 27, 49, 0.82);
+  --panel-2: #13335d;
+  --border: rgba(173, 201, 240, 0.16);
+  --accent: #89b2f2;
+  --accent-strong: #d0e0ff;
+  --shadow: 0 22px 60px rgba(0, 0, 0, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(88, 154, 255, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(255, 128, 0, 0.12), transparent 24%),
+    linear-gradient(180deg, var(--bg-glow) 0%, var(--bg) 22%, #050d18 100%);
+  color: var(--text);
+  font: 17px/1.6 "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+a {
+  color: var(--accent-strong);
+}
+
+.app-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 24px auto 48px;
+}
+
+.page-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.9fr);
+  gap: 24px;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(17, 40, 71, 0.95), rgba(10, 27, 49, 0.88));
+  box-shadow: var(--shadow);
+}
+
+.brand-block {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.brand-mark {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #8ab5ff, #6b95e6);
+  color: #071423;
+  font-weight: 700;
+  font-size: 1.35rem;
+}
+
+.brand-kicker,
+.panel-eyebrow {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+
+.brand-title {
+  margin: 2px 0 8px;
+  font: 600 2.15rem/1.1 "Source Serif 4", "Times New Roman", serif;
+}
+
+.brand-subtitle {
+  margin: 0;
+  max-width: 46ch;
+  color: var(--muted);
+}
+
+.doc-nav {
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--panel);
+}
+
+.doc-nav-list {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.doc-nav-list a {
+  text-decoration: none;
+}
+
+.page {
+  padding-top: 24px;
+  display: grid;
+  gap: 18px;
+}
+
+.doc-card {
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: var(--panel);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.doc-content {
+  margin-top: 12px;
+}
+
+.doc-content h1,
+.doc-content h2,
+.doc-content h3,
+.doc-content h4,
+.doc-content h5,
+.doc-content h6 {
+  margin: 1.2em 0 0.45em;
+  font-family: "Source Serif 4", "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.doc-content h1:first-child,
+.doc-content h2:first-child,
+.doc-content h3:first-child {
+  margin-top: 0;
+}
+
+.doc-content p,
+.doc-content ul,
+.doc-content blockquote {
+  margin: 0 0 1rem;
+}
+
+.doc-content ul {
+  padding-left: 1.4rem;
+}
+
+.doc-content li + li {
+  margin-top: 0.35rem;
+}
+
+.doc-content blockquote {
+  padding: 0.2rem 0 0.2rem 1rem;
+  border-left: 3px solid rgba(137, 178, 242, 0.5);
+  color: var(--accent-strong);
+}
+
+.doc-content hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 1.5rem 0;
+}
+
+@media (max-width: 860px) {
+  .page-header {
+    grid-template-columns: 1fr;
+  }
+
+  .app-shell {
+    width: min(100% - 24px, 1180px);
+    margin-top: 12px;
+  }
+}
