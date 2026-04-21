@@ -7,6 +7,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   generate:
@@ -31,6 +33,24 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: gentlii-foundations build product-definitions
+
+      - name: Prepare GitHub Pages artifact
+        run: |
+          mkdir -p _site
+          cp product-definitions/product-description/index.html _site/index.html
+          cp product-definitions/product-description/styles.css _site/styles.css
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
       - name: Commit generated artifacts when changed
         run: |
