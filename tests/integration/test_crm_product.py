@@ -7,7 +7,7 @@ from gentlii_foundations.pipeline import build_foundations
 def test_crm_style_folder_build_writes_expected_artifacts(monkeypatch, tmp_path: Path):
     root = tmp_path / "product-definitions"
     input_dir = root / "foundations-input"
-    output_dir = tmp_path / "docs"
+    output_dir = root / "product-description"
     input_dir.mkdir(parents=True)
     output_dir.mkdir()
 
