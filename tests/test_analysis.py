@@ -6,6 +6,6 @@ def test_target_artifacts_match_readme_scope():
         "strategy",
         "business-case",
         "product-vision",
-        "jtbd",
         "product-charter",
+        "jtbd",
     ]

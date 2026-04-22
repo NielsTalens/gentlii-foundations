@@ -1,41 +1,38 @@
-#### Business Rationale
-CRM tools “are kind of broken” for day-to-day sellers because they require too much manual navigation and data upkeep, creating “admin work” instead of helping people sell. The proposed product is a conversation-first CRM that tells users the next best action and automates logging/updates to remove friction, reduce stress, and drive consistent daily usage.  
-`Confidence: High`  
-`Evidence:` “CRM as it exists today… is kind of broken… It’s too much clicking around, updating fields… feels like admin work instead of helping you sell.”; “What we want instead is something that just… tells you what to do next.”; “reduce the general fatigue people have with CRM”; “get reps to actually use the system daily”  
-`Contradictions:` No contradictory content found.
+## Business Rationale
+Current CRMs (e.g., Salesforce/HubSpot) are described as “broken” for day-to-day sellers because they require heavy navigation, manual updates, and dashboard checking—experienced as admin work rather than sales support. The proposed product rationale is to replace screen- and field-based workflows with a conversation-first system that directly tells users the “next best action,” automates capture/logging, and reduces fragmentation across tools (CRM/email/calendar/etc.). The business-side motivation includes reducing CRM fatigue/stress, increasing daily usage/adoption, improving onboarding speed, and (as a result of better follow-up) increasing revenue per rep.
 
-#### Expected Value
-Improved sales productivity and effectiveness by removing manual CRM work (searching, updating, deciding), enabling faster execution of follow-ups/actions, increasing daily adoption, accelerating onboarding, and (as a result) increasing revenue per rep.  
-`Confidence: Medium`  
-`Evidence:` “increase revenue per rep (if they follow up more, this should happen)”; “make onboarding basically nonexistent or very fast”; “get reps to actually use the system daily”; “remove searching… remove updating… remove deciding… replace it with… clear next action… immediate execution… no admin overhead”  
-`Contradictions:` No contradictory content found.
+**Confidence:** High  
+**Evidence:** “CRM as it exists today … is kind of broken… It’s too much clicking around, updating fields, checking dashboards… feels like admin work”; “What we want instead is something that just… tells you what to do next.”; “why this matters (business side) Main goals are: reduce the general fatigue… get reps to actually use the system daily… increase revenue per rep… make onboarding basically nonexistent or very fast”; “today they usually check like 3–5 things (CRM, email, calendar, maybe Slack) → already fragmented.”  
+Contradictions: No contradictory content found.
 
-#### Assumptions
-- If the system reduces CRM fatigue and admin overhead, reps will use it daily.  
-- If reps follow up more (enabled by the product), revenue per rep will increase.  
-- Conversation-first interaction (chat now, “maybe voice later”) can replace traditional screens/dashboards for core CRM workflows.  
-- Automation can capture activities and update pipeline “in the background” with “basically zero data entry.”  
-`Confidence: Medium`  
-`Evidence:` “get reps to actually use the system daily”; “increase revenue per rep (if they follow up more, this should happen)”; “It’s basically a CRM but conversation-first… No real ‘screens’…”; “everything logs automatically in background”; “pipeline updates itself”; “basically zero data entry”  
-`Contradictions:` No contradictory content found.
+## Expected Value
+The expected value centers on time/effort reduction (less switching, searching, updating, deciding), improved user experience (calm/clear control vs stress/guilt), higher adoption (daily use), and better sales execution (more consistent follow-up and faster actions), which is expected to translate into higher revenue per rep. Additional value includes automated activity capture (emails/calls), background pipeline updates, and very fast onboarding due to minimal training needs.
 
-#### Measurable Business Outcomes
-Not found (no explicit metrics, targets, baselines, or timeframes defined).  
-`Confidence: High`  
-`Evidence:` No supporting evidence found. (Goals are stated qualitatively: “reduce… fatigue,” “get reps to… use… daily,” “increase revenue per rep,” “onboarding… very fast” without numeric targets.)  
-`Contradictions:` No contradictory content found.
+**Confidence:** Medium  
+**Evidence:** “increase revenue per rep (if they follow up more, this should happen)”; “reduce the general fatigue people have with CRM”; “get reps to actually use the system daily”; “make onboarding basically nonexistent or very fast”; “→ lots of switching + admin… desired… action executes immediately… everything logs automatically in background… pipeline updates itself… no extra steps”; “ideal state = calm, clear, just doing the next thing.”  
+Contradictions: No contradictory content found.
 
----
+## Assumptions
+The sources assume that (1) CRM friction (manual entry, dashboards, screens) is a primary cause of low adoption and negative sentiment; (2) providing prioritized next actions and automating logging/pipeline updates will materially increase follow-up behavior; (3) more/better follow-up will increase revenue per rep; (4) users prefer “actions > insights” and do not want dashboards/reporting; (5) the system can capture activities and update pipeline “in the background” reliably enough to avoid data-entry; and (6) minimizing configuration/customization is acceptable for the initial target users.
 
-## Completeness
-**Partial** (business rationale, expected value, and assumptions are present; measurable outcomes are missing/undefined).
+**Confidence:** Medium  
+**Evidence:** “increase revenue per rep (if they follow up more, this should happen)”; “people don’t need more charts, they need to know what to do”; “automation by default… system should just capture stuff”; “everything updates in background, invisible”; “if user has to fill fields → something went wrong”; “not something you customize endlessly”; “If someone needs training, we probably failed.”  
+Contradictions: No contradictory content found.
 
-## Strength
-**Medium** (problem and intent are clear and specific; outcomes are largely qualitative with limited causal claims; assumptions are present but not framed as testable hypotheses; no concrete KPIs/targets/timeframes).
+## Measurable Business Outcomes
+Some intended outcomes are stated but not quantified with targets/timeframes. The document points to measurable directions such as increased daily active use of the CRM, reduced onboarding/training time, increased revenue per rep, and reduced missed follow-ups (deals “fall through cracks”). It also implies measurable reductions in manual data entry and time spent switching tools, but does not provide explicit KPIs, baselines, or success thresholds.
+
+**Confidence:** Low  
+**Evidence:** “get reps to actually use the system daily”; “increase revenue per rep”; “make onboarding basically nonexistent or very fast”; “follow-ups fall through cracks”; “basically zero data entry.”  
+Contradictions: No contradictory content found.
 
 ---
+
+### Completeness
+Partial
+
+### Strength
+Medium
 
 ### Suggestion
-- Add measurable targets and timeframes, e.g., % reduction in time spent on CRM admin, daily active usage rate, onboarding time to first value, follow-up SLA adherence, and revenue-per-rep lift (with baseline and timeframe).  
-- Convert key assumptions into testable hypotheses (e.g., “automated logging increases daily usage from X to Y within Z weeks”).  
-- Define primary customer segment and initial use-case scope more crisply (e.g., “early-stage founders doing outbound” vs “sales reps”) and link each to specific success metrics.
+Add explicit KPIs with targets and timeframes, e.g., daily active usage (% of reps using daily), onboarding time (minutes/hours), reduction in manual CRM updates (fields touched per day), follow-up SLA adherence (e.g., replies within X days), and revenue/rep uplift (or leading indicators like activities per rep). Include baseline assumptions and how they’ll be validated (pilot size, measurement approach).

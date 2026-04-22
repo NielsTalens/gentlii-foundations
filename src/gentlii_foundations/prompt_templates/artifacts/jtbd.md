@@ -34,38 +34,39 @@ Focus only on explicitly stated or clearly supported information related to:
 
 ## Output
 
-For each subject below, use this inline structure:
-- extracted content or "Not found"
-- `Confidence: High | Medium | Low`
-- `Evidence: <exact quote, close paraphrase, or "No supporting evidence found">`
-- `Contradictions: <contradiction with evidence, or "No contradictory content found.">`
+For each subject below, use this structure:
+- `##` heading for the subject name
+- one or more normal paragraphs with extracted content, or `Not found`
+- a bold confidence line written as `**Confidence:** High | Medium | Low`
+- a bold evidence line written as `**Evidence:** <exact quote, close paraphrase, or "No supporting evidence found">`
+- a contradictions line written as `Contradictions: <contradiction with evidence, or "No contradictory content found.">`
 
 Per identified job describe the following:
 
-#### Job Name
+## Job Name
 [Extracted content or "Not found"]
 
-#### Core Job Statement
+## Core Job Statement
 [When ..., I want to ..., so I can ... / or "Not found"]
 
-#### Desired Outcomes
+## Desired Outcomes
 [Extracted content or "Not found"]
 
-#### Emotional or Social Dimension
+## Emotional or Social Dimension
 [Extracted content or "Not found"]
 
-#### Current Frictions
+## Current Frictions
 [Extracted content or "Not found"]
 
-#### Existing Alternatives or Workarounds
+## Existing Alternatives or Workarounds
 [Extracted content or "Not found"]
 
-#### User Flows or Journeys
+## User Flows or Journeys
 [Extracted content or "Not found"]
 
 ---
 
-## Completeness
+### Completeness
 
 Assess whether the key JTBD elements are present:
 
@@ -83,7 +84,7 @@ Return:
 
 ---
 
-## Strength
+### Strength
 
 Assess how usable the JTBD definition is.
 

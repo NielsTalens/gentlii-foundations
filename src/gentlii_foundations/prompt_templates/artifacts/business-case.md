@@ -18,27 +18,28 @@ Focus only on explicitly stated or clearly supported information related to:
 
 ## Output
 
-For each subject below, use this inline structure:
-- extracted content or "Not found"
-- `Confidence: High | Medium | Low`
-- `Evidence: <exact quote, close paraphrase, or "No supporting evidence found">`
-- `Contradictions: <contradiction with evidence, or "No contradictory content found.">`
+For each subject below, use this structure:
+- `##` heading for the subject name
+- one or more normal paragraphs with extracted content, or `Not found`
+- a bold confidence line written as `**Confidence:** High | Medium | Low`
+- a bold evidence line written as `**Evidence:** <exact quote, close paraphrase, or "No supporting evidence found">`
+- a contradictions line written as `Contradictions: <contradiction with evidence, or "No contradictory content found.">`
 
-#### Business Rationale
+## Business Rationale
 [Extracted content or "Not found"]
 
-#### Expected Value
+## Expected Value
 [Extracted content or "Not found"]
 
-#### Assumptions
+## Assumptions
 [Extracted content or "Not found"]
 
-#### Measurable Business Outcomes
+## Measurable Business Outcomes
 [Extracted content or "Not found"]
 
 ---
 
-## Completeness
+### Completeness
 
 Assess whether the key business case elements are present:
 
@@ -55,7 +56,7 @@ Return:
 
 ---
 
-## Strength
+### Strength
 
 Assess how usable the business case is:
 

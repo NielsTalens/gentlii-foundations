@@ -12,6 +12,9 @@ If information is missing, mark it as "Not found".
 ### Confidence score
 If information is weak or ambiguous, reflect that in the confidence level.
 For every subject or section in the Output Structure, include a confidence line immediately below the extracted content and before the supporting evidence.
+Write the confidence line as normal paragraph text, not as a bullet list item or numbered list item.
+Never put `Confidence:` in a bullet list or numbered list.
+Write confidence as `**Confidence:** <High | Medium | Low>`.
 
 Use this confidence scale:
 - High: clear, explicit, consistent evidence
@@ -23,6 +26,9 @@ For every subject or section in the Output Structure, include the related eviden
 If evidence is missing, omit the unsupported claim.
 For each extracted section, provide supporting evidence using exact quotes or close paraphrases where possible.
 If no evidence is found for a section, omit it or mark it as "No supporting evidence found".
+Write the evidence line as normal paragraph text, not as a bullet list item or numbered list item.
+Never put `Evidence:` in a bullet list or numbered list.
+Write evidence as `**Evidence:** <...>`.
 
 ### Suggestions
 You MAY provide suggestions, but they must be clearly marked as "Suggestion" and must not be mixed with extracted content.

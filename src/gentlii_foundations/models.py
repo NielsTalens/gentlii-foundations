@@ -9,8 +9,8 @@ class ArtifactName(str, Enum):
     STRATEGY = "strategy"
     BUSINESS_CASE = "business-case"
     PRODUCT_VISION = "product-vision"
-    JTBD = "jtbd"
     PRODUCT_CHARTER = "product-charter"
+    JTBD = "jtbd"
 
 
 @dataclass(frozen=True)

@@ -4,7 +4,7 @@ import html
 import re
 from pathlib import Path
 
-from gentlii_foundations.models import GeneratedArtifact
+from gentlii_foundations.models import ArtifactName, GeneratedArtifact
 
 _ORDERED_LIST_PATTERN = re.compile(r"^\d+\. (.+)$")
 _SLUG_SAFE_ARTIFACT_NAME_PATTERN = re.compile(r"^[a-z0-9-]+$")
@@ -214,7 +214,8 @@ def _split_bold_fragments(text: str) -> list[tuple[str, str]]:
 
 
 def _sort_artifacts(artifacts: list[GeneratedArtifact]) -> list[GeneratedArtifact]:
-    return sorted(artifacts, key=lambda artifact: artifact.name)
+    artifact_order = {artifact.value: index for index, artifact in enumerate(ArtifactName)}
+    return sorted(artifacts, key=lambda artifact: (artifact_order.get(artifact.name, len(artifact_order)), artifact.name))
 
 
 def _validate_artifact_names(artifacts: list[GeneratedArtifact]) -> None:

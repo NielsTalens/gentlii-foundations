@@ -25,30 +25,31 @@ Focus only on explicitly stated or clearly supported information related to:
 
 ## Output
 
-For each subject below, use this inline structure:
-- extracted content or "Not found"
-- `Confidence: High | Medium | Low`
-- `Evidence: <exact quote, close paraphrase, or "No supporting evidence found">`
-- `Contradictions: <contradiction with evidence, or "No contradictory content found.">`
+For each subject below, use this structure:
+- `##` heading for the subject name
+- one or more normal paragraphs with extracted content, or `Not found`
+- a bold confidence line written as `**Confidence:** High | Medium | Low`
+- a bold evidence line written as `**Evidence:** <exact quote, close paraphrase, or "No supporting evidence found">`
+- a contradictions line written as `Contradictions: <contradiction with evidence, or "No contradictory content found.">`
 
-#### Company Strategy
+## Company Strategy
 [Extracted content or "Not found"]
 
-#### Product Strategy
+## Product Strategy
 [Extracted content or "Not found"]
 
-#### Value Proposition
+## Value Proposition
 [Extracted content or "Not found"]
 
-#### Strategic Goals
+## Strategic Goals
 [List explicit goals or "Not found"]
 
-#### Long-term Direction
+## Long-term Direction
 [Extracted content or "Not found"]
 
 ---
 
-## Completeness
+### Completeness
 
 Assess whether all key strategic elements are present:
 
@@ -65,7 +66,7 @@ Return:
 
 ---
 
-## Strength
+### Strength
 
 Assess how usable the strategic description is:
 

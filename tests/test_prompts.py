@@ -26,6 +26,7 @@ def test_prompt_requires_confidence_below_each_output_section():
         "For every subject or section in the Output Structure, include a confidence line "
         "immediately below the extracted content and before the supporting evidence."
     ) in prompt
+    assert "Write confidence as `**Confidence:** <High | Medium | Low>`." in prompt
 
 
 def test_prompt_includes_shared_suggestions_section():
@@ -53,10 +54,20 @@ def test_all_artifact_templates_keep_evidence_and_contradictions_inline_per_subj
     for artifact_name in artifact_names:
         template = (template_dir / f"{artifact_name}.md").read_text(encoding="utf-8")
         assert "## Output" in template
-        assert "## Completeness" in template
-        assert "## Strength" in template
+        assert "### Completeness" in template
+        assert "### Strength" in template
         assert "## Evidence" not in template
         assert "## Contradictions" not in template
+
+
+def test_artifact_templates_define_output_items_as_h2():
+    template_dir = Path(PROMPT_TEMPLATE_DIR) / "artifacts"
+
+    assert "## Company Strategy" in (template_dir / "strategy.md").read_text(encoding="utf-8")
+    assert "## Business Rationale" in (template_dir / "business-case.md").read_text(encoding="utf-8")
+    assert "## Target Groups" in (template_dir / "product-vision.md").read_text(encoding="utf-8")
+    assert "## Core Principles" in (template_dir / "product-charter.md").read_text(encoding="utf-8")
+    assert "## Job Name" in (template_dir / "jtbd.md").read_text(encoding="utf-8")
 
 
 def test_shared_prompt_requires_inline_evidence_and_contradictions_per_subject():
@@ -69,3 +80,4 @@ def test_shared_prompt_requires_inline_evidence_and_contradictions_per_subject()
         "For every subject or section in the Output Structure, if there are contradictions, "
         "include the related evidence immediately below the extracted content."
     ) in prompt
+    assert "Write evidence as `**Evidence:** <...>`." in prompt

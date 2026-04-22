@@ -101,23 +101,29 @@ def test_write_artifacts_generates_gentlii_based_stylesheet(tmp_path):
 
 def test_write_artifacts_orders_combined_export_deterministically(tmp_path):
     artifacts = [
-        GeneratedArtifact(name="zeta", markdown="# Zeta\n"),
-        GeneratedArtifact(name="alpha", markdown="# Alpha\n"),
-        GeneratedArtifact(name="middle", markdown="# Middle\n"),
+        GeneratedArtifact(name="jtbd", markdown="# JTBD\n"),
+        GeneratedArtifact(name="product-charter", markdown="# Product Charter\n"),
+        GeneratedArtifact(name="strategy", markdown="# Strategy\n"),
+        GeneratedArtifact(name="product-vision", markdown="# Product Vision\n"),
+        GeneratedArtifact(name="business-case", markdown="# Business Case\n"),
     ]
 
     write_artifacts(tmp_path, artifacts)
     html = (tmp_path / "index.html").read_text(encoding="utf-8")
 
     nav_order = [
-        html.index('href="#alpha"'),
-        html.index('href="#middle"'),
-        html.index('href="#zeta"'),
+        html.index('href="#strategy"'),
+        html.index('href="#business-case"'),
+        html.index('href="#product-vision"'),
+        html.index('href="#product-charter"'),
+        html.index('href="#jtbd"'),
     ]
     section_order = [
-        html.index('<section class="doc-card" id="alpha">'),
-        html.index('<section class="doc-card" id="middle">'),
-        html.index('<section class="doc-card" id="zeta">'),
+        html.index('<section class="doc-card" id="strategy">'),
+        html.index('<section class="doc-card" id="business-case">'),
+        html.index('<section class="doc-card" id="product-vision">'),
+        html.index('<section class="doc-card" id="product-charter">'),
+        html.index('<section class="doc-card" id="jtbd">'),
     ]
 
     assert nav_order == sorted(nav_order)

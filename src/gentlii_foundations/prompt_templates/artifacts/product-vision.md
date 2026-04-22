@@ -25,30 +25,31 @@ Focus only on explicitly stated or clearly supported information related to:
 
 ## Output
 
-For each subject below, use this inline structure:
-- extracted content or "Not found"
-- `Confidence: High | Medium | Low`
-- `Evidence: <exact quote, close paraphrase, or "No supporting evidence found">`
-- `Contradictions: <contradiction with evidence, or "No contradictory content found.">`
+For each subject below, use this structure:
+- `##` heading for the subject name
+- one or more normal paragraphs with extracted content, or `Not found`
+- a bold confidence line written as `**Confidence:** High | Medium | Low`
+- a bold evidence line written as `**Evidence:** <exact quote, close paraphrase, or "No supporting evidence found">`
+- a contradictions line written as `Contradictions: <contradiction with evidence, or "No contradictory content found.">`
 
-#### Target Groups
+## Target Groups
 [Extracted content or "Not found"]
 
-#### Needs
+## Needs
 [Extracted content or "Not found"]
 
-#### Product Features
+## Product Features
 [High-level features or "Not found"]
 
-#### Business Goals
+## Business Goals
 [Extracted content or "Not found"]
 
-#### Differentiators
+## Differentiators
 [Extracted content or "Not found"]
 
 ---
 
-## Completeness
+### Completeness
 
 Assess whether all key product vision elements are present:
 
@@ -65,7 +66,7 @@ Return:
 
 ---
 
-## Strength
+### Strength
 
 Assess how usable the product vision is:
 

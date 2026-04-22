@@ -31,39 +31,40 @@ Focus only on explicitly stated or clearly supported information related to:
 
 ## Output
 
-For each subject below, use this inline structure:
-- extracted content or "Not found"
-- `Confidence: High | Medium | Low`
-- `Evidence: <exact quote, close paraphrase, or "No supporting evidence found">`
-- `Contradictions: <contradiction with evidence, or "No contradictory content found.">`
+For each subject below, use this structure:
+- `##` heading for the subject name
+- one or more normal paragraphs with extracted content, or `Not found`
+- a bold confidence line written as `**Confidence:** High | Medium | Low`
+- a bold evidence line written as `**Evidence:** <exact quote, close paraphrase, or "No supporting evidence found">`
+- a contradictions line written as `Contradictions: <contradiction with evidence, or "No contradictory content found.">`
 
-#### Core Principles
+## Core Principles
 [Extracted content or "Not found"]
 
-#### Product Boundaries
+## Product Boundaries
 [Extracted content or "Not found"]
 
-#### Behavioral Rules
+## Behavioral Rules
 [Extracted content or "Not found"]
 
-#### Decision-Making Rules
+## Decision-Making Rules
 [Extracted content or "Not found"]
 
-#### Product Character
+## Product Character
 [Extracted content or "Not found"]
 
-#### Language and Tone
+## Language and Tone
 [Extracted content or "Not found"]
 
-#### Evolution Constraints
+## Evolution Constraints
 [Extracted content or "Not found"]
 
-#### Integrity Checks
+## Integrity Checks
 [Extracted content or "Not found"]
 
 ---
 
-## Completeness
+### Completeness
 
 Assess whether key product charter elements are present:
 
@@ -80,7 +81,7 @@ Return:
 
 ---
 
-## Strength
+### Strength
 
 Assess how usable the product charter is.
 
