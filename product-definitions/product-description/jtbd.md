@@ -1,77 +1,174 @@
 ## Job Name
 
-1) Direct verzekerd zijn bij aankoop  
-2) Snel en eenvoudig een claim indienen en uitbetaald krijgen  
-3) Zekerheid krijgen over dekking en status (polisinzicht / claimstatus)
+Direct verzekerd zijn bij aankoop
 
-**Confidence:** High  
-**Evidence:** “Wanneer ik iets koop wil ik meteen verzekerd zijn zodat ik niet hoef na te denken”; “Wanneer ik schade heb wil ik direct geholpen worden (liefst direct geld)”; “Onzekerheid over dekking → leidt tot afhaken”; “Status check (altijd zichtbaar?)”; “Push notificaties bij status updates”; “Realtime dekking inzicht”  
-**Contradictions:** “Niet iedereen wil ‘direct’, sommige willen eerst contact”; “Sommige gebruikers vinden ‘extra checks’ juist geruststellend”
+**Confidence:** Medium
+
+**Evidence:** “Wanneer ik iets koop wil ik meteen verzekerd zijn zodat ik niet hoef na te denken”; “binnen een paar minuten geregeld, misschien zelfs direct bij aankoop van iets.”
+
+**Contradictions:** “1-tap afsluiten (maar klopt dit juridisch?)”; “Zo min mogelijk stappen (maar compliance?)”; “Geen formulieren (maar KYC vereist wel iets…)”; “Te weinig stappen kan ook wantrouwen creëren (‘te makkelijk?’)”
+
 
 ## Core Job Statement
 
-1) Wanneer ik iets koop, wil ik meteen verzekerd zijn, zodat ik er niet over hoef na te denken.  
-2) Wanneer ik schade heb, wil ik direct geholpen worden (en liefst direct geld), zodat het emotionele moment snel wordt opgelost.  
-3) Wanneer ik niet zeker ben wat gedekt is of waar mijn claim staat, wil ik direct inzicht in dekking en status, zodat ik vertrouwen heb en niet afhaak.
+Wanneer ik iets koop, wil ik meteen (of binnen een paar minuten) een verzekering kunnen afsluiten met zo min mogelijk gedoe, zodat ik er niet over hoef na te denken en meteen zekerheid heb.
 
-**Confidence:** High  
-**Evidence:** “Wanneer ik iets koop wil ik meteen verzekerd zijn zodat ik niet hoef na te denken”; “Wanneer ik schade heb wil ik direct geholpen worden (liefst direct geld)”; “Onzekerheid over dekking → leidt tot afhaken”; “Claims zijn emotioneel moment → snelheid = belangrijk”; “Status check (altijd zichtbaar?)”  
-**Contradictions:** “Sommige gebruikers vinden ‘extra checks’ juist geruststellend”; “Te weinig stappen kan ook wantrouwen creëren (‘te makkelijk?’)”
+**Confidence:** High
+
+**Evidence:** “Wanneer ik iets koop wil ik meteen verzekerd zijn zodat ik niet hoef na te denken”; “binnen een paar minuten geregeld, misschien zelfs direct bij aankoop van iets”; “We willen iets bouwen rondom verzekeringen maar dan extreem simpel.”
+
+**Contradictions:** “Automation-first, maar tegelijk weten we nog niet hoe ver dat kan (ivm regelgeving)”; “Compliance moet ‘by design’”; “KYC nodig (maar hoe zichtbaar?)”
+
 
 ## Desired Outcomes
 
-- Snel afsluiten (binnen minuten; doelbeelden zoals <3 min of 5 min) met zo min mogelijk stappen.  
-- Claims snel verwerken (instant payout indien mogelijk; anders sneller zoals <24u) en een groot deel automatisch.  
-- Minder fouten en minder input door prefill.  
-- Meer vertrouwen door realtime feedback, transparantie en zichtbaar statusinzicht.  
-- Hoge conversie / lage drop-off per stap, hoge NPS (als ambitie).
+- Snel afsluiten (minuten; mogelijk <3–5 min) met weinig stappen  
+- Minder invoer / minder fouten door prefill  
+- Directe of realtime feedback en meer vertrouwen/zekerheid tijdens afsluiten  
+- Hoge conversie en lage drop-off per stap
 
-**Confidence:** Medium  
-**Evidence:** “binnen een paar minuten geregeld”; “Snel afsluiten (<3 min? of realistischer 5 min?)”; “Claims snel (instant? of <24u realistischer?)”; “Instant payout (indien mogelijk)”; “70% claims automatisch”; “Prefill > input”; “Realtime feedback → meer vertrouwen”; “Drop-off per stap meten (belangrijk)”; “NPS >50 (ambitieus)”; “Conversie >60% (lijkt hoog?)”  
-**Contradictions:** “Claims direct uitbetalen (maar frauderisico?)”; “Automation-first… nog niet hoe ver dat kan (ivm regelgeving)”; “Te weinig stappen kan ook wantrouwen creëren (‘te makkelijk?’)”
+**Confidence:** Medium
+
+**Evidence:** “Snel afsluiten (<3 min? of realistischer 5 min?)”; “Zo min mogelijk stappen”; “Prefill > input”; “Minder stappen → hogere conversie”; “Drop-off per stap meten (belangrijk)”; “Verwachten directe feedback”; “Onzekerheid over dekking → leidt tot afhaken”; “Realtime feedback → meer vertrouwen.”
+
+**Contradictions:** “Te weinig stappen kan ook wantrouwen creëren (‘te makkelijk?’)”; “Minder stappen > meer uitleg (maar conflicteert soms)”; “ ‘Minder stappen > meer uitleg’ maar ook ‘geen uitleg nodig’?”
+
 
 ## Emotional or Social Dimension
 
-- Het product moet “snel, rustig, zeker, transparant” voelen.  
-- Claims zijn een emotioneel moment; snelheid is belangrijk.  
-- Vertrouwen lijkt (mogelijk) belangrijker dan prijs.  
-- Tegenspanning: sommige gebruikers ervaren extra checks als geruststellend; té makkelijk kan wantrouwen oproepen.
+- Het moet “snel, rustig, zeker, transparant” voelen  
+- Vermijden dat het “bureaucratisch” of “onduidelijk” voelt  
+- Vertrouwen/zekerheid is belangrijk (mogelijk belangrijker dan prijs)
 
-**Confidence:** High  
-**Evidence:** “Moet voelen: Snel Rustig Zeker Transparant”; “Claims zijn emotioneel moment → snelheid = belangrijk”; “Vertrouwen lijkt belangrijker dan prijs (maar niet zeker)”; “Sommige gebruikers vinden ‘extra checks’ juist geruststellend”; “Te weinig stappen kan ook wantrouwen creëren (‘te makkelijk?’)”  
-**Contradictions:** “’Rustig’ vs ‘snel’ kan botsen in UI”
+**Confidence:** High
+
+**Evidence:** “Moet voelen: Snel / Rustig / Zeker / Transparant”; “Mag niet voelen: Bureaucratisch / Onduidelijk”; “Vertrouwen lijkt belangrijker dan prijs”; “Onzekerheid over dekking → leidt tot afhaken.”
+
+**Contradictions:** “ ‘Rustig’ vs ‘snel’ kan botsen in UI”; “Sommige gebruikers vinden ‘extra checks’ juist geruststellend” (spanning met “extreem simpel” / minimale stappen).
+
 
 ## Current Frictions
 
-- Formulieren / te veel velden (afhaken rond > ~10 velden).  
-- Lange aanvraagprocessen; verzekeren voelt traag en bureaucratisch.  
-- Onduidelijke voorwaarden / onzekerheid over dekking leidt tot afhaken.  
-- Claims duren lang (dagen/weken) en vereisen veel handmatige checks.  
-- Compliance/KYC en fraudepreventie kunnen frictie en uitzonderingen op automation veroorzaken.
+- Formulieren / te veel velden (afhaken rond ~10 velden)  
+- Lange aanvraagprocessen en bureaucratie  
+- Onduidelijke voorwaarden / onzekerheid over dekking  
+- Compliance/KYC zichtbaar maken zonder frictie  
+- Spanningen rond automation vs uitzonderingen (fraude/edge cases) en instant payout vs risico
 
-**Confidence:** High  
-**Evidence:** “Mensen haken af bij formulieren > ~10 velden”; “Verzekeren voelt nu traag en bureaucratisch”; “Lange aanvraagprocessen”; “Onduidelijke voorwaarden”; “Claims duren lang (dagen/weken)”; “Veel handmatige checks”; “Compliance moet ‘by design’”; “KYC nodig”; “Fraudepreventie vereist waarschijnlijk uitzonderingen op automation”  
-**Contradictions:** “Sommige gebruikers vinden ‘extra checks’ juist geruststellend”
+**Confidence:** High
+
+**Evidence:** “Mensen haken af bij formulieren > ~10 velden”; “Verzekeren voelt nu traag en bureaucratisch”; “Lange aanvraagprocessen”; “Onduidelijke voorwaarden”; “Dingen die wringen: ‘Geen formulieren’ vs wettelijke verplichtingen”; “KYC nodig”; “Fraudepreventie vereist waarschijnlijk uitzonderingen op automation”; “ ‘Instant payout’ vs risico.”
+
+**Contradictions:** “Maar: Sommige gebruikers vinden ‘extra checks’ juist geruststellend” (frictie kan ook vertrouwen geven).
+
 
 ## Existing Alternatives or Workarounds
 
-- Huidige marktprocessen: lange aanvraagprocessen, onduidelijke voorwaarden, trage claims met handmatige checks (impliceert bestaande verzekeraars als alternatief).  
-- Impliciete workaround: “extra checks”/handmatige controle als vertrouwen-builder (maar ook frictie).
+Bestaande marktpraktijken: lange aanvraagprocessen, veel handmatige checks, claims die dagen/weken duren, onduidelijke voorwaarden.
 
-**Confidence:** Medium  
-**Evidence:** “Fricties (huidige markt): Lange aanvraagprocessen, Onduidelijke voorwaarden, Claims duren lang…, Veel handmatige checks”; “Sommige gebruikers vinden ‘extra checks’ juist geruststellend”  
-**Contradictions:** No contradictory content found.
+**Confidence:** Medium
+
+**Evidence:** “Fricties (huidige markt): Lange aanvraagprocessen / Onduidelijke voorwaarden / Claims duren lang (dagen/weken) / Veel handmatige checks.”
+
+**Contradictions:** “Sommige gebruikers vinden ‘extra checks’ juist geruststellend.”
+
 
 ## User Flows or Journeys
 
-- Verzekering afsluiten (happy path “extreem kort”); mogelijk “1-tap afsluiten” en “API-based prefill (device, aankoop, etc.)”, eventueel “direct bij aankoop van iets”.  
-- Claim indienen met foto/video; eventueel AI schadebeoordeling en (indien mogelijk) instant payout.  
-- Status check die “altijd zichtbaar” is; push notificaties bij status updates.  
-- KYC/eID + selfie verificatie als onderdeel van onboarding/afsluiten (impliciet), met onzekerheid hoe zichtbaar dit moet zijn.
+- Afsluiten verzekering (happy path extreem kort)  
+- Claim indienen met foto/video  
+- Status check (altijd zichtbaar?)  
+- Push notificaties bij status updates (journey rond updates)
 
-**Confidence:** Medium  
-**Evidence:** “Afsluiten verzekering (happy path extreem kort)”; “1-tap afsluiten (maar klopt dit juridisch?)”; “API-based prefill (device, aankoop, etc.)”; “misschien zelfs direct bij aankoop van iets”; “Claim indienen (foto/video)”; “Foto/video claims”; “AI schadebeoordeling”; “Instant payout (indien mogelijk)”; “Status check (altijd zichtbaar?)”; “Push notificaties bij status updates”; “eID + selfie verificatie”; “KYC nodig (maar hoe zichtbaar?)”  
-**Contradictions:** “Mobile-first sowieso… desktop misschien later” vs “Desktop-first interface met uitgebreide dashboards”; “Minder stappen > meer uitleg (maar conflicteert soms)”; “1-tap afsluiten (maar klopt dit juridisch?)”
+**Confidence:** High
+
+**Evidence:** “Core flows (idee): Afsluiten verzekering (happy path extreem kort); Claim indienen (foto/video); Status check (altijd zichtbaar?)”; “Push notificaties bij status updates.”; “Misschien volgens user flows format later uitwerken.”; “Foto/video claims.”
+
+
+## Job Name
+
+Snel en geruststellend geholpen worden bij schade (claim)
+
+**Confidence:** High
+
+**Evidence:** “Wanneer ik schade heb wil ik direct geholpen worden (liefst direct geld)”; “Claims zijn emotioneel moment → snelheid = belangrijk”; “Claim indienen (foto/video)”; “Instant payout (indien mogelijk).”
+
+**Contradictions:** “Niet iedereen wil ‘direct’, sommige willen eerst contact”; “ ‘Instant payout’ vs risico”; “ ‘Volledig geautomatiseerd’ vs edge cases”; “Automation first” vs “menselijke review bij fraude.”
+
+
+## Core Job Statement
+
+Wanneer ik schade heb, wil ik snel en eenvoudig een claim kunnen indienen (bijv. met foto/video) en snel duidelijkheid/uitbetaling krijgen, zodat ik me geholpen voel in een emotioneel moment en snel weer verder kan.
+
+**Confidence:** High
+
+**Evidence:** “Wanneer ik schade heb wil ik direct geholpen worden (liefst direct geld)”; “Claims zijn emotioneel moment → snelheid = belangrijk”; “Foto/video claims”; “Claims snel (instant? of <24u realistischer?)”; “Status check (altijd zichtbaar?).”
+
+**Contradictions:** “Niet iedereen wil ‘direct’, sommige willen eerst contact”; “Sommige gebruikers vinden ‘extra checks’ juist geruststellend” (kan botsen met maximale snelheid/automation).
+
+
+## Desired Outcomes
+
+- Snelle afhandeling (instant of <24u als realistischer doel)  
+- (Waar mogelijk) instant payout  
+- Continu inzicht in status + proactieve updates  
+- (Voor business) hoge mate van automatische claimafhandeling (70% idee)
+
+**Confidence:** Medium
+
+**Evidence:** “Claims snel (instant? of <24u realistischer?)”; “Instant payout (indien mogelijk)”; “Status check (altijd zichtbaar?)”; “Push notificaties bij status updates”; “70% claims automatisch (ideeën, niet gevalideerd).”
+
+**Contradictions:** “Instant payout (…frauderisico?)”; “Veel handmatige checks” in huidige markt + “Fraudepreventie vereist waarschijnlijk uitzonderingen op automation.”
+
+
+## Emotional or Social Dimension
+
+- Claim is een emotioneel moment; behoefte aan hulp, vertrouwen en zekerheid  
+- Transparantie (status/updates) kan rust geven
+
+**Confidence:** High
+
+**Evidence:** “Claims zijn emotioneel moment”; “Moet voelen: Rustig / Zeker / Transparant”; “Push notificaties bij status updates”; “Status check (altijd zichtbaar?).”
+
+**Contradictions:** “ ‘Transparantie’ vs complexiteit van voorwaarden” (spanningsveld hoe transparant te zijn zonder te ingewikkeld te worden).
+
+
+## Current Frictions
+
+- Claims duren lang (dagen/weken) in huidige markt  
+- Veel handmatige checks  
+- Onzekerheid/ondoorzichtigheid tijdens claimproces (impliceert behoefte aan status/updates)  
+- Spanningen: automation vs fraude/edge cases; instant payout vs risico; compliance by design
+
+**Confidence:** High
+
+**Evidence:** “Claims duren lang (dagen/weken)”; “Veel handmatige checks”; “Fraudepreventie vereist waarschijnlijk uitzonderingen op automation”; “ ‘Instant payout’ vs risico”; “ ‘Volledig geautomatiseerd’ vs edge cases”; “Compliance moet ‘by design’.”
+
+**Contradictions:** “Sommige gebruikers vinden ‘extra checks’ juist geruststellend.”
+
+
+## Existing Alternatives or Workarounds
+
+Not found
+
+**Confidence:** Low
+
+**Evidence:** No supporting evidence found
+
+**Contradictions:** No contradictory content found.
+
+
+## User Flows or Journeys
+
+- Claim indienen (foto/video) → (AI) schadebeoordeling → (mogelijk) instant payout → status altijd zichtbaar → push updates  
+- Mogelijke afwijking: sommige users willen eerst contact/support
+
+**Confidence:** Medium
+
+**Evidence:** “Claim indienen (foto/video)”; “AI schadebeoordeling”; “Instant payout (indien mogelijk)”; “Status check (altijd zichtbaar?)”; “Push notificaties bij status updates”; “Niet iedereen wil ‘direct’, sommige willen eerst contact”; “Misschien wel support nodig → hoe past dat?”
+
+**Contradictions:** “Geen maatwerkadvies” en “Geen offline processen” vs “Misschien wel support nodig → hoe past dat?” (tension over support model, though not fully specified).
+
 
 ### Completeness
 
@@ -83,4 +180,4 @@ Medium
 
 ### Suggestion
 
-Werk de 2–3 belangrijkste JTBD’s uit tot één consistente set per doelgroep (bijv. “direct verzekerd bij aankoop” en “snel claimen met vertrouwen”), en vul per job expliciet aan: (1) concrete gewenste uitkomsten met meetlat (bijv. maximale velden, tijd tot dekking, tijd tot payout, status-visibility), (2) belangrijkste fricties per stap inclusief compliance/KYC en waar “extra checks” bewust wél zichtbaar moeten zijn voor vertrouwen, (3) huidige alternatieven (wat doen mensen nu bij aankoop/claim/vragen over dekking) en wanneer ze daarvoor kiezen, en (4) één end-to-end flow per job (incl. uitzonderingen/edge cases en “contact eerst” variant) zodat de spanning “snel vs rustig/zeker” en “automation vs menselijke review” productbeslissingen kan sturen.
+Werk per job één expliciete JTBD uit met (1) duidelijke doelgroep/trigger (bijv. “bij aankoop van X” vs “na schade aan Y”), (2) concrete gewenste uitkomsten met meetlat (tijd tot polis, tijd tot beslissing/uitbetaling, ‘zekerheid’ operationaliseren via status/communicatie), en (3) expliciet benoemde fricties en acceptabele trade-offs (KYC/compliance-steps, wanneer extra checks juist gewenst zijn, wanneer instant payout wel/niet kan); leg daarnaast minimaal één alternatief per job vast (bijv. huidige insurer/vergelijker/handmatige claim via telefoon) en beschrijf een basisflow inclusief variant “wil eerst contact” zodat speed/automation niet de enige route is.

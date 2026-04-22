@@ -1,61 +1,58 @@
 ## Target Groups
 
-Jongere mensen (ongeveer 18–35) en “digital natives” die mobile-first gewend zijn, weinig kennis van verzekeren hebben, een lage aandachtsspanne hebben en directe feedback verwachten. Er is ook een indicatie dat het later breder toepasbaar kan zijn dan alleen jongeren.
+Jongere mensen (ongeveer 18–35) en “digital natives” die weinig kennis hebben van verzekeringen, geen zin hebben in gedoe, een lage aandachtsspanne hebben en directe feedback verwachten. Er is ook een (nog onzekere) ambitie om later breder toepasbaar te zijn dan alleen jongeren.
 
 **Confidence:** High
 
-**Evidence:** “Vooral voor jongere mensen (18–35?)”; “Target (ongeveer) Digital natives”; “Weinig kennis van verzekeringen”; “Lage aandachtsspanne”; “Verwachten directe feedback”; “mogelijk ook breder toepasbaar later (niet alleen jongeren).”
+**Evidence:** “Vooral voor jongere mensen (18–35?) die geen zin hebben in gedoe.” / “Target (ongeveer) Digital natives … Weinig kennis van verzekeringen … Lage aandachtsspanne … Verwachten directe feedback” / “mogelijk ook breder toepasbaar later (niet alleen jongeren).”
 
-**Contradictions:** “In plaats van mobile-first, juist een uitgebreid platform bouwen. Desktop-first interface…” versus “Mobile-first sowieso, desktop misschien later maar eigenlijk niet nodig.”
-
+**Contradictions:** “Target group (digital natives, mobiel)” versus “In plaats van mobile-first, juist een uitgebreid platform bouwen. Desktop-first interface met uitgebreide dashboards” (spanning tussen mobiel/jong doelgroep en desktop-first platform).
 
 ## Needs
 
-Gebruikers haken af door lange, bureaucratische, formulier-zware aanvraagprocessen en onduidelijkheid over dekking/voorwaarden. Ze willen snel (liefst binnen minuten) verzekerd kunnen zijn—idealiter direct bij aankoop—en bij schade snel geholpen worden, met snelle claimafhandeling/uitbetaling. Daarnaast is er een behoefte aan vertrouwen/zekerheid: sommige gebruikers vinden extra checks geruststellend, en “te weinig stappen” kan wantrouwen creëren.
+De kernbehoefte is een extreem simpele, snelle en niet-bureaucratische verzekeringservaring: snel afsluiten (liefst binnen minuten, mogelijk bij aankoop), weinig stappen en (idealiter) geen formulieren. Daarnaast is er een sterke behoefte aan duidelijkheid/zekerheid over dekking en transparantie, plus snelle claimafhandeling (emotioneel moment) en status/feedback tijdens processen. Tegelijk bestaat er een behoefte aan vertrouwen/geruststelling, waarbij sommige gebruikers extra checks juist waarderen—wat wringt met “te weinig stappen” en “volledige automation”.
 
 **Confidence:** High
 
-**Evidence:** “Verzekeren voelt nu traag en bureaucratisch”; “binnen een paar minuten geregeld, misschien zelfs direct bij aankoop”; “Mensen haken af bij formulieren > ~10 velden”; “Onzekerheid over dekking → leidt tot afhaken”; “Claims zijn emotioneel moment → snelheid = belangrijk”; “Sommige gebruikers vinden ‘extra checks’ juist geruststellend”; “Te weinig stappen kan ook wantrouwen creëren (‘te makkelijk?’).”
+**Evidence:** “Verzekeren voelt nu traag en bureaucratisch.” / “binnen een paar minuten geregeld, misschien zelfs direct bij aankoop” / “Mensen haken af bij formulieren > ~10 velden” / “Onzekerheid over dekking → leidt tot afhaken” / “Claims zijn emotioneel moment → snelheid = belangrijk” / “Sommige gebruikers vinden ‘extra checks’ juist geruststellend” / “Transparant” (experience/gevoel)
 
-**Contradictions:** “Geen formulieren” wordt meerdere keren genoemd, maar botst met compliance/KYC: “Geen formulieren (maar KYC vereist wel iets…)” en “’Geen formulieren’ vs wettelijke verplichtingen.”
-
+**Contradictions:** “Geen formulieren” versus “KYC nodig (maar hoe zichtbaar?)” en “wettelijke verplichtingen” (expliciet genoemd als wringing).
 
 ## Product Features
 
-Een extreem korte mobile-first afsluitflow (mogelijk 1-tap), met eID + selfie verificatie en API-based prefill (bijv. device/aankoop) om input te minimaliseren. Claim indienen met foto/video, met AI-schadebeoordeling, fraude-detectie op de achtergrond, status-check (altijd zichtbaar) en pushnotificaties bij status updates. Er zijn ideeën rond “realtime dekking inzicht” en mogelijk instant payout/zeer snelle payout, maar met open vragen/risico’s. Alternatieve richting (intern voorstel) noemt juist een desktop-first platform met dashboards, veel configuratie, polis-opties/add-ons, vergelijkingstabellen en scenario-tools.
+Mobiele, extreem korte “happy path” om een verzekering af te sluiten (mogelijk 1-tap) met eID + selfie verificatie (KYC) en API-based prefill (bijv. device/aankoopdata). Claimflow met foto/video, (mogelijk) AI-schadebeoordeling, en (indien mogelijk) instant payout. Daarnaast status-check die altijd zichtbaar is en pushnotificaties bij statusupdates. Ook genoemd: “realtime dekking inzicht” en background fraudedetectie.
+
+Er is daarnaast een concurrerend/alternatief concept genoemd: een desktop-first platform met dashboards, veel configuratie, gedetailleerde polisopties/add-ons, vergelijkingstabellen en scenario-tools.
 
 **Confidence:** High
 
-**Evidence:** “Afsluiten verzekering (happy path extreem kort)”; “Claim indienen (foto/video)”; “Status check (altijd zichtbaar?)”; “eID + selfie verificatie”; “API-based prefill (device, aankoop, etc.)”; “1-tap afsluiten (maar klopt dit juridisch?)”; “AI schadebeoordeling”; “Instant payout (indien mogelijk)”; “Push notificaties bij status updates”; “Fraudedetectie op achtergrond (onzichtbaar?)”; “Mobile-first sowieso”; “Desktop-first interface met uitgebreide dashboards… Veel configuratiemogelijkheden… Gedetailleerde polis-opties…”
+**Evidence:** “Afsluiten verzekering (happy path extreem kort)” / “Claim indienen (foto/video)” / “Status check (altijd zichtbaar?)” / “eID + selfie verificatie” / “API-based prefill (device, aankoop, etc.)” / “1-tap afsluiten (maar klopt dit juridisch?)” / “AI schadebeoordeling” / “Instant payout (indien mogelijk)” / “Push notificaties bij status updates” / “Fraudedetectie op achtergrond (onzichtbaar?)” / “Desktop-first interface met uitgebreide dashboards … Veel configuratiemogelijkheden … Gedetailleerde polis-opties … Vergelijkingstabellen en scenario-tools”
 
-**Contradictions:** Mobile-first minimal-flow richting botst met desktop-first/configuratie-zware richting: “In plaats van mobile-first… Desktop-first… Veel configuratiemogelijkheden…” versus “Mobile-first sowieso, desktop misschien later maar eigenlijk niet nodig” en “Target group (digital natives, mobiel)”. Ook: “Minder stappen > meer uitleg (maar conflicteert soms)” en “Minder stappen > meer uitleg” vs “geen uitleg nodig”.
-
+**Contradictions:** “Mobile-first sowieso, desktop misschien later maar eigenlijk niet nodig.” versus “Desktop-first interface met uitgebreide dashboards” (expliciet als conflict: “Conflicten: ‘Geen desktop-first product’”).
 
 ## Business Goals
 
-Lage operationele kosten door automation, snelle groei (met focus op een jong segment), en mogelijk schaalbaarheid (maar nog onzeker). Er zijn ook concept-metrics: hoge conversie, korte tijd tot polis, hoge mate van automatische claims, en hoge NPS.
+Lage operationele kosten door automation, snelle groei in een jong segment, en (mogelijk) schaalbaarheid (maar nog onzeker). Daarnaast worden ambitieuze (niet-gevalideerde) metrics genoemd: conversie >60%, tijd tot polis <3 minuten, 70% claims automatisch, NPS >50, en drop-off per stap meten.
 
 **Confidence:** Medium
 
-**Evidence:** “Lage operationele kosten (door automation)”; “Snelle groei (jong segment)”; “Schaalbaarheid belangrijk? (nog niet zeker)”; “Metrics (ideeën, niet gevalideerd) Conversie >60%… <3 min tot polis… 70% claims automatisch… NPS >50…”
+**Evidence:** “Lage operationele kosten (door automation)” / “Snelle groei (jong segment)” / “Schaalbaarheid belangrijk? (nog niet zeker)” / “Metrics (ideeën, niet gevalideerd) Conversie >60% … <3 min tot polis … 70% claims automatisch … NPS >50”
 
-**Contradictions:** Snelheid/automation als driver voor lage kosten botst met compliance/fraude-eisen: “Automation-first… nog niet hoe ver dat kan (ivm regelgeving)” en “Fraudepreventie vereist waarschijnlijk uitzonderingen op automation.”
-
+**Contradictions:** “Schaalbaarheid belangrijk? (nog niet zeker)” (doel is genoemd maar onzeker/ambigu geformuleerd).
 
 ## Differentiators
 
-Positionering op “extreem simpel”, mobile-first, minimale stappen, sterke prefill/automation, en snelle (mogelijk realtime) feedback/status en snelle claims (eventueel instant payout). Ook expliciet: niet zijn zoals een complexe zakelijke verzekeraar; geen offline processen; geen maatwerkadvies. Daarnaast wordt transparantie (“zeker”, “transparant”, niet bureaucratisch) als gewenste beleving genoemd—met spanning rond hoe transparant voorwaarden kunnen zijn zonder complex te worden.
+Positionering op extreme eenvoud en snelheid (“binnen minuten verzekerd”), mobile-first, automation-first (waar mogelijk), minimale stappen, prefill boven handmatige input, en snelle/instant claims/payout (als haalbaar). Ook differentiërend in ervaring: het product moet “snel, rustig, zeker, transparant” voelen en niet bureaucratisch/ondudelijk. Mogelijke differentiatie via realtime feedback/status en (achtergrond) fraudedetectie/AI schadebeoordeling.
 
 **Confidence:** Medium
 
-**Evidence:** “extreem simpel”; “Mobile-first sowieso”; “Automatiseren > documenteren”; “Prefill > input”; “Minder stappen > meer uitleg”; “Binnen minuten verzekerd, claims zonder gedoe”; “Geen complexe zakelijke verzekeraar”; “Geen offline processen”; “Geen maatwerkadvies”; “Moet voelen: Snel… Zeker… Transparant”; “Mag niet voelen: Bureaucratisch…”
+**Evidence:** “extreem simpel” / “Mobile-first sowieso” / “Automation first” / “Automatiseren > documenteren” / “Prefill > input” / “Minder stappen > meer uitleg (maar conflicteert soms)” / “Binnen minuten verzekerd, claims zonder gedoe” / “Moet voelen: Snel, Rustig, Zeker, Transparant”
 
-**Contradictions:** “Transparant” vs complexiteit: “’Transparantie’ vs complexiteit van voorwaarden.” Ook “Volledig geautomatiseerd” vs edge cases/fraude: “’Volledig geautomatiseerd’ vs edge cases” en “Automation first vs menselijke review bij fraude.”
-
+**Contradictions:** “Moet voelen: Snel … Rustig” met expliciete spanning: “ ‘Rustig’ vs ‘snel’ kan botsen in UI” en “Te weinig stappen kan ook wantrouwen creëren (‘te makkelijk?’)”.
 
 ### Completeness
 
-Partial
+Complete
 
 ### Strength
 
@@ -63,4 +60,4 @@ Medium
 
 ### Suggestion
 
-Maak één consistente productrichting expliciet (mobile-first “extreem simpel” versus desktop-first “uitgebreid platform”) en leg vast welke doelgroep je primair bedient in v1; concretiseer daarnaast de differentiatie met 2–4 harde, meetbare beloftes (bijv. “<5 min tot polis”, “status altijd zichtbaar”, “claims binnen <24u tenzij flagged”), inclusief hoe compliance/KYC en fraudecontroles zichtbaar/onzichtbaar in de flow passen zodat de spanningen (“geen formulieren”, “instant payout”, “volledig geautomatiseerd”, “transparant”) worden opgelost in een coherent vision statement.
+Maak één consistente productrichting expliciet (mobile-first “extreem simpel” vs het desktop-first dashboard-platform) en leg vast welke verzekeringstypes/complexiteit je wel en niet bedient; koppel daarna de belangrijkste behoeften (snelheid, vertrouwen, dekkingduidelijkheid) aan een klein set kernfeatures (prefill+KYC, altijd-zichtbare status, foto/video-claim, uitbetalings-SLA) met haalbare, compliance-proof doelen (bijv. “<5 min afsluiten”, “<24u payout” als default) en beschrijf concreet hoe “transparantie” en “rustig maar snel” in UX opgelost worden (bv. progressive disclosure + optionele extra checks).

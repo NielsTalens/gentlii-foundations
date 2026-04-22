@@ -1,82 +1,90 @@
 ## Core Principles
 
-De bronnen noemen een set “principles” die vooral draaien om maximale simplificatie en automatisering: liever automatiseren dan documenteren, liever schrappen dan toevoegen, liever prefill dan user input, en het aantal stappen minimaliseren (met de kanttekening dat dit soms botst met de behoefte aan uitleg/compliance). Daarnaast wordt “compliance by design” als constraint/principe genoemd.
+Het product stuurt op extreme eenvoud en automatisering: liever automatiseren dan documenteren, liever schrappen dan toevoegen, en liever prefill dan dat de gebruiker veel moet invullen. Daarnaast is “minder stappen” een leidend principe, met de kanttekening dat dit soms botst met de behoefte aan uitleg/zekerheid en met compliance.
 
 **Confidence:** High
 
-**Evidence:** “Principles (half charter, half ideeën) Automatiseren > documenteren; Schrappen > toevoegen; Prefill > input; Minder stappen > meer uitleg (maar conflicteert soms)” en “Compliance moet ‘by design’”.
+**Evidence:** “Automatiseren > documenteren”, “Schrappen > toevoegen”, “Prefill > input”, “Minder stappen > meer uitleg (maar conflicteert soms)”, en “We willen iets bouwen rondom verzekeringen maar dan extreem simpel.”
 
-**Contradictions:** Er worden expliciete spanningen genoemd tussen principes: “Minder stappen > meer uitleg (maar conflicteert soms)”, “Minder stappen > meer uitleg” vs “geen uitleg nodig”?; en “Automation-first… weten we nog niet hoe ver dat kan (ivm regelgeving)”.
+**Contradictions:** Er wordt expliciet spanning genoemd tussen principes/ambities: “Minder stappen > meer uitleg (maar conflicteert soms)”, “Te weinig stappen kan ook wantrouwen creëren (‘te makkelijk?’)”, en “Minder stappen > meer uitleg” maar ook “geen uitleg nodig”?
+
 
 ## Product Boundaries
 
-Er is een expliciete “wat we NIET zijn”-sectie, maar nog “niet scherp”. Genoemde grenzen: geen complexe zakelijke verzekeraar, geen offline processen, geen maatwerkadvies. Er is ook een expliciete afwijzing van een desktop-first richting (“Geen desktop-first product”), plus mobile-first als uitgangspunt.
+Het product positioneert zich expliciet niet als een complexe zakelijke verzekeraar, zonder offline processen, en zonder maatwerkadvies. Mobile-first wordt als uitgangspunt genoemd; een desktop-first “uitgebreid platform” wordt als conflicterend met de beoogde richting neergezet.
 
 **Confidence:** Medium
 
-**Evidence:** “Wat we NIET zijn (maar nog niet scherp) Geen complexe zakelijke verzekeraar; Geen offline processen; Geen maatwerkadvies” en “Mobile-first sowieso, desktop misschien later maar eigenlijk niet nodig.” en “Conflicten: ‘Geen desktop-first product’”.
+**Evidence:** “Wat we NIET zijn… Geen complexe zakelijke verzekeraar / Geen offline processen / Geen maatwerkadvies”; “Mobile-first sowieso, desktop misschien later maar eigenlijk niet nodig.”; “Conflicten: ‘Geen desktop-first product’”.
 
-**Contradictions:** De boundary “Geen maatwerkadvies” botst met twijfel over support: “Misschien wel support nodig → hoe past dat?”; bovendien staat een alternatief voorstel haaks op mobile-first: “In plaats van mobile-first, juist een uitgebreid platform bouwen. Desktop-first interface…”.
+**Contradictions:** Er is onzekerheid over support en platformrichting: “Misschien wel support nodig → hoe past dat?” en het alternatief “Desktop-first interface met uitgebreide dashboards…” tegenover “Mobile-first sowieso, desktop misschien later maar eigenlijk niet nodig.”
+
 
 ## Behavioral Rules
 
-Gedragsverwachtingen zijn vooral geformuleerd als gewenste gebruikerservaring: het product moet snel, rustig, zeker en transparant aanvoelen; en mag niet bureaucratisch, onduidelijk of te speels zijn. Verder wordt “status check (altijd zichtbaar?)” genoemd als (nog open) gedrag/feature, en er is een intentie om claims eenvoudig te laten indienen met foto/video en status-updates via push.
+De gewenste productgedragingen draaien om frictie minimaliseren (korte flows, weinig stappen, prefill), snelle feedback/status, en waar mogelijk geautomatiseerde claimafhandeling (incl. foto/video) en mogelijk instant payout. Compliance en fraudepreventie worden genoemd als randvoorwaarden die uitzonderingen op volledige automation kunnen vereisen.
 
 **Confidence:** Medium
 
-**Evidence:** “Experience / gevoel: Moet voelen: Snel, Rustig, Zeker, Transparant. Mag niet voelen: Bureaucratisch, Onduidelijk, Te speels” en “Claim indienen (foto/video)”, “Push notificaties bij status updates”, “Status check (altijd zichtbaar?)”.
+**Evidence:** “Afsluiten verzekering (happy path extreem kort)”, “Claim indienen (foto/video)”, “Status check (altijd zichtbaar?)”, “API-based prefill…”, “Foto/video claims”, “AI schadebeoordeling”, “Instant payout (indien mogelijk)”, “Compliance moet ‘by design’”, “Fraudepreventie vereist waarschijnlijk uitzonderingen op automation”.
 
-**Contradictions:** Expliciete UX-spanning: “‘Rustig’ vs ‘snel’ kan botsen in UI”; ook spanning rond “Te weinig stappen kan ook wantrouwen creëren (‘te makkelijk?’)” en “Sommige gebruikers vinden ‘extra checks’ juist geruststellend”.
+**Contradictions:** “Volledig geautomatiseerd” botst met uitzonderingen/edge cases: “ ‘Volledig geautomatiseerd’ vs edge cases” en “ ‘Automation first’ vs menselijke review bij fraude”; ook “ ‘Geen formulieren’ vs data nodig / KYC vereist wel iets…”.
+
 
 ## Decision-Making Rules
 
-Er zijn impliciete trade-off regels via de “X > Y”-principes (automatiseren boven documenteren, schrappen boven toevoegen, prefill boven input). Daarnaast worden meerdere trade-offs/open vragen expliciet gemaakt (instant payout vs risico/fraude, geen formulieren vs KYC/compliance, realtime/transparantie vs backend/voorwaardencomplexiteit, volledige automation vs edge cases/human review). Er is echter geen eenduidige beslisregel die deze conflicten oplost; ze worden vooral als “wringen/twijfels” benoemd.
+Trade-offs worden impliciet gestuurd door de voorkeurshiërarchieën in de principes (automatiseren/schrappen/prefill/minder stappen). Daarnaast wordt compliance “by design” als harde constraint genoemd, en frauderisico als limiter voor “instant payout” en volledige automatisering. Er is ook een expliciete spanning tussen “snel” en “rustig/zeker” die bij UI-keuzes trade-offs afdwingt.
 
 **Confidence:** Medium
 
-**Evidence:** “Automatiseren > documenteren… Schrappen > toevoegen… Prefill > input” en “Twijfels / inconsistenties: ‘Instant payout’ vs risico; ‘Geen formulieren’ vs data nodig; ‘Volledig geautomatiseerd’ vs edge cases; ‘Transparantie’ vs complexiteit van voorwaarden” en “Dingen die wringen: ‘Geen formulieren’ vs wettelijke verplichtingen; ‘Automation first’ vs menselijke review bij fraude”.
+**Evidence:** “Automatiseren > documenteren”, “Schrappen > toevoegen”, “Prefill > input”, “Minder stappen > meer uitleg (maar conflicteert soms)”; “Compliance moet ‘by design’”; “ ‘Instant payout’ vs risico”; “ ‘Rustig’ vs ‘snel’ kan botsen in UI”.
 
-**Contradictions:** De principes sturen richting maximale reductie/automation, terwijl constraints uitzonderingen vereisen: “Fraudepreventie vereist waarschijnlijk uitzonderingen op automation” en “Automation first” vs “menselijke review bij fraude”.
+**Contradictions:** Beslisregels zijn niet eenduidig door meerdere genoemde spanningen: “ ‘Realtime alles’ vs backend complexiteit”, “ ‘Transparantie’ vs complexiteit van voorwaarden”, en “Minder stappen… maar ook ‘geen uitleg nodig’?”
+
 
 ## Product Character
 
-De gewenste “character/feel” is expliciet: snel, rustig, zeker, transparant; en expliciet niet bureaucratisch, onduidelijk, te speels. De doelgroep (digital natives/jong 18–35) en “extreem simpel” versterken dit karakter, maar blijven deels tentatief (“18–35?”).
+Het product moet aanvoelen als snel, rustig, zeker en transparant; en expliciet niet bureaucratisch, onduidelijk of te speels.
 
 **Confidence:** High
 
-**Evidence:** “Moet voelen: Snel, Rustig, Zeker, Transparant. Mag niet voelen: Bureaucratisch, Onduidelijk, Te speels” en “extreem simpel… Vooral voor jongere mensen (18–35?)”.
+**Evidence:** “Moet voelen: Snel / Rustig / Zeker / Transparant” en “Mag niet voelen: Bureaucratisch / Onduidelijk / Te speels”.
 
-**Contradictions:** “Rustig” vs “snel” wordt als mogelijke botsing genoemd: “‘Rustig’ vs ‘snel’ kan botsen in UI”.
+**Contradictions:** “ ‘Rustig’ vs ‘snel’ kan botsen in UI”.
+
 
 ## Language and Tone
 
-Er is geen expliciete schrijf-, microcopy-, of tone-of-voice guidance (woordkeuze, stijlregels, do/don’t copy). Alleen high-level “gevoel”-woorden (rustig/zeker/transparant) die indirect iets over tone suggereren.
+Er is alleen karaktertaal (hoe het moet “voelen”), maar geen concrete richtlijnen voor copy/taalgebruik, vocabulaire, foutmeldingen, of tone-of-voice regels.
 
 **Confidence:** Low
 
-**Evidence:** No supporting evidence found
+**Evidence:** “Moet voelen… Transparant… Mag niet voelen… Te speels”.
 
 **Contradictions:** No contradictory content found.
 
+
 ## Evolution Constraints
 
-Er zijn meerdere constraints/guardrails voor evolutie genoemd: compliance “by design”, KYC is nodig, fraudepreventie kan uitzonderingen op automation vereisen. Ook wordt de platformrichting betwist (mobile-first nu; desktop mogelijk later; alternatief voorstel voor desktop-first uitgebreid platform). Long-term ideeën (realtime verzekeringen op live data) worden als vaag/futuristisch benoemd.
+Mobile-first wordt als uitgangspunt genoemd met desktop “misschien later”; daarnaast wordt genoemd dat de mate van automation beperkt kan worden door regelgeving en dat “compliance by design” een structurele constraint is. Er is ook een hint naar mogelijke latere verbreding van doelgroep en een futuristische long-term richting (live data), maar dit is expliciet vaag.
 
 **Confidence:** Medium
 
-**Evidence:** “Compliance moet ‘by design’”, “KYC nodig (maar hoe zichtbaar?)”, “Fraudepreventie vereist waarschijnlijk uitzonderingen op automation” en “Mobile-first sowieso, desktop misschien later maar eigenlijk niet nodig.” en “Richting (long-term-ish)… realtime verzekeringen op basis van live data… vaag / futuristisch.”
+**Evidence:** “Mobile-first sowieso, desktop misschien later maar eigenlijk niet nodig.”; “Er zit iets in automation-first, maar tegelijk weten we nog niet hoe ver dat kan (ivm regelgeving).”; “Compliance moet ‘by design’”; “mogelijk ook breder toepasbaar later”; “Maar dat voelt ook nog vaag / futuristisch.”
 
-**Contradictions:** Mobile-first uitgangspunt vs desktop-first voorstel: “In plaats van mobile-first… Desktop-first interface…” tegenover “Mobile-first sowieso, desktop misschien later…”.
+**Contradictions:** Alternatieve koers “Desktop-first… uitgebreid platform” botst met mobile-first/doelgroep: “Conflicten: ‘Geen desktop-first product’ … Target group (digital natives, mobiel)”.
+
 
 ## Integrity Checks
 
-Er zijn geen expliciete “integrity checks” of evaluatieregels voor consistentie/kwaliteit, behalve losse metric-ideeën en meetpunten (drop-off per stap meten) en ambities (NPS, conversie, % claims automatisch). Deze zijn niet als harde checks geformuleerd en worden als “niet gevalideerd/ambitieus” betwijfeld.
+Er staan ideeën voor meetbare doelen en enkele evaluatiepunten (drop-off per stap meten), plus impliciete checks rondom compliance/KYC/fraudepreventie. Er is geen uitgewerkt evaluatiekader (bijv. release-gates, kwaliteitscriteria, auditability), maar er zijn wel duidelijke risicogebieden die als checks fungeren.
 
-**Confidence:** Low
+**Confidence:** Medium
 
-**Evidence:** “Metrics (ideeën, niet gevalideerd)… Drop-off per stap meten (belangrijk)” en “Conversie >60% (lijkt hoog?)… NPS >50 (ambitieus)”.
+**Evidence:** “Metrics (ideeën…): Conversie >60%… <3 min tot polis… 70% claims automatisch… NPS >50… Drop-off per stap meten (belangrijk)”; “Compliance moet ‘by design’”; “KYC nodig”; “Fraudepreventie vereist waarschijnlijk uitzonderingen op automation”.
 
-**Contradictions:** Metrics/targets worden zelf in twijfel getrokken: “(lijkt hoog?)”, “(ambitieus)”, en “niet gevalideerd”.
+**Contradictions:** De metrics/ambities worden zelf betwijfeld: “(lijkt hoog?)”, “(ambitieus)”, en “ ‘Binnen minuten verzekerd…’ — maar niet zeker of dit te ambitieus is (zeker met compliance).”
+
 
 ### Completeness
 
@@ -88,4 +96,4 @@ Medium
 
 ### Suggestion
 
-Leg expliciete beslisregels vast voor de grootste trade-offs die al genoemd worden (bijv. “compliance en frauderisico overrulen ‘minder stappen’ wanneer X”, “wanneer schakelen we van automation naar human review”, en “wat betekent ‘transparant’ minimaal in UI: dekking/voorwaarden/status”), en maak de boundaries concreter (wat is “support” wel/niet; mobile-first als harde constraint of gefaseerde roadmap). Voeg daarnaast toonrichtlijnen toe die “rustig/zeker/transparant” vertalen naar copy-do’s/don’ts, en definieer een klein setje integrity checks (bv. elke flow moet: KYC-compliant zijn, <N schermen, status altijd vindbaar, en een expliciete ‘wat is wel/niet gedekt’ samenvatting bevatten).
+Leg expliciete beslisregels vast voor de belangrijkste spanningen die nu al genoemd worden (bijv. “compliance by design wint altijd”, wanneer je extra stappen/‘checks’ toevoegt om vertrouwen te verhogen, wanneer menselijke review verplicht is, en onder welke voorwaarden ‘instant payout’ mag), en vertaal het gewenste gevoel (“snel/rustig/zeker/transparant”) naar concrete gedrags- en copy-richtlijnen (status-communicatie, uitleg-niveau, foutmeldingen, en wanneer/hoe support wordt aangeboden) zodat teams consistent kunnen ontwerpen zonder telkens dezelfde trade-offs opnieuw te bediscussiëren.
