@@ -2,7 +2,11 @@ name: CI
 
 on:
   push:
+    paths-ignore:
+      - product-definitions/**
   pull_request:
+    paths-ignore:
+      - product-definitions/**
 
 permissions:
   contents: read

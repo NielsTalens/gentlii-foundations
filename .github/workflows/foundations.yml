@@ -34,6 +34,9 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: gentlii-foundations build product-definitions
 
+      - name: Validate generated HTML for publish safety
+        run: python -m gentlii_foundations.html_security product-definitions/product-description/index.html
+
       - name: Prepare GitHub Pages artifact
         run: |
           mkdir -p _site
