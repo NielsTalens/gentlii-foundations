@@ -1,309 +1,211 @@
 # Gentlii Foundations
 
-## Gentlii (Suite Overview)
+`gentlii-foundations` is a local Python CLI that turns source documents in a product repository into a structured product-definition package.
 
-Gentlii is a product thinking suite that helps product professionals achieve higher-quality decisions by reducing cognitive load and enabling structured thinking.
+It reads source files from `product-definitions/foundations-input`, extracts text, generates artifact markdown with OpenAI, and renders a publishable static site in `product-definitions/product-description`.
 
-Product thinking requires time and headspace. Gentlii creates that space.
+## What It Produces
 
-The suite consists of:
-- **Product Guard** — validates alignment between strategy, business case, product vision, goals, and JTBD
-- **Feature Validator** — checks if feature requests align with the product definition
-- **Foundations** — helps define and maintain a clear, structured product definition
+The pipeline generates one markdown file per artifact:
 
----
-
-## Product: Gentlii Foundations builder
-
-### Role within the Gentlii Suite
-
-The Fundamentals builder provides the foundational layer required for the rest of the Gentlii suite to function effectively.
-It ensures that a structured product definition exists, enabling meaningful validation of ideas and features.
-Without this foundation, validation lacks context and cannot produce reliable outcomes.
-While this product establishes the fundamentals, most measurable business impact is realized in downstream tools such as Feature Validator and Product Guard.
-
-### Strategic Goal
-
-Ensure the essential product fundamentals are in place by guiding and assisting users in creating and maintaining them.
-
-This product exists to make effective feature validation possible by establishing a structured product definition.
-Most business impact is driven by downstream tools in the Gentlii suite.
-
----
-
-## Product Vision
-
-### Target Groups
-- Anyone involved in product definition and decision-making
-
-### Needs
-- Create and maintain high-quality product definitions with less effort
-- Maintain clarity and alignment over time
-- Create a product definition where ideas continuously can be validated against
-- Reduce cognitive load in structuring product thinking
-
-### Features
-- Assisted product context creation (guided structure)
-- Continuous alignment validation (with other Gentlii tools)
-- Integration with existing workflows (Git, boards, documentation)
-- Structured templates based on proven frameworks (strategy, vision, JTBD)
-- Reporting on alignment (old and new)
-
-### Business Goals (Measurable)
-Most business impact is driven by downstream tools in the Gentlii suite.
-- Each product has a structured product definition that is easy explainable and presentable
-- Reduce time spent on product definition creation (if any was spent)
-
-### Differentiators
-- Focus on **thinking quality**, not output volume
-- Enforces structure without becoming documentation-heavy
-- Designed to reduce cognitive load, not add process
-
----
-
-## Product Principles
-
-### 1. Clarity Over Completeness
-A clear, usable product definition is more valuable than a complete but unused one.  
-Prevents over-documentation.
-
-### 2. Alignment Before Creation
-Every element must connect to strategy, goals, or user needs.  
-Prevents isolated or arbitrary definitions.
-
-### 3. Structure Enables Thinking
-Guided structure improves thinking quality and reduces cognitive effort.  
-Prevents unstructured, inconsistent outputs.
-
-### 4. Continuous Validation
-Product context is not static; it must be continuously tested against reality.  
-Prevents drift between definition and execution.
-
-### 5. Reduce Cognitive Load
-The product should simplify thinking, not add overhead.  
-Prevents process-heavy workflows.
-
-### 6. Depth Over Breadth
-Focus on meaningful product definition, not feature expansion.  
-Prevents tool sprawl.
-
----
-
-## Architecture
-
-### Principle
-
-Build on tools and workflows already known and used within the company like Git, boards and pipelins/workflows. The system fits into the existing product repository and uses source material that teams already produce.
-
----
-
-## Repository Structure
-
-Each product repository contains an additional folder:
-
-/product-definitions
-
-Within this folder:
-
-- /foundations-input
-  Source material added by users
-
-Generated output is written to the repository-level `/docs` folder so GitHub Pages can publish it directly from the GitHub UI.
-
----
-
-## Foundations Input
-
-The `foundations-input` folder accepts different types of source material, such as:
-
-- PowerPoint
-- Word documents
-- PDF files
-- Text files
-
-Users can add or update files at any time.
-
-(In a later version url's could be added as sources.)
-
----
-
-## Application Flow
-
-1. A document is added or changed in `foundations-input`
-2. An extractor workflow is triggered
-3. Text is extracted from all supported files
-4. The extracted text is passed to one or more analysis agents
-5. Agents detect relevant information for each product definition area
-6. Structured output is written to `/docs` as separate `.md` files plus a static HTML export
-
-Example output files:
 - `strategy.md`
 - `business-case.md`
 - `product-vision.md`
-- `product-charter.md`
 - `jtbd.md`
+- `product-charter.md`
 
-These outputs align with the intended structures for strategy, product vision, JTBD, and related product definition artifacts.
+It also generates a combined static HTML view:
 
-The renderer also generates a static HTML export in the same `/docs` folder:
 - `index.html`
 - `styles.css`
 
-This export combines the markdown artifacts into one long-form page styled after the Gentlii application UI so it can be published as GitHub Pages output.
+That HTML/CSS output is what the repo publishes through GitHub Pages.
 
-### GitHub Pages Publishing
+## Repository Structure
 
-The recommended publish target is the repository `/docs` folder.
-
-That lets you use GitHub Pages "Deploy from a branch" directly from the repository settings without adding a dedicated Pages workflow. Note that everything under `/docs`, including existing files like `docs/plans/`, becomes part of the published site.
-
----
-
-## Agents
-
-Agents analyze extracted content to determine whether the required product fundamentals are present.
-
-Agents must never invent missing information.
-They may only:
-
-- detect what is present
-- identify what is missing
-- suggest improvements, clearly marked as suggestions
-
-### Strategy Extractor
-Detects:
-- company strategy
-- product strategy
-- strategic goals
-- value proposition
-- long-term direction
-
-### Business Case Evaluator
-Detects:
-- business rationale
-- expected value
-- cost/benefit signals
-- success assumptions
-- measurable business outcomes
-
-### Product Vision Extractor
-Detects:
-- target groups
-- needs
-- product features
-- business goals
-- differentiators
-
-### JTBD Extractor
-Detects:
-- jobs to be done
-- user problems
-- desired outcomes
-- user flows
-- journeys or related user context
-
-### Product Charter Extractor
-Detects:
-- core principles
-- product boundaries
-- core product behaviours
-- decision-making rules
-- product character
-- language and tone
-- evolution constraints
-- integrity tests
-
----
-
-## Scoring and Confidence Layer
-
-Each output area includes a quality signal to help users understand how reliable and complete the extracted result is.
-
-### Purpose
-
-The scoring layer helps users:
-- see which areas are well supported by source material
-- understand where the product definition is weak or incomplete
-- decide where manual refinement is needed
-- prevent false confidence in generated structure
-
-### Confidence Score
-
-Each section receives a confidence score based on the quality of supporting evidence in the input.
-
-Example dimensions:
-- amount of relevant source evidence
-- consistency across files
-- specificity of statements
-- clarity of linkage to the section
-- ambiguity level
-
-Example:
-- **High confidence**: explicit, repeated, clear evidence found
-- **Medium confidence**: partial or indirect evidence found
-- **Low confidence**: weak, ambiguous, or minimal evidence found
-
-### Completeness Score
-
-Each section also receives a completeness score based on whether the expected components are present.
-
-Examples:
-- Strategy: mission, pillars, target customer, value proposition, success metrics
-- Product vision: target groups, needs, features, business goals, differentiators
-- JTBD: job statement, outcomes, frictions, alternatives
-
-This allows the system to distinguish between:
-- content that is confidently extracted
-- content that is structurally incomplete
-
-### Output Behaviour
-
-Scores should not replace judgment.  
-They should only help users assess the current state of the product definition.
-
-For each section, the system should provide:
-- extracted content
-- confidence score
-- completeness score
-- missing elements
-- improvement suggestions
-
----
-
-## Local CLI Implementation
-
-The first implementation phase is a local Python CLI. It will read source files from `product-definitions/foundations-input` and generate clean markdown artifacts in `docs/`.
-
-The implementation should stay simple, boring, and auditable:
-- pin exact dependency versions
-- keep the dependency set small
-- prefer mature libraries with narrow responsibilities
-- keep configuration in environment variables or a local `.env` file that is not committed
-- use `python-docx` for `.docx` extraction and `pypdf` for `.pdf` extraction in v1
-
-The local command target is:
-
-```bash
-python -m gentlii_foundations.cli build product-definitions
+```text
+.
+├── product-definitions/
+│   ├── foundations-input/        # Source files added by users
+│   └── product-description/      # Generated markdown + static site
+├── src/gentlii_foundations/
+│   ├── cli.py
+│   ├── pipeline.py
+│   ├── discovery.py
+│   ├── extraction.py
+│   ├── analysis.py
+│   ├── prompts.py
+│   ├── openai_client.py
+│   ├── render.py
+│   ├── html_security.py
+│   ├── paths.py
+│   ├── config.py
+│   └── models.py
+├── tests/
+├── CONTEXT.md
+└── RUNNING_LOCALLY.md
 ```
 
-## Output Example
+## How It Works
 
-Each generated `.md` file in `/docs` may contain:
+The main entrypoint is [src/gentlii_foundations/cli.py](src/gentlii_foundations/cli.py), which exposes:
 
-- extracted section content
-- evidence-backed findings
-- confidence assessment
-- completeness assessment
-- clearly marked suggestions for improvement
+```bash
+gentlii-foundations build <root>
+```
 
----
+In practice the command is run against `product-definitions`.
 
-## Constraint
+The pipeline in [src/gentlii_foundations/pipeline.py](src/gentlii_foundations/pipeline.py) is intentionally linear:
 
-The system must never fabricate product fundamentals.
+1. Resolve paths with [paths.py](src/gentlii_foundations/paths.py)
+   `foundations-input` must exist. Output is written to `product-description`.
+2. Discover supported input files with [discovery.py](src/gentlii_foundations/discovery.py)
+3. Extract document text with [extraction.py](src/gentlii_foundations/extraction.py)
+4. Load configuration from environment and `.env` with [config.py](src/gentlii_foundations/config.py)
+5. Build artifact prompts with [prompts.py](src/gentlii_foundations/prompts.py)
+6. Call the OpenAI Responses API via [openai_client.py](src/gentlii_foundations/openai_client.py)
+7. Generate one markdown artifact per target area with [analysis.py](src/gentlii_foundations/analysis.py)
+8. Write markdown plus combined HTML/CSS with [render.py](src/gentlii_foundations/render.py)
+9. Validate generated HTML for publish safety with [html_security.py](src/gentlii_foundations/html_security.py) in CI
 
-If information is missing:
-- it must be marked as missing
-- the confidence score must reflect uncertainty
-- suggestions may be added, but always separated from extracted facts
+## Architecture
+
+The codebase is split by responsibility.
+
+- `cli.py`
+  Thin command-line wrapper. It parses arguments and calls `build_foundations(...)`.
+- `pipeline.py`
+  Orchestrates the end-to-end build. This is the central application flow.
+- `paths.py`
+  Defines the expected repository layout and validates required directories.
+- `discovery.py`
+  Finds supported source files in `foundations-input`.
+- `extraction.py`
+  Converts supported files into plain extracted text.
+- `analysis.py`
+  Combines extracted documents into prompt payloads and generates markdown artifacts for each target artifact.
+- `prompts.py`
+  Loads prompt templates from `src/gentlii_foundations/prompt_templates`.
+- `openai_client.py`
+  Encapsulates the OpenAI API call so model selection and timeout behavior stay out of the pipeline.
+- `render.py`
+  Writes artifact markdown files and renders the combined static HTML/CSS view.
+- `html_security.py`
+  Rejects unsafe generated HTML patterns before publish.
+- `models.py`
+  Shared dataclasses and enums used across the pipeline.
+- `config.py`
+  Loads `.env` values and allows explicit environment variables to override them.
+
+## Input and Output Contract
+
+Input folder:
+
+- `product-definitions/foundations-input`
+
+Output folder:
+
+- `product-definitions/product-description`
+
+Generated output is deterministic in structure:
+
+- one `.md` file per artifact name
+- one `index.html`
+- one `styles.css`
+
+The renderer also enforces a small output contract:
+
+- artifact filenames must be slug-safe
+- duplicate artifact names are rejected
+- combined HTML is built from the generated markdown files
+
+## Configuration
+
+Settings are loaded from `.env` and environment variables.
+
+- `OPENAI_API_KEY` is required
+- `GENTLII_MODEL` is optional
+- default model is `gpt-5.2`
+
+Environment variables override values from `.env`.
+
+## Running Locally
+
+Full build:
+
+```bash
+env -u OPENAI_API_KEY zsh -lc 'set -a; source .env; set +a; ./.venv/bin/gentlii-foundations build product-definitions'
+```
+
+This command:
+
+- clears any shell-level `OPENAI_API_KEY`
+- loads `.env`
+- runs the full extraction, analysis, and rendering pipeline
+
+Render only from the existing generated markdown files:
+
+```bash
+./.venv/bin/python -c '
+from pathlib import Path
+from gentlii_foundations.models import GeneratedArtifact
+from gentlii_foundations.render import write_artifacts
+
+output_dir = Path("product-definitions/product-description")
+artifacts = [
+    GeneratedArtifact(name=path.stem, markdown=path.read_text(encoding="utf-8"))
+    for path in sorted(output_dir.glob("*.md"))
+]
+write_artifacts(output_dir, artifacts)
+'
+```
+
+That render-only path regenerates:
+
+- `product-definitions/product-description/index.html`
+- `product-definitions/product-description/styles.css`
+
+It does not call extraction or OpenAI.
+
+## GitHub Actions
+
+There are two workflows in `.github/workflows/`:
+
+- `ci.yml`
+  Runs test and dependency-security checks for code changes. It ignores `product-definitions/**`.
+- `foundations.yml`
+  Runs when `product-definitions/foundations-input/**` changes. It builds the artifacts, validates generated HTML safety, prepares a GitHub Pages artifact, deploys Pages, and commits refreshed generated output when needed.
+
+## Safety Checks
+
+The generated publish HTML is checked for obvious active-content patterns before deploy. The validator currently fails on:
+
+- `<script`
+- `javascript:`
+- inline event handlers such as `onclick=`
+- `iframe`
+- `object`
+- `embed`
+
+This is a publish-safety check for generated output. It is separate from dependency scanning.
+
+## Tests
+
+Run the full test suite:
+
+```bash
+./.venv/bin/python -m pytest -q
+```
+
+Useful focused test runs:
+
+```bash
+./.venv/bin/python -m pytest -q tests/test_render.py
+./.venv/bin/python -m pytest -q tests/test_ci_workflow.py tests/test_html_security.py
+```
+
+## Related Docs
+
+- [CONTEXT.md](CONTEXT.md): broader product context and intent
+- [RUNNING_LOCALLY.md](RUNNING_LOCALLY.md): local execution notes

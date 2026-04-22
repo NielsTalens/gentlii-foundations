@@ -8,6 +8,7 @@ from gentlii_foundations.models import GeneratedArtifact
 
 _ORDERED_LIST_PATTERN = re.compile(r"^\d+\. (.+)$")
 _SLUG_SAFE_ARTIFACT_NAME_PATTERN = re.compile(r"^[a-z0-9-]+$")
+_BOLD_PATTERN = re.compile(r"\*\*(.+?)\*\*")
 
 
 def write_artifacts(output_dir: Path, artifacts: list[GeneratedArtifact]) -> None:
@@ -105,7 +106,7 @@ def _markdown_to_html(markdown: str) -> str:
     def flush_paragraph() -> None:
         if paragraph:
             text = " ".join(part.strip() for part in paragraph if part.strip())
-            blocks.append(f"<p>{html.escape(text)}</p>")
+            _append_paragraph_blocks(blocks, text)
             paragraph.clear()
 
     def flush_unordered_list() -> None:
@@ -180,6 +181,38 @@ def _indent(text: str, spaces: int) -> str:
     return "\n".join(f"{prefix}{line}" for line in text.splitlines())
 
 
+def _append_paragraph_blocks(blocks: list[str], text: str) -> None:
+    fragments = _split_bold_fragments(text)
+    if not fragments:
+        return
+    if all(kind == "text" for kind, _ in fragments):
+        blocks.append(f"<p>{html.escape(text)}</p>")
+        return
+    for kind, value in fragments:
+        stripped = value.strip()
+        if not stripped:
+            continue
+        if kind == "bold":
+            blocks.append(f"<h3>{html.escape(stripped)}</h3>")
+        else:
+            blocks.append(f"<p>{html.escape(stripped)}</p>")
+
+
+def _split_bold_fragments(text: str) -> list[tuple[str, str]]:
+    fragments: list[tuple[str, str]] = []
+    cursor = 0
+    for match in _BOLD_PATTERN.finditer(text):
+        if match.start() > cursor:
+            fragments.append(("text", text[cursor:match.start()]))
+        fragments.append(("bold", match.group(1)))
+        cursor = match.end()
+    if cursor < len(text):
+        fragments.append(("text", text[cursor:]))
+    if not fragments:
+        return [("text", text)]
+    return fragments
+
+
 def _sort_artifacts(artifacts: list[GeneratedArtifact]) -> list[GeneratedArtifact]:
     return sorted(artifacts, key=lambda artifact: artifact.name)
 
@@ -227,19 +260,18 @@ def _looks_like_yaml_metadata(line: str) -> bool:
 
 def _render_stylesheet() -> str:
     return """
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:wght@500;600&display=swap");
-
 :root {
   --bg: #071423;
-  --bg-glow: #11294a;
-  --text: rgba(255, 255, 255, 0.92);
-  --muted: rgba(222, 233, 250, 0.72);
-  --panel: rgba(10, 27, 49, 0.82);
-  --panel-2: #13335d;
-  --border: rgba(173, 201, 240, 0.16);
-  --accent: #89b2f2;
-  --accent-strong: #d0e0ff;
-  --shadow: 0 22px 60px rgba(0, 0, 0, 0.28);
+  --surface: rgba(8, 28, 46, 0.82);
+  --surface-strong: rgba(10, 34, 55, 0.96);
+  --text: #f2f7fb;
+  --muted: #b7c9d8;
+  --accent: #1186b8ff;
+  --accent-bright: #e9821f;
+  --accent-soft: rgba(17, 134, 184, 0.12);
+  --accent-faint: rgba(17, 134, 184, 0.08);
+  --border: rgba(125, 175, 205, 0.2);
+  --shadow: 0 32px 80px rgba(0, 0, 0, 0.34);
 }
 
 * {
@@ -253,107 +285,122 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background:
-    radial-gradient(circle at top left, rgba(88, 154, 255, 0.18), transparent 28%),
-    radial-gradient(circle at top right, rgba(255, 128, 0, 0.12), transparent 24%),
-    linear-gradient(180deg, var(--bg-glow) 0%, var(--bg) 22%, #050d18 100%);
+  background: #071423;
+  background-image:
+    radial-gradient(circle at top, rgba(17, 134, 184, 0.22), transparent 36%),
+    linear-gradient(180deg, #0a1a2b 0%, #071423 42%, #08111b 100%);
   color: var(--text);
-  font: 17px/1.6 "Source Sans 3", "Segoe UI", sans-serif;
+  font-family: "Söhne", "Inter", "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
+  font: 16px/1.6 "Söhne", "Inter", "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
 }
 
 a {
-  color: var(--accent-strong);
+  color: var(--accent);
 }
 
 .app-shell {
-  width: min(1180px, calc(100% - 32px));
-  margin: 24px auto 48px;
+  width: min(1100px, calc(100% - 32px));
+  margin: 18px auto 36px;
 }
 
 .page-header {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.9fr);
-  gap: 24px;
-  padding: 28px;
+  grid-template-columns: minmax(0, 1.5fr) minmax(240px, 0.9fr);
+  gap: 18px;
+  padding: 22px;
   border: 1px solid var(--border);
-  border-radius: 24px;
-  background: linear-gradient(180deg, rgba(17, 40, 71, 0.95), rgba(10, 27, 49, 0.88));
+  border-radius: 20px;
   box-shadow: var(--shadow);
 }
 
 .brand-block {
   display: flex;
-  gap: 18px;
+  gap: 14px;
   align-items: flex-start;
 }
 
 .brand-mark {
-  width: 52px;
-  height: 52px;
-  flex: 0 0 52px;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
   display: grid;
   place-items: center;
-  border-radius: 16px;
-  background: linear-gradient(135deg, #8ab5ff, #6b95e6);
-  color: #071423;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(17, 134, 184, 0.92), rgba(15, 111, 153, 0.92));
+  color: var(--text);
   font-weight: 700;
-  font-size: 1.35rem;
+  font-size: 1.05rem;
 }
 
 .brand-kicker,
 .panel-eyebrow {
-  color: var(--muted);
-  font-size: 0.8rem;
+  color: var(--accent-bright);
+  font-size: 1.35rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1.4px;
+  letter-spacing: 0.08em;
 }
 
 .brand-title {
-  margin: 2px 0 8px;
-  font: 600 2.15rem/1.1 "Source Serif 4", "Times New Roman", serif;
+  margin: 2px 0 6px;
+  font-size: 1.65rem;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 750;
 }
 
 .brand-subtitle {
   margin: 0;
-  max-width: 46ch;
+  max-width: 54ch;
   color: var(--muted);
+  font-size: 0.96rem;
 }
 
 .doc-nav {
-  padding: 18px 20px;
+  padding: 16px 18px;
   border: 1px solid var(--border);
-  border-radius: 18px;
-  background: var(--panel);
+  border-radius: 16px;
+  background: rgba(7, 20, 35, 0.32);
+  backdrop-filter: blur(18px);
 }
 
 .doc-nav-list {
-  margin: 12px 0 0;
+  margin: 10px 0 0;
   padding-left: 18px;
   display: grid;
-  gap: 10px;
+  gap: 8px;
+  color: var(--muted);
 }
 
 .doc-nav-list a {
   text-decoration: none;
+  color: inherit;
+}
+
+.doc-nav-list a:hover,
+.doc-nav-list a:focus-visible {
+  color: var(--text);
 }
 
 .page {
-  padding-top: 24px;
+  padding-top: 18px;
   display: grid;
-  gap: 18px;
+  gap: 14px;
 }
 
 .doc-card {
-  padding: 24px;
+  padding: 20px;
   border: 1px solid var(--border);
-  border-radius: 22px;
-  background: var(--panel);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at top, rgba(17, 134, 184, 0.16), transparent 32%),
+    radial-gradient(circle at bottom, rgba(17, 134, 184, 0.12), transparent 28%),
+    linear-gradient(180deg, var(--surface) 0%, var(--surface-strong) 100%);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 .doc-content {
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
 .doc-content h1,
@@ -362,10 +409,26 @@ a {
 .doc-content h4,
 .doc-content h5,
 .doc-content h6 {
-  margin: 1.2em 0 0.45em;
-  font-family: "Source Serif 4", "Times New Roman", serif;
-  font-weight: 600;
-  letter-spacing: 0.2px;
+  margin: 1.15em 0 0.45em;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  font-weight: 720;
+}
+
+.doc-content h1 {
+  font-size: 1.5rem;
+}
+
+.doc-content h2 {
+  font-size: 1.25rem;
+}
+
+.doc-content h3,
+.doc-content h4,
+.doc-content h5,
+.doc-content h6 {
+  font-size: 1.25rem;
+  color: var(--accent);
 }
 
 .doc-content h1:first-child,
@@ -375,29 +438,37 @@ a {
 }
 
 .doc-content p,
+.doc-content ol,
 .doc-content ul,
 .doc-content blockquote {
-  margin: 0 0 1rem;
+  margin: 0 0 0.82rem;
 }
 
+.doc-content p {
+  color: var(--text);
+}
+
+.doc-content ol,
 .doc-content ul {
-  padding-left: 1.4rem;
+  padding-left: 1.2rem;
+  color: var(--muted);
 }
 
 .doc-content li + li {
-  margin-top: 0.35rem;
+  margin-top: 0.28rem;
 }
 
 .doc-content blockquote {
-  padding: 0.2rem 0 0.2rem 1rem;
-  border-left: 3px solid rgba(137, 178, 242, 0.5);
-  color: var(--accent-strong);
+  padding: 0.05rem 0 0.05rem 0.9rem;
+  border-left: 3px solid var(--accent);
+  color: var(--text);
+  background: transparent;
 }
 
 .doc-content hr {
   border: 0;
   border-top: 1px solid var(--border);
-  margin: 1.5rem 0;
+  margin: 1.2rem 0;
 }
 
 @media (max-width: 860px) {
@@ -406,8 +477,8 @@ a {
   }
 
   .app-shell {
-    width: min(100% - 24px, 1180px);
-    margin-top: 12px;
+    width: min(100% - 20px, 1100px);
+    margin-top: 10px;
   }
 }
 """.lstrip()

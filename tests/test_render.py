@@ -68,13 +68,27 @@ def test_write_artifacts_renders_ordered_lists(tmp_path):
     assert "<ol><li>Align messaging</li><li>Review rollout</li></ol>" in html
 
 
+def test_write_artifacts_promotes_inline_bold_text_to_h3_blocks(tmp_path):
+    artifact = GeneratedArtifact(
+        name="product-charter",
+        markdown="# Product Charter\n\nIntro **Principles** more text.\n",
+    )
+
+    write_artifacts(tmp_path, [artifact])
+    html = (tmp_path / "index.html").read_text(encoding="utf-8")
+
+    assert "<p>Intro</p>" in html
+    assert "<h3>Principles</h3>" in html
+    assert "<p>more text.</p>" in html
+
+
 def test_write_artifacts_generates_gentlii_based_stylesheet(tmp_path):
     write_artifacts(tmp_path, [GeneratedArtifact(name="strategy", markdown="# Strategy\n")])
     css = (tmp_path / "styles.css").read_text(encoding="utf-8")
 
-    assert "@import url(" in css
-    assert "--bg:" in css
-    assert "--accent:" in css
+    assert 'font-family: "Söhne", "Inter", "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;' in css
+    assert "--surface:" in css
+    assert "--accent: #1186b8ff;" in css
     assert ".app-shell" in css
     assert ".page-header" in css
     assert ".brand-block" in css
@@ -82,6 +96,7 @@ def test_write_artifacts_generates_gentlii_based_stylesheet(tmp_path):
     assert ".doc-nav-list" in css
     assert ".doc-card" in css
     assert ".doc-content" in css
+    assert 'font: 16px/1.6 "Söhne", "Inter", "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;' in css
 
 
 def test_write_artifacts_orders_combined_export_deterministically(tmp_path):

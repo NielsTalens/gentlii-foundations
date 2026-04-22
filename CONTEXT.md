@@ -1,0 +1,309 @@
+# Gentlii Foundations
+
+## Gentlii (Suite Overview)
+
+Gentlii is a product thinking suite that helps product professionals achieve higher-quality decisions by reducing cognitive load and enabling structured thinking.
+
+Product thinking requires time and headspace. Gentlii creates that space.
+
+The suite consists of:
+- **Product Guard** — validates alignment between strategy, business case, product vision, goals, and JTBD
+- **Feature Validator** — checks if feature requests align with the product definition
+- **Foundations** — helps define and maintain a clear, structured product definition
+
+---
+
+## Product: Gentlii Foundations builder
+
+### Role within the Gentlii Suite
+
+The Fundamentals builder provides the foundational layer required for the rest of the Gentlii suite to function effectively.
+It ensures that a structured product definition exists, enabling meaningful validation of ideas and features.
+Without this foundation, validation lacks context and cannot produce reliable outcomes.
+While this product establishes the fundamentals, most measurable business impact is realized in downstream tools such as Feature Validator and Product Guard.
+
+### Strategic Goal
+
+Ensure the essential product fundamentals are in place by guiding and assisting users in creating and maintaining them.
+
+This product exists to make effective feature validation possible by establishing a structured product definition.
+Most business impact is driven by downstream tools in the Gentlii suite.
+
+---
+
+## Product Vision
+
+### Target Groups
+- Anyone involved in product definition and decision-making
+
+### Needs
+- Create and maintain high-quality product definitions with less effort
+- Maintain clarity and alignment over time
+- Create a product definition where ideas continuously can be validated against
+- Reduce cognitive load in structuring product thinking
+
+### Features
+- Assisted product context creation (guided structure)
+- Continuous alignment validation (with other Gentlii tools)
+- Integration with existing workflows (Git, boards, documentation)
+- Structured templates based on proven frameworks (strategy, vision, JTBD)
+- Reporting on alignment (old and new)
+
+### Business Goals (Measurable)
+Most business impact is driven by downstream tools in the Gentlii suite.
+- Each product has a structured product definition that is easy explainable and presentable
+- Reduce time spent on product definition creation (if any was spent)
+
+### Differentiators
+- Focus on **thinking quality**, not output volume
+- Enforces structure without becoming documentation-heavy
+- Designed to reduce cognitive load, not add process
+
+---
+
+## Product Principles
+
+### 1. Clarity Over Completeness
+A clear, usable product definition is more valuable than a complete but unused one.  
+Prevents over-documentation.
+
+### 2. Alignment Before Creation
+Every element must connect to strategy, goals, or user needs.  
+Prevents isolated or arbitrary definitions.
+
+### 3. Structure Enables Thinking
+Guided structure improves thinking quality and reduces cognitive effort.  
+Prevents unstructured, inconsistent outputs.
+
+### 4. Continuous Validation
+Product context is not static; it must be continuously tested against reality.  
+Prevents drift between definition and execution.
+
+### 5. Reduce Cognitive Load
+The product should simplify thinking, not add overhead.  
+Prevents process-heavy workflows.
+
+### 6. Depth Over Breadth
+Focus on meaningful product definition, not feature expansion.  
+Prevents tool sprawl.
+
+---
+
+## Architecture
+
+### Principle
+
+Build on tools and workflows already known and used within the company like Git, boards and pipelins/workflows. The system fits into the existing product repository and uses source material that teams already produce.
+
+---
+
+## Repository Structure
+
+Each product repository contains an additional folder:
+
+/product-definitions
+
+Within this folder:
+
+- /foundations-input
+  Source material added by users
+
+Generated output is written to the repository-level `/docs` folder so GitHub Pages can publish it directly from the GitHub UI.
+
+---
+
+## Foundations Input
+
+The `foundations-input` folder accepts different types of source material, such as:
+
+- PowerPoint
+- Word documents
+- PDF files
+- Text files
+
+Users can add or update files at any time.
+
+(In a later version url's could be added as sources.)
+
+---
+
+## Application Flow
+
+1. A document is added or changed in `foundations-input`
+2. An extractor workflow is triggered
+3. Text is extracted from all supported files
+4. The extracted text is passed to one or more analysis agents
+5. Agents detect relevant information for each product definition area
+6. Structured output is written to `/docs` as separate `.md` files plus a static HTML export
+
+Example output files:
+- `strategy.md`
+- `business-case.md`
+- `product-vision.md`
+- `product-charter.md`
+- `jtbd.md`
+
+These outputs align with the intended structures for strategy, product vision, JTBD, and related product definition artifacts.
+
+The renderer also generates a static HTML export in the same `/docs` folder:
+- `index.html`
+- `styles.css`
+
+This export combines the markdown artifacts into one long-form page styled after the Gentlii application UI so it can be published as GitHub Pages output.
+
+### GitHub Pages Publishing
+
+The recommended publish target is the repository `/docs` folder.
+
+That lets you use GitHub Pages "Deploy from a branch" directly from the repository settings without adding a dedicated Pages workflow. Note that everything under `/docs`, including existing files like `docs/plans/`, becomes part of the published site.
+
+---
+
+## Agents
+
+Agents analyze extracted content to determine whether the required product fundamentals are present.
+
+Agents must never invent missing information.
+They may only:
+
+- detect what is present
+- identify what is missing
+- suggest improvements, clearly marked as suggestions
+
+### Strategy Extractor
+Detects:
+- company strategy
+- product strategy
+- strategic goals
+- value proposition
+- long-term direction
+
+### Business Case Evaluator
+Detects:
+- business rationale
+- expected value
+- cost/benefit signals
+- success assumptions
+- measurable business outcomes
+
+### Product Vision Extractor
+Detects:
+- target groups
+- needs
+- product features
+- business goals
+- differentiators
+
+### JTBD Extractor
+Detects:
+- jobs to be done
+- user problems
+- desired outcomes
+- user flows
+- journeys or related user context
+
+### Product Charter Extractor
+Detects:
+- core principles
+- product boundaries
+- core product behaviours
+- decision-making rules
+- product character
+- language and tone
+- evolution constraints
+- integrity tests
+
+---
+
+## Scoring and Confidence Layer
+
+Each output area includes a quality signal to help users understand how reliable and complete the extracted result is.
+
+### Purpose
+
+The scoring layer helps users:
+- see which areas are well supported by source material
+- understand where the product definition is weak or incomplete
+- decide where manual refinement is needed
+- prevent false confidence in generated structure
+
+### Confidence Score
+
+Each section receives a confidence score based on the quality of supporting evidence in the input.
+
+Example dimensions:
+- amount of relevant source evidence
+- consistency across files
+- specificity of statements
+- clarity of linkage to the section
+- ambiguity level
+
+Example:
+- **High confidence**: explicit, repeated, clear evidence found
+- **Medium confidence**: partial or indirect evidence found
+- **Low confidence**: weak, ambiguous, or minimal evidence found
+
+### Completeness Score
+
+Each section also receives a completeness score based on whether the expected components are present.
+
+Examples:
+- Strategy: mission, pillars, target customer, value proposition, success metrics
+- Product vision: target groups, needs, features, business goals, differentiators
+- JTBD: job statement, outcomes, frictions, alternatives
+
+This allows the system to distinguish between:
+- content that is confidently extracted
+- content that is structurally incomplete
+
+### Output Behaviour
+
+Scores should not replace judgment.  
+They should only help users assess the current state of the product definition.
+
+For each section, the system should provide:
+- extracted content
+- confidence score
+- completeness score
+- missing elements
+- improvement suggestions
+
+---
+
+## Local CLI Implementation
+
+The first implementation phase is a local Python CLI. It will read source files from `product-definitions/foundations-input` and generate clean markdown artifacts in `product-definitions/product-descriptions`.
+
+The implementation should stay simple, boring, and auditable:
+- pin exact dependency versions
+- keep the dependency set small
+- prefer mature libraries with narrow responsibilities
+- keep configuration in environment variables or a local `.env` file that is not committed
+- use `python-docx` for `.docx` extraction and `pypdf` for `.pdf` extraction in v1
+
+The local command target is:
+
+```bash
+python -m gentlii_foundations.cli build product-definitions
+```
+
+## Output Example
+
+Each generated `.md` file in `/docs` may contain:
+
+- extracted section content
+- evidence-backed findings
+- confidence assessment
+- completeness assessment
+- clearly marked suggestions for improvement
+
+---
+
+## Constraint
+
+The system must never fabricate product fundamentals.
+
+If information is missing:
+- it must be marked as missing
+- the confidence score must reflect uncertainty
+- suggestions may be added, but always separated from extracted facts
