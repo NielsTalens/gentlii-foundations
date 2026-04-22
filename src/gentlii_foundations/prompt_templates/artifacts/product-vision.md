@@ -30,7 +30,7 @@ For each subject below, use this structure:
 - one or more normal paragraphs with extracted content, or `Not found`
 - a bold confidence line written as `**Confidence:** High | Medium | Low`
 - a bold evidence line written as `**Evidence:** <exact quote, close paraphrase, or "No supporting evidence found">`
-- a contradictions line written as `Contradictions: <contradiction with evidence, or "No contradictory content found.">`
+- a bold contradictions line written as `**Contradictions:** <contradiction with evidence, or "No contradictory content found.">`
 
 ## Target Groups
 [Extracted content or "Not found"]
@@ -60,6 +60,9 @@ Assess whether all key product vision elements are present:
 - Differentiators
 
 Return:
+Do NOT return any other output besides the following:
+Do NOT return explanatory text like `Complete -> ...` or `High -> ...`.
+Return only one of these values on the next line:
 - Complete → all elements clearly present
 - Partial → some elements missing or weak
 - Incomplete → most elements missing
@@ -77,6 +80,30 @@ Consider:
 - clarity of differentiation
 
 Return:
+Do NOT return any other output besides the following:
+Do NOT return explanatory text like `Complete -> ...` or `High -> ...`.
+Return only one of these values on the next line:
 - High → clear, specific, actionable
 - Medium → partially defined, some ambiguity
 - Low → vague, generic, not actionable
+
+---
+
+### Suggestion
+
+Return exactly one normal paragraph under this heading.
+If no useful suggestion can be made from the source material, return `Not found`.
+
+Return the final evaluation block in exactly this shape:
+
+### Completeness
+
+Partial
+
+### Strength
+
+Medium
+
+### Suggestion
+
+One normal paragraph here.

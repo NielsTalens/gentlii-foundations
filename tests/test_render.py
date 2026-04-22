@@ -82,6 +82,102 @@ def test_write_artifacts_promotes_inline_bold_text_to_h3_blocks(tmp_path):
     assert "<p>more text.</p>" in html
 
 
+def test_write_artifacts_places_completeness_and_strength_side_by_side(tmp_path):
+    artifact = GeneratedArtifact(
+        name="strategy",
+        markdown=(
+            "# Strategy\n\n"
+            "## Company Strategy\n\n"
+            "Defined.\n\n"
+            "### Completeness\n\n"
+            "**Confidence:** High\n\n"
+            "**Evidence:** Clear coverage.\n\n"
+            "### Strength\n\n"
+            "**Confidence:** Medium\n\n"
+            "**Evidence:** Usable but uneven.\n"
+        ),
+    )
+
+    write_artifacts(tmp_path, [artifact])
+    html = (tmp_path / "index.html").read_text(encoding="utf-8")
+    css = (tmp_path / "styles.css").read_text(encoding="utf-8")
+
+    assert '<div class="doc-dual-section-grid">' in html
+    assert '<section class="doc-side-section"><h3>Completeness</h3>' in html
+    assert '<section class="doc-side-section"><h3>Strength</h3>' in html
+    assert ".doc-dual-section-grid" in css
+    assert ".doc-side-section" in css
+
+
+def test_write_artifacts_colorizes_metric_values(tmp_path):
+    artifact = GeneratedArtifact(
+        name="strategy",
+        markdown=(
+            "# Strategy\n\n"
+            "### Completeness\n\n"
+            "Complete\n\n"
+            "### Strength\n\n"
+            "Medium\n\n"
+            "**Confidence:** Low\n"
+        ),
+    )
+
+    write_artifacts(tmp_path, [artifact])
+    html = (tmp_path / "index.html").read_text(encoding="utf-8")
+    css = (tmp_path / "styles.css").read_text(encoding="utf-8")
+
+    assert '<span class="metric-value metric-pill metric-high">Complete</span>' in html
+    assert '<span class="metric-value metric-pill metric-medium">Medium</span>' in html
+    assert '<p class="metric-line"><strong>Confidence:</strong> <span class="metric-value metric-pill metric-low">Low</span></p>' in html
+    assert ".metric-value" in css
+    assert ".metric-pill" in css
+    assert ".metric-high" in css
+    assert ".metric-medium" in css
+    assert ".metric-low" in css
+
+
+def test_write_artifacts_keeps_confidence_and_evidence_separate_without_blank_lines(tmp_path):
+    artifact = GeneratedArtifact(
+        name="strategy",
+        markdown=(
+            "# Strategy\n\n"
+            "### Completeness\n"
+            "**Confidence:** High\n"
+            "**Evidence:** Explicit support from source.\n"
+        ),
+    )
+
+    write_artifacts(tmp_path, [artifact])
+    html = (tmp_path / "index.html").read_text(encoding="utf-8")
+
+    assert '<p class="metric-line"><strong>Confidence:</strong> <span class="metric-value metric-pill metric-high">High</span></p>' in html
+    assert '<p class="metric-line"><strong>Evidence:</strong> Explicit support from source.</p>' in html
+    assert "Confidence:</strong> <span class=\"metric-value metric-pill metric-high\">High</span> **Evidence:**" not in html
+
+
+def test_write_artifacts_keeps_suggestion_below_side_by_side_blocks(tmp_path):
+    artifact = GeneratedArtifact(
+        name="strategy",
+        markdown=(
+            "# Strategy\n\n"
+            "### Completeness\n\n"
+            "Complete\n\n"
+            "### Strength\n\n"
+            "Medium\n\n"
+            "### Suggestion\n\n"
+            "Clarify the strategic trade-offs in a short paragraph.\n"
+        ),
+    )
+
+    write_artifacts(tmp_path, [artifact])
+    html = (tmp_path / "index.html").read_text(encoding="utf-8")
+
+    assert '<div class="doc-dual-section-grid">' in html
+    assert '<section class="doc-side-section"><h3>Completeness</h3><p class="metric-line"><span class="metric-value metric-pill metric-high">Complete</span></p></section>' in html
+    assert '<section class="doc-side-section"><h3>Strength</h3><p class="metric-line"><span class="metric-value metric-pill metric-medium">Medium</span></p></section>' in html
+    assert '</div>\n          <h3>Suggestion</h3>\n          <p>Clarify the strategic trade-offs in a short paragraph.</p>' in html
+
+
 def test_write_artifacts_generates_gentlii_based_stylesheet(tmp_path):
     write_artifacts(tmp_path, [GeneratedArtifact(name="strategy", markdown="# Strategy\n")])
     css = (tmp_path / "styles.css").read_text(encoding="utf-8")

@@ -15,6 +15,7 @@ For every subject or section in the Output Structure, include a confidence line 
 Write the confidence line as normal paragraph text, not as a bullet list item or numbered list item.
 Never put `Confidence:` in a bullet list or numbered list.
 Write confidence as `**Confidence:** <High | Medium | Low>`.
+Do not merge `**Confidence:**` and `**Evidence:**` onto one line.
 
 Use this confidence scale:
 - High: clear, explicit, consistent evidence
@@ -33,6 +34,7 @@ Write evidence as `**Evidence:** <...>`.
 ### Suggestions
 You MAY provide suggestions, but they must be clearly marked as "Suggestion" and must not be mixed with extracted content.
 Provide concrete suggestions to improve the artifact.
+Write suggestions under a `### Suggestion` heading.
 
 - Must be clearly labeled as "Suggestion"
 - Must not introduce fabricated facts
@@ -46,6 +48,8 @@ For every subject or section in the Output Structure, if there are contradiction
 - Do not infer intent or fill gaps
 - Do not fabricate conflicts
 - If no clear contradiction is found, return: “No contradictory content found.”
+- Never put `Contradictions:` in a bullet list or numbered list.
+- Write contradictions as `**Contradictions:** <...>`.
 
 Guidance
 Pay special attention to:

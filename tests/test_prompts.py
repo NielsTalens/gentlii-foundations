@@ -27,12 +27,14 @@ def test_prompt_requires_confidence_below_each_output_section():
         "immediately below the extracted content and before the supporting evidence."
     ) in prompt
     assert "Write confidence as `**Confidence:** <High | Medium | Low>`." in prompt
+    assert "Do not merge `**Confidence:**` and `**Evidence:**` onto one line." in prompt
 
 
 def test_prompt_includes_shared_suggestions_section():
     prompt = build_artifact_prompt("business-case", "source text")
     assert "### Suggestions" in prompt
     assert "Provide concrete suggestions to improve the artifact." in prompt
+    assert "Write suggestions under a `### Suggestion` heading." in prompt
 
 
 def test_prompt_template_directory_contains_strategy_prompt_file():
@@ -56,6 +58,7 @@ def test_all_artifact_templates_keep_evidence_and_contradictions_inline_per_subj
         assert "## Output" in template
         assert "### Completeness" in template
         assert "### Strength" in template
+        assert "### Suggestion" in template
         assert "## Evidence" not in template
         assert "## Contradictions" not in template
 
@@ -81,3 +84,25 @@ def test_shared_prompt_requires_inline_evidence_and_contradictions_per_subject()
         "include the related evidence immediately below the extracted content."
     ) in prompt
     assert "Write evidence as `**Evidence:** <...>`." in prompt
+    assert "Write contradictions as `**Contradictions:** <...>`." in prompt
+
+
+def test_artifact_templates_require_exact_final_section_shape():
+    template_dir = Path(PROMPT_TEMPLATE_DIR) / "artifacts"
+
+    for artifact_name in [
+        "business-case",
+        "strategy",
+        "product-vision",
+        "jtbd",
+        "product-charter",
+    ]:
+        template = (template_dir / f"{artifact_name}.md").read_text(encoding="utf-8")
+        assert "Do NOT return explanatory text like `Complete -> ...` or `High -> ...`." in template
+        assert "Return only one of these values on the next line:" in template
+        assert "### Suggestion" in template
+        assert "Return exactly one normal paragraph under this heading." in template
+        assert "Return the final evaluation block in exactly this shape:" in template
+        assert "### Completeness" in template
+        assert "### Strength" in template
+        assert "### Suggestion" in template

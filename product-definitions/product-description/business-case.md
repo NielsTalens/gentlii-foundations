@@ -1,38 +1,55 @@
 ## Business Rationale
-Current CRMs (e.g., Salesforce/HubSpot) are described as “broken” for day-to-day sellers because they require heavy navigation, manual updates, and dashboard checking—experienced as admin work rather than sales support. The proposed product rationale is to replace screen- and field-based workflows with a conversation-first system that directly tells users the “next best action,” automates capture/logging, and reduces fragmentation across tools (CRM/email/calendar/etc.). The business-side motivation includes reducing CRM fatigue/stress, increasing daily usage/adoption, improving onboarding speed, and (as a result of better follow-up) increasing revenue per rep.
 
-**Confidence:** High  
-**Evidence:** “CRM as it exists today … is kind of broken… It’s too much clicking around, updating fields, checking dashboards… feels like admin work”; “What we want instead is something that just… tells you what to do next.”; “why this matters (business side) Main goals are: reduce the general fatigue… get reps to actually use the system daily… increase revenue per rep… make onboarding basically nonexistent or very fast”; “today they usually check like 3–5 things (CRM, email, calendar, maybe Slack) → already fragmented.”  
-Contradictions: No contradictory content found.
+Er is een expliciete reden om een nieuw verzekeringsproduct te bouwen: verzekeren wordt nu ervaren als traag, bureaucratisch en met veel frictie (formulieren, onduidelijke voorwaarden, lange doorlooptijden), waardoor (met name jongere/digital-native) gebruikers afhaken. Het beoogde product wil dit oplossen door “extreem simpel” en “mobile-first” te zijn, met sterke focus op automatisering, korte flows, en snelle claims-afhandeling.
+
+**Confidence:** High
+
+**Evidence:** “Verzekeren voelt nu traag en bureaucratisch.” / “We willen iets bouwen rondom verzekeringen maar dan extreem simpel. Vooral voor jongere mensen (18–35?) die geen zin hebben in gedoe.” / “Mensen haken af bij formulieren > ~10 velden” / “Claims duren lang (dagen/weken)”
+
+**Contradictions:** Er is een inhoudelijke richting-conflict tussen “mobile-first” en een alternatief idee om “desktop-first” met uitgebreide dashboards te bouwen. **Evidence:** “Mobile-first sowieso, desktop misschien later maar eigenlijk niet nodig.” vs “In plaats van mobile-first, juist een uitgebreid platform bouwen. Desktop-first interface met uitgebreide dashboards”
+
 
 ## Expected Value
-The expected value centers on time/effort reduction (less switching, searching, updating, deciding), improved user experience (calm/clear control vs stress/guilt), higher adoption (daily use), and better sales execution (more consistent follow-up and faster actions), which is expected to translate into higher revenue per rep. Additional value includes automated activity capture (emails/calls), background pipeline updates, and very fast onboarding due to minimal training needs.
 
-**Confidence:** Medium  
-**Evidence:** “increase revenue per rep (if they follow up more, this should happen)”; “reduce the general fatigue people have with CRM”; “get reps to actually use the system daily”; “make onboarding basically nonexistent or very fast”; “→ lots of switching + admin… desired… action executes immediately… everything logs automatically in background… pipeline updates itself… no extra steps”; “ideal state = calm, clear, just doing the next thing.”  
-Contradictions: No contradictory content found.
+Verwachte waarde zit vooral in (1) betere gebruikerservaring (snel, rustig, zeker, transparant; minder stappen; prefill; realtime status), (2) snellere aankoop/activatie en claims (mogelijk instant of <24u), en (3) lagere operationele kosten door vergaande automatisering. Daarnaast wordt snelle groei in een jong segment genoemd, en mogelijk “hogere perceived value” bij een meer uitgebreide (desktop-first) variant.
+
+**Confidence:** Medium
+
+**Evidence:** “Lage operationele kosten (door automation)” / “Snel afsluiten (<3 min? of realistischer 5 min?)” / “Claims snel (instant? of <24u realistischer?)” / “Snelle groei (jong segment)” / “Hogere perceived value” / “Moet voelen: Snel… Zeker… Transparant”
+
+**Contradictions:** “Instant payout” en “volledig geautomatiseerd” worden tegelijk gewenst en als risicovol/lastig benoemd door fraude en compliance. **Evidence:** “Instant payout (indien mogelijk)” vs “’Instant payout’ vs risico” en “(zeker met compliance)” en “Fraudepreventie vereist waarschijnlijk uitzonderingen op automation”
+
 
 ## Assumptions
-The sources assume that (1) CRM friction (manual entry, dashboards, screens) is a primary cause of low adoption and negative sentiment; (2) providing prioritized next actions and automating logging/pipeline updates will materially increase follow-up behavior; (3) more/better follow-up will increase revenue per rep; (4) users prefer “actions > insights” and do not want dashboards/reporting; (5) the system can capture activities and update pipeline “in the background” reliably enough to avoid data-entry; and (6) minimizing configuration/customization is acceptable for the initial target users.
 
-**Confidence:** Medium  
-**Evidence:** “increase revenue per rep (if they follow up more, this should happen)”; “people don’t need more charts, they need to know what to do”; “automation by default… system should just capture stuff”; “everything updates in background, invisible”; “if user has to fill fields → something went wrong”; “not something you customize endlessly”; “If someone needs training, we probably failed.”  
-Contradictions: No contradictory content found.
+Er worden meerdere (vaak expliciet als hypotheses/twijfels) aannames genoemd: minder stappen verhoogt conversie; prefill verlaagt fouten; realtime feedback verhoogt vertrouwen; automation verlaagt kosten; gebruikers willen (vaak) directe verzekering bij aankoop en snelle hulp bij schade. Tegelijk zijn er aannames/vragen over grenzen: te weinig stappen kan wantrouwen creëren; sommige gebruikers vinden extra checks juist geruststellend; niet iedereen wil “direct” contactloos; compliance/KYC en fraudepreventie beperken hoe “formulierloos” en “volledig geautomatiseerd” het kan zijn.
+
+**Confidence:** High
+
+**Evidence:** “Hypotheses: Minder stappen → hogere conversie; Prefill → minder fouten; Realtime feedback → meer vertrouwen; Automation → lagere kosten” / “Wanneer ik iets koop wil ik meteen verzekerd zijn…” / “Maar: Te weinig stappen kan ook wantrouwen creëren” / “Sommige gebruikers vinden ‘extra checks’ juist geruststellend” / “Compliance moet ‘by design’” / “KYC nodig” / “Fraudepreventie vereist waarschijnlijk uitzonderingen op automation”
+
+**Contradictions:** Er is spanning tussen “Geen formulieren” en wettelijke/KYC-verplichtingen. **Evidence:** “Geen formulieren (maar KYC vereist wel iets…)” en “’Geen formulieren’ vs wettelijke verplichtingen”
+
 
 ## Measurable Business Outcomes
-Some intended outcomes are stated but not quantified with targets/timeframes. The document points to measurable directions such as increased daily active use of the CRM, reduced onboarding/training time, increased revenue per rep, and reduced missed follow-ups (deals “fall through cracks”). It also implies measurable reductions in manual data entry and time spent switching tools, but does not provide explicit KPIs, baselines, or success thresholds.
 
-**Confidence:** Low  
-**Evidence:** “get reps to actually use the system daily”; “increase revenue per rep”; “make onboarding basically nonexistent or very fast”; “follow-ups fall through cracks”; “basically zero data entry.”  
-Contradictions: No contradictory content found.
+Er staan expliciete (maar als “ideeën, niet gevalideerd” en soms “ambitieus”) metrics genoemd: conversie >60%, tijd tot polis <3 minuten, 70% claims automatisch, NPS >50, en drop-off per stap meten. Daarnaast worden “lage operationele kosten” en “snelle groei” genoemd, maar zonder concrete targets/tijdslijnen.
 
----
+**Confidence:** Medium
+
+**Evidence:** “Metrics (ideeën, niet gevalideerd): Conversie >60%… <3 min tot polis… 70% claims automatisch… NPS >50… Drop-off per stap meten” / “Lage operationele kosten (door automation)” / “Snelle groei (jong segment)”
+
+**Contradictions:** De voorgestelde targets worden in dezelfde tekst betwijfeld als mogelijk te ambitieus of afhankelijk van compliance/flow. **Evidence:** “Conversie >60% (lijkt hoog?)” / “Binnen een paar minuten geregeld… — maar niet zeker of dit te ambitieus is (zeker met compliance).”
+
 
 ### Completeness
+
 Partial
 
 ### Strength
+
 Medium
 
 ### Suggestion
-Add explicit KPIs with targets and timeframes, e.g., daily active usage (% of reps using daily), onboarding time (minutes/hours), reduction in manual CRM updates (fields touched per day), follow-up SLA adherence (e.g., replies within X days), and revenue/rep uplift (or leading indicators like activities per rep). Include baseline assumptions and how they’ll be validated (pilot size, measurement approach).
+
+Maak de business case bruikbaarder door (1) de primaire richting expliciet te kiezen (mobile-first “extreem simpel” vs desktop-first platform) en dit te onderbouwen met doelgroep/segment en scope, (2) de belangrijkste aannames te prioriteren en te koppelen aan testplannen (bv. welke stappen zijn minimaal nodig voor “veilig gevoel” én compliance), en (3) de metrics te concretiseren met baseline, target, meetmethode en tijdshorizon (bijv. conversie/NPS/doorlooptijd/auto-claim-rate + operationele kosten per polis/claim), inclusief expliciete randvoorwaarden voor KYC/compliance en frauderoutes (wanneer menselijke review verplicht is).

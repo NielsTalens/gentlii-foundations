@@ -9,6 +9,17 @@ from gentlii_foundations.models import ArtifactName, GeneratedArtifact
 _ORDERED_LIST_PATTERN = re.compile(r"^\d+\. (.+)$")
 _SLUG_SAFE_ARTIFACT_NAME_PATTERN = re.compile(r"^[a-z0-9-]+$")
 _BOLD_PATTERN = re.compile(r"\*\*(.+?)\*\*")
+_H3_HEADING_PATTERN = re.compile(r"^<h3>(.+)</h3>$")
+_SIDE_BY_SIDE_H3_TITLES = {"Completeness", "Strength"}
+_LABELED_METRIC_PATTERN = re.compile(r"^\*\*(Confidence|Evidence):\*\*\s*(.+)$")
+_METRIC_VALUE_CLASSES = {
+    "high": "metric-high",
+    "complete": "metric-high",
+    "medium": "metric-medium",
+    "partial": "metric-medium",
+    "low": "metric-low",
+    "incomplete": "metric-low",
+}
 
 
 def write_artifacts(output_dir: Path, artifacts: list[GeneratedArtifact]) -> None:
@@ -105,8 +116,8 @@ def _markdown_to_html(markdown: str) -> str:
 
     def flush_paragraph() -> None:
         if paragraph:
-            text = " ".join(part.strip() for part in paragraph if part.strip())
-            _append_paragraph_blocks(blocks, text)
+            for text in _normalize_paragraph_lines(paragraph):
+                _append_paragraph_blocks(blocks, text)
             paragraph.clear()
 
     def flush_unordered_list() -> None:
@@ -173,7 +184,7 @@ def _markdown_to_html(markdown: str) -> str:
         paragraph.append(line)
 
     flush_all()
-    return "\n".join(blocks)
+    return "\n".join(_group_side_by_side_sections(blocks))
 
 
 def _indent(text: str, spaces: int) -> str:
@@ -182,6 +193,10 @@ def _indent(text: str, spaces: int) -> str:
 
 
 def _append_paragraph_blocks(blocks: list[str], text: str) -> None:
+    metric_block = _render_metric_block(text)
+    if metric_block is not None:
+        blocks.append(metric_block)
+        return
     fragments = _split_bold_fragments(text)
     if not fragments:
         return
@@ -198,6 +213,29 @@ def _append_paragraph_blocks(blocks: list[str], text: str) -> None:
             blocks.append(f"<p>{html.escape(stripped)}</p>")
 
 
+def _normalize_paragraph_lines(lines: list[str]) -> list[str]:
+    normalized: list[str] = []
+    text_buffer: list[str] = []
+
+    def flush_text_buffer() -> None:
+        if text_buffer:
+            normalized.append(" ".join(part.strip() for part in text_buffer if part.strip()))
+            text_buffer.clear()
+
+    for raw_line in lines:
+        stripped = raw_line.strip()
+        if not stripped:
+            continue
+        if _is_metric_text(stripped):
+            flush_text_buffer()
+            normalized.append(stripped)
+            continue
+        text_buffer.append(stripped)
+
+    flush_text_buffer()
+    return normalized
+
+
 def _split_bold_fragments(text: str) -> list[tuple[str, str]]:
     fragments: list[tuple[str, str]] = []
     cursor = 0
@@ -211,6 +249,97 @@ def _split_bold_fragments(text: str) -> list[tuple[str, str]]:
     if not fragments:
         return [("text", text)]
     return fragments
+
+
+def _render_metric_block(text: str) -> str | None:
+    labeled_metric_match = _LABELED_METRIC_PATTERN.fullmatch(text.strip())
+    if labeled_metric_match is not None:
+        label = labeled_metric_match.group(1)
+        value = labeled_metric_match.group(2).strip()
+        return (
+            '<p class="metric-line">'
+            f"<strong>{html.escape(label)}:</strong> "
+            f"{_render_metric_value(value)}"
+            "</p>"
+        )
+    stripped = text.strip()
+    if stripped.lower() in _METRIC_VALUE_CLASSES:
+        return f'<p class="metric-line">{_render_metric_value(stripped)}</p>'
+    return None
+
+
+def _is_metric_text(text: str) -> bool:
+    stripped = text.strip()
+    return _LABELED_METRIC_PATTERN.fullmatch(stripped) is not None or stripped.lower() in _METRIC_VALUE_CLASSES
+
+
+def _render_metric_value(value: str) -> str:
+    metric_class = _METRIC_VALUE_CLASSES.get(value.strip().lower())
+    if metric_class is None:
+        return html.escape(value)
+    return f'<span class="metric-value metric-pill {metric_class}">{html.escape(value)}</span>'
+
+
+def _group_side_by_side_sections(blocks: list[str]) -> list[str]:
+    grouped: list[str] = []
+    index = 0
+    while index < len(blocks):
+        first_section = _collect_side_section(blocks, index)
+        if first_section is None:
+            grouped.append(blocks[index])
+            index += 1
+            continue
+        second_section = _collect_side_section(blocks, first_section[1])
+        if second_section is None:
+            grouped.extend(first_section[0])
+            index = first_section[1]
+            continue
+        first_title = _extract_h3_title(first_section[0][0])
+        second_title = _extract_h3_title(second_section[0][0])
+        if {first_title, second_title} == _SIDE_BY_SIDE_H3_TITLES:
+            grouped.append(
+                '<div class="doc-dual-section-grid">'
+                f'<section class="doc-side-section">{"".join(first_section[0])}</section>'
+                f'<section class="doc-side-section">{"".join(second_section[0])}</section>'
+                "</div>"
+            )
+            index = second_section[1]
+            continue
+        grouped.extend(first_section[0])
+        index = first_section[1]
+    return grouped
+
+
+def _collect_side_section(blocks: list[str], start_index: int) -> tuple[list[str], int] | None:
+    if start_index >= len(blocks):
+        return None
+    heading = blocks[start_index]
+    title = _extract_h3_title(heading)
+    if title not in _SIDE_BY_SIDE_H3_TITLES:
+        return None
+    end_index = start_index + 1
+    section_blocks = [heading]
+    while end_index < len(blocks):
+        if _starts_new_side_section(blocks[end_index]):
+            break
+        section_blocks.append(blocks[end_index])
+        end_index += 1
+    return section_blocks, end_index
+
+
+def _extract_h3_title(block: str) -> str | None:
+    match = _H3_HEADING_PATTERN.fullmatch(block)
+    if match is None:
+        return None
+    return html.unescape(match.group(1))
+
+
+def _is_heading_block(block: str) -> bool:
+    return block.startswith("<h1>") or block.startswith("<h2>") or block.startswith("<h3>") or block.startswith("<h4>") or block.startswith("<h5>") or block.startswith("<h6>")
+
+
+def _starts_new_side_section(block: str) -> bool:
+    return _is_heading_block(block)
 
 
 def _sort_artifacts(artifacts: list[GeneratedArtifact]) -> list[GeneratedArtifact]:
@@ -404,6 +533,66 @@ a {
   margin-top: 10px;
 }
 
+.doc-dual-section-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0 0 0.82rem;
+}
+
+.doc-side-section {
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(7, 20, 35, 0.22);
+}
+
+.doc-side-section h3 {
+  margin-top: 0;
+}
+
+.doc-side-section p:last-child,
+.doc-side-section ol:last-child,
+.doc-side-section ul:last-child,
+.doc-side-section blockquote:last-child {
+  margin-bottom: 0;
+}
+
+.metric-line {
+  margin: 0 0 0.82rem;
+}
+
+.metric-value {
+  font-weight: 700;
+}
+
+.metric-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  line-height: 1.1;
+}
+
+.metric-high {
+  color: #57c084;
+  background: rgba(87, 192, 132, 0.14);
+  border-color: rgba(87, 192, 132, 0.28);
+}
+
+.metric-medium {
+  color: #f0a94b;
+  background: rgba(240, 169, 75, 0.14);
+  border-color: rgba(240, 169, 75, 0.28);
+}
+
+.metric-low {
+  color: #e06464;
+  background: rgba(224, 100, 100, 0.14);
+  border-color: rgba(224, 100, 100, 0.28);
+}
+
 .doc-content h1,
 .doc-content h2,
 .doc-content h3,
@@ -421,7 +610,7 @@ a {
 }
 
 .doc-content h2 {
-  font-size: 1.25rem;
+  font-size: 1.45rem;
 }
 
 .doc-content h3,
@@ -480,6 +669,10 @@ a {
   .app-shell {
     width: min(100% - 20px, 1100px);
     margin-top: 10px;
+  }
+
+  .doc-dual-section-grid {
+    grid-template-columns: 1fr;
   }
 }
 """.lstrip()
