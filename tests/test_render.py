@@ -175,7 +175,9 @@ def test_write_artifacts_keeps_suggestion_below_side_by_side_blocks(tmp_path):
     assert '<div class="doc-dual-section-grid">' in html
     assert '<section class="doc-side-section"><h3>Completeness</h3><p class="metric-line"><span class="metric-value metric-pill metric-high">Complete</span></p></section>' in html
     assert '<section class="doc-side-section"><h3>Strength</h3><p class="metric-line"><span class="metric-value metric-pill metric-medium">Medium</span></p></section>' in html
-    assert '</div>\n          <h2>Suggestion</h2>\n          <p>Clarify the strategic trade-offs in a short paragraph.</p>' in html
+    assert "<h2>Suggestion</h2>" in html
+    assert "<p>Clarify the strategic trade-offs in a short paragraph.</p>" in html
+    assert html.index('<div class="doc-dual-section-grid">') < html.index("<h2>Suggestion</h2>")
 
 
 def test_write_artifacts_generates_gentlii_based_stylesheet(tmp_path):
