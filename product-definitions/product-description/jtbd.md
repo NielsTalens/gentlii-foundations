@@ -1,47 +1,92 @@
 ## Job Name
-Get the next best sales action without CRM overhead  
-**Confidence:** High  
-**Evidence:** “first question in their head is basically: what do I do first”; “something that just… tells you what to do next”; “they want to know what to do next, clearly”  
+Get told the next best sales action (without CRM admin)
+
+**Confidence:** High
+
+**Evidence:** “something that just… tells you what to do next.” / “you just ask ‘what should I do now?’ and it gives you a straight answer.” / “system just tells them immediately… ideally ranked / prioritized so no thinking required”
+
 **Contradictions:** No contradictory content found.
 
 ## Core Job Statement
-When I start my day or need to decide what to do in my sales pipeline, I want the system to tell me the next best action (with context and an executable step), so I can make progress on deals without spending time searching, deciding, or doing CRM admin.  
-**Confidence:** High  
-**Evidence:** “you just ask ‘what should I do now?’ and it gives you a straight answer”; “get list of actions already prioritized… who, context, suggested message or next step”; “remove searching… remove updating… remove deciding… and replace it with… clear next action… immediate execution… no admin overhead”  
+When I start my day (or return to work) and need to move deals forward, I want the system to tell me the prioritized next actions and let me execute them immediately, so I can follow up consistently without hunting across tools or doing CRM admin.
+
+**Confidence:** High
+
+**Evidence:** “starting point (morning / opening laptop)… first question in their head is basically: what do I do first” / “today they usually check like 3–5 things (CRM, email, calendar, maybe Slack) → already fragmented” / “open system… ask (or it tells you without asking): ‘what should I do now?’… get list of actions already prioritized” / “action executes immediately… everything logs automatically in background… pipeline updates itself”
+
 **Contradictions:** No contradictory content found.
 
 ## Desired Outcomes
-Prioritized, clear next actions; faster execution; reduced context switching; automatic logging and pipeline updates; fewer forgotten follow-ups; daily usage without training; higher revenue per rep (via more consistent follow-up).  
-**Confidence:** High  
-**Evidence:** “tell you your next best action”; “get list of actions already prioritized so no thinking required”; “let you execute things quickly”; “everything logs automatically in background”; “keep the pipeline updated without you touching it”; “often forget something” (current) vs “system flags… converts that into actions”; “get reps to actually use the system daily”; “increase revenue per rep (if they follow up more, this should happen)”; “make onboarding basically nonexistent or very fast”  
+- Clear, prioritized “next actions” (ranked so “no thinking required”)
+- Faster execution (one command / minimal steps)
+- Reduced tool switching (less fragmentation across CRM/email/calendar)
+- Automatic capture/logging of activity (calls/emails) and notes suggestions
+- Pipeline stays accurate without manual updates
+- Fewer follow-ups missed; deals don’t “fall through cracks”
+- Reduced CRM fatigue; higher daily usage; faster onboarding (from business goals)
+
+**Confidence:** High
+
+**Evidence:** “tell you your next best action” / “let you execute things quickly” / “everything to be fast (input + output)” / “log stuff automatically (calls, emails etc.)… keep the pipeline updated without you touching it” / “often forget something” / “follow-ups fall through cracks” / “reduce the general fatigue… get reps to actually use the system daily… make onboarding basically nonexistent or very fast”
+
 **Contradictions:** No contradictory content found.
 
 ## Emotional or Social Dimension
-Users want to feel in control, calm, and not overwhelmed; they want to avoid stress/guilt associated with an always-behind CRM and avoid feeling like they’re doing admin work.  
-**Confidence:** High  
-**Evidence:** “to feel in control of their pipeline”; “not feel overwhelmed”; “not feel like they’re doing admin work”; “right now CRM = stress + guilt (because it’s always behind)”; “ideal state = calm, clear, just doing the next thing”  
+Users want to feel calm and in control, not overwhelmed or guilty about an out-of-date CRM; they don’t want to feel like they’re doing admin work.
+
+**Confidence:** High
+
+**Evidence:** “users don’t just want efficiency, they want: to feel in control of their pipeline… not feel overwhelmed… not feel like they’re doing admin work” / “right now CRM = stress + guilt… ideal state = calm, clear, just doing the next thing”
+
 **Contradictions:** No contradictory content found.
 
 ## Current Frictions
-Too much clicking and navigating; manual field updates/pipeline management; dashboard checking and interpretation; fragmented workflow across CRM/email/calendar/Slack; context switching; logging notes after calls/emails; follow-ups falling through cracks; training/onboarding burden.  
-**Confidence:** High  
-**Evidence:** “too much clicking around, updating fields, checking dashboards… feels like admin work”; “open Salesforce / HubSpot… click through pipeline / tasks / dashboards… decide manually… often forget something”; “today they usually check like 3–5 things (CRM, email, calendar, maybe Slack) → already fragmented”; “after call → user supposed to log notes… often skipped because too much effort”; “dashboards… need to interpret data… still unclear what to do… follow-ups fall through cracks”; “If someone needs training, we probably failed.”  
+- Too much clicking/navigation and manual field updates (“admin work”)
+- Hunting for information across dashboards/pipeline/tasks/notes
+- Fragmented workflow across multiple tools (CRM, email, calendar, Slack)
+- Manual deciding/prioritizing what to do next; leads to forgetting follow-ups
+- Logging notes and updating deal stages is effortful and often skipped
+- Static dashboards require interpretation but still don’t clarify next steps
+- Switching contexts (record → notes → email → logging → stage update)
+
+**Confidence:** High
+
+**Evidence:** “too much clicking around, updating fields, checking dashboards… feels like admin work” / “No hunting around.” / “check like 3–5 things… already fragmented” / “click through pipeline / tasks / dashboards… decide manually what to do… often forget something” / “after call → user supposed to log notes… pipeline → needs manual update… often skipped because too much effort” / “dashboards (static, not that helpful)… need to interpret data… still unclear what to do” / “→ lots of switching + admin”
+
 **Contradictions:** No contradictory content found.
 
 ## Existing Alternatives or Workarounds
-Traditional CRMs (Salesforce, HubSpot); simpler CRM (Pipedrive); spreadsheets; notes/reminders/calendar hacks; manual “next action” recreation.  
-**Confidence:** High  
-**Evidence:** “CRM as it exists today (like Salesforce etc.)”; “open Salesforce / HubSpot”; “people are already hacking this with: Pipedrive… spreadsheets… notes / reminders / calendar hacks… trying to recreate ‘next action’ manually”  
+- Traditional CRMs: Salesforce, HubSpot
+- Simpler CRM: Pipedrive
+- Spreadsheets
+- Notes/reminders/calendar “hacks”
+- Manual “next action” recreation (checking multiple tools and deciding)
+
+**Confidence:** High
+
+**Evidence:** “CRM as it exists today (like Salesforce etc.)” / “open Salesforce / HubSpot” / “people are already hacking this with: Pipedrive… spreadsheets… notes / reminders / calendar hacks… trying to recreate ‘next action’ manually”
+
 **Contradictions:** No contradictory content found.
 
 ## User Flows or Journeys
-Morning start: user opens app (ideally minimal/no login) and immediately gets prioritized actions (“contact X”, “follow up with Y”, “deal Z is at risk”) instead of checking multiple tools.  
-Next-action discovery (current vs desired): current involves browsing CRM, dashboards, notes/emails and manually deciding; desired is asking (or being proactively told) “what should I do now?” and receiving a prioritized action list with who/context/suggested next step.  
-Executing an action (current vs desired): current is find contact → read notes → switch to email → write → maybe log → update deal stage; desired is respond in chat (“send this/call now/schedule”) → action executes → auto-logging + background pipeline update with no “after work.”  
-Capturing activity: current requires logging notes/updates and is often skipped; desired is automatic email/call capture, suggested/generated notes, and automatic deal stage updates (“basically zero data entry”).  
-Staying on top of deals: current relies on static dashboards and interpretation; desired is proactive flags (“deal is going cold”, “you haven’t replied in 3 days”) converted into executable actions.  
-**Confidence:** High  
-**Evidence:** “starting point (morning / opening laptop)”; “system just tells them immediately… ideally ranked / prioritized”; “flow: figuring out next action (current vs desired)”; “flow: executing an action”; “flow: capturing activity”; “flow: staying on top of deals”  
+- **Morning start / open laptop:** user opens app (ideally minimal/no login) and asks “what do I do first”; today they check multiple tools.
+- **Figuring out next action (current → desired):**
+  - Current: open CRM → click pipeline/tasks/dashboards → remember follow-ups → check notes/last email → decide manually → forget things.
+  - Desired: open system → ask (or system proactively suggests) “what should I do now?” → get prioritized list with who/context/suggested message.
+- **Executing an action (current → desired):**
+  - Current: find contact → open record → read notes → switch to email → write → maybe log → update stage manually.
+  - Desired: system suggests → user confirms via chat (“send this/call now/schedule”) → action executes → auto-logging + pipeline auto-updates.
+- **Capturing activity (current → desired):**
+  - Current: manual notes/logging; inconsistent email capture; manual pipeline updates; frequently skipped.
+  - Desired: auto-capture emails/calls; notes generated/suggested; deal stage updated “without asking”; “zero data entry.”
+- **Staying on top of deals (current → desired):**
+  - Current: static dashboards; interpret data; unclear next steps; follow-ups missed.
+  - Desired: system flags risk/cold/no reply and converts it into executable actions.
+
+**Confidence:** High
+
+**Evidence:** “starting point (morning / opening laptop)” / “flow: figuring out next action (current vs desired)” / “flow: executing an action” / “flow: capturing activity” / “flow: staying on top of deals”
+
 **Contradictions:** No contradictory content found.
 
 ### Completeness
@@ -54,4 +99,4 @@ High
 
 ## Suggestion
 
-Add explicit persona/segment differences (e.g., sales rep vs founder) with concrete examples of “next best action” outputs and success metrics (time-to-first-action, follow-up SLA adherence, reduction in manual updates), and document edge cases where the system should ask a clarifying question (to avoid wrong or overly “decisive” suggestions) while still preserving the “no dashboards / minimal input” principle.
+Add one or two concrete personas and scenarios (e.g., “early-stage founder selling 10–20 active deals” vs “rep with 100+ accounts”) and define success metrics tied to the job (e.g., time-to-first-action in the morning, % activities auto-logged, follow-up SLA adherence, and reduction in missed follow-ups) to make prioritization, automation boundaries, and MVP scope decisions more testable.
