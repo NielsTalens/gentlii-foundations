@@ -1,6 +1,6 @@
 ## Target Groups
 
-Sales reps (especially those who dislike CRM admin) and founders doing their own sales (particularly early-stage). Customer success is mentioned as a possible later expansion.
+Initial target groups are sales reps who dislike CRM administrative work and founders doing their own sales (especially early-stage). Customer success people are mentioned as a possible later expansion.
 
 **Confidence:** High
 
@@ -10,27 +10,27 @@ Sales reps (especially those who dislike CRM admin) and founders doing their own
 
 ## Needs
 
-Users find traditional CRMs “broken” because they require too much clicking, manual updating, and dashboard-checking—creating admin overhead, fragmentation across tools, and stress/guilt from being behind. They want clear guidance on what to do next, prioritized actions, fast input/output, minimal/no onboarding, and to feel calm/in control rather than overwhelmed.
+Users find traditional CRMs “broken” because they require too much clicking, field updating, and dashboard checking—creating admin overhead, fragmentation across tools, and stress/guilt from being behind. They want clarity on what to do next, speed, minimal/no manual data entry, less switching between systems, and an overall feeling of calm/control rather than overwhelm.
 
 **Confidence:** High
 
-**Evidence:** “CRM as it exists today… is kind of broken… It’s too much clicking around, updating fields, checking dashboards… feels like admin work”; “they don’t want dashboards”; “they don’t want to manually update anything”; “they want to know what to do next, clearly”; “they want everything to be fast (input + output)”; “today they usually check like 3–5 things (CRM, email, calendar, maybe Slack) → already fragmented”; “right now CRM = stress + guilt (because it’s always behind)”; “ideal state = calm, clear, just doing the next thing”
+**Evidence:** “CRM as it exists today… is kind of broken… It’s too much clicking around, updating fields, checking dashboards… feels like admin work”; “they want to know what to do next, clearly”; “they don’t want to manually update anything”; “today they usually check like 3–5 things (CRM, email, calendar, maybe Slack) → already fragmented”; “right now CRM = stress + guilt (because it’s always behind)”
 
 **Contradictions:** No contradictory content found.
 
 ## Product Features
 
-A conversation-first CRM (primarily chat-based; voice possibly later) with minimal traditional screens. Core capabilities include: next-best-action recommendations (ideally proactive), prioritized action lists with context, automatic activity capture (emails/calls), automatic pipeline updates, and quick execution of actions (send follow-up, call, schedule) directly from the conversational interface. The system should provide short “why this?” explanations (not reports), reduce choices, and keep updates invisible in the background.
+A conversation-first CRM (chat-based, with possible voice later) that provides prioritized “next best actions” and enables fast execution of those actions (send follow-ups, schedule, call). It automates activity capture (emails/calls), suggests or generates notes, and keeps the pipeline/deal stages updated in the background with near-zero data entry. It can also proactively suggest actions before the user asks, and flag at-risk or cold deals in action-oriented terms (not dashboards).
 
 **Confidence:** High
 
-**Evidence:** “It’s basically a CRM but conversation-first. Probably chat based, maybe voice later. No real ‘screens’”; “tell you your next best action”; “log stuff automatically (calls, emails etc.)”; “keep the pipeline updated without you touching it”; “let you execute things quickly (send follow-up, schedule, etc.)”; “system suggests actions before you ask (ideally)”; “if you ask ‘why this?’ → short explanation, not a report”; “everything updates in background, invisible”; “reduce choices, don’t give users 10 options”; “get list of actions already prioritized… includes: who, context, suggested message or next step”; “action executes immediately… everything logs automatically in background… pipeline updates itself”
+**Evidence:** “It’s basically a CRM but conversation-first. Probably chat based, maybe voice later.”; “tell you your next best action”; “log stuff automatically (calls, emails etc.)”; “keep the pipeline updated without you touching it”; “let you execute things quickly (send follow-up, schedule, etc.)”; “system suggests actions before you ask (ideally)”; “notes generated or at least suggested”; “deal stage updated without asking user”; “system flags… ‘this deal is going cold’… Converts that into actions, not insights”
 
 **Contradictions:** No contradictory content found.
 
 ## Business Goals
 
-Reduce CRM fatigue, drive daily active usage by reps, increase revenue per rep via better follow-up, and make onboarding/training minimal to nonexistent.
+Business goals include reducing CRM fatigue, increasing daily adoption/usage by reps, increasing revenue per rep (via better/more consistent follow-up), and making onboarding/training minimal to nonexistent.
 
 **Confidence:** High
 
@@ -40,11 +40,11 @@ Reduce CRM fatigue, drive daily active usage by reps, increase revenue per rep v
 
 ## Differentiators
 
-Positioned explicitly against traditional CRMs (e.g., Salesforce/HubSpot): no/low reliance on screens, tabs, dashboards, reporting/BI, manual data entry, or manual pipeline management. Differentiation is “actions > insights,” conversation-first interaction, automation-by-default, and an experience focused on “action → next step → done,” emphasizing doing over viewing.
+Differentiation is positioned as “conversation first” with minimal/no traditional screens, tabs, dashboards, reporting/BI, or manual pipeline management. The product emphasizes actions over insights, automation by default, reduced choices, and an “invisible” CRM that focuses on “action → next step → done,” feeling calm, direct, and decisive rather than analytical, cluttered, gamified, or overly configurable (i.e., explicitly not “another version of Salesforce”).
 
 **Confidence:** High
 
-**Evidence:** “We’re intentionally not doing: traditional screens; analytics dashboards (at least not upfront); manual pipeline management”; “conversation first, always… everything through chat / language, no screens if we can avoid it”; “actions > insights… avoid anything that looks like reporting”; “automation by default… system should just capture stuff, not ask”; “not a reporting tool… not BI… not a place to input data… basically not another version of Salesforce”; “Everything is more like: → action → next step → done”
+**Evidence:** “We’re intentionally not doing: traditional screens; analytics dashboards (at least not upfront); manual pipeline management”; “conversation first, always… no screens if we can avoid it”; “actions > insights… avoid anything that looks like reporting”; “automation by default”; “not a reporting tool… not BI… basically not another version of Salesforce”; “Everything is more like: → action → next step → done”; “product should feel like… calm… decisive… should NOT feel like… overly configurable”
 
 **Contradictions:** No contradictory content found.
 
@@ -58,4 +58,4 @@ High
 
 ## Suggestion
 
-Add a small set of concrete success metrics and boundaries to make the vision more testable (e.g., target reduction in time spent on CRM admin, daily active usage targets, onboarding time goals, and what “next best action” must be able to do at v1), and explicitly name the initial integration surface(s) implied by the flows (email/calendar) while reaffirming what will be deferred (e.g., any dashboards/reporting) to prevent scope creep back toward a traditional CRM.
+Add a few crisp, testable constraints to make the vision more actionable—e.g., define the initial “day-one” workflow (what data sources it connects to first like Gmail/Outlook + calendar, what actions it can execute), success metrics tied to the stated goals (daily active use rate, time-to-first-value/onboarding time, reduction in manual updates, follow-up SLA improvements, revenue-per-rep proxy), and explicitly call out the first wedge segment (e.g., early-stage founders vs. reps) plus the minimum differentiators you will not compromise on (no dashboards, no manual stages, proactive next actions).
