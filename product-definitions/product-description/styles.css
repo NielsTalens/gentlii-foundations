@@ -57,17 +57,12 @@ a {
   align-items: flex-start;
 }
 
-.brand-mark {
+.brand-logo {
   width: 44px;
   height: 44px;
   flex: 0 0 44px;
-  display: grid;
-  place-items: center;
-  border-radius: 14px;
-  background: linear-gradient(135deg, rgba(17, 134, 184, 0.92), rgba(15, 111, 153, 0.92));
-  color: var(--text);
-  font-weight: 700;
-  font-size: 1.05rem;
+  display: block;
+  object-fit: contain;
 }
 
 .brand-kicker,

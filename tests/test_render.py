@@ -56,6 +56,14 @@ def test_write_artifacts_renders_combined_html_content(tmp_path):
     assert "title: Product Vision" not in html
 
 
+def test_write_artifacts_uses_logo_png_for_favicon_and_brand_logo(tmp_path):
+    write_artifacts(tmp_path, [GeneratedArtifact(name="strategy", markdown="# Strategy\n")])
+    html = (tmp_path / "index.html").read_text(encoding="utf-8")
+
+    assert '<link rel="icon" href="/logo.png" />' in html
+    assert '<img class="brand-logo" src="/logo.png" alt="Gentlii logo" />' in html
+
+
 def test_write_artifacts_renders_ordered_lists(tmp_path):
     artifact = GeneratedArtifact(
         name="launch-plan",

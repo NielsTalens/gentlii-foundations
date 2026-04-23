@@ -45,13 +45,14 @@ def _render_index_html(artifacts: list[GeneratedArtifact]) -> str:
         "  <meta charset=\"utf-8\" />\n"
         "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n"
         "  <title>Gentlii Foundations</title>\n"
+        "  <link rel=\"icon\" href=\"/logo.png\" />\n"
         "  <link rel=\"stylesheet\" href=\"styles.css\" />\n"
         "</head>\n"
         "<body>\n"
         "  <div class=\"app-shell\">\n"
         "    <header class=\"page-header\">\n"
         "      <div class=\"brand-block\">\n"
-        "        <div class=\"brand-mark\" aria-hidden=\"true\">G</div>\n"
+        "        <img class=\"brand-logo\" src=\"/logo.png\" alt=\"Gentlii logo\" />\n"
         "        <div>\n"
         "          <div class=\"brand-kicker\">Product Foundations</div>\n"
         "          <h1 class=\"brand-title\">Gentlii Foundations</h1>\n"
@@ -457,17 +458,12 @@ a {
   align-items: flex-start;
 }
 
-.brand-mark {
+.brand-logo {
   width: 44px;
   height: 44px;
   flex: 0 0 44px;
-  display: grid;
-  place-items: center;
-  border-radius: 14px;
-  background: linear-gradient(135deg, rgba(17, 134, 184, 0.92), rgba(15, 111, 153, 0.92));
-  color: var(--text);
-  font-weight: 700;
-  font-size: 1.05rem;
+  display: block;
+  object-fit: contain;
 }
 
 .brand-kicker,
