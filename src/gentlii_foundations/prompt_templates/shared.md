@@ -34,7 +34,7 @@ Write evidence as `**Evidence:** <...>`.
 ### Suggestions
 You MAY provide suggestions, but they must be clearly marked as "Suggestion" and must not be mixed with extracted content.
 Provide concrete suggestions to improve the artifact.
-Write suggestions under a `### Suggestion` heading.
+Write suggestions under a `## Suggestion` heading.
 
 - Must be clearly labeled as "Suggestion"
 - Must not introduce fabricated facts

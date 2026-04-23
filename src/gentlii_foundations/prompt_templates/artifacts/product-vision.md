@@ -89,7 +89,7 @@ Return only one of these values on the next line:
 
 ---
 
-### Suggestion
+## Suggestion
 
 Return exactly one normal paragraph under this heading.
 If no useful suggestion can be made from the source material, return `Not found`.
@@ -104,6 +104,6 @@ Partial
 
 Medium
 
-### Suggestion
+## Suggestion
 
 One normal paragraph here.

@@ -184,7 +184,8 @@ def _markdown_to_html(markdown: str) -> str:
         paragraph.append(line)
 
     flush_all()
-    return "\n".join(_group_side_by_side_sections(blocks))
+    grouped_blocks = _group_side_by_side_sections(blocks)
+    return "\n".join(_move_dual_section_grid_to_top(grouped_blocks))
 
 
 def _indent(text: str, spaces: int) -> str:
@@ -308,6 +309,13 @@ def _group_side_by_side_sections(blocks: list[str]) -> list[str]:
         grouped.extend(first_section[0])
         index = first_section[1]
     return grouped
+
+
+def _move_dual_section_grid_to_top(blocks: list[str]) -> list[str]:
+    for index, block in enumerate(blocks):
+        if block.startswith('<div class="doc-dual-section-grid">'):
+            return [block, *blocks[:index], *blocks[index + 1 :]]
+    return blocks
 
 
 def _collect_side_section(blocks: list[str], start_index: int) -> tuple[list[str], int] | None:
@@ -544,7 +552,6 @@ a {
   padding: 14px 16px;
   border: 1px solid var(--border);
   border-radius: 14px;
-  background: rgba(7, 20, 35, 0.22);
 }
 
 .doc-side-section h3 {
