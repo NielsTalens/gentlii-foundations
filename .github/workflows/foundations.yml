@@ -42,6 +42,7 @@ jobs:
           mkdir -p _site
           cp product-definitions/product-description/index.html _site/index.html
           cp product-definitions/product-description/styles.css _site/styles.css
+          cp logo.png _site/logo.png
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
