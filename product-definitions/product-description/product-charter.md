@@ -1,99 +1,91 @@
 ## Core Principles
 
-Het product stuurt op extreme eenvoud en automatisering: liever automatiseren dan documenteren, liever schrappen dan toevoegen, en liever prefill dan dat de gebruiker veel moet invullen. Daarnaast is “minder stappen” een leidend principe, met de kanttekening dat dit soms botst met de behoefte aan uitleg/zekerheid en met compliance.
+The product is explicitly intended to be conversation-first (chat/language as the primary interface), prioritizing actions over insights (telling users what to do next rather than showing analytics), and automating capture/updates by default so users are not maintaining the system. It also emphasizes reducing cognitive load by removing searching, updating, and deciding wherever possible.
 
 **Confidence:** High
 
-**Evidence:** “Automatiseren > documenteren”, “Schrappen > toevoegen”, “Prefill > input”, “Minder stappen > meer uitleg (maar conflicteert soms)”, en “We willen iets bouwen rondom verzekeringen maar dan extreem simpel.”
-
-**Contradictions:** Er wordt expliciet spanning genoemd tussen principes/ambities: “Minder stappen > meer uitleg (maar conflicteert soms)”, “Te weinig stappen kan ook wantrouwen creëren (‘te makkelijk?’)”, en “Minder stappen > meer uitleg” maar ook “geen uitleg nodig”?
-
-
-## Product Boundaries
-
-Het product positioneert zich expliciet niet als een complexe zakelijke verzekeraar, zonder offline processen, en zonder maatwerkadvies. Mobile-first wordt als uitgangspunt genoemd; een desktop-first “uitgebreid platform” wordt als conflicterend met de beoogde richting neergezet.
-
-**Confidence:** Medium
-
-**Evidence:** “Wat we NIET zijn… Geen complexe zakelijke verzekeraar / Geen offline processen / Geen maatwerkadvies”; “Mobile-first sowieso, desktop misschien later maar eigenlijk niet nodig.”; “Conflicten: ‘Geen desktop-first product’”.
-
-**Contradictions:** Er is onzekerheid over support en platformrichting: “Misschien wel support nodig → hoe past dat?” en het alternatief “Desktop-first interface met uitgebreide dashboards…” tegenover “Mobile-first sowieso, desktop misschien later maar eigenlijk niet nodig.”
-
-
-## Behavioral Rules
-
-De gewenste productgedragingen draaien om frictie minimaliseren (korte flows, weinig stappen, prefill), snelle feedback/status, en waar mogelijk geautomatiseerde claimafhandeling (incl. foto/video) en mogelijk instant payout. Compliance en fraudepreventie worden genoemd als randvoorwaarden die uitzonderingen op volledige automation kunnen vereisen.
-
-**Confidence:** Medium
-
-**Evidence:** “Afsluiten verzekering (happy path extreem kort)”, “Claim indienen (foto/video)”, “Status check (altijd zichtbaar?)”, “API-based prefill…”, “Foto/video claims”, “AI schadebeoordeling”, “Instant payout (indien mogelijk)”, “Compliance moet ‘by design’”, “Fraudepreventie vereist waarschijnlijk uitzonderingen op automation”.
-
-**Contradictions:** “Volledig geautomatiseerd” botst met uitzonderingen/edge cases: “ ‘Volledig geautomatiseerd’ vs edge cases” en “ ‘Automation first’ vs menselijke review bij fraude”; ook “ ‘Geen formulieren’ vs data nodig / KYC vereist wel iets…”.
-
-
-## Decision-Making Rules
-
-Trade-offs worden impliciet gestuurd door de voorkeurshiërarchieën in de principes (automatiseren/schrappen/prefill/minder stappen). Daarnaast wordt compliance “by design” als harde constraint genoemd, en frauderisico als limiter voor “instant payout” en volledige automatisering. Er is ook een expliciete spanning tussen “snel” en “rustig/zeker” die bij UI-keuzes trade-offs afdwingt.
-
-**Confidence:** Medium
-
-**Evidence:** “Automatiseren > documenteren”, “Schrappen > toevoegen”, “Prefill > input”, “Minder stappen > meer uitleg (maar conflicteert soms)”; “Compliance moet ‘by design’”; “ ‘Instant payout’ vs risico”; “ ‘Rustig’ vs ‘snel’ kan botsen in UI”.
-
-**Contradictions:** Beslisregels zijn niet eenduidig door meerdere genoemde spanningen: “ ‘Realtime alles’ vs backend complexiteit”, “ ‘Transparantie’ vs complexiteit van voorwaarden”, en “Minder stappen… maar ook ‘geen uitleg nodig’?”
-
-
-## Product Character
-
-Het product moet aanvoelen als snel, rustig, zeker en transparant; en expliciet niet bureaucratisch, onduidelijk of te speels.
-
-**Confidence:** High
-
-**Evidence:** “Moet voelen: Snel / Rustig / Zeker / Transparant” en “Mag niet voelen: Bureaucratisch / Onduidelijk / Te speels”.
-
-**Contradictions:** “ ‘Rustig’ vs ‘snel’ kan botsen in UI”.
-
-
-## Language and Tone
-
-Er is alleen karaktertaal (hoe het moet “voelen”), maar geen concrete richtlijnen voor copy/taalgebruik, vocabulaire, foutmeldingen, of tone-of-voice regels.
-
-**Confidence:** Low
-
-**Evidence:** “Moet voelen… Transparant… Mag niet voelen… Te speels”.
+**Evidence:** “conversation first, always”; “actions > insights”; “automation by default”; “remove searching → remove updating → remove deciding”; “system just tells you what to do next.”
 
 **Contradictions:** No contradictory content found.
 
+## Product Boundaries
+
+The product is explicitly not meant to resemble traditional CRMs: not a reporting/BI tool, not dashboard-driven, not a place for manual data input, and not endlessly configurable/customizable. It is also “intentionally not doing” traditional screens and manual pipeline management (at least initially).
+
+**Confidence:** High
+
+**Evidence:** “what we are not… not a reporting tool… not BI… not a place to input data… not something you customize endlessly… basically not another version of Salesforce”; “We’re intentionally not doing: traditional screens; analytics dashboards (at least not upfront); manual pipeline management.”
+
+**Contradictions:** No contradictory content found.
+
+## Behavioral Rules
+
+The system should proactively suggest prioritized next actions (ideally before the user asks), provide brief explanations when challenged (without turning into a report), keep everything updated invisibly in the background, and minimize user choices/options. It should enable immediate execution of actions (send/call/schedule) and automatically log activity and update the pipeline without “after work” or manual field entry; needing training is treated as a failure signal.
+
+**Confidence:** High
+
+**Evidence:** “system suggests actions before you ask (ideally)”; “if you ask ‘why this?’ → short explanation, not a report”; “everything updates in background, invisible”; “reduce choices, don’t give users 10 options”; “action executes immediately”; “everything logs automatically in background”; “pipeline updates itself”; “If someone needs training, we probably failed.”; “if user has to fill fields → something went wrong”; “if user has to type things in fields, we probably failed.”
+
+**Contradictions:** No contradictory content found.
+
+## Decision-Making Rules
+
+Feature and scope trade-offs should be decided by “gut checks” that bias toward removing screens, increasing immediate actionability, and reducing user input. If a proposed element does not lead directly to an executable action, it likely should not exist; adding tabs/dashboards is a warning sign of drifting back to traditional CRM patterns.
+
+**Confidence:** High
+
+**Evidence:** “decision rules (gut checks)”; “can we remove a screen instead of adding one”; “does this help someone take action immediately”; “can we reduce input here”; “if it doesn’t lead to action → probably shouldn’t exist”; “if we start adding tabs + dashboards we’re probably drifting.”
+
+**Contradictions:** No contradictory content found.
+
+## Product Character
+
+The product should feel focused, direct, calm, and somewhat decisive—“almost telling you what to do.” It aims to create an emotional experience of calm and clarity (users feel in control, not overwhelmed), and the system should become “invisible over time” so users can act without thinking about the tool.
+
+**Confidence:** High
+
+**Evidence:** “product should feel like… focused… direct… calm… a bit decisive”; “ideal state = calm, clear, just doing the next thing”; “Feels like CRM should become kind of invisible over time.”
+
+**Contradictions:** No contradictory content found.
+
+## Language and Tone
+
+Language should be short and direct, with no hype/cheerleading and no buzzwords; the interface should phrase outputs as concrete actions rather than abstract metrics.
+
+**Confidence:** High
+
+**Evidence:** “tone / language… short, direct”; “no hype / no ‘you’re crushing it’ type stuff”; “no buzzwords”; “more like: ‘call these 3 deals’ not: ‘pipeline health improved’.”
+
+**Contradictions:** No contradictory content found.
 
 ## Evolution Constraints
 
-Mobile-first wordt als uitgangspunt genoemd met desktop “misschien later”; daarnaast wordt genoemd dat de mate van automation beperkt kan worden door regelgeving en dat “compliance by design” een structurele constraint is. Er is ook een hint naar mogelijke latere verbreding van doelgroep en een futuristische long-term richting (live data), maar dit is expliciet vaag.
+The product should avoid evolving back into a traditional CRM (screens/tabs/dashboards); if it starts resembling a traditional CRM again, that indicates the product has “lost the plot.” Dashboards/analytics are explicitly deprioritized “at least not upfront,” implying sequencing constraints for future expansion.
 
 **Confidence:** Medium
 
-**Evidence:** “Mobile-first sowieso, desktop misschien later maar eigenlijk niet nodig.”; “Er zit iets in automation-first, maar tegelijk weten we nog niet hoe ver dat kan (ivm regelgeving).”; “Compliance moet ‘by design’”; “mogelijk ook breder toepasbaar later”; “Maar dat voelt ook nog vaag / futuristisch.”
+**Evidence:** “if it starts looking like a traditional CRM again, we’ve probably lost the plot”; “analytics dashboards (at least not upfront)”; “not another version of Salesforce.”
 
-**Contradictions:** Alternatieve koers “Desktop-first… uitgebreid platform” botst met mobile-first/doelgroep: “Conflicten: ‘Geen desktop-first product’ … Target group (digital natives, mobiel)”.
-
+**Contradictions:** No contradictory content found.
 
 ## Integrity Checks
 
-Er staan ideeën voor meetbare doelen en enkele evaluatiepunten (drop-off per stap meten), plus impliciete checks rondom compliance/KYC/fraudepreventie. Er is geen uitgewerkt evaluatiekader (bijv. release-gates, kwaliteitscriteria, auditability), maar er zijn wel duidelijke risicogebieden die als checks fungeren.
+There are explicit failure/health signals tied to integrity: if users must fill fields or do manual data entry, something went wrong/“we probably failed”; if training is required, that’s also treated as a failure. Drift checks include noticing when tabs/dashboards/screens are being added.
 
-**Confidence:** Medium
+**Confidence:** High
 
-**Evidence:** “Metrics (ideeën…): Conversie >60%… <3 min tot polis… 70% claims automatisch… NPS >50… Drop-off per stap meten (belangrijk)”; “Compliance moet ‘by design’”; “KYC nodig”; “Fraudepreventie vereist waarschijnlijk uitzonderingen op automation”.
+**Evidence:** “if user has to fill fields → something went wrong”; “if user has to type things in fields, we probably failed”; “If someone needs training, we probably failed.”; “if we start adding tabs + dashboards we’re probably drifting.”
 
-**Contradictions:** De metrics/ambities worden zelf betwijfeld: “(lijkt hoog?)”, “(ambitieus)”, en “ ‘Binnen minuten verzekerd…’ — maar niet zeker of dit te ambitieus is (zeker met compliance).”
-
+**Contradictions:** No contradictory content found.
 
 ### Completeness
 
-Partial
+Complete
 
 ### Strength
 
-Medium
+High
 
-### Suggestion
+## Suggestion
 
-Leg expliciete beslisregels vast voor de belangrijkste spanningen die nu al genoemd worden (bijv. “compliance by design wint altijd”, wanneer je extra stappen/‘checks’ toevoegt om vertrouwen te verhogen, wanneer menselijke review verplicht is, en onder welke voorwaarden ‘instant payout’ mag), en vertaal het gewenste gevoel (“snel/rustig/zeker/transparant”) naar concrete gedrags- en copy-richtlijnen (status-communicatie, uitleg-niveau, foutmeldingen, en wanneer/hoe support wordt aangeboden) zodat teams consistent kunnen ontwerpen zonder telkens dezelfde trade-offs opnieuw te bediscussiëren.
+Add a small set of explicit “non-negotiables” and measurable acceptance checks (e.g., maximum number of user choices presented per step, required percentage of activities auto-captured, maximum time-to-next-action on open, and a rule for when a screen is allowed at all) plus a clear exception policy for edge cases (e.g., compliance-required fields, user corrections to automated pipeline updates) so the charter remains enforceable as features expand.

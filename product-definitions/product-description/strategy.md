@@ -1,61 +1,61 @@
 ## Company Strategy
 
-Een verzekeringsbedrijf bouwen dat zich richt op een extreem simpele, snelle, mobile-first ervaring voor met name jongere “digital natives” (ca. 18–35) die “geen zin hebben in gedoe”. De strategie leunt op “automation-first” om lage operationele kosten te realiseren, met compliance “by design” als randvoorwaarde. Er is spanning tussen een mobile-first positionering en een alternatief idee om juist een uitgebreid desktop-first platform met dashboards en veel configuratie te bouwen.
+Build a new kind of CRM company positioned against traditional CRMs (e.g., Salesforce/HubSpot) by focusing on eliminating admin overhead and driving daily usage through a conversation-first, action-oriented experience. The approach emphasizes not “boiling the ocean” initially, starting with a focused target user segment and resisting drift into traditional CRM patterns (screens, dashboards, heavy configurability).
 
 **Confidence:** Medium
 
-**Evidence:** “We willen iets bouwen rondom verzekeringen maar dan extreem simpel. Vooral voor jongere mensen (18–35?)”; “Mobile-first sowieso, desktop misschien later maar eigenlijk niet nodig.”; “Er zit iets in automation-first”; “Compliance moet ‘by design’”; “Lage operationele kosten (door automation)”; “In plaats van mobile-first, juist een uitgebreid platform bouwen. Desktop-first interface met uitgebreide dashboards”
+**Evidence:** “Not trying to boil the ocean here.”; “basically not another version of Salesforce”; “if it starts looking like a traditional CRM again, we’ve probably lost the plot”; “who this is really for (at least initially)… sales reps… founders… maybe customer success people later”
 
-**Contradictions:** Er is een expliciet conflict tussen mobile-first voor digital natives en een desktop-first platformstrategie. **Evidence:** “Mobile-first sowieso, desktop misschien later maar eigenlijk niet nodig.” vs “In plaats van mobile-first, juist een uitgebreid platform bouwen. Desktop-first interface…” en “Conflicten: ‘Geen desktop-first product’ … Target group (digital natives, mobiel)”
+**Contradictions:** No contradictory content found.
 
 ## Product Strategy
 
-Productstrategie draait om kernflows die extreem kort en frictieloos zijn: verzekering afsluiten (“happy path extreem kort”), claim indienen met foto/video, en een altijd zichtbare status-check. Feature-richting omvat eID + selfie verificatie (KYC), API-based prefill (device/aankoop), 1-tap afsluiten (met juridische twijfel), AI-schadebeoordeling, (mogelijk) instant payout, pushnotificaties bij statusupdates, “realtime dekking inzicht”, en onzichtbare fraudedetectie op de achtergrond. Ontwerpprincipes sturen naar minder stappen, prefill boven input, en “automatiseren > documenteren”, met erkende trade-offs: minder stappen kan botsen met behoefte aan uitleg/vertrouwen en met compliance/edge cases.
+Create a conversation-first CRM (chat as the primary interface, potentially voice later) that replaces navigation, dashboards, and manual updates with prioritized “next best actions,” fast execution, and automation-by-default. The product should proactively suggest actions, keep the pipeline updated invisibly in the background, and minimize user choices and data entry; if users must fill fields or need training, the design is considered a failure. Avoid building BI/reporting and avoid endless customization; prioritize “actions > insights.”
 
 **Confidence:** High
 
-**Evidence:** “Afsluiten verzekering (happy path extreem kort)”; “Claim indienen (foto/video)”; “Status check (altijd zichtbaar?)”; “eID + selfie verificatie”; “API-based prefill”; “1-tap afsluiten (maar klopt dit juridisch?)”; “AI schadebeoordeling”; “Instant payout (indien mogelijk)”; “Fraudedetectie op achtergrond (onzichtbaar?)”; “Automatiseren > documenteren”; “Prefill > input”; “Minder stappen > meer uitleg (maar conflicteert soms)”
+**Evidence:** “It’s basically a CRM but conversation-first. Probably chat based, maybe voice later. No real ‘screens’”; “tell you your next best action”; “log stuff automatically… keep the pipeline updated without you touching it”; “analytics dashboards (at least not upfront)”; “conversation first, always… no screens if we can avoid it”; “actions > insights”; “automation by default… if user has to fill fields → something went wrong”; “system suggests actions before you ask (ideally)”; “reduce choices”
 
-**Contradictions:** Meerdere expliciete spanningen: “geen formulieren” vs benodigde data/KYC; “instant payout” vs risico/fraude; “volledig geautomatiseerd” vs edge cases/human review; “rustig” vs “snel” in UI; en mobile-first vs desktop-first productidee. **Evidence:** “’Geen formulieren’ vs data nodig”; “’Instant payout’ vs risico”; “’Volledig geautomatiseerd’ vs edge cases”; “’Rustig’ vs ‘snel’ kan botsen in UI”; “In plaats van mobile-first… Desktop-first…”
+**Contradictions:** No contradictory content found.
 
 ## Value Proposition
 
-Belofte: verzekeren moet niet traag/bureaucratisch voelen maar “binnen minuten” geregeld zijn, mogelijk zelfs direct bij aankoop. Claims “zonder gedoe”, snel geholpen worden (liefst direct geld), met een gevoel van snelheid, rust, zekerheid en transparantie. Er is onzekerheid hoe ambitieus dit kan zijn door compliance en frauderisico, en de value proposition is expliciet “niet scherp”.
+For reps/founders who dislike CRM admin, deliver a calm, direct system that tells them what to do next, executes follow-ups quickly, and automatically captures/logs activity so they feel in control without being overwhelmed. The core promise is “less viewing, more doing”: remove searching/updating/deciding and replace it with clear prioritized actions, immediate execution, and near-zero data entry.
 
-**Confidence:** Medium
+**Confidence:** High
 
-**Evidence:** “Verzekeren voelt nu traag en bureaucratisch. Idee is: binnen een paar minuten geregeld, misschien zelfs direct bij aankoop van iets.”; “’Binnen minuten verzekerd, claims zonder gedoe’”; “Moet voelen: Snel / Rustig / Zeker / Transparant”; “Value / Proposition (niet scherp)”; “Claims snel (instant? of <24u realistischer?)”
+**Evidence:** “CRM… is kind of broken… too much clicking around… feels like admin work instead of helping you sell.”; “something that just… tells you what to do next.”; “Not another tool you manage, more like something that manages you”; “everything points to: → remove searching → remove updating → remove deciding… and replace it with: → clear next action → immediate execution → no admin overhead”; “ideal state = calm, clear, just doing the next thing”
 
-**Contradictions:** “Transparantie” en “realtime dekking inzicht” botsen mogelijk met complexiteit van voorwaarden; “geen formulieren” botst met wettelijke/KYC eisen; snelheid/instant payout botst met risico en extra checks die sommige gebruikers juist geruststellend vinden. **Evidence:** “’Transparantie’ vs complexiteit van voorwaarden”; “’Geen formulieren’ vs wettelijke verplichtingen”; “’Instant payout’ vs risico”; “Sommige gebruikers vinden ‘extra checks’ juist geruststellend”
+**Contradictions:** No contradictory content found.
 
 ## Strategic Goals
 
-Niet found als harde, definitieve doelen; wel concept-metrics/ambities genoemd: conversie >60%, <3 min tot polis, 70% claims automatisch, NPS >50, en snelle groei in jong segment plus lage operationele kosten door automation.
+Reduce CRM fatigue/stress and the sense of admin burden; drive daily CRM usage; increase revenue per rep via improved follow-up; make onboarding nonexistent or very fast; keep the system “invisible” by updating in the background with minimal user input.
 
-**Confidence:** Medium
+**Confidence:** High
 
-**Evidence:** “Metrics (ideeën, niet gevalideerd): Conversie >60% … <3 min tot polis … 70% claims automatisch … NPS >50”; “Snelle groei (jong segment)”; “Lage operationele kosten (door automation)”
+**Evidence:** “Main goals are: reduce the general fatigue people have with CRM”; “get reps to actually use the system daily”; “increase revenue per rep (if they follow up more, this should happen)”; “make onboarding basically nonexistent or very fast”; “Everything updates in background, invisible”
 
-**Contradictions:** Doelen/ambities staan onder onzekerheid en worden als mogelijk te ambitieus benoemd; daarnaast spanning met compliance/fraude/handmatige checks. **Evidence:** “(lijkt hoog?)”; “(ambitieus)”; “maar niet zeker of dit te ambitieus is (zeker met compliance).”; “Fraudepreventie vereist waarschijnlijk uitzonderingen op automation”
+**Contradictions:** No contradictory content found.
 
 ## Long-term Direction
 
-Een long-term-ish richting wordt genoemd: mogelijk “volledig realtime verzekeringen” op basis van live data (gedrag, device, aankoopmoment), maar dit wordt als vaag/futuristisch gekwalificeerd. Daarnaast bestaat een alternatieve richting (door CIO-idee) naar een uitgebreid desktop-first platform met dashboards, configuratie, gedetailleerde polis-opties/add-ons en scenario-tools, maar dit conflicteert met de beoogde mobile-first doelgroep.
+Evolve CRM toward an “invisible” assistant-like system that proactively suggests the next best actions, minimizes interface/screen complexity, and potentially adds voice input later—while resisting drift back into traditional CRM dashboards, tabs, and reporting.
 
 **Confidence:** Medium
 
-**Evidence:** “Richting (long-term-ish): Misschien volledig realtime verzekeringen op basis van live data (bijv. gedrag, device, aankoopmoment). Maar dat voelt ook nog vaag / futuristisch.”; “In plaats van mobile-first, juist een uitgebreid platform bouwen… vergelijkingstabellen en scenario-tools”
+**Evidence:** “Feels like CRM should become kind of invisible over time… that’s the direction.”; “system suggests actions before you ask (ideally)”; “maybe voice later”; “if we start adding tabs + dashboards we’re probably drifting”
 
-**Contradictions:** Long-term desktop-first platformrichting botst met de eerder geformuleerde mobile-first focus en doelgroep. **Evidence:** “Mobile-first sowieso…” vs “Desktop-first interface…” en “Conflicten: ‘Geen desktop-first product’ … Target group (digital natives, mobiel)”
+**Contradictions:** No contradictory content found.
 
 ### Completeness
 
-Partial
+Complete
 
 ### Strength
 
-Medium
+High
 
-### Suggestion
+## Suggestion
 
-Maak één expliciete strategiekeuze (mobile-first “extreem simpel” voor 18–35 vs desktop-first “uitgebreid platform”) en vertaal die naar een scherpe value proposition met concrete, realistische doelen (bijv. “polis in ≤5 min”, “claims in ≤24u met X% straight-through processing”) die aantoonbaar compatibel zijn met compliance/KYC en fraudepreventie; leg daarnaast vast welke frictie “bewust” blijft (bijv. extra checks) om vertrouwen te ondersteunen en de geconstateerde spanningen (“geen formulieren”, “instant payout”, “volledige automation”) te resolven.
+Clarify the go-to-market strategy and success metrics by stating an initial beachhead (e.g., “early-stage founders doing sales” vs “sales reps”), the primary acquisition channel assumptions, and measurable product outcomes (e.g., target daily active usage rate, % activities auto-logged, time-to-first-value/onboarding time, follow-up SLA improvement, and revenue-per-rep lift) so the strategy is more actionable beyond product principles.
