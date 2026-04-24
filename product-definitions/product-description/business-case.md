@@ -1,40 +1,36 @@
 ## Business Rationale
-
-Current CRMs are described as “broken” for day-to-day sellers because they require heavy manual navigation and data entry (“clicking around, updating fields, checking dashboards”), which feels like admin work and leads to fragmented workflows and stress/guilt. The proposed product direction is a conversation-first CRM that removes screens/dashboards where possible, automates capture/updates, and focuses on telling users the “next best action” to reduce overwhelm and make the system feel “invisible.”
+Gentlii addresses the problem that “faster value delivery” in agile does not come from following processes alone, but from substantial thinking, planning, and making smart choices—work that product professionals often lack time and headspace to do due to their environment. The product aims to reduce cognitive load and improve product thinking and context before building, countering trends like spec-driven development (starting too early without enough product context) and an industry focus on output over outcomes. It is also positioned as an extension of existing “product thinking consultancy,” reducing dependency on a consultant to drive the process.
 
 **Confidence:** High
 
-**Evidence:** “CRM as it exists today (like Salesforce etc.) is kind of broken… It’s too much clicking around, updating fields, checking dashboards… feels like admin work”; “What we want instead is something that just… tells you what to do next.”; “today they usually check like 3–5 things (CRM, email, calendar, maybe Slack) → already fragmented”; “right now CRM = stress + guilt (because it’s always behind)”
+**Evidence:** “The problem is that the agile promise of faster value delivery does not come from the processes like scrum… it requires much more thinking and planning… most people do not have the time nor the head space…”; “This product is about reducing cognitive load of product professionals”; “start building too early without enough product context”; “Output over outcome while is must be the other way around.”; “Gentlii could be a extension of the product thinking consultancy work.”
 
 **Contradictions:** No contradictory content found.
 
 ## Expected Value
-
-The text expects value primarily through reduced CRM fatigue and admin burden, increased daily adoption/usage by reps, faster onboarding (minimal training), improved execution speed (less switching and “after work”), and increased revenue per rep via more consistent follow-up driven by prioritized next actions.
+Expected value is described as helping product professionals by gathering needed information into an “opinionated product definition,” ensuring they can rely on its quality “without any required action,” and enabling checks that ideas/feature requests align with that definition. Additional value includes integrating into existing tools/workflows (not adding another UI-heavy app) and generating key product artifacts (strategy, vision, charter, business case) by extracting meaning from available data, while “guarding alignment” across documents.
 
 **Confidence:** Medium
 
-**Evidence:** “Main goals are: reduce the general fatigue people have with CRM… get reps to actually use the system daily… increase revenue per rep (if they follow up more, this should happen)… make onboarding basically nonexistent or very fast”; “everything logs automatically in background… pipeline updates itself… no extra steps, no ‘after work’”
+**Evidence:** “We want to help product professionals by: providing help in gathering the needed information… opinionated product definition… making sure they can rely on the quality… without any required action… providing a way… to check whether any idea aligns with the product definition”; “integrate within existing tools and workflows”; “The product will create strategic, product vision, product charter documents… extracting the meaning from all available data”; “The product will guard alignment… validate feature requests against the product description.”
 
 **Contradictions:** No contradictory content found.
 
 ## Assumptions
-
-Assumptions include: (1) sellers prefer actions over dashboards/insights and primarily want clear direction on what to do next; (2) removing manual data entry and screens will increase usage/adoption; (3) automation can reliably capture emails/calls, generate/suggest notes, and update deal stages “in the background”; (4) better follow-up prompted by the system will increase revenue per rep; (5) users will accept a “decisive” system that tells them what to do.
+The text implies several assumptions: (1) product professionals lack time/headspace for sufficient product thinking and brainstorming; (2) environments commonly prevent this thinking; (3) integrating into existing tools/workflows is necessary to reduce cognitive load (i.e., another standalone app would be counterproductive); (4) it is feasible to extract “meaning from all available data” to produce reliable product artifacts; and (5) an “opinionated product definition” can be trustworthy “without any required action” from users.
 
 **Confidence:** Medium
 
-**Evidence:** “people don’t need more charts, they need to know what to do”; “if user has to fill fields → something went wrong”; “get reps to actually use the system daily”; “increase revenue per rep (if they follow up more, this should happen)”; “system suggests actions before you ask (ideally)”; “deal stage updated without asking user”
+**Evidence:** “most people do not have the time nor the head space… The environment doesn't allow it.”; “This product is about reducing cognitive load… it should not be an additional app with an UI that needs an account”; “Wherever possible the product should integrate within existing tools and workflows.”; “created by extracting the meaning from all available data.”; “rely on the quality… without any required action.”
 
 **Contradictions:** No contradictory content found.
 
 ## Measurable Business Outcomes
-
-Some outcomes are stated but not quantified: increased daily usage/adoption (“use the system daily”), increased revenue per rep, and faster onboarding (ideally “basically nonexistent or very fast”). However, no specific metrics, targets, baselines, or timeframes are provided.
+Not found.
 
 **Confidence:** Low
 
-**Evidence:** “get reps to actually use the system daily”; “increase revenue per rep”; “make onboarding basically nonexistent or very fast”
+**Evidence:** No supporting evidence found
 
 **Contradictions:** No contradictory content found.
 
@@ -48,4 +44,4 @@ Low
 
 ## Suggestion
 
-Add concrete success metrics with targets and timeframes (e.g., daily active usage rate, % activities auto-logged, reduction in time spent on CRM admin, onboarding time to first productive use, follow-up SLA adherence, and revenue per rep lift), and explicitly list testable assumptions/risk factors (e.g., automation accuracy, integration coverage for email/calls/calendar, user trust in suggested actions) along with how each will be validated in pilots.
+Define measurable outcomes and targets (e.g., time saved creating strategy/vision/charter, reduction in rework or misaligned feature requests, % of feature requests validated/flagged, adoption/retention), and tie them to a timeframe and baseline. Clarify the value hypothesis with quantification (how much cognitive load/time is reduced, and what “quality” means for the product definition), and explicitly list testable assumptions (data availability/quality, integration feasibility, acceptable accuracy thresholds) with validation plans.

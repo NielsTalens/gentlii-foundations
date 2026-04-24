@@ -1,102 +1,73 @@
 ## Job Name
-Get told the next best sales action (without CRM admin)
+Create and maintain a reliable product definition with minimal cognitive effort
 
-**Confidence:** High
-
-**Evidence:** “something that just… tells you what to do next.” / “you just ask ‘what should I do now?’ and it gives you a straight answer.” / “system just tells them immediately… ideally ranked / prioritized so no thinking required”
-
+**Confidence:** High  
+**Evidence:** “reducing cognitive load of product professionals”; “need a very concise product definition”; “making sure they can rely on the quality of this product definition without any required action”; “The product will create strategic, product vision, product charter documents”  
 **Contradictions:** No contradictory content found.
 
 ## Core Job Statement
-When I start my day (or return to work) and need to move deals forward, I want the system to tell me the prioritized next actions and let me execute them immediately, so I can follow up consistently without hunting across tools or doing CRM admin.
+When I’m responsible for shaping a digital product but don’t have the time/headspace for deep thinking and planning, I want the system to gather and synthesize existing product inputs into a concise, high-quality product definition and keep it aligned over time, so I can make smarter choices and validate ideas without heavy manual effort.
 
-**Confidence:** High
-
-**Evidence:** “starting point (morning / opening laptop)… first question in their head is basically: what do I do first” / “today they usually check like 3–5 things (CRM, email, calendar, maybe Slack) → already fragmented” / “open system… ask (or it tells you without asking): ‘what should I do now?’… get list of actions already prioritized” / “action executes immediately… everything logs automatically in background… pipeline updates itself”
-
+**Confidence:** Medium  
+**Evidence:** “most people do not have the time nor the head space… thinking and brainstorming”; “providing help in gathering the needed information… capture this in a opinionated product definition”; “rely on the quality… without any required action”; “provide a way… to check whether any idea aligns with the product definition”; “integrate within existing tools and workflows”  
 **Contradictions:** No contradictory content found.
 
 ## Desired Outcomes
-- Clear, prioritized “next actions” (ranked so “no thinking required”)
-- Faster execution (one command / minimal steps)
-- Reduced tool switching (less fragmentation across CRM/email/calendar)
-- Automatic capture/logging of activity (calls/emails) and notes suggestions
-- Pipeline stays accurate without manual updates
-- Fewer follow-ups missed; deals don’t “fall through cracks”
-- Reduced CRM fatigue; higher daily usage; faster onboarding (from business goals)
+- A concise product definition that can be trusted.  
+- Strategic/vision/charter (and related) documents generated from existing data.  
+- Ongoing alignment/consistency across product documents (“guard alignment”).  
+- Ability to validate feature requests/ideas against the product description.  
+- Better outcomes-focus (vs output/spec-only focus).
 
-**Confidence:** High
-
-**Evidence:** “tell you your next best action” / “let you execute things quickly” / “everything to be fast (input + output)” / “log stuff automatically (calls, emails etc.)… keep the pipeline updated without you touching it” / “often forget something” / “follow-ups fall through cracks” / “reduce the general fatigue… get reps to actually use the system daily… make onboarding basically nonexistent or very fast”
-
+**Confidence:** High  
+**Evidence:** “need a very concise product definition”; “make sure we create the right one and trust that”; “create strategic, product vision, product charter documents… extracting the meaning from all available data”; “guard alignment between all mentioned output documents”; “validate feature requests against the product description”; “Output over outcome… must be the other way around”; “Defining outcomes is very important.”  
 **Contradictions:** No contradictory content found.
 
 ## Emotional or Social Dimension
-Users want to feel calm and in control, not overwhelmed or guilty about an out-of-date CRM; they don’t want to feel like they’re doing admin work.
+Reduced cognitive load / mental burden for product professionals.
 
-**Confidence:** High
-
-**Evidence:** “users don’t just want efficiency, they want: to feel in control of their pipeline… not feel overwhelmed… not feel like they’re doing admin work” / “right now CRM = stress + guilt… ideal state = calm, clear, just doing the next thing”
-
+**Confidence:** Medium  
+**Evidence:** “reducing cognitive load of product professionals”  
 **Contradictions:** No contradictory content found.
 
 ## Current Frictions
-- Too much clicking/navigation and manual field updates (“admin work”)
-- Hunting for information across dashboards/pipeline/tasks/notes
-- Fragmented workflow across multiple tools (CRM, email, calendar, Slack)
-- Manual deciding/prioritizing what to do next; leads to forgetting follow-ups
-- Logging notes and updating deal stages is effortful and often skipped
-- Static dashboards require interpretation but still don’t clarify next steps
-- Switching contexts (record → notes → email → logging → stage update)
+- Agile “faster value delivery” requires significant thinking/planning/smart choices beyond processes.  
+- Product professionals lack time/headspace for necessary thinking/brainstorming; environment doesn’t allow it.  
+- Spec-driven development pushes teams to “start building too early without enough product context.”  
+- Over-focus on AI output instead of product quality/outcomes.  
+- Consultancy process is too dependent on the consultant pulling the process.
 
-**Confidence:** High
-
-**Evidence:** “too much clicking around, updating fields, checking dashboards… feels like admin work” / “No hunting around.” / “check like 3–5 things… already fragmented” / “click through pipeline / tasks / dashboards… decide manually what to do… often forget something” / “after call → user supposed to log notes… pipeline → needs manual update… often skipped because too much effort” / “dashboards (static, not that helpful)… need to interpret data… still unclear what to do” / “→ lots of switching + admin”
-
+**Confidence:** High  
+**Evidence:** “requires much more thinking and planning”; “most people do not have the time nor the head space”; “The environment doesn't allow it”; “start building too early without enough product context”; “focus mainly on the amount of output AI can generate… not on… quality”; “too much embedded in the consultant pulling the process”  
 **Contradictions:** No contradictory content found.
 
 ## Existing Alternatives or Workarounds
-- Traditional CRMs: Salesforce, HubSpot
-- Simpler CRM: Pipedrive
-- Spreadsheets
-- Notes/reminders/calendar “hacks”
-- Manual “next action” recreation (checking multiple tools and deciding)
+- Scrum/agile processes (implied as insufficient alone).  
+- Spec-driven development.  
+- Product thinking consultancy where consultants create artefacts with product people.
 
-**Confidence:** High
-
-**Evidence:** “CRM as it exists today (like Salesforce etc.)” / “open Salesforce / HubSpot” / “people are already hacking this with: Pipedrive… spreadsheets… notes / reminders / calendar hacks… trying to recreate ‘next action’ manually”
-
+**Confidence:** Medium  
+**Evidence:** “agile promise… does not come from the processes like scrum”; “One of the trends… spec-driven development”; “we do product thinking consultancy where we create the product artefacts…”  
 **Contradictions:** No contradictory content found.
 
 ## User Flows or Journeys
-- **Morning start / open laptop:** user opens app (ideally minimal/no login) and asks “what do I do first”; today they check multiple tools.
-- **Figuring out next action (current → desired):**
-  - Current: open CRM → click pipeline/tasks/dashboards → remember follow-ups → check notes/last email → decide manually → forget things.
-  - Desired: open system → ask (or system proactively suggests) “what should I do now?” → get prioritized list with who/context/suggested message.
-- **Executing an action (current → desired):**
-  - Current: find contact → open record → read notes → switch to email → write → maybe log → update stage manually.
-  - Desired: system suggests → user confirms via chat (“send this/call now/schedule”) → action executes → auto-logging + pipeline auto-updates.
-- **Capturing activity (current → desired):**
-  - Current: manual notes/logging; inconsistent email capture; manual pipeline updates; frequently skipped.
-  - Desired: auto-capture emails/calls; notes generated/suggested; deal stage updated “without asking”; “zero data entry.”
-- **Staying on top of deals (current → desired):**
-  - Current: static dashboards; interpret data; unclear next steps; follow-ups missed.
-  - Desired: system flags risk/cold/no reply and converts it into executable actions.
+- User uploads “all types of files they can find that state something about the product or ideas for a product.”  
+- Gentlii uses “different agent” to create Strategy, Product Vision, Business case, Product charter; collectively called “product description.”  
+- Outputs are written “both in markdown [and] in a generated html page.”  
+- “Product description guarding”: if any change (CRUD) is detected in product input files… (flow is truncated in source).
 
-**Confidence:** High
-
-**Evidence:** “starting point (morning / opening laptop)” / “flow: figuring out next action (current vs desired)” / “flow: executing an action” / “flow: capturing activity” / “flow: staying on top of deals”
-
+**Confidence:** High  
+**Evidence:** “A user uploads all types of files…”; “Gentlii will use different agent to create: Strategy, Product Vision, Business case, Product charter”; “These are written both in markdown as in a generated html page”; “If there is any change (crud) detected in product input files”  
 **Contradictions:** No contradictory content found.
 
 ### Completeness
 
-Complete
+Partial
 
 ### Strength
 
-High
+Medium
 
 ## Suggestion
 
-Add one or two concrete personas and scenarios (e.g., “early-stage founder selling 10–20 active deals” vs “rep with 100+ accounts”) and define success metrics tied to the job (e.g., time-to-first-action in the morning, % activities auto-logged, follow-up SLA adherence, and reduction in missed follow-ups) to make prioritization, automation boundaries, and MVP scope decisions more testable.
+Add one explicit JTBD statement per primary user (e.g., product manager, product lead) and specify measurable desired outcomes (e.g., time saved creating/maintaining the product description, reduction in misaligned feature requests), list key frictions in the flow (what makes input files hard to use, how “quality” is ensured “without any required action”), and name the concrete alternatives users use today (docs/templates, PRDs, wikis, consultants, backlog tools) to clarify replacement vs complement.

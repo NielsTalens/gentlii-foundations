@@ -1,91 +1,67 @@
 ## Core Principles
+Reduce cognitive load for product professionals by providing a concise, trustworthy product definition and prioritizing outcomes over output.
 
-Conversation-first interaction is the primary principle: the product should route “everything through chat/language” and avoid traditional screens where possible. The product prioritizes action over insight/reporting, and defaults to automation so the system captures and updates information without asking the user to fill fields.
-
-**Confidence:** High
-
-**Evidence:** “conversation first, always… everything through chat / language, no screens if we can avoid it”; “actions > insights”; “automation by default… system should just capture stuff, not ask… if user has to fill fields → something went wrong”; “Everything is more like: → action → next step → done.”
-
+**Confidence:** Medium  
+**Evidence:** “This product is about reducing cognitive load of product professionals.” / “The users do not need very extensive descriptions but need a very concise product definition.” / “Defining outcomes is very important. More important than output.”  
 **Contradictions:** No contradictory content found.
 
 ## Product Boundaries
+Gentlii is not an additional standalone app requiring an account/UI, and it is not an agile backlog tool. It should integrate into existing tools/workflows and be “invisible” where possible.
 
-The product is explicitly not a reporting/BI tool, not a place for manual data input, and not an endlessly customizable Salesforce-like CRM. It avoids traditional screens/tabs/dashboards (at least initially) and avoids manual pipeline management.
-
-**Confidence:** High
-
-**Evidence:** “what we are not… not a reporting tool… not BI… not a place to input data… not something you customize endlessly… basically not another version of Salesforce”; “We’re intentionally not doing: traditional screens… analytics dashboards (at least not upfront)… manual pipeline management.”
-
+**Confidence:** High  
+**Evidence:** “Therefore it should not be an additional app with an UI that needs an account and so on.” / “The product is not another agile backlog product tool.” / “Wherever possible the product should integrate within existing tools and workflows.” / “Wherever we can make the product invisible we will do that.”  
 **Contradictions:** No contradictory content found.
 
 ## Behavioral Rules
+Create an opinionated product definition by extracting meaning from available data; generate key product documents in markdown and HTML; guard/maintain alignment between the generated documents; validate feature requests against the product description; detect changes in input files and respond (guarding behavior implied but incomplete).
 
-The system should proactively suggest prioritized next actions (ideally before the user asks), provide short explanations when questioned (not full reports), and keep everything updated invisibly in the background. It should reduce choices (avoid presenting many options), enable immediate execution of actions, and ensure activity capture and pipeline updates happen automatically; if users must type into fields, that indicates failure.
-
-**Confidence:** High
-
-**Evidence:** “system suggests actions before you ask (ideally)”; “if you ask ‘why this?’ → short explanation, not a report”; “everything updates in background, invisible”; “reduce choices, don’t give users 10 options”; “action executes immediately… everything logs automatically in background… pipeline updates itself”; “basically zero data entry”; “If someone needs training, we probably failed.”
-
+**Confidence:** Medium  
+**Evidence:** “We will capture this in a opinionated product definition.” / “The product will create strategic, product vision, product charter documents that are created by extracting the meaning from all available data.” / “The product will guard alignment between all mentioned output documents (the product description)” / “The product will validate feature requests against the product description.” / “These are written both in markdown as in a generated html page” / “If there is any change (crud) detected in product input files”  
 **Contradictions:** No contradictory content found.
 
 ## Decision-Making Rules
+Prefer integration/invisibility over adding a new UI/app; prefer concise definitions over extensive descriptions; prioritize outcomes over output.
 
-Trade-offs should be resolved using “gut checks” that bias toward removing screens, reducing input, and ensuring every feature directly enables immediate action. If something does not lead to an executable action, it likely should not exist; adding tabs/dashboards is a sign of drifting toward a traditional CRM.
-
-**Confidence:** High
-
-**Evidence:** “decision rules (gut checks) ● can we remove a screen instead of adding one ● does this help someone take action immediately ● can we reduce input here ● if it doesn’t lead to action → probably shouldn’t exist”; “if we start adding tabs + dashboards we’re probably drifting.”
-
+**Confidence:** Medium  
+**Evidence:** “Wherever possible the product should integrate within existing tools and workflows.” / “Wherever we can make the product invisible we will do that.” / “need a very concise product definition.” / “Defining outcomes is very important. More important than output.”  
 **Contradictions:** No contradictory content found.
 
 ## Product Character
+The product should feel lightweight/invisible and trustworthy/reliable in the quality of its product definition.
 
-The product should feel focused, direct, calm, and somewhat decisive (almost telling the user what to do). It should help users feel in control and not overwhelmed; the intended emotional outcome is “calm, clear, just doing the next thing.” It should not feel analytical, busy/cluttered, gamified, or overly configurable.
-
-**Confidence:** High
-
-**Evidence:** “product should feel like… focused… direct… calm… a bit decisive”; “ideal state = calm, clear, just doing the next thing”; “should NOT feel like: analytical tool… busy / cluttered… gamified… overly configurable.”
-
+**Confidence:** Medium  
+**Evidence:** “Wherever we can make the product invisible we will do that.” / “making sure they can rely on the quality of this product definition without any required action”  
 **Contradictions:** No contradictory content found.
 
 ## Language and Tone
+Concise documentation; avoid very extensive descriptions.
 
-Tone should be short and direct, avoiding hype, praise-y coaching language, and buzzwords. Prefer imperative, action-oriented phrasing (e.g., “call these 3 deals”) over status/analytics phrasing (e.g., “pipeline health improved”).
-
-**Confidence:** High
-
-**Evidence:** “tone / language… short, direct ● no hype / no ‘you’re crushing it’ type stuff ● no buzzwords”; “more like: ‘call these 3 deals’ not: ‘pipeline health improved’.”
-
+**Confidence:** Medium  
+**Evidence:** “The users do not need very extensive descriptions but need a very concise product definition.”  
 **Contradictions:** No contradictory content found.
 
 ## Evolution Constraints
+Avoid evolving into a standalone UI-heavy app or an agile backlog tool; maintain integration with existing tools/workflows and keep the product “invisible” where possible.
 
-As the product evolves, it should resist becoming a traditional CRM: adding tabs, dashboards, or traditional CRM “screens” is treated as losing direction. There’s also an implied constraint to make the CRM “invisible over time,” minimizing user awareness and interaction overhead, though feasibility is noted as uncertain.
-
-**Confidence:** Medium
-
-**Evidence:** “if we start adding tabs + dashboards we’re probably drifting”; “random note… if it starts looking like a traditional CRM again, we’ve probably lost the plot”; “Feels like CRM should become kind of invisible over time… Not 100% sure how far we can push that but that’s the direction.”
-
+**Confidence:** Medium  
+**Evidence:** “should not be an additional app with an UI that needs an account and so on.” / “The product is not another agile backlog product tool.” / “Wherever possible the product should integrate within existing tools and workflows.”  
 **Contradictions:** No contradictory content found.
 
 ## Integrity Checks
+Guard alignment between the generated documents in the “product description”; validate feature requests against the product description; aim for users to rely on quality “without any required action.” Change detection on input files is mentioned but the evaluation/action loop is not fully described.
 
-The document includes several explicit “failure”/drift signals that can be used as integrity checks: if users have to fill fields or do manual updating, something is wrong; if users need training, the product failed; if the product starts resembling traditional CRM with screens/dashboards/tabs, it has “lost the plot.”
-
-**Confidence:** High
-
-**Evidence:** “if user has to fill fields → something went wrong”; “if user has to type things in fields, we probably failed”; “If someone needs training, we probably failed”; “if it starts looking like a traditional CRM again, we’ve probably lost the plot.”
-
+**Confidence:** Medium  
+**Evidence:** “making sure they can rely on the quality of this product definition without any required action” / “providing a way for them to check whether any idea aligns with the product definition” / “The product will guard alignment between all mentioned output documents” / “The product will validate feature requests against the product description.” / “If there is any change (crud) detected in product input files”  
 **Contradictions:** No contradictory content found.
 
 ### Completeness
 
-Complete
+Partial
 
 ### Strength
 
-High
+Medium
 
 ## Suggestion
 
-Add a small set of explicit acceptance checks for key experiences (e.g., “morning open,” “post-call,” “follow-up triage”) with measurable thresholds such as maximum steps/taps, maximum time-to-next-action, and a hard rule for when (if ever) limited “screens” are allowed; this would make the existing principles (conversation-first, actions>insights, automation-by-default) more enforceable during implementation and prevent gradual drift into dashboards/configuration.
+Make the charter more enforceable by adding explicit pass/fail integrity criteria (e.g., what “quality” means for the product definition, how alignment is measured, and what happens on detected input-file changes), and clarify decision rules for trade-offs (e.g., when to sacrifice “invisible” integration for necessary UI, and how outcome-priority is operationalized in feature validation).

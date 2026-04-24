@@ -3,6 +3,7 @@ name: shared-extraction-prompt
 description: there are some important prompt elements that are applicable for all the extractors
 ---
 
+Keep the output very concise.
 Return clean markdown only.
 Do not invent missing information.
 Do not infer beyond what is reasonably supported by the text.
@@ -35,7 +36,8 @@ Write evidence as `**Evidence:** <...>`.
 You MAY provide suggestions, but they must be clearly marked as "Suggestion" and must not be mixed with extracted content.
 Provide concrete suggestions to improve the artifact.
 Write suggestions under a `## Suggestion` heading.
-
+Write the suggestions as a bulleted list.
+Limit it to max 5 suggestions.
 - Must be clearly labeled as "Suggestion"
 - Must not introduce fabricated facts
 - Should focus on missing or weak elements

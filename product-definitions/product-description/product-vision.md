@@ -1,50 +1,45 @@
 ## Target Groups
-
-Initial target users are sales reps who dislike CRM administrative work and founders doing their own sales (especially early-stage). Customer success is mentioned as a possible later expansion.
+Product professionals working on digital product development (including those currently supported by product-thinking consultancy).
 
 **Confidence:** High
 
-**Evidence:** “sales reps who hate CRM admin”; “founders doing their own sales (especially early stage)”; “maybe customer success people later”
+**Evidence:** “Gentlii focusses on digital product development.” / “We want to help product professionals…” / “Now we do product thinking consultancy…”
 
 **Contradictions:** No contradictory content found.
 
 ## Needs
-
-Users find traditional CRMs “broken” due to excessive clicking, manual field updates, dashboards, and fragmented workflows across CRM/email/calendar/Slack. They want clear prioritization of “what to do next,” fast input/output, minimal/no manual data entry, and reduced stress/guilt—feeling calm and in control rather than overwhelmed by admin work.
+Reduce cognitive load and time/mental effort required for product thinking, planning, brainstorming, and creating a solid product context/definition; avoid building too early with insufficient context; shift focus from output/specs to outcomes/quality; ensure alignment of ideas/feature requests with a trusted product definition.
 
 **Confidence:** High
 
-**Evidence:** “too much clicking around, updating fields, checking dashboards… feels like admin work”; “they want to know what to do next, clearly”; “they don’t want dashboards”; “they don’t want to manually update anything”; “everything to be fast”; “today they usually check like 3–5 things… already fragmented”; “CRM = stress + guilt (because it’s always behind)”; “remove searching… remove updating… remove deciding”
+**Evidence:** “reducing cognitive load of product professionals” / “most people do not have the time nor the head space to do the amount of thinking and brainstorming” / “start building too early without enough product context” / “Output over outcome” / “providing a way for them to check whether any idea aligns with the product definition”
 
 **Contradictions:** No contradictory content found.
 
 ## Product Features
-
-A conversation-first CRM (chat-based, possibly voice later) that provides next-best actions (ideally proactively), prioritizes tasks, and enables quick execution (send follow-up, call, schedule) directly from the conversation. It automatically logs activity (emails/calls), generates or suggests notes, and updates pipeline/deal stages in the background with “basically zero data entry.” It may provide short explanations for recommendations (“why this?”) but avoids reporting-style outputs.
+Creates an “opinionated product definition” (called “product description”) by extracting meaning from uploaded existing materials; generates key product artifacts (strategy, product vision, business case, product charter) in markdown and HTML; ensures/guards quality and alignment across the documents; validates feature requests/ideas against the product description; integrates into existing tools/workflows (not a standalone UI-heavy app); detects changes (CRUD) in input files to trigger guarding.
 
 **Confidence:** High
 
-**Evidence:** “CRM but conversation-first. Probably chat based, maybe voice later. No real ‘screens’”; “tell you your next best action”; “log stuff automatically (calls, emails etc.)”; “keep the pipeline updated without you touching it”; “let you execute things quickly”; “get list of actions already prioritized”; “suggested message or next step”; “action executes immediately”; “notes generated or at least suggested”; “system suggests actions before you ask (ideally)”; “if you ask ‘why this?’ → short explanation, not a report”
+**Evidence:** “providing help in gathering the needed information… capture this in a opinionated product definition” / “The product will create strategic, product vision, product charter documents… by extracting the meaning from all available data.” / “The product will guard alignment…” / “validate feature requests against the product description.” / “should integrate within existing tools and workflows… not be an additional app with an UI…” / “These are written both in markdown as in a generated html page” / “If there is any change (crud) detected in product input files”
 
 **Contradictions:** No contradictory content found.
 
 ## Business Goals
+Extend/augment existing product-thinking consultancy by productizing parts of the process; improve product quality and outcome focus rather than output.
 
-Business goals include reducing CRM fatigue, driving daily usage/adoption, increasing revenue per rep through better follow-up, and making onboarding/training minimal or unnecessary.
+**Confidence:** Medium
 
-**Confidence:** High
-
-**Evidence:** “reduce the general fatigue people have with CRM”; “get reps to actually use the system daily”; “increase revenue per rep (if they follow up more, this should happen)”; “make onboarding basically nonexistent or very fast”; “If someone needs training, we probably failed.”
+**Evidence:** “Gentlii could be a extension of the product thinking consultancy work.” / “focus… not on how to improve the quality of the products… Output over outcome”
 
 **Contradictions:** No contradictory content found.
 
 ## Differentiators
-
-Differentiation is positioned as avoiding traditional CRM paradigms: no/limited screens, no dashboards/analytics/reporting emphasis (especially initially), no manual pipeline management, and not being endlessly customizable. The product prioritizes “actions > insights,” automation-by-default, and a focused, direct, calm, decisive tone that tells users what to do (“call these 3 deals”) rather than presenting charts or “pipeline health” reporting.
+Not an agile backlog/spec-driven tool and not a standalone account-based UI app; “invisible” integration into existing workflows; emphasizes concise, trusted product definition and outcome/quality over output; automated quality reliance “without any required action.”
 
 **Confidence:** High
 
-**Evidence:** “We’re intentionally not doing: traditional screens; analytics dashboards (at least not upfront); manual pipeline management”; “conversation first, always… no screens if we can avoid it”; “actions > insights”; “avoid anything that looks like reporting”; “automation by default”; “not a reporting tool… not BI… not a place to input data… not something you customize endlessly”; “basically not another version of Salesforce”; “focused… direct… calm… a bit decisive”
+**Evidence:** “The product is not another agile backlog product tool.” / “should not be an additional app with an UI that needs an account” / “Wherever we can make the product invisible we will do that.” / “very concise product definition” / “making sure they can rely on the quality… without any required action” / “Output over outcome… must be the other way around.”
 
 **Contradictions:** No contradictory content found.
 
@@ -54,8 +49,8 @@ Complete
 
 ### Strength
 
-High
+Medium
 
 ## Suggestion
 
-Add a few explicit, measurable success metrics and constraints to make the vision more actionable (e.g., target daily active usage, time-to-first-value/onboarding time, % activities auto-logged, reduction in manual updates, and revenue/rep lift assumptions), and clarify initial go-to-market scope such as the first sales segment (SMB/PLG/early-stage founders), required integrations (email/calendar), and what “no screens” still allows (e.g., a minimal settings/inbox view) to prevent drift while shipping.
+Add explicit, measurable business goals (e.g., reduce time-to-create product definition by X%, reduce misaligned feature requests by Y%), clarify primary target segments (PMs vs POs vs founders vs consultants) and key use contexts, and state 2–3 concrete differentiators vs existing AI/spec tools (e.g., specific integration surfaces, governance/alignment mechanism) to make the vision more actionable.

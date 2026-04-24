@@ -1,45 +1,45 @@
-## Company Strategy
-
-Not found.
-
-**Confidence:** Low  
-**Evidence:** No supporting evidence found  
-**Contradictions:** No contradictory content found.
-
 ## Product Strategy
 
-Build a conversation-first CRM (chat as primary interface, potentially voice later) designed to minimize or eliminate traditional CRM “screens,” dashboards, and manual data entry. The product should proactively (ideally before being asked) recommend prioritized “next best actions,” enable fast execution (send follow-ups, schedule, call), and automatically capture/maintain activity logs and pipeline state in the background. Product principles emphasize “actions > insights,” “automation by default,” reducing choices, and avoiding drift into a traditional, configurable Salesforce-like system.
+Gentlii’s strategy is to support digital product development by reducing product professionals’ cognitive load and improving product thinking before building. It aims to integrate into existing tools/workflows (not be “another app”), automatically generate an opinionated, concise “product description” from available inputs, and then use it to guard alignment and validate ideas/feature requests against that definition.
 
-**Confidence:** High  
-**Evidence:** “It’s basically a CRM but conversation-first. Probably chat based, maybe voice later. No real ‘screens’”; “tell you your next best action”; “log stuff automatically”; “keep the pipeline updated without you touching it”; “conversation first, always… no screens if we can avoid it”; “actions > insights”; “automation by default”; “system suggests actions before you ask (ideally)”; “everything updates in background, invisible”; “not another version of Salesforce”  
+**Confidence:** High
+
+**Evidence:** “Gentlii focusses on digital product development.” / “This product is about reducing cognitive load of product professionals. Therefore it should not be an additional app with an UI that needs an account and so on.” / “Wherever possible the product should integrate within existing tools and workflows.” / “We will capture this in a opinionated product definition.” / “The product will create strategic, product vision, product charter documents… extracting the meaning from all available data.” / “The product will guard alignment… [and] validate feature requests against the product description.”
+
 **Contradictions:** No contradictory content found.
 
 ## Value Proposition
 
-Reduce CRM “admin work” and cognitive load by replacing dashboards, manual updates, and searching/deciding with a calm, direct system that tells users exactly what to do next, executes actions quickly, and keeps records/pipeline updated automatically—helping users feel in control rather than stressed or guilty about an out-of-date CRM.
+Gentlii promises to (1) help gather the information needed for solid product development and turn it into an opinionated product definition/product description, (2) make product professionals able to rely on the quality of that definition without required action, and (3) provide a way to check whether ideas align with the definition—prioritizing outcomes over output and improving context before specs/building.
 
-**Confidence:** High  
-**Evidence:** “CRM… is kind of broken… too much clicking around… feels like admin work instead of helping you sell”; “something that just… tells you what to do next”; “reduce the general fatigue people have with CRM”; “users… want: to feel in control… not feel overwhelmed… not feel like they’re doing admin work”; “ideal state = calm, clear, just doing the next thing”  
+**Confidence:** High
+
+**Evidence:** “providing help in gathering the needed information for solid product development… opinionated product definition.” / “making sure they can rely on the quality of this product definition without any required action” / “providing a way for them to check whether any idea aligns with the product definition” / “Defining outcomes is very important. More important than output.” / “start building too early without enough product context.”
+
 **Contradictions:** No contradictory content found.
 
 ## Strategic Goals
 
-- Reduce CRM fatigue and the “admin work” burden.  
-- Drive daily CRM usage/adoption by reps.  
-- Increase revenue per rep (via better/more consistent follow-up).  
-- Make onboarding “basically nonexistent or very fast” (minimal/no training).  
-- Achieve “basically zero data entry” via automation (auto-capture activity, auto-update pipeline).
+- Reduce cognitive load for product professionals.
+- Create strategy/vision/business case/product charter artifacts from existing files/data.
+- Provide a concise, trusted product definition/product description.
+- Ensure ongoing alignment between product artifacts and validate feature requests/ideas against them.
+- Shift focus from output/spec-driven work to outcomes and sufficient product context.
 
-**Confidence:** High  
-**Evidence:** “Main goals are: reduce the general fatigue… get reps to actually use the system daily… increase revenue per rep… make onboarding basically nonexistent or very fast. If someone needs training, we probably failed.”; “basically zero data entry”  
+**Confidence:** Medium
+
+**Evidence:** “This product is about reducing cognitive load of product professionals.” / “The users… need a very concise product definition.” / “The product will create strategic, product vision, product charter documents…” / “The product will guard alignment…” / “The product will validate feature requests…” / “Output over outcome while is must be the other way around.”
+
 **Contradictions:** No contradictory content found.
 
 ## Long-term Direction
 
-Over time, the CRM should become “kind of invisible,” operating in the background so users don’t think about maintaining a system—just taking the next action. There is also an implied staged expansion of target users: start with sales reps and founders doing their own sales, potentially extend to customer success later.
+Position Gentlii as an extension of existing product thinking consultancy by productizing the creation of key product artifacts and making the process less dependent on a consultant “pulling the process,” while keeping the product “invisible” via integration into existing workflows.
 
-**Confidence:** Medium  
-**Evidence:** “Feels like CRM should become kind of invisible over time… that’s the direction.”; “who this is really for (at least initially)… sales reps… founders… maybe customer success people later”  
+**Confidence:** Medium
+
+**Evidence:** “Gentlii could be a extension of the product thinking consultancy work.” / “The problem often is that the whole concepts is to much embedded in the consultant pulling the process.” / “Wherever we can make the product invisible we will do that.” / “Wherever possible the product should integrate within existing tools and workflows.”
+
 **Contradictions:** No contradictory content found.
 
 ### Completeness
@@ -52,4 +52,8 @@ Medium
 
 ## Suggestion
 
-Add explicit company-level strategy and positioning (e.g., target market segment and go-to-market approach versus incumbents like Salesforce/HubSpot), plus concrete success metrics/time horizons for the stated goals (adoption targets, onboarding time, revenue-per-rep lift) and clarify phased scope decisions (e.g., when/if analytics dashboards appear, and what “invisible CRM” means in terms of required integrations and automation boundaries).
+- Define a clear target customer segment and primary use case (e.g., new product discovery vs existing product alignment) using the same terms as the docs (“product professionals” is broad).  
+- Add explicit success metrics (e.g., time saved, reduction in misaligned features, outcome-quality measures) to make “outcome over output” measurable.  
+- Clarify the “opinionated” nature of the product definition: what principles/frameworks it enforces and how it handles ambiguity/conflicting inputs.  
+- Specify the integration strategy (“existing tools and workflows”) with 2–3 concrete entry points (e.g., Jira/Confluence/Google Drive) and the “invisible” interaction model.  
+- Make the long-term positioning explicit: product vs service (consultancy extension) and intended go-to-market path.
