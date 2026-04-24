@@ -1,63 +1,73 @@
 ## Vision Statement
-A conversation-first CRM that tells users what to do next and minimizes screens, manual updates, and admin work—so the system guides action and becomes “invisible” over time.
+A conversation-first CRM that tells users what to do next and minimizes traditional CRM “admin work” by automating logging and pipeline updates, aiming to feel “invisible” and action-oriented.
 
-**Confidence:** High  
-**Evidence:** “It’s basically a CRM but conversation-first.” / “What we want instead is something that just… tells you what to do next.” / “Feels like CRM should become kind of invisible over time.”  
+**Confidence:** High
+
+**Evidence:** “It’s basically a CRM but conversation-first… You just interact with it like you would with ChatGPT”; “What we want instead is something that just… tells you what to do next.”; “Feels like CRM should become kind of invisible over time.”
+
 **Contradictions:** No contradictory content found.
 
 ## Target Groups
-- Sales reps who dislike CRM administration  
-- Founders doing their own sales (especially early stage)  
-- Potentially customer success people later
+- Sales reps who dislike CRM administration.
+- Founders doing their own sales (especially early stage).
+- Potentially customer success people later.
 
-**Confidence:** High  
-**Evidence:** “sales reps who hate CRM admin” / “founders doing their own sales (especially early stage)” / “maybe customer success people later”  
+**Confidence:** High
+
+**Evidence:** “sales reps who hate CRM admin”; “founders doing their own sales (especially early stage)”; “maybe customer success people later”
+
 **Contradictions:** No contradictory content found.
 
 ## Needs
-- Reduce time spent clicking around, updating fields, and maintaining CRM (admin burden)  
-- Get clear “next best action” guidance without hunting through dashboards/pipelines  
-- Make work fast with minimal switching between tools (CRM/email/calendar/Slack)  
-- Avoid manual data entry; capture activity automatically (emails, calls, notes)  
-- Stay on top of deals without interpreting dashboards; prevent follow-ups from falling through cracks  
-- Emotional needs: feel in control, not overwhelmed; reduce “stress + guilt” from an outdated CRM
+- Reduce time and fatigue caused by CRM admin (clicking, updating fields, dashboards).
+- Provide clear, prioritized “next best action” so users don’t have to decide what to do.
+- Reduce fragmentation/switching between CRM, email, calendar, Slack.
+- Avoid manual data entry; ensure activities and pipeline stay updated automatically.
+- Emotional needs: feel in control, not overwhelmed; reduce stress/guilt from an “always behind” CRM.
 
-**Confidence:** High  
-**Evidence:** “too much clicking around, updating fields, checking dashboards… feels like admin work” / “they want to know what to do next, clearly” / “everything to be fast (input + output)” / “emails + calls captured automatically… basically zero data entry” / “follow-ups fall through cracks” / “right now CRM = stress + guilt… ideal state = calm, clear”  
+**Confidence:** High
+
+**Evidence:** “too much clicking around, updating fields, checking dashboards… feels like admin work”; “they want to know what to do next, clearly”; “today they usually check like 3–5 things… already fragmented”; “basically zero data entry”; “right now CRM = stress + guilt… ideal state = calm, clear”
+
 **Contradictions:** No contradictory content found.
 
 ## Product Features
-- Chat-first interface (possibly voice later), minimal/no traditional screens  
-- “What should I do now?” query and/or proactive suggested actions  
-- Prioritized list of next actions with who + context + suggested message/next step  
-- Quick/one-command execution (send follow-up, call, schedule) from chat  
-- Automatic logging of emails/calls; notes generated or suggested  
-- Pipeline/deal stage updates in the background without manual input  
-- Deal risk/cold flags converted into executable actions (not reporting)
+- Chat-first interface (potentially voice later); minimal/no traditional screens.
+- “What should I do now?” / next-best-action recommendations; ideally proactive suggestions.
+- Prioritized action list including who/context/suggested message or next step.
+- Quick execution of actions (send follow-up, call, schedule) from the conversational UI.
+- Automatic logging of emails/calls; notes generated or suggested.
+- Background/invisible pipeline updates and deal stage updates.
+- Deal risk/cold alerts converted into executable actions with brief “why” explanations (not reports).
 
-**Confidence:** High  
-**Evidence:** “chat based, maybe voice later. No real ‘screens’” / “tell you your next best action” / “system suggests actions before you ask (ideally)” / “each item includes: who, context, suggested message” / “action executes immediately… everything logs automatically… pipeline updates itself” / “avoid anything that looks like reporting”  
+**Confidence:** High
+
+**Evidence:** “chat interface as the main thing”; “ability to just ask ‘what should I do now?’”; “system suggests actions before you ask (ideally)”; “action executes immediately… everything logs automatically… pipeline updates itself”; “notes generated or at least suggested”; “system flags: ‘this deal is going cold’… converts that into actions, not insights”
+
 **Contradictions:** No contradictory content found.
 
 ## Business Goals
-- Reduce CRM fatigue  
-- Increase daily CRM adoption/usage  
-- Increase revenue per rep (via better follow-up)  
-- Make onboarding/training minimal or unnecessary
+- Reduce CRM fatigue.
+- Increase daily CRM usage/adoption.
+- Increase revenue per rep (via more consistent follow-up).
+- Make onboarding nonexistent or very fast (minimal training).
 
-**Confidence:** High  
-**Evidence:** “reduce the general fatigue people have with CRM” / “get reps to actually use the system daily” / “increase revenue per rep (if they follow up more, this should happen)” / “make onboarding basically nonexistent or very fast” / “If someone needs training, we probably failed.”  
+**Confidence:** High
+
+**Evidence:** “Main goals are: reduce the general fatigue… get reps to actually use the system daily… increase revenue per rep… make onboarding basically nonexistent or very fast”
+
 **Contradictions:** No contradictory content found.
 
 ## Differentiators
-- Conversation-first “actions > insights” (telling users what to do, not showing dashboards)  
-- Avoids traditional CRM UI patterns: screens/tabs/dashboards/pipeline browsing  
-- Automation-by-default with “invisible” background updates; near-zero data entry  
-- Low choice overload: focused, direct, decisive guidance; not overly configurable/customizable  
-- Explicitly positioned as “not another version of Salesforce” and “not a reporting tool / not BI”
+- Conversation-first “actions > insights” orientation: tells users what to do vs dashboards/analytics.
+- Automation-by-default with near-zero data entry; background updates.
+- Not a traditional CRM: avoids screens/tabs/dashboards, manual pipeline management, heavy customization.
+- Product feel/tone: focused, direct, calm, decisive; short explanations instead of reports.
 
-**Confidence:** High  
-**Evidence:** “conversation first, always… no screens if we can avoid it” / “actions > insights… avoid anything that looks like reporting” / “automation by default… if user has to fill fields → something went wrong” / “reduce choices, don’t give users 10 options” / “not… something you customize endlessly… basically not another version of Salesforce”  
+**Confidence:** High
+
+**Evidence:** “We’re intentionally not doing: traditional screens… analytics dashboards… manual pipeline management”; “conversation first, always… no screens”; “actions > insights… avoid anything that looks like reporting”; “automation by default… if user has to fill fields → something went wrong”; “not something you customize endlessly… basically not another version of Salesforce”; “focused… direct… calm… a bit decisive”
+
 **Contradictions:** No contradictory content found.
 
 ### Completeness
@@ -69,8 +79,6 @@ Complete
 High
 
 ## Suggestion
-- Add a single crisp one-sentence vision statement (final wording) to replace the draft tone (“so basically…”) with a shareable internal/external tagline.
-- Define initial ICP boundaries (e.g., team size, sales motion, existing tools like Gmail/Outlook) to sharpen “who it’s for initially.”
-- Add 2–3 measurable success metrics tied to goals (e.g., daily active use %, time spent on admin, follow-up SLA, revenue/rep lift).
-- Clarify the minimum “must-have” integrations needed to deliver auto-capture and execution (email, calendar, dialer) without turning into “another Salesforce.”
-- State explicit non-goals/guardrails as release criteria (e.g., “no dashboards in v1,” “no manual pipeline stage editing”) to prevent drift.
+- Add 1–2 explicit success metrics/targets (e.g., adoption frequency, time saved, follow-up rate) to make goals measurable.
+- Clarify initial integration scope (email/calendar/calling providers) since automation depends on it.
+- Define the initial boundary between “no dashboards” and any minimal visibility users may still require (e.g., lightweight status summaries in chat).

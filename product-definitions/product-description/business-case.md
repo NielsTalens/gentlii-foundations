@@ -1,40 +1,42 @@
 ## Business Rationale
 
-Current CRMs are described as “broken” for frontline users because they create admin overhead (clicking, updating fields, dashboards) instead of helping users take sales actions. The proposed conversational CRM is positioned as an alternative that removes navigation, manual updates, and “searching/deciding,” replacing them with prioritized next actions and rapid execution.
+Current CRMs are described as “broken” for frontline sellers because they require heavy manual navigation and data entry, creating admin burden, fragmented workflows, and stress/guilt. The proposed conversational CRM is positioned as a remedy: reduce searching/updating/deciding by having the system proactively provide prioritized next actions and execute/log work in the background.
 
 **Confidence:** High
 
-**Evidence:** “CRM as it exists today… is kind of broken… It’s too much clicking around, updating fields, checking dashboards… feels like admin work instead of helping you sell.” / “What we want instead is something that just… tells you what to do next.” / “everything points to: → remove searching → remove updating → remove deciding”
+**Evidence:** “CRM as it exists today (like Salesforce etc.) is kind of broken… It’s too much clicking around… feels like admin work instead of helping you sell.” / “today they usually check like 3–5 things (CRM, email, calendar, maybe Slack) → already fragmented” / “right now CRM = stress + guilt (because it’s always behind)” / “everything points to: → remove searching → remove updating → remove deciding”
 
 **Contradictions:** No contradictory content found.
 
 ## Expected Value
 
-Expected value is framed as reduced CRM fatigue/stress, higher daily usage/adoption, more follow-ups leading to higher revenue per rep, and faster/easier onboarding (minimal training). Additional value includes improved user experience: feeling “in control,” “calm,” and less overwhelmed via a system that prioritizes actions and automates logging and pipeline updates.
+Expected value centers on higher CRM adoption and productivity: reducing CRM fatigue and admin work, enabling faster execution (follow-ups, scheduling), improving onboarding speed, and increasing revenue per rep through more consistent follow-up. Additional implied value is improved user experience (calm/control) and fewer follow-ups “falling through cracks.”
 
 **Confidence:** Medium
 
-**Evidence:** “Main goals are: reduce the general fatigue people have with CRM… get reps to actually use the system daily… increase revenue per rep (if they follow up more, this should happen)… make onboarding basically nonexistent or very fast” / “users don’t just want efficiency… to feel in control… not feel overwhelmed… right now CRM = stress + guilt… ideal state = calm, clear”
+**Evidence:** “Main goals are: reduce the general fatigue… get reps to actually use the system daily… increase revenue per rep (if they follow up more, this should happen)… make onboarding basically nonexistent or very fast” / “let you execute things quickly” / “follow-ups fall through cracks” (current) vs “system flags… converts that into actions”
 
 **Contradictions:** No contradictory content found.
 
 ## Assumptions
 
-Assumptions include: (1) removing dashboards/screens and focusing on conversational actions will improve usability and adoption; (2) automation (auto-capture emails/calls, background pipeline updates) is feasible and sufficient to achieve “zero data entry”; (3) increased follow-up behavior will translate into increased revenue per rep; (4) users prefer action recommendations over analytics/insights; (5) training should be unnecessary if the product is designed correctly.
+The business case assumes: (1) reducing friction and automating logging/pipeline updates will drive daily usage; (2) providing prioritized next actions will improve follow-up behavior; (3) improved follow-up will increase revenue per rep; (4) onboarding can be “nonexistent or very fast” if the product is sufficiently intuitive; (5) a conversation-first/no-screens approach is feasible and won’t drift toward traditional CRM patterns.
 
 **Confidence:** Medium
 
-**Evidence:** “increase revenue per rep (if they follow up more, this should happen)” / “conversation first, always… no screens if we can avoid it” / “automation by default… if user has to fill fields → something went wrong” / “people don’t need more charts, they need to know what to do”
+**Evidence:** “increase revenue per rep (if they follow up more, this should happen)” / “get reps to actually use the system daily” (as a goal tied to reducing fatigue/automation) / “If someone needs training, we probably failed.” / “conversation first, always… no screens if we can avoid it… if we start adding tabs + dashboards we’re probably drifting”
 
-**Contradictions:** Mild tension between aspiration and feasibility is acknowledged but not contradicted: “Not 100% sure how far we can push that.”
+**Contradictions:** Potential tension between “no screens” and acknowledging uncertainty/limits.
+
+**Evidence:** “No real ‘screens’… that’s the idea right now.” vs “Not 100% sure how far we can push that”
 
 ## Measurable Business Outcomes
 
-Some measurable outcomes are implied but not specified with targets/timeframes: increased daily active use (“use the system daily”), increased revenue per rep, faster onboarding/less training required, reduced manual data entry, and faster execution (fewer steps/switching). No explicit metrics, baselines, or time-bound targets are provided.
+Measurable outcomes are mentioned directionally but without specific metrics, targets, or timeframes. Outcomes implied include: increased daily active usage, increased revenue per rep, reduced onboarding/training time, and reduced manual data entry/logging.
 
 **Confidence:** Low
 
-**Evidence:** “get reps to actually use the system daily” / “increase revenue per rep” / “make onboarding basically nonexistent or very fast” / “basically zero data entry” / “everything logs automatically in background”
+**Evidence:** “get reps to actually use the system daily” / “increase revenue per rep” / “make onboarding basically nonexistent or very fast” / “basically zero data entry”
 
 **Contradictions:** No contradictory content found.
 
@@ -48,8 +50,8 @@ Medium
 
 ## Suggestion
 
-- Define specific success metrics and targets (e.g., DAU/WAU, % activities auto-logged, time-to-first-value/onboarding time, follow-up rate, revenue per rep) and add timeframes.
-- Add baseline/problem quantification (e.g., current time spent on CRM admin, current logging completeness, current follow-up drop-off).
-- Make key assumptions explicit and testable (e.g., “action-first UX increases adoption by X,” “automation accuracy threshold required,” “recommended actions improve follow-up rate”).
-- Clarify the economic value model (who pays, expected ROI drivers, and which segment is first: reps vs founders).
-- Identify measurement approach/data sources (e.g., instrumentation for task execution time, logging coverage, pipeline accuracy) to validate outcomes.
+- Define baseline and target metrics for “use the system daily” (e.g., DAU/WAU, actions completed per rep per day) and a measurement window.
+- Quantify “increase revenue per rep” with a specific target and leading indicators (e.g., follow-up SLA, contact attempts, meetings booked).
+- Add explicit assumptions with validation plans (e.g., automation → adoption; next-best-action accuracy threshold; acceptable error rates for auto-logging/stage updates).
+- Specify onboarding success criteria (e.g., time-to-first-value, time-to-independent use, training minutes) and target personas/segments.
+- Clarify scope boundaries for “no screens” (what minimal UI is allowed) to reduce drift risk and make delivery constraints testable.
