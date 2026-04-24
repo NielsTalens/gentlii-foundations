@@ -11,13 +11,13 @@ def test_write_artifacts_creates_expected_markdown_files(tmp_path):
 def test_write_artifacts_creates_static_site_files(tmp_path):
     artifacts = [
         GeneratedArtifact(name="strategy", markdown="# Strategy\n\nBody text.\n"),
-        GeneratedArtifact(name="jtbd", markdown="# JTBD\n\n- First\n- Second\n"),
+        GeneratedArtifact(name="product-charter", markdown="# Product Charter\n\n- First\n- Second\n"),
     ]
 
     write_artifacts(tmp_path, artifacts)
 
     assert (tmp_path / "strategy.md").exists()
-    assert (tmp_path / "jtbd.md").exists()
+    assert (tmp_path / "product-charter.md").exists()
     assert (tmp_path / "index.html").exists()
     assert (tmp_path / "styles.css").exists()
 
@@ -207,7 +207,6 @@ def test_write_artifacts_generates_gentlii_based_stylesheet(tmp_path):
 
 def test_write_artifacts_orders_combined_export_deterministically(tmp_path):
     artifacts = [
-        GeneratedArtifact(name="jtbd", markdown="# JTBD\n"),
         GeneratedArtifact(name="product-charter", markdown="# Product Charter\n"),
         GeneratedArtifact(name="strategy", markdown="# Strategy\n"),
         GeneratedArtifact(name="product-vision", markdown="# Product Vision\n"),
@@ -222,14 +221,12 @@ def test_write_artifacts_orders_combined_export_deterministically(tmp_path):
         html.index('href="#business-case"'),
         html.index('href="#product-vision"'),
         html.index('href="#product-charter"'),
-        html.index('href="#jtbd"'),
     ]
     section_order = [
         html.index('<section class="doc-card" id="strategy">'),
         html.index('<section class="doc-card" id="business-case">'),
         html.index('<section class="doc-card" id="product-vision">'),
         html.index('<section class="doc-card" id="product-charter">'),
-        html.index('<section class="doc-card" id="jtbd">'),
     ]
 
     assert nav_order == sorted(nav_order)
@@ -276,7 +273,7 @@ def test_write_artifacts_rejects_unsafe_names(tmp_path):
 def test_write_artifacts_accepts_slug_safe_names(tmp_path):
     artifacts = [
         GeneratedArtifact(name="strategy-2026", markdown="# Strategy\n"),
-        GeneratedArtifact(name="jtbd", markdown="# JTBD\n"),
+        GeneratedArtifact(name="product-charter", markdown="# Product Charter\n"),
     ]
 
     write_artifacts(tmp_path, artifacts)

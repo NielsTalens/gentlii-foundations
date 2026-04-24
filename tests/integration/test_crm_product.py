@@ -39,9 +39,7 @@ def test_crm_style_folder_build_writes_expected_artifacts(monkeypatch, tmp_path:
                 return "# Product Vision\n"
             if "business-case" in prompt:
                 return "# Business Case\n"
-            if "strategy" in prompt:
-                return "# Strategy\n"
-            return "# JTBD\n"
+            return "# Strategy\n"
 
     monkeypatch.setattr("gentlii_foundations.pipeline.FoundationsClient", FakeClient)
 
@@ -50,5 +48,4 @@ def test_crm_style_folder_build_writes_expected_artifacts(monkeypatch, tmp_path:
     assert (output_dir / "strategy.md").read_text() == "# Strategy\n"
     assert (output_dir / "business-case.md").read_text() == "# Business Case\n"
     assert (output_dir / "product-vision.md").read_text() == "# Product Vision\n"
-    assert (output_dir / "jtbd.md").read_text() == "# JTBD\n"
     assert (output_dir / "product-charter.md").read_text() == "# Product Charter\n"

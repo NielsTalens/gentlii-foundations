@@ -11,7 +11,6 @@ The pipeline generates one markdown file per artifact:
 - `strategy.md`
 - `business-case.md`
 - `product-vision.md`
-- `jtbd.md`
 - `product-charter.md`
 
 It also generates a combined static HTML view:

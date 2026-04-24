@@ -1,35 +1,31 @@
 ## Business Rationale
-
-Gentlii is positioned as a response to a gap between the “agile promise of faster value delivery” and what actually enables that (thinking, planning, and making smart choices). The rationale is that product professionals lack time/headspace and their environment does not support the needed upfront product thinking, leading to building too early without enough context and an industry focus on output over outcomes.
+Gentlii is positioned as a response to the gap between “agile” processes and actually achieving faster value delivery, which the text attributes to insufficient upfront thinking, planning, and product context. It also responds to industry trends that over-focus on spec-driven development and AI-generated output rather than product quality and outcomes. Additionally, it is framed as an extension to existing product thinking consultancy, reducing dependency on consultants “pulling the process.”
 
 **Confidence:** High
 
-**Evidence:** “The problem is that the agile promise of faster value delivery does not come from the processes like scrum and such.” / “it requires much more thinking and planning and making smart choices” / “most people do not have the time nor the head space” / “start building too early without enough product context.” / “Output over outcome while is must be the other way around.”
+**Evidence:** “The problem is that the agile promise of faster value delivery does not come from the processes like scrum…”; “it requires much more thinking and planning…”; “most people do not have the time nor the head space…”; “start building too early without enough product context.”; “Output over outcome…”; “Gentlii could be a extension of the product thinking consultancy work.”
 
 **Contradictions:** No contradictory content found.
 
 ## Expected Value
-
-Expected value is described mainly as reducing cognitive load for product professionals and improving product development quality via an “opinionated product definition” users can trust, plus automated alignment checks between ideas/feature requests and the product definition. It also suggests value as an extension to existing product thinking consultancy by reducing dependency on the consultant to “pull the process.”
+Expected value is described as reducing the cognitive load for product professionals and improving product development quality via an “opinionated product definition” that users can trust without required action, plus alignment-checking and validation of ideas/feature requests against the definition. It also aims to integrate into existing tools/workflows rather than becoming another UI-heavy app.
 
 **Confidence:** Medium
 
-**Evidence:** “This product is about reducing cognitive load of product professionals.” / “providing help in gathering the needed information for solid product development… opinionated product definition.” / “making sure they can rely on the quality of this product definition without any required action” / “providing a way for them to check whether any idea aligns with the product definition” / “Gentlii could be a extension of the product thinking consultancy work.”
+**Evidence:** “This product is about reducing cognitive load of product professionals.”; “providing help in gathering the needed information for solid product development.”; “making sure they can rely on the quality of this product definition without any required action”; “providing a way for them to check whether any idea aligns with the product definition”; “integrate within existing tools and workflows.”
 
 **Contradictions:** No contradictory content found.
 
 ## Assumptions
-
-Several assumptions are implied/partially explicit: that faster value delivery depends more on product thinking/planning than agile process mechanics; that product professionals lack time/headspace and their environment prevents adequate thinking; that integrating into existing tools (and being “invisible”) is necessary to avoid adding cognitive load; and that a concise product definition is preferable to extensive descriptions.
+Assumes that faster value delivery depends more on better thinking/planning and product context than on agile processes alone; that product professionals lack time/headspace and their environment inhibits necessary thinking; that a concise product definition is preferable to extensive descriptions; and that the product can extract meaning from “all available data” to generate core product artifacts and maintain their alignment.
 
 **Confidence:** Medium
 
-**Evidence:** “The problem is that the agile promise… does not come from the processes” / “most people do not have the time nor the head space” / “The environment doesn't allow it.” / “it should not be an additional app with an UI that needs an account” / “Wherever possible the product should integrate within existing tools and workflows.” / “The users do not need very extensive descriptions but need a very concise product definition.”
+**Evidence:** “it requires much more thinking and planning…”; “most people do not have the time nor the head space…”; “The environment doesn't allow it.”; “The users do not need very extensive descriptions but need a very concise product definition.”; “created by extracting the meaning from all available data.”
 
 **Contradictions:** No contradictory content found.
 
 ## Measurable Business Outcomes
-
 Not found.
 
 **Confidence:** Low
@@ -47,9 +43,8 @@ Partial
 Low
 
 ## Suggestion
-
-- State specific target users/segments and the business problem in measurable terms (e.g., time spent on product definition/alignment, rework, misaligned features).
-- Quantify expected value with explicit metrics and targets (e.g., % reduction in time to create product definition, % fewer misaligned feature requests, cycle-time reduction).
-- Add assumptions that can be tested (e.g., “integrating into existing tools increases adoption,” “concise definitions improve alignment”) and how they will be validated.
-- Define measurable outcomes with timeframes (e.g., within 3 months post-adoption) and how Gentlii will track them.
-- Clarify how the product’s success relates to consultancy outcomes (e.g., reduced consultant hours per engagement, improved client outcome attainment).
+- Define specific measurable outcomes (e.g., reduction in time to produce strategy/vision/charter, fewer misaligned feature requests, improved outcome-definition coverage) with targets and timeframes.
+- Quantify the “cognitive load” and “quality” improvements using concrete proxy metrics (e.g., cycle time, number of iterations, rework rate, stakeholder alignment score).
+- Explicitly state and validate key assumptions (e.g., availability/quality of source files, ability to “extract meaning from all available data,” feasibility of “no required action” quality assurance).
+- Clarify the business impact model (who pays, how it extends consultancy, expected revenue/cost savings) without adding unsupported claims.
+- Add success criteria for integration/invisibility goals (e.g., % of workflows completed within existing tools, adoption/retention metrics).

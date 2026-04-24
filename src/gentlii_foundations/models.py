@@ -10,7 +10,6 @@ class ArtifactName(str, Enum):
     BUSINESS_CASE = "business-case"
     PRODUCT_VISION = "product-vision"
     PRODUCT_CHARTER = "product-charter"
-    JTBD = "jtbd"
 
 
 @dataclass(frozen=True)

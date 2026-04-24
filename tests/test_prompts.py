@@ -49,7 +49,6 @@ def test_all_artifact_templates_keep_evidence_and_contradictions_inline_per_subj
         "business-case",
         "strategy",
         "product-vision",
-        "jtbd",
         "product-charter",
     ]
 
@@ -69,9 +68,9 @@ def test_artifact_templates_define_output_items_as_h2():
     assert "## Product Strategy" in (template_dir / "strategy.md").read_text(encoding="utf-8")
     assert "## Company Strategy" not in (template_dir / "strategy.md").read_text(encoding="utf-8")
     assert "## Business Rationale" in (template_dir / "business-case.md").read_text(encoding="utf-8")
+    assert "## Vision Statement" in (template_dir / "product-vision.md").read_text(encoding="utf-8")
     assert "## Target Groups" in (template_dir / "product-vision.md").read_text(encoding="utf-8")
     assert "## Core Principles" in (template_dir / "product-charter.md").read_text(encoding="utf-8")
-    assert "## Job Name" in (template_dir / "jtbd.md").read_text(encoding="utf-8")
 
 
 def test_shared_prompt_requires_inline_evidence_and_contradictions_per_subject():
@@ -126,14 +125,3 @@ def test_artifact_templates_require_exact_final_section_shape():
     assert "Return the final evaluation block in exactly this shape:" in product_charter_template
     assert "### Completeness" in product_charter_template
     assert "### Strength" in product_charter_template
-
-    for artifact_name in ["jtbd"]:
-        template = (template_dir / f"{artifact_name}.md").read_text(encoding="utf-8")
-        assert "Do NOT return explanatory text like `Complete -> ...` or `High -> ...`." in template
-        assert "Return only one of these values on the next line:" in template
-        assert "## Suggestion" in template
-        assert "Return exactly one normal paragraph under this heading." in template
-        assert "Return the final evaluation block in exactly this shape:" in template
-        assert "### Completeness" in template
-        assert "### Strength" in template
-        assert "## Suggestion" in template
