@@ -216,6 +216,11 @@ def test_write_artifacts_orders_combined_export_deterministically(tmp_path):
     write_artifacts(tmp_path, artifacts)
     html = (tmp_path / "index.html").read_text(encoding="utf-8")
 
+    assert 'href="#strategy">strategy</a>' in html
+    assert 'href="#business-case">business case</a>' in html
+    assert 'href="#product-vision">product vision</a>' in html
+    assert 'href="#product-charter">product charter</a>' in html
+
     nav_order = [
         html.index('href="#strategy"'),
         html.index('href="#business-case"'),
@@ -256,7 +261,8 @@ def test_write_artifacts_uses_first_heading_at_any_level_for_titles(tmp_path):
     write_artifacts(tmp_path, [artifact])
     html = (tmp_path / "index.html").read_text(encoding="utf-8")
 
-    assert 'href="#customer-research">Deep Dive</a>' in html
+    assert 'href="#customer-research">customer research</a>' in html
+    assert "<h3>Deep Dive</h3>" in html
 
 
 def test_write_artifacts_rejects_unsafe_names(tmp_path):

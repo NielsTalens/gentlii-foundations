@@ -5,6 +5,7 @@ description: there are some important prompt elements that are applicable for al
 
 Keep the output very concise.
 Return clean markdown only.
+If the answer naturally consists of multiple items, format it as a bulleted list. Otherwise, use a paragraph.
 Do not invent missing information.
 Do not infer beyond what is reasonably supported by the text.
 Only extract information that is backed by explicit or strongly implied evidence.

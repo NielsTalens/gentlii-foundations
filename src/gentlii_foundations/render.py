@@ -34,7 +34,7 @@ def write_artifacts(output_dir: Path, artifacts: list[GeneratedArtifact]) -> Non
 
 def _render_index_html(artifacts: list[GeneratedArtifact]) -> str:
     nav_items = "\n".join(
-        f'          <li><a href="#{html.escape(artifact.name)}">{html.escape(_artifact_title(artifact))}</a></li>'
+        f'          <li><a href="#{html.escape(artifact.name)}">{html.escape(_artifact_eyebrow(artifact))}</a></li>'
         for artifact in artifacts
     )
     sections = "\n".join(_render_artifact_section(artifact) for artifact in artifacts)
@@ -78,12 +78,16 @@ def _render_index_html(artifacts: list[GeneratedArtifact]) -> str:
 def _render_artifact_section(artifact: GeneratedArtifact) -> str:
     return (
         f'      <section class="doc-card" id="{html.escape(artifact.name)}">\n'
-        f'        <div class="panel-eyebrow">{html.escape(artifact.name.replace("-", " "))}</div>\n'
+        f'        <div class="panel-eyebrow">{html.escape(_artifact_eyebrow(artifact))}</div>\n'
         '        <div class="doc-content">\n'
         f"{_indent(_markdown_to_html(artifact.markdown), 10)}\n"
         "        </div>\n"
         "      </section>"
     )
+
+
+def _artifact_eyebrow(artifact: GeneratedArtifact) -> str:
+    return artifact.name.replace("-", " ")
 
 
 def _artifact_title(artifact: GeneratedArtifact) -> str:
