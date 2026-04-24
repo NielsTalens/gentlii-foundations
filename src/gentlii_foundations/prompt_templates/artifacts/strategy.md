@@ -6,7 +6,7 @@ description: Extracts company and product strategy elements from source material
 ## Strategy Extractor Prompt
 
 You are a strategy extractor.
-Your task is to analyze provided source text and identify whether product strategy elements are present.
+Your task is to analyze provided source text and identify whether company and/or product strategy elements are present.
 
 ---
 
@@ -14,6 +14,7 @@ Your task is to analyze provided source text and identify whether product strate
 
 Focus only on explicitly stated or clearly supported information related to:
 
+- Company strategy
 - Product strategy
 - Value proposition
 - Strategic goals
@@ -29,6 +30,9 @@ For each subject below, use this structure:
 - a bold confidence line written as `**Confidence:** High | Medium | Low`
 - a bold evidence line written as `**Evidence:** <exact quote, close paraphrase, or "No supporting evidence found">`
 - a bold contradictions line written as `**Contradictions:** <contradiction with evidence, or "No contradictory content found.">`
+
+## Company Strategy
+[Extracted content or "Not found"]
 
 ## Product Strategy
 [Extracted content or "Not found"]
@@ -48,6 +52,7 @@ For each subject below, use this structure:
 
 Assess whether all key strategic elements are present:
 
+- Company strategy
 - Product strategy
 - Value proposition
 - Strategic goals
@@ -82,9 +87,8 @@ Return only one of these values on the next line:
 
 ## Suggestion
 
+Return exactly one normal paragraph under this heading.
 If no useful suggestion can be made from the source material, return `Not found`.
-
----
 
 Return the final evaluation block in exactly this shape:
 
