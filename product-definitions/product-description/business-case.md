@@ -1,61 +1,55 @@
 ## Business Rationale
 
-Gentlii is positioned to address the gap between “agile promise” and actual faster value delivery by helping product professionals do the additional thinking/planning required for solid product development, despite limited time/headspace and environmental constraints. It also responds to industry trends of spec-driven development and output-over-outcome by shifting focus to product context and outcomes. Additionally, it is framed as an extension to existing product thinking consultancy that is currently too dependent on consultants “pulling the process.”
+Current CRMs are described as “broken” for frontline users because they create admin overhead (clicking, updating fields, dashboards) instead of helping users take sales actions. The proposed conversational CRM is positioned as an alternative that removes navigation, manual updates, and “searching/deciding,” replacing them with prioritized next actions and rapid execution.
 
 **Confidence:** High
 
-**Evidence:** “the agile promise of faster value delivery does not come from the processes like scrum”; “it requires much more thinking and planning”; “most people do not have the time nor the head space”; “focus is on spec-driven development… start building too early without enough product context”; “Output over outcome”; “Gentlii could be a extension of the product thinking consultancy work… too much embedded in the consultant pulling the process.”
+**Evidence:** “CRM as it exists today… is kind of broken… It’s too much clicking around, updating fields, checking dashboards… feels like admin work instead of helping you sell.” / “What we want instead is something that just… tells you what to do next.” / “everything points to: → remove searching → remove updating → remove deciding”
 
 **Contradictions:** No contradictory content found.
 
 ## Expected Value
 
-Expected value includes reduced cognitive load for product professionals, faster creation of product context/definition, higher-quality and trusted product definition, improved alignment of ideas/features to strategy/vision/charter, fewer wrong features built (time/money saved), quicker stakeholder clarity/feedback, and operational savings via “better features with less code.”
+Expected value is framed as reduced CRM fatigue/stress, higher daily usage/adoption, more follow-ups leading to higher revenue per rep, and faster/easier onboarding (minimal training). Additional value includes improved user experience: feeling “in control,” “calm,” and less overwhelmed via a system that prioritizes actions and automates logging and pipeline updates.
 
-**Confidence:** High
+**Confidence:** Medium
 
-**Evidence:** “reducing cognitive load of product professionals”; “providing help in gathering the needed information for solid product development”; “rely on the quality of this product definition without any required action”; “check whether any idea aligns with the product definition”; “give clarity and quick feedback”; “time and money saved”; “Better features with less code save 25% op operations, bugs and other expensive stuff.”
+**Evidence:** “Main goals are: reduce the general fatigue people have with CRM… get reps to actually use the system daily… increase revenue per rep (if they follow up more, this should happen)… make onboarding basically nonexistent or very fast” / “users don’t just want efficiency… to feel in control… not feel overwhelmed… right now CRM = stress + guilt… ideal state = calm, clear”
 
 **Contradictions:** No contradictory content found.
 
 ## Assumptions
 
-- Product professionals lack sufficient time/headspace and their environments don’t support the needed thinking/brainstorming.
-- Integrating into existing tools/workflows (and being “invisible”) is preferable to a standalone UI/app.
-- It is feasible to “extract the meaning from all available data” to generate strategy/vision/charter/business case artifacts.
-- Quality can be improved and “proved (backed up by data)” and that “not good” feature requests can be registered/used as a proxy metric.
+Assumptions include: (1) removing dashboards/screens and focusing on conversational actions will improve usability and adoption; (2) automation (auto-capture emails/calls, background pipeline updates) is feasible and sufficient to achieve “zero data entry”; (3) increased follow-up behavior will translate into increased revenue per rep; (4) users prefer action recommendations over analytics/insights; (5) training should be unnecessary if the product is designed correctly.
 
 **Confidence:** Medium
 
-**Evidence:** “most people do not have the time nor the head space… The environment doesn't allow it.”; “should not be an additional app with an UI… Wherever possible the product should integrate within existing tools and workflows.”; “documents… created by extracting the meaning from all available data.”; “It will prove (bakced up by data)”; “we can register how many feature requests are marked Not good.”
+**Evidence:** “increase revenue per rep (if they follow up more, this should happen)” / “conversation first, always… no screens if we can avoid it” / “automation by default… if user has to fill fields → something went wrong” / “people don’t need more charts, they need to know what to do”
 
-**Contradictions:** No contradictory content found.
+**Contradictions:** Mild tension between aspiration and feasibility is acknowledged but not contradicted: “Not 100% sure how far we can push that.”
 
 ## Measurable Business Outcomes
 
-- Reduce time to create a proper product description/context by 75%.
-- Reduce the amount of features built that are not the right solution by 50% (tracked via feature requests marked “Not good”).
-- Save 25% of operations/bugs/other expensive costs through “better features with less code.”
-- Improve product description quality to a level that is “confidently right on all facets” (stated as measurable via data, but no explicit metric/threshold defined).
+Some measurable outcomes are implied but not specified with targets/timeframes: increased daily active use (“use the system daily”), increased revenue per rep, faster onboarding/less training required, reduced manual data entry, and faster execution (fewer steps/switching). No explicit metrics, baselines, or time-bound targets are provided.
 
-**Confidence:** High
+**Confidence:** Low
 
-**Evidence:** “Reduce the time to create a proper product description/context by 75%.”; “reduce the amount of features that will be build that are not the right solution by 50% (we can register how many feature requests are marked Not good)”; “Better features with less code save 25% op operations, bugs and other expensive stuff.”; “prove (bakced up by data) that the quality… will improve to a state where it is confidently right on all facets.”
+**Evidence:** “get reps to actually use the system daily” / “increase revenue per rep” / “make onboarding basically nonexistent or very fast” / “basically zero data entry” / “everything logs automatically in background”
 
 **Contradictions:** No contradictory content found.
 
 ### Completeness
 
-Complete -> all core elements clearly present
+Partial
 
 ### Strength
 
-Medium → partially defined, some ambiguity
+Medium
 
 ## Suggestion
 
-- Define how “quality of the product description” will be measured (e.g., rubric, stakeholder agreement rate, defect/rewrites, alignment checks) and set target thresholds/timeframes.
-- Specify baseline assumptions for the % improvements (75% time reduction, 50% fewer wrong features, 25% ops/bugs savings) and how baselines will be established.
-- Add explicit scope boundaries for “all available data” (data sources included/excluded) and success criteria for extraction accuracy.
-- Clarify the business case for Gentlii itself (e.g., cost to build/run, pricing, ROI/payback period) since only product outcomes are currently quantified.
-- Add measurable adoption/usage metrics tied to value (e.g., % of feature requests validated, stakeholder verification time reduction, frequency of alignment checks).
+- Define specific success metrics and targets (e.g., DAU/WAU, % activities auto-logged, time-to-first-value/onboarding time, follow-up rate, revenue per rep) and add timeframes.
+- Add baseline/problem quantification (e.g., current time spent on CRM admin, current logging completeness, current follow-up drop-off).
+- Make key assumptions explicit and testable (e.g., “action-first UX increases adoption by X,” “automation accuracy threshold required,” “recommended actions improve follow-up rate”).
+- Clarify the economic value model (who pays, expected ROI drivers, and which segment is first: reps vs founders).
+- Identify measurement approach/data sources (e.g., instrumentation for task execution time, logging coverage, pipeline accuracy) to validate outcomes.

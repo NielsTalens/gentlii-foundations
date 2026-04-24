@@ -1,60 +1,63 @@
 ## Vision Statement
-Gentlii aims to reduce the cognitive load of product professionals and improve faster value delivery by creating and maintaining a trusted, concise, opinionated product definition (product description) from existing data, and using it to ensure ongoing alignment and validate ideas/feature requests.
+A conversation-first CRM that tells users what to do next and minimizes screens, manual updates, and admin work—so the system guides action and becomes “invisible” over time.
 
 **Confidence:** High  
-**Evidence:** “This product is about reducing cognitive load of product professionals.” / “We want to help product professionals by… providing help in gathering the needed information… capture this in a opinionated product definition… making sure they can rely on the quality… providing a way for them to check whether any idea aligns with the product definition.”  
+**Evidence:** “It’s basically a CRM but conversation-first.” / “What we want instead is something that just… tells you what to do next.” / “Feels like CRM should become kind of invisible over time.”  
 **Contradictions:** No contradictory content found.
 
 ## Target Groups
-- Product professionals (including “product people” and stakeholders interacting with feature requests)
+- Sales reps who dislike CRM administration  
+- Founders doing their own sales (especially early stage)  
+- Potentially customer success people later
 
 **Confidence:** High  
-**Evidence:** “We want to help product professionals…” / “This product is about reducing cognitive load of product professionals.” / “provide stakeholders a way to quickly verify a feature requests possibility.”  
+**Evidence:** “sales reps who hate CRM admin” / “founders doing their own sales (especially early stage)” / “maybe customer success people later”  
 **Contradictions:** No contradictory content found.
 
 ## Needs
-- Reduce cognitive load; users lack time/headspace for necessary product thinking, planning, brainstorming  
-- Avoid building too early without enough product context (countering spec-driven development misuse)  
-- Shift focus from output to outcomes; define outcomes clearly  
-- Provide concise, trusted product definition without demanding extensive user input or extra overhead  
-- Maintain alignment across product documents and quickly assess whether ideas/feature requests fit
+- Reduce time spent clicking around, updating fields, and maintaining CRM (admin burden)  
+- Get clear “next best action” guidance without hunting through dashboards/pipelines  
+- Make work fast with minimal switching between tools (CRM/email/calendar/Slack)  
+- Avoid manual data entry; capture activity automatically (emails, calls, notes)  
+- Stay on top of deals without interpreting dashboards; prevent follow-ups from falling through cracks  
+- Emotional needs: feel in control, not overwhelmed; reduce “stress + guilt” from an outdated CRM
 
 **Confidence:** High  
-**Evidence:** “reducing cognitive load… should not be an additional app…” / “most people do not have the time nor the head space…” / “start building too early without enough product context.” / “Output over outcome… must be the other way around.” / “users… need a very concise product definition… trust that.” / “guard alignment… validate feature requests against the product description.”  
+**Evidence:** “too much clicking around, updating fields, checking dashboards… feels like admin work” / “they want to know what to do next, clearly” / “everything to be fast (input + output)” / “emails + calls captured automatically… basically zero data entry” / “follow-ups fall through cracks” / “right now CRM = stress + guilt… ideal state = calm, clear”  
 **Contradictions:** No contradictory content found.
 
 ## Product Features
-- Ingest/upload “all types of files” that describe product/ideas; extract meaning from “all available data”  
-- Generate a “product description” set: Strategy, Product Vision, Business case, Product charter  
-- Produce outputs as Markdown and a generated HTML page  
-- Ongoing “product description guarding”: detect changes (CRUD) in input files and keep artifacts aligned  
-- Validate feature requests/ideas against the product description; provide quick stakeholder verification/feedback  
-- Integrate into existing tools/workflows; minimize UI/account needs (“invisible” where possible)
+- Chat-first interface (possibly voice later), minimal/no traditional screens  
+- “What should I do now?” query and/or proactive suggested actions  
+- Prioritized list of next actions with who + context + suggested message/next step  
+- Quick/one-command execution (send follow-up, call, schedule) from chat  
+- Automatic logging of emails/calls; notes generated or suggested  
+- Pipeline/deal stage updates in the background without manual input  
+- Deal risk/cold flags converted into executable actions (not reporting)
 
 **Confidence:** High  
-**Evidence:** “A user uploads all types of files…” / “create… Strategy… Product Vision… Business case… Product charter… called the `product description`… written both in markdown as in a generated html page” / “The product will… extracting the meaning from all available data.” / “guard alignment…” / “validate feature requests…” / “should integrate within existing tools and workflows… not be an additional app with an UI that needs an account… make the product invisible…”  
+**Evidence:** “chat based, maybe voice later. No real ‘screens’” / “tell you your next best action” / “system suggests actions before you ask (ideally)” / “each item includes: who, context, suggested message” / “action executes immediately… everything logs automatically… pipeline updates itself” / “avoid anything that looks like reporting”  
 **Contradictions:** No contradictory content found.
 
 ## Business Goals
-- Reduce time to create proper product context/description by 75%  
-- Improve quality of product description to be “confidently right on all facets” (backed by data)  
-- Reduce “wrong solution” features built by 50% (tracked via feature requests marked “Not good”)  
-- Save time and money; improve product with less code; save 25% on operations/bugs/other costs  
-- Extend/scale product thinking consultancy beyond consultant-led delivery
+- Reduce CRM fatigue  
+- Increase daily CRM adoption/usage  
+- Increase revenue per rep (via better follow-up)  
+- Make onboarding/training minimal or unnecessary
 
 **Confidence:** High  
-**Evidence:** “Reduce the time… by 75%.” / “prove (backed up by data) that the quality… will improve… confidently right…” / “reduce… features… not the right solution by 50%” / “Better features with less code save 25% op operations, bugs…” / “Gentlii could be a extension of the product thinking consultancy work.”  
+**Evidence:** “reduce the general fatigue people have with CRM” / “get reps to actually use the system daily” / “increase revenue per rep (if they follow up more, this should happen)” / “make onboarding basically nonexistent or very fast” / “If someone needs training, we probably failed.”  
 **Contradictions:** No contradictory content found.
 
 ## Differentiators
-- Not another backlog/agile tool; focuses on pre-build product context and outcome definition  
-- “Invisible”/integrated approach (avoid standalone app, UI, accounts)  
-- Opinionated, concise product definition users can trust without required action  
-- Quality emphasis (outcome over output; quality improvements “backed up by data”)  
-- Continuous alignment guarding and validation against the product description
+- Conversation-first “actions > insights” (telling users what to do, not showing dashboards)  
+- Avoids traditional CRM UI patterns: screens/tabs/dashboards/pipeline browsing  
+- Automation-by-default with “invisible” background updates; near-zero data entry  
+- Low choice overload: focused, direct, decisive guidance; not overly configurable/customizable  
+- Explicitly positioned as “not another version of Salesforce” and “not a reporting tool / not BI”
 
 **Confidence:** High  
-**Evidence:** “The product is not another agile backlog product tool.” / “should not be an additional app with an UI that needs an account…” / “integrate within existing tools and workflows.” / “opinionated product definition… rely on the quality… without any required action” / “Output over outcome…” / “prove (bakced up by data)…” / “guard alignment… validate feature requests…”  
+**Evidence:** “conversation first, always… no screens if we can avoid it” / “actions > insights… avoid anything that looks like reporting” / “automation by default… if user has to fill fields → something went wrong” / “reduce choices, don’t give users 10 options” / “not… something you customize endlessly… basically not another version of Salesforce”  
 **Contradictions:** No contradictory content found.
 
 ### Completeness
@@ -66,8 +69,8 @@ Complete
 High
 
 ## Suggestion
-- Define 1–2 primary personas within “product professionals” (e.g., PM, PO, product strategist) and their key workflows to sharpen targeting.
-- Consolidate the “product description” scope: explicitly define what “opinionated product definition” includes/excludes and how conflicts between sources are handled.
-- Add explicit differentiation vs spec-driven AI output tools (e.g., governance, traceability, quality gates) using the same language already present (“quality”, “outcome”, “alignment”).
-- Clarify how “integrate within existing tools and workflows” will be achieved at a high level (e.g., plugins, APIs, document sync) without going into implementation detail.
-- Specify 1–3 measurable indicators for “quality… confidently right on all facets” beyond time reduction (even if only placeholders).
+- Add a single crisp one-sentence vision statement (final wording) to replace the draft tone (“so basically…”) with a shareable internal/external tagline.
+- Define initial ICP boundaries (e.g., team size, sales motion, existing tools like Gmail/Outlook) to sharpen “who it’s for initially.”
+- Add 2–3 measurable success metrics tied to goals (e.g., daily active use %, time spent on admin, follow-up SLA, revenue/rep lift).
+- Clarify the minimum “must-have” integrations needed to deliver auto-capture and execution (email, calendar, dialer) without turning into “another Salesforce.”
+- State explicit non-goals/guardrails as release criteria (e.g., “no dashboards in v1,” “no manual pipeline stage editing”) to prevent drift.

@@ -1,81 +1,91 @@
 ## Core Principles
-- Reduce cognitive load for product professionals by making product definition creation and validation concise, reliable, and low-effort.
-- Prefer outcome/quality over output/volume; emphasize defining outcomes as “more important than output.”
-- Build the right product definition and enable trust in it.
+- Conversation-first (always); run everything through chat/language and avoid screens.
+- Actions over insights; prioritize telling users what to do over charts/reporting.
+- Automation by default; the system should capture/update without asking the user for manual input.
 
-**Confidence:** Medium  
-**Evidence:** “This product is about reducing cognitive load of product professionals.” / “The users do not need very extensive descriptions but need a very concise product definition.” / “Defining outcomes is very important. More important than output.” / “We should therefore make sure we create the right one and trust that.”  
+**Confidence:** High
+
+**Evidence:** “conversation first, always… everything through chat / language, no screens if we can avoid it”; “actions > insights… avoid anything that looks like reporting”; “automation by default… system should just capture stuff, not ask… if user has to fill fields → something went wrong”
+
 **Contradictions:** No contradictory content found.
 
 ## Product Boundaries
-- Not an additional app with its own UI/account overhead.
-- Not another agile backlog product tool.
-- Should be “invisible” where possible; integrate into existing tools/workflows.
+Not a reporting/BI tool; not a data-entry destination; not endlessly customizable; not another Salesforce; avoid traditional screens, dashboards, and manual pipeline management (especially upfront).
 
-**Confidence:** High  
-**Evidence:** “it should not be an additional app with an UI that needs an account and so on.” / “The product is not another agile backlog product tool.” / “Wherever possible the product should integrate within existing tools and workflows.” / “Wherever we can make the product invisible we will do that.”  
+**Confidence:** High
+
+**Evidence:** “what we are not… not a reporting tool… not BI… not a place to input data… not something you customize endlessly… basically not another version of Salesforce”; “We’re intentionally not doing: traditional screens… analytics dashboards (at least not upfront)… manual pipeline management”
+
 **Contradictions:** No contradictory content found.
 
 ## Behavioral Rules
-- Extract meaning from “all available data” to generate product documents (including product charter) as part of a “product description.”
-- Guard alignment between generated documents and validate feature requests against the product description.
-- Detect changes (CRUD) in product input files and (implied) re-run/guard accordingly.
-- Provide quick clarity/feedback to stakeholders on feature request feasibility.
+- Suggest next actions proactively (ideally before being asked) and prioritize/rank them to reduce user thinking.
+- Keep everything updating/logging invisibly in the background; “zero data entry” and no “after work.”
+- If the user asks “why,” provide a short explanation (not a report).
+- Reduce choices; don’t present many options; emphasize immediate execution.
 
-**Confidence:** Medium  
-**Evidence:** “created by extracting the meaning from all available data.” / “The product will guard alignment between all mentioned output documents” / “The product will validate feature requests against the product description.” / “If there is any change (crud) detected in product input files” / “provide stakeholders a way to quickly verify a feature requests possibility.→give clarity and quick feedback.”  
+**Confidence:** High
+
+**Evidence:** “system suggests actions before you ask (ideally)”; “ideally ranked / prioritized so no thinking required”; “everything updates in background, invisible”; “everything logs automatically in background… pipeline updates itself”; “if you ask ‘why this?’ → short explanation, not a report”; “reduce choices, don’t give users 10 options”; “basically zero data entry”
+
 **Contradictions:** No contradictory content found.
 
 ## Decision-Making Rules
-- When trade-offs exist, prioritize outcomes and quality of product context/definition over generating more output.
-- Prefer integration/invisibility over building standalone UI/account experiences.
+Use gut-checks that favor removing screens, reducing user input, and ensuring every feature drives immediate action; if it doesn’t lead to action, it likely shouldn’t exist.
 
-**Confidence:** Medium  
-**Evidence:** “Defining outcomes is very important. More important than output.” / “Wherever possible the product should integrate within existing tools and workflows.” / “Wherever we can make the product invisible we will do that.”  
+**Confidence:** High
+
+**Evidence:** “decision rules (gut checks)… can we remove a screen instead of adding one… does this help someone take action immediately… can we reduce input here… if it doesn’t lead to action → probably shouldn’t exist”
+
 **Contradictions:** No contradictory content found.
 
 ## Product Character
-- Concise, low-friction, “invisible” assistant that reduces mental overhead and provides clarity/quick feedback.
+Should feel focused, direct, calm, and a bit decisive (almost telling you what to do); aim for an “invisible” CRM that helps users feel in control and not overwhelmed.
 
-**Confidence:** Medium  
-**Evidence:** “reducing cognitive load” / “very concise product definition” / “make the product invisible” / “give clarity and quick feedback.”  
+**Confidence:** High
+
+**Evidence:** “product should feel like… focused… direct… calm… a bit decisive”; “Feels like CRM should become kind of invisible over time”; “ideal state = calm, clear, just doing the next thing”; “to feel in control of their pipeline… not feel overwhelmed”
+
 **Contradictions:** No contradictory content found.
 
 ## Language and Tone
-- Favor concise descriptions over extensive documentation.
+Use short, direct language; avoid hype, buzzwords, and congratulatory/gamified phrasing. Prefer action-oriented directives over analytic status statements.
 
-**Confidence:** Medium  
-**Evidence:** “The users do not need very extensive descriptions but need a very concise product definition.”  
+**Confidence:** High
+
+**Evidence:** “tone / language… short, direct… no hype / no ‘you’re crushing it’… no buzzwords”; “more like: ‘call these 3 deals’ not: ‘pipeline health improved’”
+
 **Contradictions:** No contradictory content found.
 
 ## Evolution Constraints
-- Maintain tool/workflow integration and avoid becoming a standalone UI/account-based app.
-- Continue guarding alignment between documents as the system changes.
+Avoid drifting into traditional CRM patterns (tabs, dashboards, traditional screens); if it starts looking like a traditional CRM again, that indicates losing direction.
 
-**Confidence:** Low  
-**Evidence:** “should not be an additional app…” / “integrate within existing tools and workflows.” / “guard alignment between all mentioned output documents”  
+**Confidence:** High
+
+**Evidence:** “if we start adding tabs + dashboards we’re probably drifting”; “random note… if it starts looking like a traditional CRM again, we’ve probably lost the plot”; “analytics dashboards (at least not upfront)”
+
 **Contradictions:** No contradictory content found.
 
 ## Integrity Checks
-- Ensure users can “rely on the quality” of the product definition “without any required action.”
-- Validate feature requests against the product description; mark misaligned requests (implied by tracking “Not good”).
-- Prove/backup quality improvements “by data”; aim for “confidently right on all facets.”
+Treat presence of manual field-filling/data entry as a failure condition; use drift checks (adding screens/dashboards, becoming traditional CRM) as signals the product is off-course.
 
-**Confidence:** Medium  
-**Evidence:** “making sure they can rely on the quality of this product definition without any required action” / “validate feature requests against the product description.” / “It will prove (bakced up by data) that the quality of the product description will improve… confidently right on all facets.” / “we can register how many feature requests are marked Not good”  
+**Confidence:** High
+
+**Evidence:** “if user has to fill fields → something went wrong”; “If someone needs training, we probably failed”; “if we start adding tabs + dashboards we’re probably drifting”; “if it starts looking like a traditional CRM again, we’ve probably lost the plot”
+
 **Contradictions:** No contradictory content found.
 
 ### Completeness
 
-Partial
+Complete → all core elements clearly present
 
 ### Strength
 
-Medium
+High → clear, enforceable, actionable
 
 ## Suggestion
-- Define explicit acceptance criteria for “quality” and “confidently right on all facets” (e.g., required sections, evidence coverage, conflict resolution rules).
-- Specify how alignment guarding works (what constitutes misalignment, how conflicts across sources/documents are handled, and what the system does when misalignment is detected).
-- Add concrete decision rules for trade-offs (speed vs accuracy, conciseness vs completeness, automation vs human review).
-- Clarify tone/style guidance for generated artifacts beyond “concise” (e.g., voice, level of formality, stakeholder-specific variants).
-- State explicit evolution constraints (what must never change, compatibility guarantees with existing tools/workflows, and how new data sources/tools are onboarded).
+- Define explicit exceptions/overrides for “decisive” recommendations (e.g., when to ask the user vs auto-execute) to prevent unsafe or unwanted actions.
+- Add a small set of acceptance checks for “actions > insights” (e.g., what minimal context is required with every suggested action).
+- Clarify how “short explanation, not a report” should look (max length, allowable data points, and when to link details).
+- Specify boundaries for “not configurable endlessly” (what is configurable vs intentionally fixed).
+- Add explicit privacy/security integrity rules for automatic logging and background updates (what can/can’t be captured automatically).
