@@ -15,6 +15,7 @@ Your task is to analyze provided source text and identify whether product vision
 
 Focus only on explicitly stated or clearly supported information related to:
 
+- Product vision statement 
 - Target groups
 - Needs (problems to solve)
 - Product features (high-level, not detailed specs)
@@ -32,20 +33,23 @@ For each subject below, use this structure:
 - a bold evidence line written as `**Evidence:** <exact quote, close paraphrase, or "No supporting evidence found">`
 - a bold contradictions line written as `**Contradictions:** <contradiction with evidence, or "No contradictory content found.">`
 
-## Target Groups
+## Vision Statement
 [Extracted content or "Not found"]
+
+## Target Groups
+[List of extracted content or "Not found"]
 
 ## Needs
-[Extracted content or "Not found"]
+[List of extracted content or "Not found"]
 
 ## Product Features
-[High-level features or "Not found"]
+[List of high-level features or "Not found"]
 
 ## Business Goals
-[Extracted content or "Not found"]
+[List of extracted content or "Not found"]
 
 ## Differentiators
-[Extracted content or "Not found"]
+[List of extracted content or "Not found"]
 
 ---
 
@@ -53,6 +57,7 @@ For each subject below, use this structure:
 
 Assess whether all key product vision elements are present:
 
+- Vision statement
 - Target groups
 - Needs
 - Product features
@@ -91,7 +96,6 @@ Return only one of these values on the next line:
 
 ## Suggestion
 
-Return exactly one normal paragraph under this heading.
 If no useful suggestion can be made from the source material, return `Not found`.
 
 Return the final evaluation block in exactly this shape:
@@ -106,4 +110,4 @@ Medium
 
 ## Suggestion
 
-One normal paragraph here.
+Write the suggestions as a bulleted list.

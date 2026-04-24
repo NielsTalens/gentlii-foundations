@@ -98,4 +98,4 @@ Medium
 
 ## Suggestion
 
-One normal paragraph here.
+Write the suggestions as a bulleted list.

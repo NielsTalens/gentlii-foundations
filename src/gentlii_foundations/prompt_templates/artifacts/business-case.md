@@ -81,7 +81,6 @@ Return only one of these values on the next line:
 
 ## Suggestion
 
-Return exactly one normal paragraph under this heading.
 If no useful suggestion can be made from the source material, return `Not found`.
 
 Return the final evaluation block in exactly this shape:
@@ -96,4 +95,4 @@ Medium
 
 ## Suggestion
 
-One normal paragraph here.
+Write the suggestions as a bulleted list.

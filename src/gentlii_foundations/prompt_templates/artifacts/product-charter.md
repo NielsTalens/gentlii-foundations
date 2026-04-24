@@ -39,28 +39,28 @@ For each subject below, use this structure:
 - a bold contradictions line written as `**Contradictions:** <contradiction with evidence, or "No contradictory content found.">`
 
 ## Core Principles
-[Extracted content or "Not found"]
+[List of extracted content or "Not found"]
 
 ## Product Boundaries
-[Extracted content or "Not found"]
+[List of extracted content or "Not found"]
 
 ## Behavioral Rules
-[Extracted content or "Not found"]
+[List of extracted content or "Not found"]
 
 ## Decision-Making Rules
-[Extracted content or "Not found"]
+[List of extracted content or "Not found"]
 
 ## Product Character
-[Extracted content or "Not found"]
+[List of extracted content or "Not found"]
 
 ## Language and Tone
-[Extracted content or "Not found"]
+[List of extracted content or "Not found"]
 
 ## Evolution Constraints
-[Extracted content or "Not found"]
+[List of extracted content or "Not found"]
 
 ## Integrity Checks
-[Extracted content or "Not found"]
+[List of extracted content or "Not found"]
 
 ---
 
@@ -107,7 +107,6 @@ Return only one of these values on the next line:
 
 ## Suggestion
 
-Return exactly one normal paragraph under this heading.
 If no useful suggestion can be made from the source material, return `Not found`.
 
 Return the final evaluation block in exactly this shape:
@@ -122,4 +121,4 @@ Medium
 
 ## Suggestion
 
-One normal paragraph here.
+Write the suggestions as a bulleted list.

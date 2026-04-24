@@ -1,0 +1,3 @@
+product-definitions/product-description/*.md merge=ours
+product-definitions/product-description/index.html merge=ours
+product-definitions/product-description/styles.css merge=ours

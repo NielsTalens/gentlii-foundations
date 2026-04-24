@@ -1,63 +1,56 @@
 ## Job Name
-Create and maintain a reliable product definition with minimal cognitive effort
-
+Create a reliable product definition with minimal cognitive effort  
 **Confidence:** High  
-**Evidence:** “reducing cognitive load of product professionals”; “need a very concise product definition”; “making sure they can rely on the quality of this product definition without any required action”; “The product will create strategic, product vision, product charter documents”  
+**Evidence:** “reducing cognitive load of product professionals”; “providing help in gathering the needed information for solid product development… an opinionated product definition”; “making sure they can rely on the quality of this product definition without any required action”  
 **Contradictions:** No contradictory content found.
 
 ## Core Job Statement
-When I’m responsible for shaping a digital product but don’t have the time/headspace for deep thinking and planning, I want the system to gather and synthesize existing product inputs into a concise, high-quality product definition and keep it aligned over time, so I can make smarter choices and validate ideas without heavy manual effort.
-
+When I need to define or refine a digital product, I want to automatically assemble a concise, high-quality product definition from existing materials and keep work aligned to it, so I can make better product decisions without spending scarce time/mental bandwidth on heavy planning and brainstorming.  
 **Confidence:** Medium  
-**Evidence:** “most people do not have the time nor the head space… thinking and brainstorming”; “providing help in gathering the needed information… capture this in a opinionated product definition”; “rely on the quality… without any required action”; “provide a way… to check whether any idea aligns with the product definition”; “integrate within existing tools and workflows”  
+**Evidence:** “most people do not have the time nor the head space to do the amount of thinking and brainstorming that is needed”; “provide help in gathering the needed information… capture this in a opinionated product definition”; “very concise product definition”; “validate feature requests against the product description”; “guard alignment”  
 **Contradictions:** No contradictory content found.
 
 ## Desired Outcomes
-- A concise product definition that can be trusted.  
-- Strategic/vision/charter (and related) documents generated from existing data.  
-- Ongoing alignment/consistency across product documents (“guard alignment”).  
-- Ability to validate feature requests/ideas against the product description.  
-- Better outcomes-focus (vs output/spec-only focus).
-
+- Reduced cognitive load and minimal overhead (no extra UI/account; “invisible” where possible)  
+- Concise product definition that users can trust for quality without extra work  
+- Clear, measurable outcomes emphasized over output/specs  
+- Consistent alignment across strategy/vision/charter/business case and feature requests  
 **Confidence:** High  
-**Evidence:** “need a very concise product definition”; “make sure we create the right one and trust that”; “create strategic, product vision, product charter documents… extracting the meaning from all available data”; “guard alignment between all mentioned output documents”; “validate feature requests against the product description”; “Output over outcome… must be the other way around”; “Defining outcomes is very important.”  
+**Evidence:** “reducing cognitive load… should not be an additional app with an UI that needs an account”; “Wherever possible… integrate within existing tools and workflows”; “very concise product definition… trust that”; “Defining outcomes is very important. More important than output”; “guard alignment between all mentioned output documents”; “validate feature requests against the product description”  
 **Contradictions:** No contradictory content found.
 
 ## Emotional or Social Dimension
-Reduced cognitive load / mental burden for product professionals.
-
+- Avoid overwhelm/mental fatigue from required thinking/brainstorming  
+- Confidence/trust in the quality of the product definition  
 **Confidence:** Medium  
-**Evidence:** “reducing cognitive load of product professionals”  
+**Evidence:** “do not have the time nor the head space”; “rely on the quality… without any required action”; “trust that”  
 **Contradictions:** No contradictory content found.
 
 ## Current Frictions
-- Agile “faster value delivery” requires significant thinking/planning/smart choices beyond processes.  
-- Product professionals lack time/headspace for necessary thinking/brainstorming; environment doesn’t allow it.  
-- Spec-driven development pushes teams to “start building too early without enough product context.”  
-- Over-focus on AI output instead of product quality/outcomes.  
-- Consultancy process is too dependent on the consultant pulling the process.
-
+- Agile processes alone don’t deliver faster value; requires more thinking/planning/smart choices  
+- Lack of time/headspace and environment not supporting deep planning/brainstorming  
+- Teams build too early without enough product context (spec-driven misapplied)  
+- Industry focus on AI output over product outcomes/quality  
+- Consultancy approach too dependent on a consultant “pulling the process”  
 **Confidence:** High  
-**Evidence:** “requires much more thinking and planning”; “most people do not have the time nor the head space”; “The environment doesn't allow it”; “start building too early without enough product context”; “focus mainly on the amount of output AI can generate… not on… quality”; “too much embedded in the consultant pulling the process”  
+**Evidence:** “agile promise… does not come from the processes”; “requires much more thinking and planning”; “most people do not have the time nor the head space”; “The environment doesn't allow it”; “start building too early without enough product context”; “Output over outcome”; “too much embedded in the consultant pulling the process”  
 **Contradictions:** No contradictory content found.
 
 ## Existing Alternatives or Workarounds
-- Scrum/agile processes (implied as insufficient alone).  
-- Spec-driven development.  
-- Product thinking consultancy where consultants create artefacts with product people.
-
+- Scrum/spec-driven development (used but insufficient/misapplied)  
+- Consultancy-driven product thinking to create artifacts (consultant-led)  
+- Agile backlog product tools (explicitly not what this is)  
 **Confidence:** Medium  
-**Evidence:** “agile promise… does not come from the processes like scrum”; “One of the trends… spec-driven development”; “we do product thinking consultancy where we create the product artefacts…”  
+**Evidence:** “processes like scrum”; “trend… spec-driven development”; “product thinking consultancy where we create the product artefacts…”; “The product is not another agile backlog product tool.”  
 **Contradictions:** No contradictory content found.
 
 ## User Flows or Journeys
-- User uploads “all types of files they can find that state something about the product or ideas for a product.”  
-- Gentlii uses “different agent” to create Strategy, Product Vision, Business case, Product charter; collectively called “product description.”  
-- Outputs are written “both in markdown [and] in a generated html page.”  
-- “Product description guarding”: if any change (CRUD) is detected in product input files… (flow is truncated in source).
-
+- User uploads “all types of files” about the product/ideas  
+- System creates Strategy, Product Vision, Business case, Product charter; collectively the “product description”  
+- Outputs provided as markdown and generated HTML page  
+- Ongoing guarding: detect changes (CRUD) in input files (flow is truncated after this point)  
 **Confidence:** High  
-**Evidence:** “A user uploads all types of files…”; “Gentlii will use different agent to create: Strategy, Product Vision, Business case, Product charter”; “These are written both in markdown as in a generated html page”; “If there is any change (crud) detected in product input files”  
+**Evidence:** “A user uploads all types of files…”; “Gentlii will use different agent to create: Strategy… Product Vision… Business case… Product charter”; “called the `product description`”; “written both in markdown as in a generated html page”; “If there is any change (crud) detected in product input files”  
 **Contradictions:** No contradictory content found.
 
 ### Completeness
@@ -70,4 +63,4 @@ Medium
 
 ## Suggestion
 
-Add one explicit JTBD statement per primary user (e.g., product manager, product lead) and specify measurable desired outcomes (e.g., time saved creating/maintaining the product description, reduction in misaligned feature requests), list key frictions in the flow (what makes input files hard to use, how “quality” is ensured “without any required action”), and name the concrete alternatives users use today (docs/templates, PRDs, wikis, consultants, backlog tools) to clarify replacement vs complement.
+Add one explicit JTBD statement per primary user (e.g., product manager, product owner) and enumerate measurable desired outcomes (e.g., time saved to produce/maintain product description, alignment error rate, confidence/trust signals); clarify the “product description guarding” flow after change detection (what notifications/actions happen, how conflicts are resolved), and document explicit current alternatives (how users do this today in existing tools) plus the main frictions in those alternatives to make the job definition more actionable.

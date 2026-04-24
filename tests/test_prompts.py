@@ -91,6 +91,9 @@ def test_shared_prompt_requires_inline_evidence_and_contradictions_per_subject()
 def test_artifact_templates_require_exact_final_section_shape():
     template_dir = Path(PROMPT_TEMPLATE_DIR) / "artifacts"
     strategy_template = (template_dir / "strategy.md").read_text(encoding="utf-8")
+    business_case_template = (template_dir / "business-case.md").read_text(encoding="utf-8")
+    product_vision_template = (template_dir / "product-vision.md").read_text(encoding="utf-8")
+    product_charter_template = (template_dir / "product-charter.md").read_text(encoding="utf-8")
 
     assert "Do NOT return explanatory text like `Complete -> ...` or `High -> ...`." in strategy_template
     assert "Return only one of these values on the next line:" in strategy_template
@@ -100,12 +103,31 @@ def test_artifact_templates_require_exact_final_section_shape():
     assert "### Completeness" in strategy_template
     assert "### Strength" in strategy_template
 
-    for artifact_name in [
-        "business-case",
-        "product-vision",
-        "jtbd",
-        "product-charter",
-    ]:
+    assert "Do NOT return explanatory text like `Complete -> ...` or `High -> ...`." in business_case_template
+    assert "Return only one of these values on the next line:" in business_case_template
+    assert "## Suggestion" in business_case_template
+    assert "Return exactly one normal paragraph under this heading." not in business_case_template
+    assert "Return the final evaluation block in exactly this shape:" in business_case_template
+    assert "### Completeness" in business_case_template
+    assert "### Strength" in business_case_template
+
+    assert "Do NOT return explanatory text like `Complete -> ...` or `High -> ...`." in product_vision_template
+    assert "Return only one of these values on the next line:" in product_vision_template
+    assert "## Suggestion" in product_vision_template
+    assert "Return exactly one normal paragraph under this heading." not in product_vision_template
+    assert "Return the final evaluation block in exactly this shape:" in product_vision_template
+    assert "### Completeness" in product_vision_template
+    assert "### Strength" in product_vision_template
+
+    assert "Do NOT return explanatory text like `Complete -> ...` or `High -> ...`." in product_charter_template
+    assert "Return only one of these values on the next line:" in product_charter_template
+    assert "## Suggestion" in product_charter_template
+    assert "Return exactly one normal paragraph under this heading." not in product_charter_template
+    assert "Return the final evaluation block in exactly this shape:" in product_charter_template
+    assert "### Completeness" in product_charter_template
+    assert "### Strength" in product_charter_template
+
+    for artifact_name in ["jtbd"]:
         template = (template_dir / f"{artifact_name}.md").read_text(encoding="utf-8")
         assert "Do NOT return explanatory text like `Complete -> ...` or `High -> ...`." in template
         assert "Return only one of these values on the next line:" in template
