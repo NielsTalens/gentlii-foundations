@@ -164,6 +164,45 @@ a {
   margin: 0 0 0.82rem;
 }
 
+.evidence-accordion {
+  margin: 0 0 0.82rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+}
+
+.evidence-accordion summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.78rem 0.95rem;
+  font-weight: 650;
+  color: var(--text);
+}
+
+.evidence-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.evidence-accordion summary::after {
+  content: "+";
+  float: right;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.evidence-accordion[open] summary::after {
+  content: "−";
+}
+
+.evidence-body {
+  padding: 0 0.95rem 0.82rem;
+}
+
+.evidence-body p:last-child {
+  margin-bottom: 0;
+}
+
 .metric-value {
   font-weight: 700;
 }

@@ -1,47 +1,46 @@
 ## Business Rationale
 
-Gentlii aims to address the gap between the “agile promise” of faster value delivery and the reality that achieving it requires substantial thinking, planning, and product context-building—work that product professionals often lack time and capacity to do. It also responds to industry trends that over-focus on specs and AI-generated output rather than improving product quality and outcomes. Additionally, it is positioned as a potential extension of existing “product thinking consultancy,” reducing reliance on consultants to drive the process.
+Gentlii is positioned to address the gap between “agile promise” and actual faster value delivery by helping product professionals do the additional thinking/planning required for solid product development, despite limited time/headspace and environmental constraints. It also responds to industry trends of spec-driven development and output-over-outcome by shifting focus to product context and outcomes. Additionally, it is framed as an extension to existing product thinking consultancy that is currently too dependent on consultants “pulling the process.”
 
 **Confidence:** High
 
-**Evidence:** “the agile promise of faster value delivery does not come from the processes like scrum”; “it requires much more thinking and planning”; “most people do not have the time nor the head space”; “focus is on spec-driven development… start building too early without enough product context”; “Output over outcome”; “Gentlii could be a extension of the product thinking consultancy work.”
+**Evidence:** “the agile promise of faster value delivery does not come from the processes like scrum”; “it requires much more thinking and planning”; “most people do not have the time nor the head space”; “focus is on spec-driven development… start building too early without enough product context”; “Output over outcome”; “Gentlii could be a extension of the product thinking consultancy work… too much embedded in the consultant pulling the process.”
 
 **Contradictions:** No contradictory content found.
 
 ## Expected Value
 
-Expected value includes reducing cognitive load for product professionals, integrating into existing tools/workflows (to avoid becoming “an additional app”), producing concise but trusted product definitions, and improving decision-making/alignment by validating ideas and feature requests against the product description. It also expects time and cost savings by preventing misaligned feature builds and improving product outcomes with less code.
+Expected value includes reduced cognitive load for product professionals, faster creation of product context/definition, higher-quality and trusted product definition, improved alignment of ideas/features to strategy/vision/charter, fewer wrong features built (time/money saved), quicker stakeholder clarity/feedback, and operational savings via “better features with less code.”
 
 **Confidence:** High
 
-**Evidence:** “This product is about reducing cognitive load of product professionals”; “integrate within existing tools and workflows”; “need a very concise product definition”; “create strategic, product vision, product charter documents”; “guard alignment”; “validate feature requests against the product description”; “time and money saved”; “Better features with less code save 25% op operations, bugs and other expensive stuff.”
+**Evidence:** “reducing cognitive load of product professionals”; “providing help in gathering the needed information for solid product development”; “rely on the quality of this product definition without any required action”; “check whether any idea aligns with the product definition”; “give clarity and quick feedback”; “time and money saved”; “Better features with less code save 25% op operations, bugs and other expensive stuff.”
 
 **Contradictions:** No contradictory content found.
 
 ## Assumptions
 
-- Product professionals currently lack sufficient time and “head space” to do the necessary upfront thinking and context-building.
-- Building too early without product context is a recurring industry problem (especially in spec-driven approaches).
-- Creating an “opinionated product definition” can be done with high quality “without any required action” from users.
-- Uploading “all types of files” provides enough usable data to extract strategy/vision/charter (and other artifacts) accurately.
-- “Invisible”/integrated product experiences reduce cognitive load more than standalone apps.
+- Product professionals lack sufficient time/headspace and their environments don’t support the needed thinking/brainstorming.
+- Integrating into existing tools/workflows (and being “invisible”) is preferable to a standalone UI/app.
+- It is feasible to “extract the meaning from all available data” to generate strategy/vision/charter/business case artifacts.
+- Quality can be improved and “proved (backed up by data)” and that “not good” feature requests can be registered/used as a proxy metric.
 
 **Confidence:** Medium
 
-**Evidence:** “most people do not have the time nor the head space”; “start building too early without enough product context”; “making sure they can rely on the quality of this product definition without any required action”; “A user uploads all types of files… Gentlii will use different agent to create: Strategy… Product Vision… Business case… Product charter”; “Wherever we can make the product invisible we will do that.”
+**Evidence:** “most people do not have the time nor the head space… The environment doesn't allow it.”; “should not be an additional app with an UI… Wherever possible the product should integrate within existing tools and workflows.”; “documents… created by extracting the meaning from all available data.”; “It will prove (bakced up by data)”; “we can register how many feature requests are marked Not good.”
 
-**Contradictions:** Potential tension between “without any required action” and the need for users to “upload all types of files” as input.
+**Contradictions:** No contradictory content found.
 
 ## Measurable Business Outcomes
 
-- Reduce the time to create a proper product description/context by 75%.
-- Reduce the number of features built that are “not the right solution” by 50% (tracked via feature requests marked “Not good”).
-- Save 25% on “operations, bugs and other expensive stuff” by improving the product with less code.
-- Improve product description quality to a level “confidently right on all facets” and “proved (backed up by data).”
+- Reduce time to create a proper product description/context by 75%.
+- Reduce the amount of features built that are not the right solution by 50% (tracked via feature requests marked “Not good”).
+- Save 25% of operations/bugs/other expensive costs through “better features with less code.”
+- Improve product description quality to a level that is “confidently right on all facets” (stated as measurable via data, but no explicit metric/threshold defined).
 
 **Confidence:** High
 
-**Evidence:** “Reduce the time to create a proper product description/context by 75%”; “reduce the amount of features that will be build that are not the right solution by 50% (we can register how many feature requests are marked Not good)”; “save 25% op operations, bugs and other expensive stuff”; “prove (bakced up by data) that the quality… will improve to a state where it is confidently right on all facets.”
+**Evidence:** “Reduce the time to create a proper product description/context by 75%.”; “reduce the amount of features that will be build that are not the right solution by 50% (we can register how many feature requests are marked Not good)”; “Better features with less code save 25% op operations, bugs and other expensive stuff.”; “prove (bakced up by data) that the quality… will improve to a state where it is confidently right on all facets.”
 
 **Contradictions:** No contradictory content found.
 
@@ -55,8 +54,8 @@ Medium → partially defined, some ambiguity
 
 ## Suggestion
 
-- Define how “quality… confidently right on all facets” will be measured (scoring rubric, audit method, baseline, and acceptance threshold).
-- Add timeframes for the targets (e.g., achieve 75% reduction within X weeks/months after onboarding).
-- Clarify what “25% op operations” refers to (which cost buckets, how measured, and attribution method).
-- State explicit assumptions and prerequisites for success (e.g., minimum input data quality/quantity; supported tools/workflows).
-- Specify who the primary buyer/stakeholders are (e.g., product leaders, consultancies) and what value they care about most (time, cost, risk, alignment).
+- Define how “quality of the product description” will be measured (e.g., rubric, stakeholder agreement rate, defect/rewrites, alignment checks) and set target thresholds/timeframes.
+- Specify baseline assumptions for the % improvements (75% time reduction, 50% fewer wrong features, 25% ops/bugs savings) and how baselines will be established.
+- Add explicit scope boundaries for “all available data” (data sources included/excluded) and success criteria for extraction accuracy.
+- Clarify the business case for Gentlii itself (e.g., cost to build/run, pricing, ROI/payback period) since only product outcomes are currently quantified.
+- Add measurable adoption/usage metrics tied to value (e.g., % of feature requests validated, stakeholder verification time reduction, frequency of alignment checks).

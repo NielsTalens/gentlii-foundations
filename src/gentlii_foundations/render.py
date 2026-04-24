@@ -262,6 +262,13 @@ def _render_metric_block(text: str) -> str | None:
     if labeled_metric_match is not None:
         label = labeled_metric_match.group(1)
         value = labeled_metric_match.group(2).strip()
+        if label == "Evidence":
+            return (
+                '<details class="evidence-accordion">'
+                "<summary>Evidence</summary>"
+                f'<div class="evidence-body"><p>{html.escape(value)}</p></div>'
+                "</details>"
+            )
         return (
             '<p class="metric-line">'
             f"<strong>{html.escape(label)}:</strong> "
@@ -567,6 +574,45 @@ a {
 
 .metric-line {
   margin: 0 0 0.82rem;
+}
+
+.evidence-accordion {
+  margin: 0 0 0.82rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+}
+
+.evidence-accordion summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.78rem 0.95rem;
+  font-weight: 650;
+  color: var(--text);
+}
+
+.evidence-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.evidence-accordion summary::after {
+  content: "+";
+  float: right;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.evidence-accordion[open] summary::after {
+  content: "−";
+}
+
+.evidence-body {
+  padding: 0 0.95rem 0.82rem;
+}
+
+.evidence-body p:last-child {
+  margin-bottom: 0;
 }
 
 .metric-value {

@@ -157,10 +157,13 @@ def test_write_artifacts_keeps_confidence_and_evidence_separate_without_blank_li
 
     write_artifacts(tmp_path, [artifact])
     html = (tmp_path / "index.html").read_text(encoding="utf-8")
+    css = (tmp_path / "styles.css").read_text(encoding="utf-8")
 
     assert '<p class="metric-line"><strong>Confidence:</strong> <span class="metric-value metric-pill metric-high">High</span></p>' in html
-    assert '<p class="metric-line"><strong>Evidence:</strong> Explicit support from source.</p>' in html
+    assert '<details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Explicit support from source.</p></div></details>' in html
     assert "Confidence:</strong> <span class=\"metric-value metric-pill metric-high\">High</span> **Evidence:**" not in html
+    assert ".evidence-accordion" in css
+    assert ".evidence-body" in css
 
 
 def test_write_artifacts_keeps_suggestion_below_side_by_side_blocks(tmp_path):
