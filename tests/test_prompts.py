@@ -65,8 +65,16 @@ def test_all_artifact_templates_keep_evidence_and_contradictions_inline_per_subj
 def test_artifact_templates_define_output_items_as_h2():
     template_dir = Path(PROMPT_TEMPLATE_DIR) / "artifacts"
 
-    assert "## Product Strategy" in (template_dir / "strategy.md").read_text(encoding="utf-8")
-    assert "## Company Strategy" not in (template_dir / "strategy.md").read_text(encoding="utf-8")
+    strategy_template = (template_dir / "strategy.md").read_text(encoding="utf-8")
+
+    assert "## Mission" in strategy_template
+    assert "## Target Customer" in strategy_template
+    assert "## Value Proposition" in strategy_template
+    assert "## Strategic Pillars" in strategy_template
+    assert "## Success Metrics" in strategy_template
+    assert "## Long-term Vision" in strategy_template
+    assert "## Product Strategy" not in strategy_template
+    assert "## Company Strategy" not in strategy_template
     assert "## Business Rationale" in (template_dir / "business-case.md").read_text(encoding="utf-8")
     assert "## Vision Statement" in (template_dir / "product-vision.md").read_text(encoding="utf-8")
     assert "## Target Groups" in (template_dir / "product-vision.md").read_text(encoding="utf-8")
