@@ -1,78 +1,80 @@
 ## Core Principles
 
-- Reduce cognitive load for product professionals.
-- Prioritize outcomes over output; defining outcomes is central.
+- Prioritize reducing cognitive load for product professionals.
+- Favor outcome over output; defining outcomes is crucial.
+- Start with sufficient product context; avoid building too early based on specs alone.
+- Product definitions should be concise and reliable without requiring user effort to ensure quality.
 
 **Confidence:** Medium  
-**Evidence:** “This product is about reducing cognitive load of product professionals.” / “Defining outcomes is very important. More important than output.”  
+**Evidence:** “This product is about reducing cognitive load of product professionals.” / “Defining outcomes is very important. More important than output.” / “start building too early without enough product context.” / “very concise product definition.” and “rely on the quality… without any required action”  
 **Contradictions:** No contradictory content found.
 
 ## Product Boundaries
 
-- Not an additional app with its own UI, accounts, etc.
-- Not another agile backlog product tool.
-- Should be “invisible” where possible, integrating into existing tools/workflows.
-- Avoid extensive descriptions; produce a concise product definition.
+- Not an additional standalone app with a UI requiring accounts.
+- Not another agile backlog/product tool.
+- Not primarily focused on maximizing AI output at the expense of product quality.
 
 **Confidence:** High  
-**Evidence:** “it should not be an additional app with an UI that needs an account and so on.” / “The product is not another agile backlog product tool.” / “Wherever possible the product should integrate within existing tools and workflows.” / “Wherever we can make the product invisible we will do that.” / “The users do not need very extensive descriptions but need a very concise product definition.”  
+**Evidence:** “it should not be an additional app with an UI that needs an account” / “The product is not another agile backlog product tool.” / “focus mainly on the amount of output AI can generate… not on how to improve the quality”  
 **Contradictions:** No contradictory content found.
 
 ## Behavioral Rules
 
-- Create strategic/product documents by extracting meaning from available data (uploaded files).
-- Generate a “product description” set containing Strategy, Product Vision, Business case, Product charter.
-- Write outputs in both markdown and generated HTML.
-- Guard alignment between the generated output documents (“product description”).
+- Integrate into existing tools and workflows where possible; make the product “invisible” when possible.
+- Extract meaning from “all available data” to generate core product documents (including a product charter).
+- Guard alignment between generated “output documents” within the product description.
 - Validate feature requests against the product description.
-- Detect changes (CRUD) in product input files (implying the system reacts to changes).
+- Detect changes (CRUD) in input files and trigger “product description guarding.”
 
 **Confidence:** Medium  
-**Evidence:** “The product will create strategic, product vision, product charter documents that are created by extracting the meaning from all available data.” / “A user uploads all types of files…” / “Gentlii will use different agent to create: Strategy, Product Vision, Business case, Product charter” / “These are written both in markdown as in a generated html page” / “The product will guard alignment between all mentioned output documents” / “The product will validate feature requests against the product description.” / “If there is any change (crud) detected in product input files”  
+**Evidence:** “Wherever possible the product should integrate within existing tools and workflows.” / “Wherever we can make the product invisible we will do that.” / “created by extracting the meaning from all available data.” / “guard alignment between all mentioned output documents” / “validate feature requests against the product description.” / “If there is any change (crud) detected in product input files”  
 **Contradictions:** No contradictory content found.
 
 ## Decision-Making Rules
 
-- Prefer concise product definitions over extensive descriptions.
-- Prefer integration/invisibility over building a standalone app experience.
+- Prefer outcomes over output when making trade-offs.
+- Prefer conciseness over extensive descriptions for product definition.
+- Prefer integration/invisibility over adding new UI surfaces.
 
-**Confidence:** Low  
-**Evidence:** “The users do not need very extensive descriptions but need a very concise product definition.” / “Wherever possible the product should integrate within existing tools and workflows.” / “Wherever we can make the product invisible we will do that.”  
+**Confidence:** Medium  
+**Evidence:** “Defining outcomes is very important. More important than output.” / “do not need very extensive descriptions but need a very concise product definition.” / “should integrate within existing tools… Wherever we can make the product invisible we will do that.”  
 **Contradictions:** No contradictory content found.
 
 ## Product Character
 
-- Should feel lightweight/low-friction (“invisible”), providing clarity and quick feedback while reducing cognitive load.
+- Feels lightweight and low-friction (reduces cognitive load; minimal/no standalone UI; “invisible” where possible).
+- Feels opinionated (an “opinionated product definition”) and clarity-oriented (quick verification/feedback for stakeholders).
 
 **Confidence:** Medium  
-**Evidence:** “reduce cognitive load” / “Wherever we can make the product invisible we will do that.” / “give clarity and quick feedback.”  
+**Evidence:** “reducing cognitive load” / “not… an additional app with an UI” / “make the product invisible” / “capture this in a opinionated product definition.” / “quickly verify… give clarity and quick feedback.”  
 **Contradictions:** No contradictory content found.
 
 ## Language and Tone
 
-Not found
+- Product definition should be concise (implying brief, to-the-point language).
 
-**Confidence:** High  
-**Evidence:** No supporting evidence found  
+**Confidence:** Low  
+**Evidence:** “do not need very extensive descriptions but need a very concise product definition.”  
 **Contradictions:** No contradictory content found.
 
 ## Evolution Constraints
 
-- Growth should favor integrating into existing tools/workflows rather than becoming a standalone UI-based app.
-- Maintain a concise product definition approach (avoid drifting into overly extensive documentation).
+- Growth should favor integrations within existing tools/workflows rather than expanding into a standalone app experience.
 
 **Confidence:** Low  
-**Evidence:** “it should not be an additional app with an UI…” / “Wherever possible the product should integrate within existing tools and workflows.” / “need a very concise product definition.”  
+**Evidence:** “should integrate within existing tools and workflows.” and “should not be an additional app with an UI that needs an account”  
 **Contradictions:** No contradictory content found.
 
 ## Integrity Checks
 
-- Quality should be reliable “without any required action” by users.
-- Feature requests should be validated for alignment against the product description.
-- Alignment between all output documents should be guarded.
+- Quality of the product definition should be reliable “without any required action” by users.
+- Changes in input files should be detected (CRUD detection) and used for “product description guarding.”
+- Feature requests should be checked for alignment/validity against the product description.
+- Alignment across generated documents is guarded.
 
 **Confidence:** Medium  
-**Evidence:** “making sure they can rely on the quality of this product definition without any required action” / “providing a way for them to check whether any idea aligns with the product definition” / “The product will guard alignment between all mentioned output documents” / “The product will validate feature requests against the product description.”  
+**Evidence:** “rely on the quality… without any required action” / “way for them to check whether any idea aligns with the product definition” / “guard alignment between all mentioned output documents” / “validate feature requests against the product description.” / “If there is any change (crud) detected in product input files”  
 **Contradictions:** No contradictory content found.
 
 ### Completeness
@@ -85,8 +87,8 @@ Medium
 
 ## Suggestion
 
-- Define explicit decision rules for trade-offs (e.g., what wins when “concise” conflicts with “confidently right on all facets,” or speed vs accuracy).
-- Specify concrete integrity checks (e.g., required consistency tests across Strategy/Vision/Business case/Charter; acceptance thresholds; “alignment” definition).
-- Add explicit behavioral constraints for change handling (what happens on detected CRUD changes; versioning, re-generation rules, audit trail expectations).
-- Provide clear language/tone guidelines for generated artifacts (concise style rules, reading level, forbidden jargon, formatting norms).
-- Clarify boundaries around data sources and permissions (what “all available data” includes/excludes; privacy/compliance guardrails).
+- Define explicit pass/fail integrity tests for “quality” and “alignment” (e.g., required fields, consistency rules, provenance/citations, confidence thresholds).
+- Specify decision rules for conflicts in source inputs (e.g., recency vs authority, stakeholder weighting, tie-breakers).
+- Add explicit evolution constraints about what new document types/features are allowed vs disallowed (to avoid drifting into a full product management suite).
+- Provide concrete language/tone guidelines for generated artifacts (e.g., voice, reading level, maximum length, required structure).
+- Clarify what happens when a feature request is “Not good” (workflow, feedback format, and whether alternatives are suggested).
