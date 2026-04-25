@@ -15,11 +15,11 @@ Your task is to analyze provided source text and identify whether product vision
 
 Focus only on explicitly stated or clearly supported information related to:
 
-- Product vision statement 
+- Product vision statement (A concise description of the desired future state the product aims to create)
 - Target groups
 - Needs (problems to solve)
-- Product features (high-level, not detailed specs)
-- Business goals
+- Product features (capabilities, not UI or implementation)
+- Business goals (outcomes the product should drive, not detailed metrics)
 - Differentiators
 
 ---
@@ -32,6 +32,7 @@ For each subject below, use this structure:
 - a bold confidence line written as `**Confidence:** High | Medium | Low`
 - a bold evidence line written as `**Evidence:** <exact quote, close paraphrase, or "No supporting evidence found">`
 - a bold contradictions line written as `**Contradictions:** <contradiction with evidence, or "No contradictory content found.">`
+Only include features that describe what the product enables, not UI elements or implementation details.
 
 ## Vision Statement
 [Extracted content or "Not found"]
@@ -83,6 +84,7 @@ Consider:
 - alignment between needs and features
 - presence of concrete business goals
 - clarity of differentiation
+- coherence (do all elements reinforce a single direction?)
 
 Return:
 Do NOT return any other output besides the following:
@@ -96,7 +98,18 @@ Return only one of these values on the next line:
 
 ## Suggestion
 
+If useful improvements can be made, return them as a bulleted list.
+
+Focus on:
+- Missing elements
+- Weak or unclear needs
+- Features not clearly solving needs
+- Lack of differentiation
+- Misalignment between elements
+
 If no useful suggestion can be made from the source material, return `Not found`.
+
+---
 
 Return the final evaluation block in exactly this shape:
 

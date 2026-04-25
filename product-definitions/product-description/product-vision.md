@@ -1,63 +1,62 @@
 ## Vision Statement
-A conversation-first CRM that tells users what to do next and minimizes screens, manual updates, and admin work—so the system guides action and becomes “invisible” over time.
+Gentlii aims to reduce the cognitive load on product professionals and improve product development decisions by creating a concise, trusted “product description” (strategy, product vision, business case, charter) from available data and using it to maintain alignment and validate ideas/requests.
 
-**Confidence:** High  
-**Evidence:** “It’s basically a CRM but conversation-first.” / “What we want instead is something that just… tells you what to do next.” / “Feels like CRM should become kind of invisible over time.”  
+**Confidence:** Medium  
+**Evidence:** “This product is about reducing cognitive load of product professionals.” + “The product will create strategic, product vision, product charter documents… by extracting the meaning from all available data.” + “The product will guard alignment… [and] validate feature requests against the product description.”  
 **Contradictions:** No contradictory content found.
 
 ## Target Groups
-- Sales reps who dislike CRM administration  
-- Founders doing their own sales (especially early stage)  
-- Potentially customer success people later
+- Product professionals / product people (in digital product development)  
+- Stakeholders (as recipients of quick verification/feedback on feature requests)
 
 **Confidence:** High  
-**Evidence:** “sales reps who hate CRM admin” / “founders doing their own sales (especially early stage)” / “maybe customer success people later”  
+**Evidence:** “Gentlii focusses on digital product development.” + “We want to help product professionals…” + “It will provide stakeholders a way to quickly verify a feature requests possibility.”  
 **Contradictions:** No contradictory content found.
 
 ## Needs
-- Reduce time spent clicking around, updating fields, and maintaining CRM (admin burden)  
-- Get clear “next best action” guidance without hunting through dashboards/pipelines  
-- Make work fast with minimal switching between tools (CRM/email/calendar/Slack)  
-- Avoid manual data entry; capture activity automatically (emails, calls, notes)  
-- Stay on top of deals without interpreting dashboards; prevent follow-ups from falling through cracks  
-- Emotional needs: feel in control, not overwhelmed; reduce “stress + guilt” from an outdated CRM
+- Reduce cognitive load; lack of time/headspace for required thinking, planning, brainstorming in product development  
+- Gather needed information for solid product development and capture it in an opinionated product definition  
+- Confidence in the quality of the product definition “without any required action”  
+- Ensure ideas/feature requests align with product context/definition; avoid building too early without enough context  
+- Shift focus from output/specs to outcomes/quality
 
 **Confidence:** High  
-**Evidence:** “too much clicking around, updating fields, checking dashboards… feels like admin work” / “they want to know what to do next, clearly” / “everything to be fast (input + output)” / “emails + calls captured automatically… basically zero data entry” / “follow-ups fall through cracks” / “right now CRM = stress + guilt… ideal state = calm, clear”  
+**Evidence:** “reducing cognitive load” + “most people do not have the time nor the head space…” + “providing help in gathering the needed information…” + “rely on the quality… without any required action” + “check whether any idea aligns…” + “start building too early without enough product context” + “Output over outcome… it must be the other way around.”  
 **Contradictions:** No contradictory content found.
 
 ## Product Features
-- Chat-first interface (possibly voice later), minimal/no traditional screens  
-- “What should I do now?” query and/or proactive suggested actions  
-- Prioritized list of next actions with who + context + suggested message/next step  
-- Quick/one-command execution (send follow-up, call, schedule) from chat  
-- Automatic logging of emails/calls; notes generated or suggested  
-- Pipeline/deal stage updates in the background without manual input  
-- Deal risk/cold flags converted into executable actions (not reporting)
+- Ingest/upload diverse product-related files as inputs  
+- Automatically extract meaning from available data to generate: Strategy, Product Vision, Business Case, Product Charter (together: “product description”)  
+- Provide the generated documents in markdown and generated HTML  
+- Guard/maintain alignment across product description documents  
+- Validate feature requests/ideas against the product description  
+- Detect changes (CRUD) in product input files (triggering guarding/update flow implied)  
+- Integrate into existing tools and workflows; avoid being a standalone UI-heavy app (product “invisible” where possible)
 
 **Confidence:** High  
-**Evidence:** “chat based, maybe voice later. No real ‘screens’” / “tell you your next best action” / “system suggests actions before you ask (ideally)” / “each item includes: who, context, suggested message” / “action executes immediately… everything logs automatically… pipeline updates itself” / “avoid anything that looks like reporting”  
+**Evidence:** “A user uploads all types of files…” + “create: Strategy, Product Vision, Business case, Product charter… called the `product description`” + “written both in markdown as in a generated html page” + “guard alignment…” + “validate feature requests…” + “If there is any change (crud) detected in product input files” + “integrate within existing tools and workflows… not be an additional app with an UI…” + “Wherever we can make the product invisible…”  
 **Contradictions:** No contradictory content found.
 
 ## Business Goals
-- Reduce CRM fatigue  
-- Increase daily CRM adoption/usage  
-- Increase revenue per rep (via better follow-up)  
-- Make onboarding/training minimal or unnecessary
+- Reduce time to create proper product description/context by 75%  
+- Improve product-description quality to a level where it is “confidently right on all facets” (backed by data)  
+- Provide quicker clarity/feedback to stakeholders on feature requests  
+- Reduce building wrong features by 50% (time and money saved)  
+- Improve product with less code; save ~25% on operations/bugs/other costs  
+- Extend/scale product thinking consultancy beyond consultant-led delivery
 
 **Confidence:** High  
-**Evidence:** “reduce the general fatigue people have with CRM” / “get reps to actually use the system daily” / “increase revenue per rep (if they follow up more, this should happen)” / “make onboarding basically nonexistent or very fast” / “If someone needs training, we probably failed.”  
+**Evidence:** “Reduce the time… by 75%.” + “prove (backed up by data) that the quality… will improve…” + “provide stakeholders a way to quickly verify…” + “reduce the amount of features… not the right solution by 50%” + “Better features with less code save 25%…” + “Gentlii could be a extension of the product thinking consultancy work.”  
 **Contradictions:** No contradictory content found.
 
 ## Differentiators
-- Conversation-first “actions > insights” (telling users what to do, not showing dashboards)  
-- Avoids traditional CRM UI patterns: screens/tabs/dashboards/pipeline browsing  
-- Automation-by-default with “invisible” background updates; near-zero data entry  
-- Low choice overload: focused, direct, decisive guidance; not overly configurable/customizable  
-- Explicitly positioned as “not another version of Salesforce” and “not a reporting tool / not BI”
+- Opinionated, concise product definition users can trust with no required action  
+- Outcome/quality-first positioning (not output/spec-only)  
+- Not a backlog/agile tool; avoids being another UI-heavy app; “invisible” via integration into existing workflows  
+- Uses “all available data” to extract meaning and generate key product artifacts, then validates/guards alignment
 
 **Confidence:** High  
-**Evidence:** “conversation first, always… no screens if we can avoid it” / “actions > insights… avoid anything that looks like reporting” / “automation by default… if user has to fill fields → something went wrong” / “reduce choices, don’t give users 10 options” / “not… something you customize endlessly… basically not another version of Salesforce”  
+**Evidence:** “opinionated product definition” + “rely on the quality… without any required action” + “users… need a very concise product definition” + “Defining outcomes is very important. More important than output.” + “The product is not another agile backlog product tool.” + “not be an additional app with an UI…” + “integrate within existing tools and workflows” + “extracting the meaning from all available data.”  
 **Contradictions:** No contradictory content found.
 
 ### Completeness
@@ -69,8 +68,8 @@ Complete
 High
 
 ## Suggestion
-- Add a single crisp one-sentence vision statement (final wording) to replace the draft tone (“so basically…”) with a shareable internal/external tagline.
-- Define initial ICP boundaries (e.g., team size, sales motion, existing tools like Gmail/Outlook) to sharpen “who it’s for initially.”
-- Add 2–3 measurable success metrics tied to goals (e.g., daily active use %, time spent on admin, follow-up SLA, revenue/rep lift).
-- Clarify the minimum “must-have” integrations needed to deliver auto-capture and execution (email, calendar, dialer) without turning into “another Salesforce.”
-- State explicit non-goals/guardrails as release criteria (e.g., “no dashboards in v1,” “no manual pipeline stage editing”) to prevent drift.
+- Clarify the one-sentence vision statement explicitly (desired future state) to unify “cognitive load reduction,” “trusted product description,” and “alignment validation.”
+- Specify primary vs secondary target groups (e.g., PMs/POs vs designers/engineers vs executives) to sharpen prioritization.
+- Define what “quality… confidently right on all facets” means (criteria/facets), without adding detailed metrics.
+- State how differentiation against spec-driven tools/AI output tools will be communicated (positioning message) using the existing “outcome over output” theme.
+- Complete the “product description guarding” flow (what happens after CRUD detection: regenerate, notify, re-validate requests, etc.) at a capability level.

@@ -11,10 +11,10 @@ Analyze provided source text and identify whether business case elements are pre
 
 Focus only on explicitly stated or clearly supported information related to:
 
-- Business rationale
-- Expected value
-- Assumptions
-- Measurable business outcomes
+- Business rationale (why this initiative should exist now)
+- Expected value (type of value created, not the metric)
+- Assumptions (what must be true for value to materialize)
+- Measurable business outcomes (how success is measured)
 
 ## Output
 
@@ -64,10 +64,11 @@ Return only one of these values on the next line:
 Assess how usable the business case is:
 
 Consider:
-- is the problem and purpose clearly and specifically defined?
-- is the impact clearly described and, where possible, quantified?
-- are underlying assumptions explicitly stated and testable?
-- are clear metrics, targets, and timeframes defined?
+- clarity of the problem or opportunity
+- clarity and type of value described
+- whether assumptions are explicit and testable
+- whether outcomes are measurable (metrics, targets, direction)
+- causal coherence (do assumptions logically lead to value and outcomes?) is the problem and purpose clearly and specifically defined?
 
 Return:
 Do NOT return any other output besides the following:
@@ -81,7 +82,18 @@ Return only one of these values on the next line:
 
 ## Suggestion
 
+If useful improvements can be made, return them as a bulleted list.
+
+Focus on:
+- Missing elements
+- Unclear or generic value
+- Hidden or untestable assumptions
+- Lack of measurable outcomes
+- Weak or broken causal chain
+
 If no useful suggestion can be made from the source material, return `Not found`.
+
+---
 
 Return the final evaluation block in exactly this shape:
 

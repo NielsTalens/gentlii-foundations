@@ -14,18 +14,19 @@ Focus on how the product is expected to behave, make decisions, and protect its 
 
 Focus only on explicitly stated or clearly supported information related to:
 
-- Core principles
-- Product boundaries (what the product is not)
-- Behavioral rules (how the product behaves)
+- Core principles (foundational truths guiding decisions)
+- Product boundaries (what the product is explicitly not)
+- Behavioral rules (what the product/system enforces by design)
 - Decision-making rules (how trade-offs are resolved)
 - Product character (how the product should feel)
 - Language and tone guidance
-- Evolution constraints
-- Integrity checks or evaluation rules
+- Evolution constraints (how the product is allowed to grow)
+- Integrity checks (tests applied before changes are accepted)
 
 ## Additional Rules
 
 - Do NOT restate strategy or product vision.
+- Only extract enforceable or actionable statements where possible.
 
 ---
 
@@ -67,11 +68,12 @@ For each subject below, use this structure:
 ### Completeness
 
 Assess whether key product charter elements are present:
-
-- Principles
-- Boundaries
+- Core principles
+- Product boundaries
 - Behavioral rules
 - Decision-making rules
+- Evolution constraints
+- Integrity checks
 
 Return:
 Do NOT return any other output besides the following:
@@ -90,10 +92,10 @@ Assess how usable the product charter is.
 Consider:
 
 - clarity and specificity of principles
-- enforceability of rules
-- presence of clear constraints
+- enforceability of rules (can they guide or reject decisions?)
+- presence of clear constraints and boundaries
 - usefulness for decision-making
-- consistency across elements
+- consistency (do elements reinforce or contradict each other?)
 
 Return:
 Do NOT return any other output besides the following:
@@ -107,7 +109,20 @@ Return only one of these values on the next line:
 
 ## Suggestion
 
+If useful improvements can be made, return them as a bulleted list.
+
+Focus on:
+
+- Missing elements
+- Weak or non-enforceable principles
+- Lack of clear boundaries
+- Ambiguous decision rules
+- Missing or weak integrity checks
+- Internal contradictions
+
 If no useful suggestion can be made from the source material, return `Not found`.
+
+---
 
 Return the final evaluation block in exactly this shape:
 
