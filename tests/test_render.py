@@ -25,6 +25,20 @@ def test_write_artifact_page_creates_standalone_product_guard_html(tmp_path):
     assert "<h2>Strategy &lt;-&gt; Business Case</h2>" in html
     assert "<p>Aligned.</p>" in html
     assert '<link rel="stylesheet" href="styles.css" />' in html
+    assert 'href="index.html"' in html
+
+
+def test_write_artifact_page_refreshes_existing_stylesheet(tmp_path):
+    (tmp_path / "styles.css").write_text("body { color: hotpink; }\n", encoding="utf-8")
+    artifact = GeneratedArtifact(name="product-guard", markdown="# Product Guard\n\n### Alignment score\n\n4/5\n")
+
+    write_artifact_page(tmp_path / "product-guard.html", artifact, page_title="Product Guard", page_kicker="Product Guard")
+
+    css = (tmp_path / "styles.css").read_text(encoding="utf-8")
+
+    assert ".doc-dual-section-grid" in css
+    assert ".doc-side-section" in css
+    assert "hotpink" not in css
 
 
 def test_write_artifacts_creates_static_site_files(tmp_path):
@@ -73,6 +87,7 @@ def test_write_artifacts_renders_combined_html_content(tmp_path):
     assert "<li>Two</li>" in html
     assert "<hr />" in html
     assert "title: Product Vision" not in html
+    assert 'href="product-guard.html"' in html
 
 
 def test_write_artifacts_uses_logo_png_for_favicon_and_brand_logo(tmp_path):
@@ -161,6 +176,32 @@ def test_write_artifacts_colorizes_metric_values(tmp_path):
     assert ".metric-high" in css
     assert ".metric-medium" in css
     assert ".metric-low" in css
+
+
+def test_write_artifact_page_places_alignment_score_and_confidence_side_by_side(tmp_path):
+    artifact = GeneratedArtifact(
+        name="product-guard",
+        markdown=(
+            "# Product Guard\n\n"
+            "## Strategy <-> Business Case\n\n"
+            "Aligned.\n\n"
+            "### Alignment score\n\n"
+            "4/5\n\n"
+            "### Confidence\n\n"
+            "High\n\n"
+            "**Evidence:** Explicit support from source.\n"
+        ),
+    )
+
+    write_artifact_page(tmp_path / "product-guard.html", artifact, page_title="Product Guard", page_kicker="Product Guard")
+    html = (tmp_path / "product-guard.html").read_text(encoding="utf-8")
+    css = (tmp_path / "styles.css").read_text(encoding="utf-8") if (tmp_path / "styles.css").exists() else ""
+
+    assert '<div class="doc-dual-section-grid">' in html
+    assert '<section class="doc-side-section"><h3>Alignment score</h3><p class="metric-line"><span class="metric-value metric-pill score-pill score-4">4/5</span></p></section>' in html
+    assert '<section class="doc-side-section"><h3>Confidence</h3><p class="metric-line"><span class="metric-value metric-pill metric-high">High</span></p></section>' in html
+    assert '<details class="evidence-accordion"><summary>Evidence</summary>' in html
+    assert ".doc-dual-section-grid" in css
 
 
 def test_write_artifacts_keeps_confidence_and_evidence_separate_without_blank_lines(tmp_path):

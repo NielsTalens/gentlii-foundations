@@ -30,6 +30,14 @@ def test_prompt_requires_confidence_below_each_output_section():
     assert "Do not merge `**Confidence:**` and `**Evidence:**` onto one line." in prompt
 
 
+def test_product_guard_prompt_uses_numeric_alignment_and_categorical_risk_signals():
+    prompt = build_artifact_prompt("product-guard", "source text")
+    assert "### Alignment score" in prompt
+    assert "### Confidence" in prompt
+    assert "Write the value directly below `### Alignment score` as exactly one of `1/5`, `2/5`, `3/5`, `4/5`, `5/5`." in prompt
+    assert "Write the value directly below `### Confidence` as exactly one of `Low`, `Medium`, `High`." in prompt
+
+
 def test_prompt_includes_shared_suggestions_section():
     prompt = build_artifact_prompt("business-case", "source text")
     assert "### Suggestions" in prompt

@@ -10,8 +10,11 @@ _ORDERED_LIST_PATTERN = re.compile(r"^\d+\. (.+)$")
 _SLUG_SAFE_ARTIFACT_NAME_PATTERN = re.compile(r"^[a-z0-9-]+$")
 _BOLD_PATTERN = re.compile(r"\*\*(.+?)\*\*")
 _H3_HEADING_PATTERN = re.compile(r"^<h3>(.+)</h3>$")
-_SIDE_BY_SIDE_H3_TITLES = {"Completeness", "Strength"}
-_LABELED_METRIC_PATTERN = re.compile(r"^\*\*(Confidence|Evidence):\*\*\s*(.+)$")
+_SIDE_BY_SIDE_H3_TITLE_PAIRS = {
+    frozenset({"Completeness", "Strength"}),
+    frozenset({"Alignment score", "Confidence"}),
+}
+_LABELED_METRIC_PATTERN = re.compile(r"^\*\*(Alignment score|Confidence|Evidence):\*\*\s*(.+)$")
 _METRIC_VALUE_CLASSES = {
     "high": "metric-high",
     "complete": "metric-high",
@@ -20,6 +23,7 @@ _METRIC_VALUE_CLASSES = {
     "low": "metric-low",
     "incomplete": "metric-low",
 }
+_ALIGNMENT_SCORE_PATTERN = re.compile(r"^[1-5]/5$")
 
 
 def write_artifacts(output_dir: Path, artifacts: list[GeneratedArtifact]) -> None:
@@ -45,6 +49,8 @@ def write_artifact_page(
 ) -> None:
     output_file = Path(output_path)
     output_file.parent.mkdir(parents=True, exist_ok=True)
+    styles_path = output_file.parent / "styles.css"
+    styles_path.write_text(_render_stylesheet(), encoding="utf-8")
     output_file.write_text(_render_artifact_page(artifact, page_title=page_title, page_kicker=page_kicker), encoding="utf-8")
 
 
@@ -63,6 +69,7 @@ def _render_index_html(artifacts: list[GeneratedArtifact]) -> str:
         nav_markup=(
             "      <nav class=\"doc-nav\" aria-label=\"Artifact navigation\">\n"
             "        <div class=\"panel-eyebrow\">Artifacts</div>\n"
+            "        <p><a href=\"product-guard.html\">Product Guard</a></p>\n"
             "        <ol class=\"doc-nav-list\">\n"
             f"{nav_items}\n"
             "        </ol>\n"
@@ -83,6 +90,7 @@ def _render_artifact_page(artifact: GeneratedArtifact, page_title: str, page_kic
         nav_markup=(
             "      <nav class=\"doc-nav\" aria-label=\"Document navigation\">\n"
             "        <div class=\"panel-eyebrow\">Document</div>\n"
+            "        <p><a href=\"index.html\">Foundations</a></p>\n"
             "        <ol class=\"doc-nav-list\">\n"
             f'          <li><a href="#{html.escape(artifact.name)}">{html.escape(_artifact_eyebrow(artifact))}</a></li>\n'
             "        </ol>\n"
@@ -334,6 +342,8 @@ def _render_metric_block(text: str) -> str | None:
             "</p>"
         )
     stripped = text.strip()
+    if _ALIGNMENT_SCORE_PATTERN.fullmatch(stripped) is not None:
+        return f'<p class="metric-line">{_render_alignment_score_value(stripped)}</p>'
     if stripped.lower() in _METRIC_VALUE_CLASSES:
         return f'<p class="metric-line">{_render_metric_value(stripped)}</p>'
     return None
@@ -341,7 +351,11 @@ def _render_metric_block(text: str) -> str | None:
 
 def _is_metric_text(text: str) -> bool:
     stripped = text.strip()
-    return _LABELED_METRIC_PATTERN.fullmatch(stripped) is not None or stripped.lower() in _METRIC_VALUE_CLASSES
+    return (
+        _LABELED_METRIC_PATTERN.fullmatch(stripped) is not None
+        or _ALIGNMENT_SCORE_PATTERN.fullmatch(stripped) is not None
+        or stripped.lower() in _METRIC_VALUE_CLASSES
+    )
 
 
 def _render_metric_value(value: str) -> str:
@@ -349,6 +363,13 @@ def _render_metric_value(value: str) -> str:
     if metric_class is None:
         return html.escape(value)
     return f'<span class="metric-value metric-pill {metric_class}">{html.escape(value)}</span>'
+
+
+def _render_alignment_score_value(value: str) -> str:
+    score = value.strip()
+    if _ALIGNMENT_SCORE_PATTERN.fullmatch(score) is None:
+        return html.escape(score)
+    return f'<span class="metric-value metric-pill score-pill score-{score[0]}">{html.escape(score)}</span>'
 
 
 def _group_side_by_side_sections(blocks: list[str]) -> list[str]:
@@ -367,7 +388,7 @@ def _group_side_by_side_sections(blocks: list[str]) -> list[str]:
             continue
         first_title = _extract_h3_title(first_section[0][0])
         second_title = _extract_h3_title(second_section[0][0])
-        if {first_title, second_title} == _SIDE_BY_SIDE_H3_TITLES:
+        if frozenset({first_title, second_title}) in _SIDE_BY_SIDE_H3_TITLE_PAIRS:
             grouped.append(
                 '<div class="doc-dual-section-grid">'
                 f'<section class="doc-side-section">{"".join(first_section[0])}</section>'
@@ -393,11 +414,13 @@ def _collect_side_section(blocks: list[str], start_index: int) -> tuple[list[str
         return None
     heading = blocks[start_index]
     title = _extract_h3_title(heading)
-    if title not in _SIDE_BY_SIDE_H3_TITLES:
+    if not any(title in title_pair for title_pair in _SIDE_BY_SIDE_H3_TITLE_PAIRS):
         return None
     end_index = start_index + 1
     section_blocks = [heading]
     while end_index < len(blocks):
+        if title in {"Alignment score", "Confidence"} and len(section_blocks) >= 2:
+            break
         if _starts_new_side_section(blocks[end_index]):
             break
         section_blocks.append(blocks[end_index])
@@ -632,6 +655,47 @@ a {
 
 .metric-line {
   margin: 0 0 0.82rem;
+}
+
+.score-callout {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin: 0 0 0.95rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(17, 134, 184, 0.32);
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(17, 134, 184, 0.16), rgba(233, 130, 31, 0.12));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.score-label {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.score-value {
+  font-size: 1.8rem;
+  line-height: 1;
+  font-weight: 780;
+  letter-spacing: -0.04em;
+}
+
+.score-1,
+.score-2 {
+  color: #e06464;
+}
+
+.score-3 {
+  color: #f0a94b;
+}
+
+.score-4,
+.score-5 {
+  color: #57c084;
 }
 
 .evidence-accordion {

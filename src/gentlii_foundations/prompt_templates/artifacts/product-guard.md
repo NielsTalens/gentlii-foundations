@@ -33,11 +33,10 @@ Evaluate coherence across these document pairs:
 For each pair, determine:
 
 - alignment score (1–5)
-- confidence score (1–5)
+- confidence level (Low|Medium|High)
 - Core alignment themes (what connects all individual documents, shared intent or reinforcing patterns)
 - detected contradictions (Explicit or implicit conflicts in direction, scope, or priorities)
 - missing links (Expected connections that are not present)
-- structural risk level (Low|Medium|High)
 - minimal change to improve coherence (Smallest possible change that significantly improves alignment)
 
 ---
@@ -56,31 +55,31 @@ When evaluating alignment, consider:
 For each subject below, use this structure:
 - `##` heading for the subject name
 - one or more normal paragraphs with extracted content, or `Not found`
-- a bold evidence line written as `**Alignment score:** <score/5>`
-- a bold confidence line written as `**Confidence:** <score/5>`
-- a bold structural risk level line written as `**Structucal risks level:** <score/5>`
+- a `### Alignment score` heading followed by exactly one score line
+- a `### Confidence` heading followed by exactly one confidence line
 
-## Alignment score
-[Score]
+Write the value directly below `### Alignment score` as exactly one of `1/5`, `2/5`, `3/5`, `4/5`, `5/5`.
+Write the value directly below `### Confidence` as exactly one of `Low`, `Medium`, `High`.
 
-## Confidence score
-[Score]
+### Alignment score
+[1/5 | 2/5 | 3/5 | 4/5 | 5/5]
 
-## Structural risk level:
-[Score]
+### Confidence
+[Low | Medium | High]
 
-## Alignment themes:
-[Evidence or "Not found"]
+## Subject name
 
-## Detected contradictions:
-[Evidence or "Not found"]
+## Alignment themes
+[Extracted content or "Not found"]
 
-## Missing links:
-[Evidence or "Not found"]
+## Detected contradictions
+[Extracted content or "Not found"]
 
+## Missing links
+[Extracted content or "Not found"]
 
-## Minimal change to improve_coherence:
-[Evidence or "Not found"]
+## Minimal change to improve coherence
+[Extracted content or "Not found"]
 
 ---
 
@@ -94,16 +93,9 @@ Use the following to determine the scoring for these elements:
 4 = Strong alignment with minor gaps  
 5 = Fully aligned, mutually reinforcing  
 
-## confidence_score:
-1 = Very weak or missing evidence  
-2 = Limited evidence, high uncertainty  
-3 = Moderate evidence, some ambiguity  
-4 = Strong evidence  
-5 = Clear, explicit, consistent evidence  
-
-## Structural risk level:
-1 = Minor gaps, no conflicting direction
-2 = Noticeable gaps or weak connections, some ambiguity in priorities or scope
-3 = Conflicting statements contradicting priorities or goals, misaligned scope, conflicting needs and features
+## confidence:
+Low = Weak or missing evidence, high uncertainty  
+Medium = Moderate evidence, some ambiguity  
+High = Clear, explicit, consistent evidence  
 
 ---

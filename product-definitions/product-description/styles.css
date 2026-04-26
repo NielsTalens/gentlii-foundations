@@ -164,6 +164,47 @@ a {
   margin: 0 0 0.82rem;
 }
 
+.score-callout {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin: 0 0 0.95rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(17, 134, 184, 0.32);
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(17, 134, 184, 0.16), rgba(233, 130, 31, 0.12));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.score-label {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.score-value {
+  font-size: 1.8rem;
+  line-height: 1;
+  font-weight: 780;
+  letter-spacing: -0.04em;
+}
+
+.score-1,
+.score-2 {
+  color: #e06464;
+}
+
+.score-3 {
+  color: #f0a94b;
+}
+
+.score-4,
+.score-5 {
+  color: #57c084;
+}
+
 .evidence-accordion {
   margin: 0 0 0.82rem;
   border: 1px solid var(--border);
