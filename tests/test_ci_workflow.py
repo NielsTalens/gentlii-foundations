@@ -14,27 +14,37 @@ def test_ci_workflow_includes_test_and_security_jobs():
     assert "pip-audit" in workflow
 
 
-def test_foundations_workflow_deploys_pages_from_generated_site():
+def test_foundations_workflow_builds_and_commits_generated_site():
     workflow = Path(".github/workflows/foundations.yml").read_text(encoding="utf-8")
 
-    assert "pages: write" in workflow
-    assert "id-token: write" in workflow
     assert "Validate generated HTML for publish safety" in workflow
     assert "python -m gentlii_foundations.html_security" in workflow
-    assert "actions/configure-pages" in workflow
-    assert "actions/upload-pages-artifact" in workflow
-    assert "actions/deploy-pages" in workflow
-    assert "product-definitions/product-description/index.html" in workflow
-    assert "product-definitions/product-description/styles.css" in workflow
+    assert "pages: write" not in workflow
+    assert "id-token: write" not in workflow
+    assert "actions/configure-pages" not in workflow
+    assert "actions/upload-pages-artifact" not in workflow
+    assert "actions/deploy-pages" not in workflow
+    assert 'git commit -m "chore: refresh generated product description"' in workflow
 
 
-def test_product_guard_workflow_runs_on_committed_product_description_changes():
+def test_product_guard_workflow_runs_after_foundations_and_deploys_pages():
     workflow = Path(".github/workflows/product-guard.yml").read_text(encoding="utf-8")
 
     assert "workflow_run:" in workflow
     assert 'workflows: ["Foundations"]' in workflow
     assert "types: [completed]" in workflow
     assert "github.event.workflow_run.conclusion == 'success'" in workflow
+    assert "pages: write" in workflow
+    assert "id-token: write" in workflow
     assert "gentlii-foundations guard product-definitions" in workflow
+    assert "python -m gentlii_foundations.html_security product-definitions/product-description/index.html" in workflow
+    assert "python -m gentlii_foundations.html_security product-definitions/product-description/product-guard.html" in workflow
+    assert "actions/configure-pages" in workflow
+    assert "actions/upload-pages-artifact" in workflow
+    assert "actions/deploy-pages" in workflow
+    assert "product-definitions/product-description/index.html" in workflow
+    assert "product-definitions/product-description/product-guard.html" in workflow
+    assert "product-definitions/product-description/styles.css" in workflow
     assert "git add product-definitions/product-description/product-guard.md" in workflow
+    assert "git add product-definitions/product-description/product-guard.html" in workflow
     assert 'git commit -m "chore: refresh product guard"' in workflow

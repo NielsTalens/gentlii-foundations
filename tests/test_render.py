@@ -1,11 +1,30 @@
 from gentlii_foundations.models import GeneratedArtifact
-from gentlii_foundations.render import write_artifacts
+from gentlii_foundations.render import write_artifact_page, write_artifacts
 
 
 def test_write_artifacts_creates_expected_markdown_files(tmp_path):
     artifact = GeneratedArtifact(name="strategy", markdown="# Strategy\n")
     write_artifacts(tmp_path, [artifact])
     assert (tmp_path / "strategy.md").read_text() == "# Strategy\n"
+
+
+def test_write_artifact_page_creates_standalone_product_guard_html(tmp_path):
+    artifact = GeneratedArtifact(
+        name="product-guard",
+        markdown="# Product Guard\n\n## Strategy <-> Business Case\n\nAligned.\n",
+    )
+
+    write_artifact_page(tmp_path / "product-guard.html", artifact, page_title="Product Guard", page_kicker="Product Guard")
+
+    html = (tmp_path / "product-guard.html").read_text(encoding="utf-8")
+
+    assert "<title>Product Guard</title>" in html
+    assert "<h1 class=\"brand-title\">Product Guard</h1>" in html
+    assert "<div class=\"brand-kicker\">Product Guard</div>" in html
+    assert "<h1>Product Guard</h1>" in html
+    assert "<h2>Strategy &lt;-&gt; Business Case</h2>" in html
+    assert "<p>Aligned.</p>" in html
+    assert '<link rel="stylesheet" href="styles.css" />' in html
 
 
 def test_write_artifacts_creates_static_site_files(tmp_path):

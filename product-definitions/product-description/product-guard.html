@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Guard</title>
+  <link rel="icon" href="logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="page-header">
+      <div class="brand-block">
+        <img class="brand-logo" src="logo.png" alt="Gentlii logo" />
+        <div>
+          <div class="brand-kicker">Product Guard</div>
+          <h1 class="brand-title">Product Guard</h1>
+          <p class="brand-subtitle">Standalone export of the Product Guard review.</p>
+        </div>
+      </div>
+      <nav class="doc-nav" aria-label="Document navigation">
+        <div class="panel-eyebrow">Document</div>
+        <ol class="doc-nav-list">
+          <li><a href="#product-guard">product guard</a></li>
+        </ol>
+      </nav>
+    </header>
+    <main class="page">
+      <section class="doc-card" id="product-guard">
+        <div class="panel-eyebrow">product guard</div>
+        <div class="doc-content">
+          <h2>Strategy &lt;-&gt; Business Case</h2>
+          <p>Strong directional and causal alignment around reducing cognitive load, producing a trusted “product description,” integrating into existing workflows, and using alignment checks/validation to reduce waste and improve outcomes.</p>
+          <h3>Alignment score:</h3>
+          <p>4/5</p>
+          <p class="metric-line"><strong>Confidence:</strong> 4/5</p>
+          <h3>Structucal risks level:</h3>
+          <p>2/5</p>
+          <h2>Alignment themes:</h2>
+          <ul><li>Shared mission/value: reduce cognitive load and enable faster value via high-quality product thinking artifacts and alignment checks.</li><li>Shared product approach: generate strategy/vision/business case/charter by extracting meaning from available data; integrate into existing workflows; avoid standalone UI/account burden.</li><li>Shared outcomes/metrics: 75% faster product description creation, 50% fewer wrong features, 25% ops/bugs savings; plus “confidently right” product definition quality (measurement unclear in both).</li></ul>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Strategy: “reduce cognitive load… enable faster value delivery… providing high-quality, reliable product thinking artifacts… and alignment checks.” Business case: “reduce cognitive load… improve the quality and reliability of product definitions/context… increase alignment… reduce waste… integrate into existing tools/workflows rather than adding UI/account overhead.”</p></div></details>
+          <h2>Detected contradictions:</h2>
+          <p>No contradictory content found.</p>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Both documents consistently emphasize integration/invisibility, upstream product thinking, and alignment/validation as mechanisms.</p></div></details>
+          <h2>Missing links:</h2>
+          <ul><li>Business case does not clearly specify *how* integrations will work while still avoiding a UI/account (“invisible” constraint), beyond stating the intent.</li><li>Both rely on “confidently right on all facets” quality, but neither defines a concrete measurement/rubric; business case explicitly notes measurement approach is not defined.</li><li>Causal chain for 25% ops/bugs savings and 50% wrong-feature reduction is asserted but not operationalized (mechanism, baselines, instrumentation).</li></ul>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Business case: “quality… ‘confidently right on all facets’ (quality improvement is claimed, but the measurement approach is not defined).” Strategy: “quality… ‘confidently right on all facets’ (no numeric threshold defined).” Business case assumptions include feasibility tensions: “Integration into existing workflows/tools is feasible… without becoming ‘an additional app with an UI… account.’”</p></div></details>
+          <h2>Minimal change to improve_coherence:</h2>
+          <p>Add one shared “measurement + mechanism” paragraph (in either doc, referenced by the other) that defines (a) how “confidently right” is assessed, (b) how “Not good” labeling will be governed to measure the 50% target, and (c) what concrete signals link alignment checking to ops/bug savings.</p>
+          <hr />
+          <h2>Business Case &lt;-&gt; Product Vision</h2>
+          <p>High alignment: the vision’s needs/features/differentiators largely instantiate the business case rationale, assumptions, and intended value/outcomes. Main gaps are measurement specificity and assumption validation detail.</p>
+          <h3>Alignment score:</h3>
+          <p>4/5</p>
+          <p class="metric-line"><strong>Confidence:</strong> 4/5</p>
+          <h3>Structucal risks level:</h3>
+          <p>2/5</p>
+          <h2>Alignment themes:</h2>
+          <ul><li>Same problem framing: agile/spec-driven output emphasis leads to building too early without context; product professionals lack time/headspace for product thinking.</li><li>Same solution shape: ingest files, extract meaning into core artifacts, guard alignment, validate feature requests, integrate invisibly.</li><li>Same target groups: product professionals + stakeholders needing quick verification/feedback.</li><li>Same business outcomes/targets: 75% time reduction, 50% fewer wrong features, 25% ops/bugs savings; plus quality/trust emphasis.</li></ul>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Business case: “agile practices alone don’t deliver… requires much more thinking… most people do not have the time nor the head space… start building too early without enough product context.” Vision needs: “most people do not have the time nor the head space… start building too early…” Vision features: “upload ‘all types of files’… generate… strategy… business case… charter… guard alignment… validate feature requests… integrate into existing tools.”</p></div></details>
+          <h2>Detected contradictions:</h2>
+          <p>No contradictory content found.</p>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Both documents reinforce the same direction (upstream product context, alignment/validation) and constraints (integration/invisibility; not another agile/backlog tool).</p></div></details>
+          <h2>Missing links:</h2>
+          <ul><li>Vision states “prove (backed up by data) that the quality… will improve… confidently right” but does not define what data, what proof, or acceptance criteria—matching the business case gap.</li><li>Business case lists assumptions (sufficient source materials, feasibility of “all available data,” integration feasibility) but the vision does not specify how these assumptions will be tested or what minimum viable inputs are.</li></ul>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Vision: “prove (backed up by data) that the quality… will improve… confidently right.” Business case assumptions: “Automatically extracting meaning from ‘all available data’… ‘confidently right on all facets.’ Users will have sufficient and relevant source materials…”</p></div></details>
+          <h2>Minimal change to improve_coherence:</h2>
+          <p>Add a short “Assumptions to validate first” section to the Product Vision (or explicitly reference the business-case assumptions) with 2–3 concrete validation criteria: minimum input set, quality acceptance rubric, and a definition of “quick feedback” latency target.</p>
+          <hr />
+          <h2>Product Vision &lt;-&gt; Product Charter</h2>
+          <p>Very strong alignment: the charter’s principles, boundaries, and behavioral rules are direct constraints and operating rules for the vision’s features and differentiators. Main gap is that the charter is “partial” and missing operational details (tone, conflict tie-breakers, explicit quality gates).</p>
+          <h3>Alignment score:</h3>
+          <p>5/5</p>
+          <p class="metric-line"><strong>Confidence:</strong> 4/5</p>
+          <h3>Structucal risks level:</h3>
+          <p>1/5</p>
+          <h2>Alignment themes:</h2>
+          <ul><li>Shared principles: reduce cognitive load; outcome-over-output; concise product definition; trust “without any required action.”</li><li>Shared boundaries: not another agile/backlog tool; not a standalone UI/account-heavy app; “invisible” via integration.</li><li>Shared behaviors: create artifacts from “all available data,” guard alignment across documents, validate feature requests, auto-run Product Guard on CRUD changes and produce a report.</li></ul>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Vision differentiators/features: “not another agile backlog product tool… integrate into existing tools… make the product invisible… rely on the quality… without any required action… guard alignment… validate feature requests… If there is any change (crud)… run… create a report.” Charter principles/boundaries/behavior: “not… additional app… account” + “not another agile backlog product tool” + “integrate within existing tools” + “guard alignment… validate feature requests… If… CRUD change… Product Guard… create a report.”</p></div></details>
+          <h2>Detected contradictions:</h2>
+          <p>No contradictory content found.</p>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>The charter reads like a constraint/specification of the vision rather than diverging from it.</p></div></details>
+          <h2>Missing links:</h2>
+          <ul><li>Charter lacks language/tone rules for generated artifacts, while vision specifies outputs (markdown + HTML) but not standards for clarity/structure.</li><li>Charter does not define pass/fail quality criteria for “confidently right,” despite making “rely on the quality” a core principle.</li><li>Charter does not specify tie-breakers when principles conflict (e.g., invisibility vs need for traceability/control), which could affect how vision features are implemented.</li></ul>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Charter: “Language and Tone: Not found.” Charter principle: “rely on the quality… without any required action” (no criteria). Vision: “written both in markdown as in a generated html page” (no quality/tone standard).</p></div></details>
+          <h2>Minimal change to improve_coherence:</h2>
+          <p>Add one “Quality &amp; Governance” subsection to the Product Charter defining (a) minimum structure/tone requirements for generated artifacts, (b) explicit quality gates for “trustworthy by default,” and (c) one tie-breaker rule for integration/invisibility vs user control/traceability.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

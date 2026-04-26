@@ -115,7 +115,7 @@ def test_run_product_guard_reads_generated_markdown_and_excludes_guard(monkeypat
     (output_dir / "business-case.md").write_text("# Business Case\nEconomic logic\n", encoding="utf-8")
     (output_dir / "product-guard.md").write_text("# Old Guard\nIgnore me\n", encoding="utf-8")
 
-    captured = {"documents": None, "artifact": None, "artifact_names": None}
+    captured = {"documents": None, "artifact": None, "html_page": None, "artifact_names": None}
 
     monkeypatch.setattr(
         "gentlii_foundations.pipeline.load_settings",
@@ -133,6 +133,12 @@ def test_run_product_guard_reads_generated_markdown_and_excludes_guard(monkeypat
         "gentlii_foundations.pipeline.write_markdown_artifact",
         lambda output_path, artifact: captured.__setitem__("artifact", (output_path, artifact)),
     )
+    monkeypatch.setattr(
+        "gentlii_foundations.pipeline.write_artifact_page",
+        lambda output_path, artifact, page_title, page_kicker: captured.__setitem__(
+            "html_page", (output_path, artifact, page_title, page_kicker)
+        ),
+    )
 
     run_product_guard(root)
 
@@ -142,6 +148,12 @@ def test_run_product_guard_reads_generated_markdown_and_excludes_guard(monkeypat
     assert captured["artifact"] == (
         output_dir / "product-guard.md",
         GeneratedArtifact(name="product-guard", markdown="# Product Guard\nAligned\n"),
+    )
+    assert captured["html_page"] == (
+        output_dir / "product-guard.html",
+        GeneratedArtifact(name="product-guard", markdown="# Product Guard\nAligned\n"),
+        "Product Guard",
+        "Product Guard",
     )
 
 
@@ -166,6 +178,10 @@ def test_run_product_guard_reports_progress(monkeypatch, tmp_path: Path):
         ] and [GeneratedArtifact(name="product-guard", markdown="# Product Guard\nAligned\n")],
     )
     monkeypatch.setattr("gentlii_foundations.pipeline.write_markdown_artifact", lambda output_path, artifact: None)
+    monkeypatch.setattr(
+        "gentlii_foundations.pipeline.write_artifact_page",
+        lambda output_path, artifact, page_title, page_kicker: None,
+    )
 
     run_product_guard(root, report=messages.append)
 
@@ -175,6 +191,7 @@ def test_run_product_guard_reports_progress(monkeypatch, tmp_path: Path):
     assert "Generating 1 product guard artifact with OpenAI." in messages
     assert "Generating artifact: product-guard" in messages
     assert f"Wrote guard report to {output_dir / 'product-guard.md'}." in messages
+    assert f"Wrote guard page to {output_dir / 'product-guard.html'}." in messages
 
 
 def test_run_product_guard_requires_generated_markdown(tmp_path: Path):

@@ -9,7 +9,7 @@ from gentlii_foundations.extraction import extract_documents
 from gentlii_foundations.models import ExtractedDocument
 from gentlii_foundations.openai_client import FoundationsClient
 from gentlii_foundations.paths import resolve_product_paths
-from gentlii_foundations.render import write_artifacts, write_markdown_artifact
+from gentlii_foundations.render import write_artifact_page, write_artifacts, write_markdown_artifact
 
 
 def build_foundations(root: Path, report=None) -> None:
@@ -46,7 +46,10 @@ def run_product_guard(root: Path, report=None) -> None:
     artifact = next(artifact for artifact in artifacts if artifact.name == "product-guard")
     output_path = paths.output_dir / "product-guard.md"
     write_markdown_artifact(output_path, artifact)
+    page_path = paths.output_dir / "product-guard.html"
+    write_artifact_page(page_path, artifact, page_title="Product Guard", page_kicker="Product Guard")
     _report(report, f"Wrote guard report to {output_path}.")
+    _report(report, f"Wrote guard page to {page_path}.")
 
 
 def _discover_generated_markdown_documents(output_dir: Path) -> list[ExtractedDocument]:

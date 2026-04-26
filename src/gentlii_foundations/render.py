@@ -37,19 +37,77 @@ def write_markdown_artifact(output_path: Path, artifact: GeneratedArtifact) -> N
     Path(output_path).write_text(artifact.markdown, encoding="utf-8")
 
 
+def write_artifact_page(
+    output_path: Path,
+    artifact: GeneratedArtifact,
+    page_title: str,
+    page_kicker: str,
+) -> None:
+    output_file = Path(output_path)
+    output_file.parent.mkdir(parents=True, exist_ok=True)
+    output_file.write_text(_render_artifact_page(artifact, page_title=page_title, page_kicker=page_kicker), encoding="utf-8")
+
+
 def _render_index_html(artifacts: list[GeneratedArtifact]) -> str:
     nav_items = "\n".join(
         f'          <li><a href="#{html.escape(artifact.name)}">{html.escape(_artifact_eyebrow(artifact))}</a></li>'
         for artifact in artifacts
     )
     sections = "\n".join(_render_artifact_section(artifact) for artifact in artifacts)
+    return _render_page_shell(
+        page_title="Gentlii Foundations",
+        page_kicker="Product Foundations",
+        brand_title="Gentlii Foundations",
+        subtitle="Static export of product description artifacts for review and publishing.",
+        nav_label="Artifacts",
+        nav_markup=(
+            "      <nav class=\"doc-nav\" aria-label=\"Artifact navigation\">\n"
+            "        <div class=\"panel-eyebrow\">Artifacts</div>\n"
+            "        <ol class=\"doc-nav-list\">\n"
+            f"{nav_items}\n"
+            "        </ol>\n"
+            "      </nav>\n"
+        ),
+        main_markup=sections,
+    )
+
+
+def _render_artifact_page(artifact: GeneratedArtifact, page_title: str, page_kicker: str) -> str:
+    section = _render_artifact_section(artifact)
+    return _render_page_shell(
+        page_title=page_title,
+        page_kicker=page_kicker,
+        brand_title=page_title,
+        subtitle="Standalone export of the Product Guard review.",
+        nav_label="Document",
+        nav_markup=(
+            "      <nav class=\"doc-nav\" aria-label=\"Document navigation\">\n"
+            "        <div class=\"panel-eyebrow\">Document</div>\n"
+            "        <ol class=\"doc-nav-list\">\n"
+            f'          <li><a href="#{html.escape(artifact.name)}">{html.escape(_artifact_eyebrow(artifact))}</a></li>\n'
+            "        </ol>\n"
+            "      </nav>\n"
+        ),
+        main_markup=section,
+    )
+
+
+def _render_page_shell(
+    page_title: str,
+    page_kicker: str,
+    brand_title: str,
+    subtitle: str,
+    nav_label: str,
+    nav_markup: str,
+    main_markup: str,
+) -> str:
     return (
         "<!DOCTYPE html>\n"
         "<html lang=\"en\">\n"
         "<head>\n"
         "  <meta charset=\"utf-8\" />\n"
         "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n"
-        "  <title>Gentlii Foundations</title>\n"
+        f"  <title>{html.escape(page_title)}</title>\n"
         "  <link rel=\"icon\" href=\"logo.png\" />\n"
         "  <link rel=\"stylesheet\" href=\"styles.css\" />\n"
         "</head>\n"
@@ -59,20 +117,15 @@ def _render_index_html(artifacts: list[GeneratedArtifact]) -> str:
         "      <div class=\"brand-block\">\n"
         "        <img class=\"brand-logo\" src=\"logo.png\" alt=\"Gentlii logo\" />\n"
         "        <div>\n"
-        "          <div class=\"brand-kicker\">Product Foundations</div>\n"
-        "          <h1 class=\"brand-title\">Gentlii Foundations</h1>\n"
-        "          <p class=\"brand-subtitle\">Static export of product description artifacts for review and publishing.</p>\n"
+        f"          <div class=\"brand-kicker\">{html.escape(page_kicker)}</div>\n"
+        f"          <h1 class=\"brand-title\">{html.escape(brand_title)}</h1>\n"
+        f"          <p class=\"brand-subtitle\">{html.escape(subtitle)}</p>\n"
         "        </div>\n"
         "      </div>\n"
-        "      <nav class=\"doc-nav\" aria-label=\"Artifact navigation\">\n"
-        "        <div class=\"panel-eyebrow\">Artifacts</div>\n"
-        "        <ol class=\"doc-nav-list\">\n"
-        f"{nav_items}\n"
-        "        </ol>\n"
-        "      </nav>\n"
+        f"{nav_markup}"
         "    </header>\n"
         "    <main class=\"page\">\n"
-        f"{sections}\n"
+        f"{main_markup}\n"
         "    </main>\n"
         "  </div>\n"
         "</body>\n"
