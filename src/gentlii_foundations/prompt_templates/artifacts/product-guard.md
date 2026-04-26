@@ -53,10 +53,10 @@ When evaluating alignment, consider:
 ## Output
 
 For each subject below, use this structure:
-- `##` heading for the subject name
-- one or more normal paragraphs with extracted content, or `Not found`
+- `#` heading for the subject name
 - a `### Alignment score` heading followed by exactly one score line
 - a `### Confidence` heading followed by exactly one confidence line
+- one or more normal paragraphs with extracted content, or `Not found`
 
 Write the value directly below `### Alignment score` as exactly one of `1/5`, `2/5`, `3/5`, `4/5`, `5/5`.
 Write the value directly below `### Confidence` as exactly one of `Low`, `Medium`, `High`.
@@ -67,7 +67,7 @@ Write the value directly below `### Confidence` as exactly one of `Low`, `Medium
 ### Confidence
 [Low | Medium | High]
 
-## Subject name
+# Subject name
 
 ## Alignment themes
 [Extracted content or "Not found"]
