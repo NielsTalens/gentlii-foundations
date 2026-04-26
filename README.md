@@ -2,7 +2,7 @@
 
 `gentlii-foundations` is a local Python CLI that turns source documents in a product repository into a structured product-definition package.
 
-It reads source files from `product-definitions/foundations-input`, extracts text, generates artifact markdown with OpenAI, and renders a publishable static site in `product-definitions/product-description`.
+It reads source files from `product-definitions/foundations-input`, extracts text, generates artifact markdown with OpenAI, renders a publishable static site in `product-definitions/product-description`, and can run a separate guard pass over the generated markdown artifacts.
 
 ## What It Produces
 
@@ -67,7 +67,7 @@ The pipeline in [src/gentlii_foundations/pipeline.py](src/gentlii_foundations/pi
 6. Call the OpenAI Responses API via [openai_client.py](src/gentlii_foundations/openai_client.py)
 7. Generate one markdown artifact per target area with [analysis.py](src/gentlii_foundations/analysis.py)
 8. Write markdown plus combined HTML/CSS with [render.py](src/gentlii_foundations/render.py)
-9. Run product guard against committed/generated product-description markdown with [pipeline.py](src/gentlii_foundations/pipeline.py)
+9. Optionally run the separate product guard command against generated product-description markdown with [pipeline.py](src/gentlii_foundations/pipeline.py)
 10. Validate generated HTML for publish safety with [html_security.py](src/gentlii_foundations/html_security.py) in CI
 
 ## Architecture
@@ -75,9 +75,9 @@ The pipeline in [src/gentlii_foundations/pipeline.py](src/gentlii_foundations/pi
 The codebase is split by responsibility.
 
 - `cli.py`
-  Thin command-line wrapper. It parses arguments and calls `build_foundations(...)`.
+  Thin command-line wrapper. It parses arguments and calls `build_foundations(...)` or `run_product_guard(...)`.
 - `pipeline.py`
-  Orchestrates the end-to-end build. This is the central application flow.
+  Orchestrates the end-to-end build and the separate product-guard flow. This is the central application flow.
 - `paths.py`
   Defines the expected repository layout and validates required directories.
 - `discovery.py`
@@ -146,7 +146,7 @@ This command:
 - loads `.env`
 - runs the full extraction, analysis, and rendering pipeline
 
-Run product guard after committed/generated product-description markdown changes:
+Run product guard after a build has produced or refreshed product-description markdown:
 
 ```bash
 env -u OPENAI_API_KEY zsh -lc 'set -a; source .env; set +a; ./.venv/bin/gentlii-foundations guard product-definitions'
@@ -191,7 +191,7 @@ There are two workflows in `.github/workflows/`:
 - `foundations.yml`
   Runs when `product-definitions/foundations-input/**` changes. It builds the artifacts, validates generated HTML safety, prepares a GitHub Pages artifact, deploys Pages, and commits refreshed generated output when needed.
 - `product-guard.yml`
-  Runs on pushed commits that change `product-definitions/product-description/*.md`, excluding `product-guard.md` itself. It runs `gentlii-foundations guard product-definitions` and commits a refreshed `product-guard.md` when needed.
+  Trigger: GitHub Actions `workflow_run` for `Foundations`, with `types: [completed]`, and the guard job runs only when that workflow concludes successfully. It then runs `gentlii-foundations guard product-definitions`, evaluates the generated product-description markdown files except `product-guard.md`, and commits a refreshed `product-guard.md` when needed.
 
 ## Safety Checks
 
