@@ -58,6 +58,7 @@ For each subject below, use this structure:
 - one or more normal paragraphs with extracted content, or `Not found`
 - a bold evidence line written as `**Alignment score:** <score/5>`
 - a bold confidence line written as `**Confidence:** <score/5>`
+- a bold structural risk level line written as `**Structucal risks level:** <score/5>`
 
 ## Alignment score
 [Score]
