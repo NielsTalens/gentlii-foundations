@@ -1,21 +1,23 @@
 name: Product Guard
 
 on:
-  push:
-    paths:
-      - product-definitions/product-description/*.md
-      - "!product-definitions/product-description/product-guard.md"
+  workflow_run:
+    workflows: ["Foundations"]
+    types: [completed]
 
 permissions:
   contents: write
 
 jobs:
   guard:
+    if: github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
 
     steps:
       - name: Check out repository
         uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.workflow_run.head_branch }}
 
       - name: Set up Python
         uses: actions/setup-python@v6
