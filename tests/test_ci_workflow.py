@@ -33,7 +33,8 @@ def test_product_guard_workflow_runs_on_committed_product_description_changes():
 
     assert "push:" in workflow
     assert "product-definitions/product-description/*.md" in workflow
-    assert "product-definitions/product-description/product-guard.md" in workflow
+    assert '!product-definitions/product-description/product-guard.md' in workflow
+    assert "paths-ignore:" not in workflow
     assert "gentlii-foundations guard product-definitions" in workflow
     assert "git add product-definitions/product-description/product-guard.md" in workflow
     assert 'git commit -m "chore: refresh product guard"' in workflow

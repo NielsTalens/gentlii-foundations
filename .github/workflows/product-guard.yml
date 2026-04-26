@@ -4,8 +4,7 @@ on:
   push:
     paths:
       - product-definitions/product-description/*.md
-    paths-ignore:
-      - product-definitions/product-description/product-guard.md
+      - "!product-definitions/product-description/product-guard.md"
 
 permissions:
   contents: write
