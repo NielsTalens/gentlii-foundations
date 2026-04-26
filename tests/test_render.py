@@ -132,11 +132,9 @@ def test_write_artifacts_places_completeness_and_strength_side_by_side(tmp_path)
             "## Company Strategy\n\n"
             "Defined.\n\n"
             "### Completeness\n\n"
-            "**Confidence:** High\n\n"
-            "**Evidence:** Clear coverage.\n\n"
+            "Complete\n\n"
             "### Strength\n\n"
-            "**Confidence:** Medium\n\n"
-            "**Evidence:** Usable but uneven.\n"
+            "Medium\n"
         ),
     )
 
@@ -156,11 +154,14 @@ def test_write_artifacts_colorizes_metric_values(tmp_path):
         name="strategy",
         markdown=(
             "# Strategy\n\n"
+            "## Company Strategy\n\n"
+            "Defined.\n\n"
+            "### Confidence\n\n"
+            "Low\n\n"
             "### Completeness\n\n"
             "Complete\n\n"
             "### Strength\n\n"
-            "Medium\n\n"
-            "**Confidence:** Low\n"
+            "Medium\n"
         ),
     )
 
@@ -170,7 +171,8 @@ def test_write_artifacts_colorizes_metric_values(tmp_path):
 
     assert '<span class="metric-value metric-pill metric-high">Complete</span>' in html
     assert '<span class="metric-value metric-pill metric-medium">Medium</span>' in html
-    assert '<p class="metric-line"><strong>Confidence:</strong> <span class="metric-value metric-pill metric-low">Low</span></p>' in html
+    assert '<h3>Confidence</h3>' in html
+    assert '<p class="metric-line"><span class="metric-value metric-pill metric-low">Low</span></p>' in html
     assert ".metric-value" in css
     assert ".metric-pill" in css
     assert ".metric-high" in css
@@ -209,8 +211,10 @@ def test_write_artifacts_keeps_confidence_and_evidence_separate_without_blank_li
         name="strategy",
         markdown=(
             "# Strategy\n\n"
-            "### Completeness\n"
-            "**Confidence:** High\n"
+            "## Company Strategy\n"
+            "Defined.\n"
+            "### Confidence\n"
+            "High\n"
             "**Evidence:** Explicit support from source.\n"
         ),
     )
@@ -219,9 +223,10 @@ def test_write_artifacts_keeps_confidence_and_evidence_separate_without_blank_li
     html = (tmp_path / "index.html").read_text(encoding="utf-8")
     css = (tmp_path / "styles.css").read_text(encoding="utf-8")
 
-    assert '<p class="metric-line"><strong>Confidence:</strong> <span class="metric-value metric-pill metric-high">High</span></p>' in html
+    assert '<h3>Confidence</h3>' in html
+    assert '<p class="metric-line"><span class="metric-value metric-pill metric-high">High</span></p>' in html
     assert '<details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Explicit support from source.</p></div></details>' in html
-    assert "Confidence:</strong> <span class=\"metric-value metric-pill metric-high\">High</span> **Evidence:**" not in html
+    assert "<h3>Confidence</h3><p class=\"metric-line\"><span class=\"metric-value metric-pill metric-high\">High</span></p>**Evidence:**" not in html
     assert ".evidence-accordion" in css
     assert ".evidence-body" in css
 

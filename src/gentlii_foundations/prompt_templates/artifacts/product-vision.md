@@ -29,7 +29,7 @@ Focus only on explicitly stated or clearly supported information related to:
 For each subject below, use this structure:
 - `##` heading for the subject name
 - one or more normal paragraphs with extracted content, or `Not found`
-- a bold confidence line written as `**Confidence:** High | Medium | Low`
+- a `### Confidence` heading followed by exactly one value line
 - a bold evidence line written as `**Evidence:** <exact quote, close paraphrase, or "No supporting evidence found">`
 - a bold contradictions line written as `**Contradictions:** <contradiction with evidence, or "No contradictory content found.">`
 Only include features that describe what the product enables, not UI elements or implementation details.

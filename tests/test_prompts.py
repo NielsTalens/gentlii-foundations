@@ -23,11 +23,11 @@ def test_business_case_prompt_inherits_common_extraction_rules():
 def test_prompt_requires_confidence_below_each_output_section():
     prompt = build_artifact_prompt("product-vision", "source text")
     assert (
-        "For every subject or section in the Output Structure, include a confidence line "
+        "For every subject or section in the Output Structure, include a `### Confidence` heading "
         "immediately below the extracted content and before the supporting evidence."
     ) in prompt
-    assert "Write confidence as `**Confidence:** <High | Medium | Low>`." in prompt
-    assert "Do not merge `**Confidence:**` and `**Evidence:**` onto one line." in prompt
+    assert "Write the confidence value directly below `### Confidence` as normal paragraph text" in prompt
+    assert "Do not merge the confidence value and `**Evidence:**` onto one line." in prompt
 
 
 def test_product_guard_prompt_uses_numeric_alignment_and_categorical_risk_signals():
