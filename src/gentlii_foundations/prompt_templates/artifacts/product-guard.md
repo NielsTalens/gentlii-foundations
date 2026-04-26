@@ -26,9 +26,9 @@ Purpose:
 
 Evaluate coherence across these document pairs:
 
-1. Strategy <-> Business Case
-2. Business Case <-> Product Vision
-3. Product Vision <-> Product Charter
+1. Strategy ↔ Business Case
+2. Business Case ↔ Product Vision
+3. Product Vision ↔ Product Charter
 
 For each pair, determine:
 

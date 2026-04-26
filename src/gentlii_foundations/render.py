@@ -781,7 +781,8 @@ a {
 }
 
 .doc-content h1 {
-  font-size: 1.5rem;
+  font-size: 1.85rem;
+  color: var(--accent-bright);
 }
 
 .doc-content h2 {
