@@ -1,0 +1,47 @@
+name: Product Guard
+
+on:
+  push:
+    paths:
+      - product-definitions/product-description/*.md
+    paths-ignore:
+      - product-definitions/product-description/product-guard.md
+
+permissions:
+  contents: write
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install project
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install setuptools wheel
+          python -m pip install -e . --no-build-isolation
+
+      - name: Run product guard
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: gentlii-foundations guard product-definitions
+
+      - name: Commit refreshed product guard when changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add product-definitions/product-description/product-guard.md
+          if git diff --cached --quiet; then
+            echo "No product guard changes detected."
+            exit 0
+          fi
+          git commit -m "chore: refresh product guard"
+          git push

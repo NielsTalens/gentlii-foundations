@@ -26,3 +26,14 @@ def test_foundations_workflow_deploys_pages_from_generated_site():
     assert "actions/deploy-pages" in workflow
     assert "product-definitions/product-description/index.html" in workflow
     assert "product-definitions/product-description/styles.css" in workflow
+
+
+def test_product_guard_workflow_runs_on_committed_product_description_changes():
+    workflow = Path(".github/workflows/product-guard.yml").read_text(encoding="utf-8")
+
+    assert "push:" in workflow
+    assert "product-definitions/product-description/*.md" in workflow
+    assert "product-definitions/product-description/product-guard.md" in workflow
+    assert "gentlii-foundations guard product-definitions" in workflow
+    assert "git add product-definitions/product-description/product-guard.md" in workflow
+    assert 'git commit -m "chore: refresh product guard"' in workflow

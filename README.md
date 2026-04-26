@@ -51,6 +51,7 @@ The main entrypoint is [src/gentlii_foundations/cli.py](src/gentlii_foundations/
 
 ```bash
 gentlii-foundations build <root>
+gentlii-foundations guard <root>
 ```
 
 In practice the command is run against `product-definitions`.
@@ -66,7 +67,8 @@ The pipeline in [src/gentlii_foundations/pipeline.py](src/gentlii_foundations/pi
 6. Call the OpenAI Responses API via [openai_client.py](src/gentlii_foundations/openai_client.py)
 7. Generate one markdown artifact per target area with [analysis.py](src/gentlii_foundations/analysis.py)
 8. Write markdown plus combined HTML/CSS with [render.py](src/gentlii_foundations/render.py)
-9. Validate generated HTML for publish safety with [html_security.py](src/gentlii_foundations/html_security.py) in CI
+9. Run product guard against committed/generated product-description markdown with [pipeline.py](src/gentlii_foundations/pipeline.py)
+10. Validate generated HTML for publish safety with [html_security.py](src/gentlii_foundations/html_security.py) in CI
 
 ## Architecture
 
@@ -110,6 +112,7 @@ Output folder:
 Generated output is deterministic in structure:
 
 - one `.md` file per artifact name
+- one `product-guard.md` after running the separate guard command
 - one `index.html`
 - one `styles.css`
 
@@ -143,6 +146,18 @@ This command:
 - loads `.env`
 - runs the full extraction, analysis, and rendering pipeline
 
+Run product guard after committed/generated product-description markdown changes:
+
+```bash
+env -u OPENAI_API_KEY zsh -lc 'set -a; source .env; set +a; ./.venv/bin/gentlii-foundations guard product-definitions'
+```
+
+This command:
+
+- reads markdown files from `product-definitions/product-description`
+- excludes `product-definitions/product-description/product-guard.md`
+- writes a refreshed `product-definitions/product-description/product-guard.md`
+
 Render only from the existing generated markdown files:
 
 ```bash
@@ -175,6 +190,8 @@ There are two workflows in `.github/workflows/`:
   Runs test and dependency-security checks for code changes. It ignores `product-definitions/**`.
 - `foundations.yml`
   Runs when `product-definitions/foundations-input/**` changes. It builds the artifacts, validates generated HTML safety, prepares a GitHub Pages artifact, deploys Pages, and commits refreshed generated output when needed.
+- `product-guard.yml`
+  Runs on pushed commits that change `product-definitions/product-description/*.md`, excluding `product-guard.md` itself. It runs `gentlii-foundations guard product-definitions` and commits a refreshed `product-guard.md` when needed.
 
 ## Safety Checks
 

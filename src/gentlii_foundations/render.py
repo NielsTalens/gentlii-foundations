@@ -27,9 +27,14 @@ def write_artifacts(output_dir: Path, artifacts: list[GeneratedArtifact]) -> Non
     output_path.mkdir(parents=True, exist_ok=True)
     _validate_artifact_names(artifacts)
     for artifact in artifacts:
-        (output_path / f"{artifact.name}.md").write_text(artifact.markdown, encoding="utf-8")
+        write_markdown_artifact(output_path / f"{artifact.name}.md", artifact)
     (output_path / "index.html").write_text(_render_index_html(_sort_artifacts(artifacts)), encoding="utf-8")
     (output_path / "styles.css").write_text(_render_stylesheet(), encoding="utf-8")
+
+
+def write_markdown_artifact(output_path: Path, artifact: GeneratedArtifact) -> None:
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    Path(output_path).write_text(artifact.markdown, encoding="utf-8")
 
 
 def _render_index_html(artifacts: list[GeneratedArtifact]) -> str:
