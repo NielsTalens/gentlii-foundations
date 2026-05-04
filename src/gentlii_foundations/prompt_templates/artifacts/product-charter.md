@@ -37,7 +37,7 @@ For each subject below, use this structure:
 - one or more normal paragraphs with extracted content, or `Not found`
 - a `### Confidence` heading followed by exactly one value line
 - a bold evidence line written as `**Evidence:** <exact quote, close paraphrase, or "No supporting evidence found">`
-- a bold contradictions line written as `**Contradictions:** <contradiction with evidence, or "No contradictory content found.">`
+- a `### Contradictions` heading followed by one normal paragraph with `<contradiction with evidence, or "No contradictory content found.">`
 
 ## Core Principles
 [List of extracted content or "Not found"]

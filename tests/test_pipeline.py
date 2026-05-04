@@ -65,7 +65,7 @@ def test_build_foundations_reports_progress(monkeypatch, tmp_path: Path):
     assert f"Using output directory: {root / 'product-description'}" in messages
     assert "Found 2 supported source files." in messages
     assert "Extracted 0 source documents." in messages
-    assert "Generating 4 foundation artifacts with OpenAI." in messages
+    assert "Generating foundation artifacts with OpenAI." in messages
     assert "Generating artifact: strategy" in messages
     assert "Generating artifact: business-case" in messages
     assert "Rendering markdown and static site output." in messages

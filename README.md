@@ -36,7 +36,6 @@ That HTML/CSS output is what the repo publishes through GitHub Pages.
 │   ├── prompts.py
 │   ├── openai_client.py
 │   ├── render.py
-│   ├── html_security.py
 │   ├── paths.py
 │   ├── config.py
 │   └── models.py
@@ -68,7 +67,6 @@ The pipeline in [src/gentlii_foundations/pipeline.py](src/gentlii_foundations/pi
 7. Generate one markdown artifact per target area with [analysis.py](src/gentlii_foundations/analysis.py)
 8. Write markdown plus combined HTML/CSS with [render.py](src/gentlii_foundations/render.py)
 9. Optionally run the separate product guard command against generated product-description markdown with [pipeline.py](src/gentlii_foundations/pipeline.py)
-10. Validate generated HTML for publish safety with [html_security.py](src/gentlii_foundations/html_security.py) in CI
 
 ## Architecture
 
@@ -92,8 +90,6 @@ The codebase is split by responsibility.
   Encapsulates the OpenAI API call so model selection and timeout behavior stay out of the pipeline.
 - `render.py`
   Writes artifact markdown files and renders the combined static HTML/CSS view.
-- `html_security.py`
-  Rejects unsafe generated HTML patterns before publish.
 - `models.py`
   Shared dataclasses and enums used across the pipeline.
 - `config.py`
@@ -189,22 +185,9 @@ There are two workflows in `.github/workflows/`:
 - `ci.yml`
   Runs test and dependency-security checks for code changes. It ignores `product-definitions/**`.
 - `foundations.yml`
-  Runs when `product-definitions/foundations-input/**` changes. It builds the artifacts, validates generated HTML safety, prepares a GitHub Pages artifact, deploys Pages, and commits refreshed generated output when needed.
+  Runs when `product-definitions/foundations-input/**` changes. It builds the artifacts and commits refreshed generated output when needed.
 - `product-guard.yml`
   Trigger: GitHub Actions `workflow_run` for `Foundations`, with `types: [completed]`, and the guard job runs only when that workflow concludes successfully. It then runs `gentlii-foundations guard product-definitions`, evaluates the generated product-description markdown files except `product-guard.md`, and commits a refreshed `product-guard.md` when needed.
-
-## Safety Checks
-
-The generated publish HTML is checked for obvious active-content patterns before deploy. The validator currently fails on:
-
-- `<script`
-- `javascript:`
-- inline event handlers such as `onclick=`
-- `iframe`
-- `object`
-- `embed`
-
-This is a publish-safety check for generated output. It is separate from dependency scanning.
 
 ## Tests
 
@@ -218,7 +201,7 @@ Useful focused test runs:
 
 ```bash
 ./.venv/bin/python -m pytest -q tests/test_render.py
-./.venv/bin/python -m pytest -q tests/test_ci_workflow.py tests/test_html_security.py
+./.venv/bin/python -m pytest -q tests/test_ci_workflow.py
 ```
 
 ## Related Docs

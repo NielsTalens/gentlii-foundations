@@ -24,7 +24,7 @@ def build_foundations(root: Path, report=None) -> None:
     settings = load_settings()
     # The pipeline stays linear on purpose so the later Git-triggered entry point can reuse it unchanged.
     client = FoundationsClient(api_key=settings.openai_api_key, model=settings.model)
-    _report(report, "Generating 4 foundation artifacts with OpenAI.")
+    _report(report, "Generating foundation artifacts with OpenAI.")
     artifacts = generate_artifacts(documents, client, report=report)
     _report(report, "Rendering markdown and static site output.")
     write_artifacts(paths.output_dir, artifacts)

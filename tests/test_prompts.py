@@ -67,7 +67,7 @@ def test_all_artifact_templates_keep_evidence_and_contradictions_inline_per_subj
         assert "### Strength" in template
         assert "## Suggestion" in template
         assert "## Evidence" not in template
-        assert "## Contradictions" not in template
+        assert "## Contradictions\n" not in template
 
 
 def test_artifact_templates_define_output_items_as_h2():
@@ -100,7 +100,22 @@ def test_shared_prompt_requires_inline_evidence_and_contradictions_per_subject()
         "include the related evidence immediately below the extracted content."
     ) in prompt
     assert "Write evidence as `**Evidence:** <...>`." in prompt
-    assert "Write contradictions as `**Contradictions:** <...>`." in prompt
+    assert "Write contradictions under a `### Contradictions` heading." in prompt
+
+
+def test_artifact_templates_require_heading_based_contradictions_per_subject():
+    template_dir = Path(PROMPT_TEMPLATE_DIR) / "artifacts"
+    artifact_names = [
+        "business-case",
+        "strategy",
+        "product-vision",
+        "product-charter",
+    ]
+
+    for artifact_name in artifact_names:
+        template = (template_dir / f"{artifact_name}.md").read_text(encoding="utf-8")
+        assert "- a `### Contradictions` heading followed by one normal paragraph" in template
+        assert "**Contradictions:**" not in template
 
 
 def test_artifact_templates_require_exact_final_section_shape():

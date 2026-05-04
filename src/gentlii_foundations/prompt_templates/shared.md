@@ -50,7 +50,8 @@ For every subject or section in the Output Structure, if there are contradiction
 - Do not fabricate conflicts
 - If no clear contradiction is found, return: “No contradictory content found.”
 - Never put `Contradictions:` in a bullet list or numbered list.
-- Write contradictions as `**Contradictions:** <...>`.
+- Write contradictions under a `### Contradictions` heading.
+- Write exactly one normal paragraph directly below `### Contradictions`.
 
 Guidance
 Pay special attention to:

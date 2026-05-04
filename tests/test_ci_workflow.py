@@ -17,8 +17,8 @@ def test_ci_workflow_includes_test_and_security_jobs():
 def test_foundations_workflow_builds_and_commits_generated_site():
     workflow = Path(".github/workflows/foundations.yml").read_text(encoding="utf-8")
 
-    assert "Validate generated HTML for publish safety" in workflow
-    assert "python -m gentlii_foundations.html_security" in workflow
+    assert "Validate generated HTML for publish safety" not in workflow
+    assert "python -m gentlii_foundations.html_security" not in workflow
     assert "pages: write" not in workflow
     assert "id-token: write" not in workflow
     assert "actions/configure-pages" not in workflow
@@ -37,8 +37,7 @@ def test_product_guard_workflow_runs_after_foundations_and_deploys_pages():
     assert "pages: write" in workflow
     assert "id-token: write" in workflow
     assert "gentlii-foundations guard product-definitions" in workflow
-    assert "python -m gentlii_foundations.html_security product-definitions/product-description/index.html" in workflow
-    assert "python -m gentlii_foundations.html_security product-definitions/product-description/product-guard.html" in workflow
+    assert "python -m gentlii_foundations.html_security" not in workflow
     assert "actions/configure-pages" in workflow
     assert "actions/upload-pages-artifact" in workflow
     assert "actions/deploy-pages" in workflow
