@@ -7,26 +7,29 @@
 High
 
 ## Alignment themes
-- Both frame the core problem as **CRMs causing admin burden and cognitive overload**, and the solution as a **conversational “system of action/execution”** that tells users what to do next and enables execution.  
-**Evidence:** Strategy: “Replace complex CRM software with a conversational system that tells you exactly what to do next.” / “We want CRM as a system of execution.” / “reduce cognitive load” Business case: “replace ‘system-of-record’ CRMs with a conversational ‘system-of-action’ that reduces cognitive load and tells reps exactly what to do next.”
-- Both emphasize **automation-by-default** (auto logging and background updates) to drive **adoption/daily usage** and better data quality.  
-**Evidence:** Strategy: “log stuff automatically… keep the pipeline updated without you touching it” Business case: “automatic logging of emails / calls… pipeline updates happening in the background” and outcomes include “increased daily CRM usage/adoption… improved data quality.”
-- Both explicitly deprioritize **dashboards/analytics** in favor of **execution**.  
-**Evidence:** Strategy: “Actions over insights… avoid anything that looks like reporting/analytics.” Business case: “We’re intentionally not doing… analytics dashboards (at least not upfront).”
+Both documents share the same diagnosis and strategic response: traditional CRMs create heavy admin + low adoption + unreliable data, and the product should shift CRM from “system-of-record” to a conversational “system-of-action/execution” that reduces cognitive load via automation and “next best action” guidance. Both also reinforce speed/minimal training as key to adoption and value realization.  
+### Confidence
+High  
+**Evidence:** Strategy: “Replace complex CRM software with a conversational system that tells you exactly what to do next.” / “We want CRM as a system of execution.” / “reduce… CRM fatigue.” Business case: “Shift from system-of-record… We want CRM as a system of execution.” / “Heavy manual data entry… Complex navigation… Pipeline is inaccurate… Shadow systems… emerge.”
 
 ## Detected contradictions
 No contradictory content found.  
-**Evidence:** Both documents consistently describe the same problem, approach (conversation + action + automation), and sequencing (avoid dashboards upfront).
+### Confidence
+High  
+**Evidence:** No explicit conflicts in stated direction, scope, or constraints across the two sources.
 
 ## Missing links
-- Business outcomes are listed (revenue, users, NPS, investment) but the documents do not explicitly connect **which strategy pillars** drive **which measurable outcomes** (i.e., a clear value chain per metric).  
-**Evidence:** Metrics/outcomes are stated (“EUR 50,000 per quarter… 20k new registered users… NPS 7 to 9”), but no explicit mapping to pillars like “conversation-first” or “automation by default.”
+- The strategy lists business metrics (EUR 50k/quarter, 20k users, EUR 200k investment, NPS 7→9) but neither doc clearly ties these metrics to the stated causal chain (automation → adoption → data trust → execution → revenue) beyond general statements.  
+### Confidence
+Medium  
+**Evidence:** Metrics appear as lists: “Increase of revenu… EUR 50.000,- per quarter” / “20k new registred users” / “Additional investments EUR 200k” / “NPS score from 7 to a 9”; causal link is mostly qualitative: “increase revenue per rep (if they follow up more, this should happen)”.
 
 ## Minimal change to improve coherence
-- Add a simple **strategy→outcome mapping table** tying each measurable outcome to 1–2 strategic pillars and a leading indicator (e.g., auto-logged % → adoption → revenue).  
-**Evidence:** Outcomes are present in both (“Increase of revenu…”, “20k new registred users…”, “NPS…”) and pillars are explicit, but the causal linkage isn’t written as such.
+Add a single explicit “logic model” paragraph in either document mapping each measurable outcome to 1–2 product levers (e.g., “% activities auto-logged,” “daily active reps,” “time-to-first-value”), so the numeric targets are causally grounded in the strategy.  
+### Confidence
+Medium  
+**Evidence:** Adoption and automation goals are present but not operationalized: “get reps to actually use the system daily”; “everything logs automatically in background… pipeline updates itself.”
 
----
 
 # Business Case ↔ Product Vision
 
@@ -37,26 +40,30 @@ No contradictory content found.
 High
 
 ## Alignment themes
-- The vision statement repeats the business case rationale nearly verbatim: **replace complex CRM with conversational next-action system**, shift from **system of record → system of action**, reduce cognitive load, become “invisible.”  
-**Evidence:** Business case: “replace ‘system-of-record’ CRMs with a conversational ‘system-of-action’…” Vision: “Replace complex CRM software… shifting CRM from a ‘system of record’ to a ‘system of action/execution’… becomes ‘invisible.’”
-- Vision needs/features directly implement the business case value drivers: **next best actions**, **fast execution**, **auto logging**, and **background pipeline updates** to increase adoption and data trust.  
-**Evidence:** Business case expected value: “prioritized ‘next best action’… automatic logging… background pipeline updates” Vision features: “ ‘Next best action’… Fast execution… Automatic capture/logging… Automatic background pipeline… updates.”
-- Target groups are consistent (sales reps who hate admin; founders; possible CS later).  
-**Evidence:** Business case discusses reps and CRM fatigue/adoption; vision explicitly lists “Sales reps who dislike CRM admin… Founders… customer success people later.”
+The business case “why” (CRM broken due to admin burden → low adoption → inaccurate pipeline → stress) aligns tightly with the vision “what” (conversation-first interface, prioritized next actions, automation-by-default, background pipeline maintenance, minimize dashboards). Both emphasize cognitive load reduction (“calm, clear”) and fast onboarding/minimal training.  
+### Confidence
+High  
+**Evidence:** Business case: “Heavy manual data entry… Complex navigation… Pipeline is inaccurate… Shadow systems.” / “reduce cognitive load… ideal state = calm, clear.” Vision: “Eliminate complex navigation and dashboards” / “Provide clear, prioritized ‘next best action’” / “Automatic capture/logging… Background pipeline maintenance.”
 
 ## Detected contradictions
 No contradictory content found.  
-**Evidence:** Both documents maintain consistent positioning (execution-first, minimal dashboards) and consistent mechanism (automation + guidance).
+### Confidence
+High  
+**Evidence:** No explicit mismatch between the value narrative and the described product approach/features.
 
 ## Missing links
-- The vision lists business goals/targets but does not specify **measurement definitions/baselines/time horizons** for the same outcomes that the business case lists as measurable outcomes.  
-**Evidence:** Both include “EUR 50.000… 20k… NPS 7 to 9… Additional investments,” but no baseline/timeframe/method is stated beyond “per quarter” / “this year” fragments.
+- The business case lists measurable outcomes (EUR 50k/quarter, 20k users, NPS 7→9, EUR 200k investment) but the vision does not explicitly connect specific vision features to these exact targets.  
+- “Managers (indirectly affected, via trust in CRM data)” is mentioned in vision, but the business case doesn’t explicitly define manager-facing requirements or how trust will be measured.  
+### Confidence
+Medium  
+**Evidence:** Vision: “Managers (indirectly affected, via trust in CRM data)” / “Improve data reliability…” Business case focuses on frontline pain and outcomes, but manager metrics are not specified beyond “Pipeline is inaccurate… Managers don’t trust CRM data” appearing in rationale context.
 
 ## Minimal change to improve coherence
-- Add a shared “Measurement Notes” block (definitions + timeframe) for revenue/users/NPS/investment and link them to leading indicators like daily usage and % auto-logged activity.  
-**Evidence:** Business case suggestion calls for “baseline and measurement method/timeframe,” and vision includes the same goals but without those definitions.
+In the product vision, add a short “business outcomes mapping” section: each listed business metric gets a direct linkage to 1–2 product capabilities (e.g., NPS → cognitive load reduction + “no training”; revenue → next-best-action + execution speed; trust → auto-capture + pipeline updates).  
+### Confidence
+Medium  
+**Evidence:** Outcomes and features are both present but not explicitly mapped: outcomes list vs features list appear as separate sections.
 
----
 
 # Product Vision ↔ Product Charter
 
@@ -67,21 +74,26 @@ No contradictory content found.
 High
 
 ## Alignment themes
-- Charter operationalizes the vision: **conversation-first**, **actions over insights**, **automation by default**, and **invisible tooling**.  
-**Evidence:** Vision: “conversation-first… ‘next best action’… automatic capture/logging… background pipeline updates… becomes ‘invisible.’” Charter principles: “Conversation-first… Prioritize action/execution over insights… Automation by default… ‘invisible’ tooling.”
-- Both explicitly reject the same directions: **traditional screens/tabs/dashboards**, **BI/reporting**, **manual data entry**, and **Salesforce-like configurability**.  
-**Evidence:** Vision differentiators: “minimal/no traditional screens… not BI/reporting… not… Salesforce-like” Charter boundaries: “Not a reporting/BI… Not a place for manual data entry… Not endlessly configurable… Avoid traditional UI paradigms.”
+The charter operationalizes the vision with enforceable principles and boundaries: conversation-first (“one interface (chat)”), “actions over insights,” “automation by default,” minimize choices/cognitive load, proactive prioritized next actions, and “invisible” background updates. The charter’s tone/behavior (“focused, direct, calm”) matches the vision’s desired user experience (“calm, clear,” reduce stress/guilt).  
+### Confidence
+High  
+**Evidence:** Vision: “Conversation-first… (chat; possibly voice later)” / “Next best action… proactive and prioritized” / “Automatic capture/logging… Background pipeline maintenance” / “Deal risk… converted into executable actions (not analytics/reporting).” Charter: “One interface (chat) One output (next action)” / “actions > insights” / “everything updates in background, invisible” / “avoid… analytics dashboards (at least not upfront).”
 
 ## Detected contradictions
-- Potential tension: Vision includes “Lightweight ‘why this?’ explanations (brief rationale, not reporting)” while charter strongly polices against anything becoming “a report.” This is not a direct contradiction, but it is a risk area without stricter shared constraints.  
-**Evidence:** Vision: “Lightweight ‘why this?’ explanations (brief rationale, not reporting)” Charter: “When asked ‘why this?’, provide a short explanation (not a report).”
+- The vision includes a broader set of stakeholders (“Managers… trust in CRM data”) and mentions preventing fragmentation across tools (email/calendar/Slack), but the charter strongly constrains interaction surfaces (“one interface (chat)”) and treats additional screens/interfaces as drift, which could implicitly limit how multi-tool workflows are supported unless explicitly framed as background integrations rather than user-facing surfaces.  
+### Confidence
+Medium  
+**Evidence:** Vision: “Prevent fragmented workflows across CRM/email/calendar/Slack” and includes “Managers (indirectly affected…).” Charter: “One interface (chat)” / “Prefer removing screens… adding tabs/dashboards is treated as drift.”
 
 ## Missing links
-- Vision describes a feature set, but charter does not specify **minimum product boundaries/integration requirements** needed to fulfill “automatic capture/logging” and “fast execution,” which makes enforcement of “automation by default” less testable.  
-**Evidence:** Vision features: “Automatic capture/logging of emails and calls… execute… send/call/schedule.” Charter: strong rules (“system captures and updates data”) but no explicit integration scope or thresholds.
-- Charter contains “training is an anti-goal” and “if it doesn’t lead to action, it probably shouldn’t exist,” but vision doesn’t explicitly connect each proposed feature to these decision rules (it’s implied, not mapped).  
-**Evidence:** Charter making rules: “If someone needs training, we probably failed.” / “if it doesn’t lead to action → probably shouldn’t exist.” Vision lists features but doesn’t explicitly state compliance per feature.
+- The charter does not explicitly address how manager “trust/visibility” needs will be satisfied while remaining “not a reporting/analytics/BI tool (especially ‘not upfront’).”  
+- The vision mentions “possibly voice later,” while the charter focuses on chat/language but does not explicitly acknowledge voice as an allowed future modality (it’s compatible, but not stated as a planned evolution).  
+### Confidence
+Medium  
+**Evidence:** Vision: “Managers… trust in CRM data” / “possibly voice later.” Charter: “not a reporting tool… not BI… analytics dashboards (at least not upfront)” / “primary interface is chat / language.”
 
 ## Minimal change to improve coherence
-- Add a short “Operationalization” appendix to the vision (or a charter addendum) specifying: (1) what counts as “short explanation” for “why this?”, and (2) a minimal integration baseline (email/calendar/calling) required to claim auto-logging + execution.  
-**Evidence:** Charter calls out “analytics dashboards… not upfront” and “why this? → short explanation,” while vision includes the relevant features but not the measurable constraints/baselines to keep them aligned and testable.
+Add a small “stakeholder & visibility” clause to the charter clarifying what minimal manager-facing outputs are allowed *only when tied to action* (e.g., “trust indicators” or exceptions list) and explicitly state that email/calendar integrations are expected as background inputs while keeping chat as the primary user interface.  
+### Confidence
+Medium  
+**Evidence:** Charter already allows “short justifications… not a report” and defers dashboards: “short explanation, not a report” / “analytics dashboards (at least not upfront).”
