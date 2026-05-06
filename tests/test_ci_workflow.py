@@ -47,3 +47,21 @@ def test_product_guard_workflow_runs_after_foundations_and_deploys_pages():
     assert "git add product-definitions/product-description/product-guard.md" in workflow
     assert "git add product-definitions/product-description/product-guard.html" in workflow
     assert 'git commit -m "chore: refresh product guard"' in workflow
+
+
+def test_feature_validation_workflow_runs_on_issue_open_and_comments_result():
+    workflow = Path(".github/workflows/feature-validation.yml").read_text(encoding="utf-8")
+
+    assert "issues:" in workflow
+    assert "types: [opened]" in workflow
+    assert "issues: write" in workflow
+    assert "actions/checkout@v5" in workflow
+    assert "actions/setup-python@v6" in workflow
+    assert "python -m pip install -e . --no-build-isolation" in workflow
+    assert 'issue_title: ${{ github.event.issue.title }}' in workflow
+    assert 'issue_body: ${{ github.event.issue.body }}' in workflow
+    assert 'issue_url: ${{ github.event.issue.html_url }}' in workflow
+    assert "feature-request.md" in workflow
+    assert "gentlii-foundations feature-validate product-definitions" in workflow
+    assert "product-definitions/product-description/feature-validator.md" in workflow
+    assert "gh issue comment" in workflow

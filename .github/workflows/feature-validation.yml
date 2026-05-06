@@ -1,0 +1,61 @@
+name: Feature Validation
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install project
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install setuptools wheel
+          python -m pip install -e . --no-build-isolation
+
+      - name: Write feature request markdown from issue
+        env:
+          issue_title: ${{ github.event.issue.title }}
+          issue_body: ${{ github.event.issue.body }}
+          issue_url: ${{ github.event.issue.html_url }}
+        run: |
+          if [ -z "${issue_body}" ]; then
+            echo "Issue body is required for feature validation."
+            exit 1
+          fi
+          cat <<EOF > feature-request.md
+          # Feature Request
+
+          ## Title
+          ${issue_title}
+
+          ## Description
+          ${issue_body}
+
+          ## Source
+          ${issue_url}
+          EOF
+
+      - name: Run feature validator
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: gentlii-foundations feature-validate product-definitions feature-request.md
+
+      - name: Comment feature validation result on issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue comment "${{ github.event.issue.number }}" --body-file product-definitions/product-description/feature-validator.md
