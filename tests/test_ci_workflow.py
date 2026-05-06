@@ -19,25 +19,23 @@ def test_foundations_workflow_builds_and_commits_generated_site():
 
     assert "Validate generated HTML for publish safety" not in workflow
     assert "python -m gentlii_foundations.html_security" not in workflow
-    assert "pages: write" not in workflow
-    assert "id-token: write" not in workflow
+    assert "pages: write" in workflow
+    assert "id-token: write" in workflow
     assert "actions/configure-pages" not in workflow
     assert "actions/upload-pages-artifact" not in workflow
     assert "actions/deploy-pages" not in workflow
-    assert 'git commit -m "chore: refresh generated product description"' in workflow
+    assert "gentlii-foundations build product-definitions" in workflow
+    assert "gentlii-foundations guard product-definitions" in workflow
+    assert "cp product-definitions/product-description/*.html pages-source/" in workflow
+    assert "uses: ./.github/workflows/publish-pages.yml" in workflow
+    assert 'git commit -m "chore: refresh generated product description and guard"' in workflow
 
 
 def test_product_guard_workflow_runs_after_foundations_and_deploys_pages():
     workflow = Path(".github/workflows/product-guard.yml").read_text(encoding="utf-8")
 
     assert "workflow_run:" not in workflow
-    assert "push:" in workflow
-    assert "branches:" in workflow
-    assert "main" in workflow
-    assert "product-definitions/product-description/strategy.md" in workflow
-    assert "product-definitions/product-description/business-case.md" in workflow
-    assert "product-definitions/product-description/product-vision.md" in workflow
-    assert "product-definitions/product-description/product-charter.md" in workflow
+    assert "workflow_dispatch:" in workflow
     assert "github.event.workflow_run.conclusion == 'success'" not in workflow
     assert "pages: write" in workflow
     assert "id-token: write" in workflow

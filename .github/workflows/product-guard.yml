@@ -1,16 +1,7 @@
 name: Product Guard
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - product-definitions/product-description/strategy.md
-      - product-definitions/product-description/business-case.md
-      - product-definitions/product-description/product-vision.md
-      - product-definitions/product-description/product-charter.md
-      - product-definitions/product-description/index.html
-      - product-definitions/product-description/styles.css
+  workflow_dispatch:
 
 permissions:
   contents: write

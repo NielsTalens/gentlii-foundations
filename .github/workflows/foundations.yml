@@ -7,6 +7,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   generate:
@@ -32,6 +34,23 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: gentlii-foundations build product-definitions
 
+      - name: Run product guard
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: gentlii-foundations guard product-definitions
+
+      - name: Stage pages source
+        run: |
+          mkdir -p pages-source
+          cp product-definitions/product-description/*.html pages-source/
+          cp product-definitions/product-description/styles.css pages-source/styles.css
+
+      - name: Upload staged pages source
+        uses: actions/upload-artifact@v4
+        with:
+          name: foundations-pages-source
+          path: pages-source
+
       - name: Commit generated artifacts when changed
         run: |
           git config user.name "github-actions[bot]"
@@ -41,5 +60,12 @@ jobs:
             echo "No generated artifact changes detected."
             exit 0
           fi
-          git commit -m "chore: refresh generated product description"
+          git commit -m "chore: refresh generated product description and guard"
           git push
+
+  publish:
+    needs: generate
+    uses: ./.github/workflows/publish-pages.yml
+    with:
+      artifact_name: foundations-pages-source
+    secrets: inherit

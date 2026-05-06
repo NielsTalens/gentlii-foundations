@@ -114,6 +114,8 @@ Generated output is deterministic in structure:
 - one `product-guard.md` after running the separate guard command
 - one `feature-validator.md` after running the separate feature validator command
 - one `index.html`
+- one `product-guard.html`
+- one `feature-validator.html`
 - one `styles.css`
 
 The renderer also enforces a small output contract:
@@ -157,6 +159,7 @@ This command:
 - reads markdown files from `product-definitions/product-description`
 - excludes `product-definitions/product-description/product-guard.md`
 - writes a refreshed `product-definitions/product-description/product-guard.md`
+- writes a refreshed `product-definitions/product-description/product-guard.html`
 
 Run feature validation against the generated artifacts plus a feature request file:
 
@@ -201,14 +204,18 @@ It does not call extraction or OpenAI.
 
 ## GitHub Actions
 
-There are two workflows in `.github/workflows/`:
+There are four workflows in `.github/workflows/`:
 
 - `ci.yml`
   Runs test and dependency-security checks for code changes. It ignores `product-definitions/**`.
 - `foundations.yml`
-  Runs when `product-definitions/foundations-input/**` changes. It builds the artifacts and commits refreshed generated output when needed.
+  Runs when `product-definitions/foundations-input/**` changes. It builds the artifacts, runs product guard, stages all generated HTML files, commits refreshed generated output when needed, and then calls the reusable Pages publisher.
 - `product-guard.yml`
-  Trigger: GitHub Actions `workflow_run` for `Foundations`, with `types: [completed]`, and the guard job runs only when that workflow concludes successfully. It then runs `gentlii-foundations guard product-definitions`, evaluates the generated product-description markdown files except `product-guard.md`, and commits a refreshed `product-guard.md` when needed.
+  Manual-only via `workflow_dispatch`. It runs `gentlii-foundations guard product-definitions`, stages all current HTML output, commits refreshed `product-guard.md` and `product-guard.html` when needed, and then calls the reusable Pages publisher.
+- `feature-validation.yml`
+  Runs when a new issue is opened. It converts the issue into a temporary feature request file, runs `gentlii-foundations feature-validate product-definitions <temp-file>`, comments the generated validator markdown back onto the issue, stages all current HTML output, and then calls the reusable Pages publisher.
+- `publish-pages.yml`
+  Reusable workflow triggered via `workflow_call`. Caller workflows upload a staged site artifact, and this workflow publishes all staged `*.html` files plus shared assets to GitHub Pages.
 
 ## Tests
 

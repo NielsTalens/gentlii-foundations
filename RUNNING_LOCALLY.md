@@ -30,6 +30,7 @@ This:
 - loads values from `.env`
 - reads source files from `product-definitions/foundations-input`
 - writes generated artifacts to `product-definitions/product-description`
+- does not automatically publish Pages locally
 
 ## Run product guard
 
@@ -45,6 +46,7 @@ This:
 - excludes `product-definitions/product-description/product-guard.md`
 - writes `product-definitions/product-description/product-guard.md`
 - writes `product-definitions/product-description/product-guard.html`
+- mirrors the same guard step that `foundations.yml` now runs automatically in CI
 
 ## Run feature validation
 
@@ -62,6 +64,7 @@ This:
 - reads the feature request markdown file you pass in
 - writes `product-definitions/product-description/feature-validator.md`
 - writes `product-definitions/product-description/feature-validator.html`
+- mirrors the same validator step that `feature-validation.yml` runs automatically for newly opened issues
 
 ## Render only from existing markdown
 
@@ -85,6 +88,8 @@ write_artifacts(output_dir, artifacts)
 This rewrites:
 
 - `product-definitions/product-description/index.html`
+- `product-definitions/product-description/product-guard.html`
+- `product-definitions/product-description/feature-validator.html`
 - `product-definitions/product-description/styles.css`
 
 ## Run tests

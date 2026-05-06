@@ -1,4 +1,5 @@
 product-definitions/product-description/*.md merge=ours
 product-definitions/product-description/index.html merge=ours
 product-definitions/product-description/product-guard.html merge=ours
+product-definitions/product-description/feature-validator.html merge=ours
 product-definitions/product-description/styles.css merge=ours
