@@ -2,7 +2,7 @@ name: Feature Validation
 
 on:
   issues:
-    types: [opened]
+    types: [labeled]
 
 permissions:
   contents: read
@@ -12,6 +12,7 @@ permissions:
 
 jobs:
   validate:
+    if: github.event.label.name == 'feature-validation'
     runs-on: ubuntu-latest
 
     steps:

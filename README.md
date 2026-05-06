@@ -213,7 +213,7 @@ There are four workflows in `.github/workflows/`:
 - `product-guard.yml`
   Manual-only via `workflow_dispatch`. It runs `gentlii-foundations guard product-definitions`, stages all current HTML output, commits refreshed `product-guard.md` and `product-guard.html` when needed, and then calls the reusable Pages publisher.
 - `feature-validation.yml`
-  Runs when a new issue is opened. It converts the issue into a temporary feature request file, runs `gentlii-foundations feature-validate product-definitions <temp-file>`, comments the generated validator markdown back onto the issue, stages all current HTML output, and then calls the reusable Pages publisher.
+  Runs when the label `feature-validation` is added to an issue. It converts the issue into a temporary feature request file, runs `gentlii-foundations feature-validate product-definitions <temp-file>`, comments the generated validator markdown back onto the issue, stages all current HTML output, and then calls the reusable Pages publisher.
 - `publish-pages.yml`
   Reusable workflow triggered via `workflow_call`. Caller workflows upload a staged site artifact, and this workflow publishes all staged `*.html` files plus shared assets to GitHub Pages.
 

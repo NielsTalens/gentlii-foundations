@@ -53,11 +53,12 @@ def test_product_guard_workflow_runs_after_foundations_and_deploys_pages():
     assert 'git commit -m "chore: refresh product guard"' in workflow
 
 
-def test_feature_validation_workflow_runs_on_issue_open_and_comments_result():
+def test_feature_validation_workflow_runs_on_feature_validation_label_and_comments_result():
     workflow = Path(".github/workflows/feature-validation.yml").read_text(encoding="utf-8")
 
     assert "issues:" in workflow
-    assert "types: [opened]" in workflow
+    assert "types: [labeled]" in workflow
+    assert "github.event.label.name == 'feature-validation'" in workflow
     assert "issues: write" in workflow
     assert "actions/checkout@v5" in workflow
     assert "actions/setup-python@v6" in workflow
