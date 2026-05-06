@@ -16,10 +16,13 @@ _SIDE_BY_SIDE_H3_TITLE_PAIRS = {
 }
 _LABELED_METRIC_PATTERN = re.compile(r"^\*\*(Alignment score|Confidence|Evidence):\*\*\s*(.+)$")
 _METRIC_VALUE_CLASSES = {
+    "approve": "metric-high",
     "high": "metric-high",
     "complete": "metric-high",
+    "revise": "metric-medium",
     "medium": "metric-medium",
     "partial": "metric-medium",
+    "reject": "metric-low",
     "low": "metric-low",
     "incomplete": "metric-low",
 }

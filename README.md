@@ -2,7 +2,7 @@
 
 `gentlii-foundations` is a local Python CLI that turns source documents in a product repository into a structured product-definition package.
 
-It reads source files from `product-definitions/foundations-input`, extracts text, generates artifact markdown with OpenAI, renders a publishable static site in `product-definitions/product-description`, and can run a separate guard pass over the generated markdown artifacts.
+It reads source files from `product-definitions/foundations-input`, extracts text, generates artifact markdown with OpenAI, renders a publishable static site in `product-definitions/product-description`, and can run separate validation passes over the generated markdown artifacts.
 
 ## What It Produces
 
@@ -26,6 +26,7 @@ That HTML/CSS output is what the repo publishes through GitHub Pages.
 .
 ├── product-definitions/
 │   ├── foundations-input/        # Source files added by users
+│   ├── feature-requests/         # Feature request markdown files for validation
 │   └── product-description/      # Generated markdown + static site
 ├── src/gentlii_foundations/
 │   ├── cli.py
@@ -51,6 +52,7 @@ The main entrypoint is [src/gentlii_foundations/cli.py](src/gentlii_foundations/
 ```bash
 gentlii-foundations build <root>
 gentlii-foundations guard <root>
+gentlii-foundations feature-validate <root> <feature-request-file>
 ```
 
 In practice the command is run against `product-definitions`.
@@ -66,16 +68,16 @@ The pipeline in [src/gentlii_foundations/pipeline.py](src/gentlii_foundations/pi
 6. Call the OpenAI Responses API via [openai_client.py](src/gentlii_foundations/openai_client.py)
 7. Generate one markdown artifact per target area with [analysis.py](src/gentlii_foundations/analysis.py)
 8. Write markdown plus combined HTML/CSS with [render.py](src/gentlii_foundations/render.py)
-9. Optionally run the separate product guard command against generated product-description markdown with [pipeline.py](src/gentlii_foundations/pipeline.py)
+9. Optionally run separate validation commands against generated product-description markdown with [pipeline.py](src/gentlii_foundations/pipeline.py)
 
 ## Architecture
 
 The codebase is split by responsibility.
 
 - `cli.py`
-  Thin command-line wrapper. It parses arguments and calls `build_foundations(...)` or `run_product_guard(...)`.
+  Thin command-line wrapper. It parses arguments and calls `build_foundations(...)`, `run_product_guard(...)`, or `run_feature_validator(...)`.
 - `pipeline.py`
-  Orchestrates the end-to-end build and the separate product-guard flow. This is the central application flow.
+  Orchestrates the end-to-end build plus the separate product validation flows. This is the central application flow.
 - `paths.py`
   Defines the expected repository layout and validates required directories.
 - `discovery.py`
@@ -100,6 +102,7 @@ The codebase is split by responsibility.
 Input folder:
 
 - `product-definitions/foundations-input`
+- `product-definitions/feature-requests`
 
 Output folder:
 
@@ -109,6 +112,7 @@ Generated output is deterministic in structure:
 
 - one `.md` file per artifact name
 - one `product-guard.md` after running the separate guard command
+- one `feature-validator.md` after running the separate feature validator command
 - one `index.html`
 - one `styles.css`
 
@@ -153,6 +157,23 @@ This command:
 - reads markdown files from `product-definitions/product-description`
 - excludes `product-definitions/product-description/product-guard.md`
 - writes a refreshed `product-definitions/product-description/product-guard.md`
+
+Run feature validation against the generated artifacts plus a feature request file:
+
+```bash
+env -u OPENAI_API_KEY zsh -lc 'set -a; source .env; set +a; ./.venv/bin/gentlii-foundations feature-validate product-definitions product-definitions/feature-requests/feature-request-template.md'
+```
+
+This command:
+
+- reads markdown files from `product-definitions/product-description`
+- excludes `product-definitions/product-description/product-guard.md`
+- excludes `product-definitions/product-description/feature-validator.md`
+- reads the feature request file from `product-definitions/feature-requests/feature-request-template.md`
+- writes a refreshed `product-definitions/product-description/feature-validator.md`
+- writes a refreshed `product-definitions/product-description/feature-validator.html`
+
+Use [feature-request-template.md](product-definitions/feature-requests/feature-request-template.md) as the starting point for new requests.
 
 Render only from the existing generated markdown files:
 

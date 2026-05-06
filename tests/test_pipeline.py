@@ -4,7 +4,7 @@ from types import SimpleNamespace
 import pytest
 
 from gentlii_foundations.models import ExtractedDocument, GeneratedArtifact
-from gentlii_foundations.pipeline import build_foundations, run_product_guard
+from gentlii_foundations.pipeline import build_foundations, run_feature_validator, run_product_guard
 
 
 def test_build_foundations_runs_pipeline(monkeypatch, tmp_path: Path):
@@ -201,3 +201,122 @@ def test_run_product_guard_requires_generated_markdown(tmp_path: Path):
 
     with pytest.raises(ValueError, match="No generated markdown artifacts found"):
         run_product_guard(root)
+
+
+def test_run_feature_validator_reads_foundations_and_feature_request(monkeypatch, tmp_path: Path):
+    root = tmp_path / "product-definitions"
+    output_dir = root / "product-description"
+    feature_request_file = tmp_path / "feature-request.md"
+    (root / "foundations-input").mkdir(parents=True)
+    output_dir.mkdir()
+    (output_dir / "strategy.md").write_text("# Strategy\nAligned direction\n", encoding="utf-8")
+    (output_dir / "business-case.md").write_text("# Business Case\nEconomic logic\n", encoding="utf-8")
+    (output_dir / "product-guard.md").write_text("# Product Guard\nIgnore me\n", encoding="utf-8")
+    (output_dir / "feature-validator.md").write_text("# Feature Validator\nIgnore me too\n", encoding="utf-8")
+    feature_request_file.write_text("# Feature Request\nAdd shared inbox triage\n", encoding="utf-8")
+
+    captured = {"documents": None, "artifact": None, "html_page": None, "artifact_names": None}
+
+    monkeypatch.setattr(
+        "gentlii_foundations.pipeline.load_settings",
+        lambda: SimpleNamespace(openai_api_key="test-key", model="gpt-5.2"),
+    )
+    monkeypatch.setattr("gentlii_foundations.pipeline.FoundationsClient", lambda api_key, model: object())
+
+    def fake_generate_artifacts(documents, client, report=None, artifact_names=None):
+        captured["documents"] = documents
+        captured["artifact_names"] = artifact_names
+        return [GeneratedArtifact(name="feature-validator", markdown="# Feature Validator\nRevise\n")]
+
+    monkeypatch.setattr("gentlii_foundations.pipeline.generate_artifacts", fake_generate_artifacts)
+    monkeypatch.setattr(
+        "gentlii_foundations.pipeline.write_markdown_artifact",
+        lambda output_path, artifact: captured.__setitem__("artifact", (output_path, artifact)),
+    )
+    monkeypatch.setattr(
+        "gentlii_foundations.pipeline.write_artifact_page",
+        lambda output_path, artifact, page_title, page_kicker: captured.__setitem__(
+            "html_page", (output_path, artifact, page_title, page_kicker)
+        ),
+    )
+
+    run_feature_validator(root, feature_request_file)
+
+    assert [document.title for document in captured["documents"]] == ["strategy", "business-case", "feature-request"]
+    assert all(document.path.name != "product-guard.md" for document in captured["documents"])
+    assert all(document.path.name != "feature-validator.md" for document in captured["documents"])
+    assert captured["documents"][-1].text == "# Feature Request\nAdd shared inbox triage\n"
+    assert captured["artifact_names"] == ["feature-validator"]
+    assert captured["artifact"] == (
+        output_dir / "feature-validator.md",
+        GeneratedArtifact(name="feature-validator", markdown="# Feature Validator\nRevise\n"),
+    )
+    assert captured["html_page"] == (
+        output_dir / "feature-validator.html",
+        GeneratedArtifact(name="feature-validator", markdown="# Feature Validator\nRevise\n"),
+        "Feature Validator",
+        "Feature Validator",
+    )
+
+
+def test_run_feature_validator_reports_progress(monkeypatch, tmp_path: Path):
+    root = tmp_path / "product-definitions"
+    output_dir = root / "product-description"
+    feature_request_file = tmp_path / "feature-request.md"
+    (root / "foundations-input").mkdir(parents=True)
+    output_dir.mkdir()
+    (output_dir / "strategy.md").write_text("# Strategy\nAligned direction\n", encoding="utf-8")
+    feature_request_file.write_text("# Feature Request\nAdd shared inbox triage\n", encoding="utf-8")
+
+    messages: list[str] = []
+
+    monkeypatch.setattr(
+        "gentlii_foundations.pipeline.load_settings",
+        lambda: SimpleNamespace(openai_api_key="test-key", model="gpt-5.2"),
+    )
+    monkeypatch.setattr("gentlii_foundations.pipeline.FoundationsClient", lambda api_key, model: object())
+    monkeypatch.setattr(
+        "gentlii_foundations.pipeline.generate_artifacts",
+        lambda documents, client, report=None, artifact_names=None: [
+            report("Generating artifact: feature-validator") if report else None,
+        ] and [GeneratedArtifact(name="feature-validator", markdown="# Feature Validator\nRevise\n")],
+    )
+    monkeypatch.setattr("gentlii_foundations.pipeline.write_markdown_artifact", lambda output_path, artifact: None)
+    monkeypatch.setattr(
+        "gentlii_foundations.pipeline.write_artifact_page",
+        lambda output_path, artifact, page_title, page_kicker: None,
+    )
+
+    run_feature_validator(root, feature_request_file, report=messages.append)
+
+    assert f"Running feature validator from root: {root}" in messages
+    assert f"Using output directory: {output_dir}" in messages
+    assert f"Using feature request file: {feature_request_file}" in messages
+    assert "Found 1 generated markdown artifacts for feature validation." in messages
+    assert "Generating 1 feature validator artifact with OpenAI." in messages
+    assert "Generating artifact: feature-validator" in messages
+    assert f"Wrote validator report to {output_dir / 'feature-validator.md'}." in messages
+    assert f"Wrote validator page to {output_dir / 'feature-validator.html'}." in messages
+
+
+def test_run_feature_validator_requires_generated_markdown(tmp_path: Path):
+    root = tmp_path / "product-definitions"
+    feature_request_file = tmp_path / "feature-request.md"
+    (root / "foundations-input").mkdir(parents=True)
+    (root / "product-description").mkdir()
+    feature_request_file.write_text("# Feature Request\nAdd shared inbox triage\n", encoding="utf-8")
+
+    with pytest.raises(ValueError, match="No generated markdown artifacts found"):
+        run_feature_validator(root, feature_request_file)
+
+
+def test_run_feature_validator_requires_feature_request_file(tmp_path: Path):
+    root = tmp_path / "product-definitions"
+    feature_request_file = tmp_path / "missing-feature-request.md"
+    (root / "foundations-input").mkdir(parents=True)
+    output_dir = root / "product-description"
+    output_dir.mkdir()
+    (output_dir / "strategy.md").write_text("# Strategy\nAligned direction\n", encoding="utf-8")
+
+    with pytest.raises(ValueError, match="Feature request file not found"):
+        run_feature_validator(root, feature_request_file)

@@ -48,7 +48,7 @@ For each subject below, use this structure:
 ## Behavioral Rules
 [List of extracted content or "Not found"]
 
-## Decision-Making Rules
+## Making Rules
 [List of extracted content or "Not found"]
 
 ## Product Character

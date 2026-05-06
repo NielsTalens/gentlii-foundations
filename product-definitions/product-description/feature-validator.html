@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feature Validator</title>
+  <link rel="icon" href="logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="page-header">
+      <div class="brand-block">
+        <img class="brand-logo" src="logo.png" alt="Gentlii logo" />
+        <div>
+          <div class="brand-kicker">Feature Validator</div>
+          <h1 class="brand-title">Feature Validator</h1>
+          <p class="brand-subtitle">Standalone export of the Product Guard review.</p>
+        </div>
+      </div>
+      <nav class="doc-nav" aria-label="Document navigation">
+        <div class="panel-eyebrow">Document</div>
+        <p><a href="index.html">Foundations</a></p>
+        <ol class="doc-nav-list">
+          <li><a href="#feature-validator">feature validator</a></li>
+        </ol>
+      </nav>
+    </header>
+    <main class="page">
+      <section class="doc-card" id="feature-validator">
+        <div class="panel-eyebrow">feature validator</div>
+        <div class="doc-content">
+          <div class="doc-dual-section-grid"><section class="doc-side-section"><h3>Alignment score</h3><p class="metric-line"><span class="metric-value metric-pill score-pill score-4">4/5</span></p></section><section class="doc-side-section"><h3>Confidence</h3><p class="metric-line"><span class="metric-value metric-pill metric-high">High</span></p></section></div>
+          <h1>Feature Request: Email forwarding to create/update contact info</h1>
+          <h3>Decision</h3>
+          <p class="metric-line"><span class="metric-value metric-pill metric-medium">Revise</span></p>
+          <h2>Strategic alignment</h2>
+          <h3>Confidence</h3>
+          <p class="metric-line"><span class="metric-value metric-pill metric-high">High</span></p>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Strategy emphasizes “Automation by default” and removing “dashboards/navigation and manual updating,” aiming for “automatic capture/logging.” The feature enables input via an existing daily tool (email) “instead of having to go to the CRM system (and possibly login).”</p></div></details>
+          <h3>Contradictions</h3>
+          <p>No contradictory content found.</p>
+          <h2>Business Case alignment</h2>
+          <h3>Confidence</h3>
+          <p class="metric-line"><span class="metric-value metric-pill metric-medium">Medium</span></p>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Business case targets “daily usage/adoption,” “minimizes training/onboarding,” and reducing “manual/admin overhead.” Email forwarding reduces friction and avoids “after work” CRM updates by capturing contact info without logging into CRM.</p></div></details>
+          <h3>Contradictions</h3>
+          <p>No contradictory content found.</p>
+          <h2>Product Vision fit</h2>
+          <h3>Confidence</h3>
+          <p class="metric-line"><span class="metric-value metric-pill metric-high">High</span></p>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Vision includes “automatic activity capture/logging (emails, calls)” and “automation by default: zero/near-zero data entry.” Extracting “contact info from mail senders” is consistent with automatic capture from email.</p></div></details>
+          <h3>Contradictions</h3>
+          <p>No contradictory content found.</p>
+          <h2>Product Charter compliance</h2>
+          <h3>Confidence</h3>
+          <p class="metric-line"><span class="metric-value metric-pill metric-medium">Medium</span></p>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Charter says “conversation-first interface as the default/primary mode” and “One interface (chat).” Email forwarding introduces an additional interaction surface outside chat, even if it reduces friction. Charter also says “system should capture and update data without asking the user to do manual entry,” which this supports (forwarding is a lightweight action, not field-filling).</p></div></details>
+          <h3>Contradictions</h3>
+          <p>No contradictory content found.</p>
+          <h2>Risks introduced</h2>
+          <h3>Confidence</h3>
+          <p class="metric-line"><span class="metric-value metric-pill metric-high">High</span></p>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Not explicitly covered in artifacts; risks inferred from the request’s mechanism and charter boundaries.</p></div></details>
+          <ul><li>Creates a second “interface” pattern (email ingestion) that may dilute “one interface (chat)” and lead to sprawl (“use the tools they already use” could expand beyond email).</li><li>Potential for increased user choice/ambiguity (“forward an email that contains specific info”)—users must remember formatting/what to forward, which can increase cognitive load.</li><li>Could become a manual workaround rather than “invisible” automation if forwarding is required frequently.</li></ul>
+          <h3>Contradictions</h3>
+          <p>No contradictory content found.</p>
+          <h2>Missing justification</h2>
+          <h3>Confidence</h3>
+          <p class="metric-line"><span class="metric-value metric-pill metric-high">High</span></p>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>The request lacks details needed to confirm it reduces cognitive load and stays within boundaries:</p></div></details>
+          <ul><li>Not found: how this remains conversation-first (e.g., confirmation/next action delivered via chat).</li><li>Not found: how the system ensures “minimal thinking required” (format rules, parsing reliability).</li><li>Not found: how it leads to “immediate user action/execution” beyond data capture (charter making rule).</li><li>Not found: explicit scope limits (it says “existing tools,” but only first version email contact info—needs boundary to prevent drift).</li></ul>
+          <h3>Contradictions</h3>
+          <p>No contradictory content found.</p>
+          <h2>Minimal change to make this valid</h2>
+          <h3>Confidence</h3>
+          <p class="metric-line"><span class="metric-value metric-pill metric-high">High</span></p>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Based on charter decision rules and vision features (conversation-first, actions, automation).</p></div></details>
+          <ul><li>Reframe as **automation-first email capture** (auto-detect new contacts from connected inbox) with **email forwarding only as a fallback**, not the primary workflow.</li></ul>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>“Automation by default… system should just capture stuff, not ask”; “CRM becomes ‘invisible’… stays out of the way.”</p></div></details>
+          <ul><li>Ensure the user experience remains **chat-centered**: after ingestion, surface a concise chat message with a single recommended next action (e.g., “Add contact + schedule follow-up?”).</li></ul>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>“One interface (chat) / One output (next action)”; “execute actions quickly via chat commands.”</p></div></details>
+          <ul><li>Add explicit scope guardrails: “Only contact creation/enrichment from sender metadata in v1; no custom parsing/templates; no multi-tool ingestion yet.”</li></ul>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>“Scope discipline: ‘Not trying to boil the ocean here’”; “reduce choices.”</p></div></details>
+          <h3>Contradictions</h3>
+          <p>No contradictory content found.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

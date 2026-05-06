@@ -180,6 +180,32 @@ def test_write_artifacts_colorizes_metric_values(tmp_path):
     assert ".metric-low" in css
 
 
+def test_write_artifact_page_colorizes_feature_validator_decision_as_metric_pill(tmp_path):
+    artifact = GeneratedArtifact(
+        name="feature-validator",
+        markdown=(
+            "# Feature Validator\n\n"
+            "### Decision\n\n"
+            "Approve\n\n"
+            "### Alignment score\n\n"
+            "4/5\n\n"
+            "### Confidence\n\n"
+            "Medium\n"
+        ),
+    )
+
+    write_artifact_page(
+        tmp_path / "feature-validator.html",
+        artifact,
+        page_title="Feature Validator",
+        page_kicker="Feature Validator",
+    )
+    html = (tmp_path / "feature-validator.html").read_text(encoding="utf-8")
+
+    assert '<h3>Decision</h3>' in html
+    assert '<p class="metric-line"><span class="metric-value metric-pill metric-high">Approve</span></p>' in html
+
+
 def test_write_artifact_page_places_alignment_score_and_confidence_side_by_side(tmp_path):
     artifact = GeneratedArtifact(
         name="product-guard",

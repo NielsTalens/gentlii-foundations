@@ -38,6 +38,14 @@ def test_product_guard_prompt_uses_numeric_alignment_and_categorical_risk_signal
     assert "Write the value directly below `### Confidence` as exactly one of `Low`, `Medium`, `High`." in prompt
 
 
+def test_feature_validator_prompt_loads_template_and_instructions():
+    prompt = build_artifact_prompt("feature-validator", "source text")
+    assert "You are the feature validator" in prompt
+    assert "Does this feature align with the product’s intent?" in prompt
+    assert "Write the value directly below `### Decision` as exactly one of `Approve`, `Reject`, `Revise`." in prompt
+    assert "Write the value directly below `### Alignment score` as exactly one of `1/5`, `2/5`, `3/5`, `4/5`, `5/5`." in prompt
+
+
 def test_prompt_includes_shared_suggestions_section():
     prompt = build_artifact_prompt("business-case", "source text")
     assert "### Suggestions" in prompt

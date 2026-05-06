@@ -35,7 +35,7 @@ def run_product_guard(root: Path, report=None) -> None:
     paths = resolve_product_paths(Path(root))
     _report(report, f"Running product guard from root: {paths.root_dir}")
     _report(report, f"Using output directory: {paths.output_dir}")
-    documents = _discover_generated_markdown_documents(paths.output_dir)
+    documents = _discover_generated_markdown_documents(paths.output_dir, excluded_filenames={"product-guard.md"})
     if not documents:
         raise ValueError(f"No generated markdown artifacts found in {paths.output_dir}")
     _report(report, f"Found {len(documents)} generated markdown artifacts for alignment analysis.")
@@ -52,10 +52,51 @@ def run_product_guard(root: Path, report=None) -> None:
     _report(report, f"Wrote guard page to {page_path}.")
 
 
-def _discover_generated_markdown_documents(output_dir: Path) -> list[ExtractedDocument]:
+def run_feature_validator(root: Path, feature_request_file: Path, report=None) -> None:
+    paths = resolve_product_paths(Path(root))
+    request_path = Path(feature_request_file)
+    _report(report, f"Running feature validator from root: {paths.root_dir}")
+    _report(report, f"Using output directory: {paths.output_dir}")
+    _report(report, f"Using feature request file: {request_path}")
+    documents = _discover_generated_markdown_documents(
+        paths.output_dir,
+        excluded_filenames={"product-guard.md", "feature-validator.md"},
+    )
+    if not documents:
+        raise ValueError(f"No generated markdown artifacts found in {paths.output_dir}")
+    if not request_path.is_file():
+        raise ValueError(f"Feature request file not found: {request_path}")
+    _report(report, f"Found {len(documents)} generated markdown artifacts for feature validation.")
+    documents.append(
+        ExtractedDocument(
+            path=request_path,
+            title="feature-request",
+            text=request_path.read_text(encoding="utf-8"),
+        )
+    )
+    settings = load_settings()
+    client = FoundationsClient(api_key=settings.openai_api_key, model=settings.model)
+    _report(report, "Generating 1 feature validator artifact with OpenAI.")
+    artifacts = generate_artifacts(documents, client, report=report, artifact_names=["feature-validator"])
+    artifact = next(artifact for artifact in artifacts if artifact.name == "feature-validator")
+    output_path = paths.output_dir / "feature-validator.md"
+    write_markdown_artifact(output_path, artifact)
+    page_path = paths.output_dir / "feature-validator.html"
+    write_artifact_page(page_path, artifact, page_title="Feature Validator", page_kicker="Feature Validator")
+    _report(report, f"Wrote validator report to {output_path}.")
+    _report(report, f"Wrote validator page to {page_path}.")
+
+
+def _discover_generated_markdown_documents(
+    output_dir: Path,
+    excluded_filenames: set[str] | None = None,
+) -> list[ExtractedDocument]:
+    excluded_filenames = excluded_filenames or set()
     ordered_paths = {name: Path(output_dir) / f"{name}.md" for name in target_artifacts()}
     documents: list[ExtractedDocument] = []
     for path in ordered_paths.values():
+        if path.name in excluded_filenames:
+            continue
         if not path.is_file():
             continue
         documents.append(
@@ -68,7 +109,7 @@ def _discover_generated_markdown_documents(output_dir: Path) -> list[ExtractedDo
     extra_paths = sorted(
         path
         for path in Path(output_dir).glob("*.md")
-        if path.name != "product-guard.md" and path.stem not in ordered_paths
+        if path.name not in excluded_filenames and path.stem not in ordered_paths
     )
     for path in extra_paths:
         documents.append(
