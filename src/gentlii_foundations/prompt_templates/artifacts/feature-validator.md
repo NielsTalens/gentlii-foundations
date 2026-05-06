@@ -65,6 +65,7 @@ For each subject below, use this structure:
 - a `### Alignment score` heading followed by exactly one score line
 - a `### Confidence` heading followed by exactly one confidence line
 - one or more normal paragraphs with extracted content, or `Not found`
+- If there are 'Minimal changes to make this valid', return them as a bulleted list.
 
 Write the value directly below `### Decision` as exactly one of `Approve`, `Reject`, `Revise`.
 Write the value directly below `### Alignment score` as exactly one of `1/5`, `2/5`, `3/5`, `4/5`, `5/5`.
