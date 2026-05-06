@@ -1,73 +1,71 @@
 ## Core Principles
-- Conversation-first interaction as the default interface; avoid traditional screens where possible.
-- Prioritize action/execution over insights/analytics and reduce cognitive load/minimal thinking required.
-- Automation by default: the system captures and updates data without asking the user to fill fields.
-- The best experience is “invisible” tooling: CRM should “disappear” and “get out of the way.”
+- Conversation-first as the default interaction model; avoid traditional screens where possible.
+- Prioritize actions/execution over insights/reporting.
+- Automation by default; the system should capture/update without user data entry.
+- Reduce cognitive load by minimizing choices/decisions and removing “searching/updating/deciding.”
 
 ### Confidence
 High
 
-**Evidence:** “conversation first, always… everything through chat / language, no screens if we can avoid it”; “actions > insights”; “automation by default… system should just capture stuff, not ask”; “We need to to reduce cognitive load”; “The best tools disappear—they don’t feel like tools.”; “CRM should become kind of invisible over time.”
+**Evidence:** “conversation first, always”; “actions > insights”; “automation by default”; “We need to to reduce cognitive load, not just time”; “remove searching → remove updating → remove deciding.”
 
 ### Contradictions
 No contradictory content found.
 
 ## Product Boundaries
-- Not a reporting/BI/analytics-first tool (especially “not upfront”).
-- Not a place for manual data entry; not manual pipeline management.
-- Not endlessly configurable; not “another version of Salesforce.”
-- Avoid traditional UI paradigms (tabs, dashboards, traditional screens).
+The product is explicitly not meant to be a traditional CRM UX (tabs/screens), not a reporting/BI tool, not a place for manual data input, and not an endlessly customizable platform (i.e., “not another version of Salesforce”).
 
 ### Confidence
 High
 
-**Evidence:** “We’re intentionally not doing: traditional screens; analytics dashboards (at least not upfront); manual pipeline management.”; “what we are not… not a reporting tool… not BI… not a place to input data… not something you customize endlessly… basically not another version of Salesforce”; “if we start adding tabs + dashboards we’re probably drifting.”
+**Evidence:** “We’re intentionally not doing: traditional screens; analytics dashboards (at least not upfront); manual pipeline management”; “not a reporting tool”; “not BI”; “not a place to input data”; “not something you customize endlessly”; “basically not another version of Salesforce.”
 
 ### Contradictions
 No contradictory content found.
 
 ## Behavioral Rules
-- System provides “next best action” and (ideally) suggests actions proactively before being asked; actions should be prioritized/ranked to reduce thinking.
-- Execution should be immediate via chat commands (e.g., send/call/schedule), minimizing steps and context switching.
-- Automatic capture/logging of emails and calls; pipeline updates happen in the background/invisible.
-- If users must type into fields/manual updates, it indicates failure.
-- When asked “why this?”, provide a short explanation (not a report) and reduce choices (don’t give 10 options).
+- The system should tell the user what to do next (ideally proactively), with prioritized actions.
+- Actions should be executable immediately from the conversational interface (minimal steps).
+- Logging (emails/calls) happens automatically; pipeline updates happen in the background.
+- If the user has to fill fields/manual-update, that indicates failure.
+- If the user asks “why this?”, provide a short explanation (not a report).
+- Reduce choices; don’t offer many options.
 
 ### Confidence
 High
 
-**Evidence:** “tell you your next best action”; “system suggests actions before you ask (ideally)”; “get list of actions already prioritized so no thinking required”; “user clicks or replies in chat: ‘send this’ / ‘call now’ / ‘schedule’… action executes immediately”; “everything logs automatically in background… pipeline updates itself”; “if user has to fill fields → something went wrong”; “if user has to type things in fields, we probably failed”; “if you ask ‘why this?’ → short explanation, not a report”; “reduce choices, don’t give users 10 options.”
+**Evidence:** “system suggests actions before you ask (ideally)”; “get list of actions already prioritized”; “action executes immediately”; “everything logs automatically in background”; “pipeline updates itself”; “if user has to fill fields → something went wrong”; “if you ask ‘why this?’ → short explanation, not a report”; “reduce choices, don’t give users 10 options.”
 
 ### Contradictions
 No contradictory content found.
 
 ## Making Rules
-- Prefer removing a screen over adding one; adding tabs/dashboards is a drift signal.
-- Features must help someone take action immediately; if it doesn’t lead to action, it “probably shouldn’t exist.”
-- Prefer reducing user input; if it requires field-filling, something went wrong.
-- Training is an anti-goal; need for training implies failure.
+- Prefer removing screens over adding them.
+- Only build features that help someone take action immediately.
+- Prefer reducing user input; if it doesn’t lead to action, it probably shouldn’t exist.
+- “If someone needs training, we probably failed” (usability is a decision constraint).
 
 ### Confidence
 High
 
-**Evidence:** “decision rules (gut checks): can we remove a screen instead of adding one”; “does this help someone take action immediately”; “if it doesn’t lead to action → probably shouldn’t exist”; “can we reduce input here”; “If someone needs training, we probably failed.”
+**Evidence:** “decision rules (gut checks)”; “can we remove a screen instead of adding one”; “does this help someone take action immediately”; “can we reduce input here”; “if it doesn’t lead to action → probably shouldn’t exist”; “If someone needs training, we probably failed.”
 
 ### Contradictions
 No contradictory content found.
 
 ## Product Character
-The product should feel focused, direct, calm, and a bit decisive—almost telling the user what to do. It should help users feel in control, not overwhelmed, and avoid the stress/guilt associated with traditional CRMs.
+Should feel focused, direct, calm, and a bit decisive (tells you what to do). Should not feel analytical, busy/cluttered, gamified, or overly configurable. Overall aim: “invisible” tool that “disappears.”
 
 ### Confidence
 High
 
-**Evidence:** “product should feel like: focused; direct; calm; a bit decisive”; “users… want: to feel in control… not feel overwhelmed”; “ideal state = calm, clear, just doing the next thing.”
+**Evidence:** “product should feel like: focused; direct; calm; a bit decisive”; “should NOT feel like: analytical tool; busy / cluttered; gamified; overly configurable”; “Feels like CRM should become kind of invisible over time”; “The best tools disappear—they don’t feel like tools.”
 
 ### Contradictions
 No contradictory content found.
 
 ## Language and Tone
-Use short, direct language; avoid hype, buzzwords, and congratulatory/gamified phrasing. Prefer action-imperative phrasing (e.g., “call these 3 deals”) over analytical status statements.
+Use short, direct language; avoid hype/praise-y tone and buzzwords. Prefer imperative action phrasing (e.g., “call these 3 deals”) over analytical/metric phrasing.
 
 ### Confidence
 High
@@ -78,38 +76,38 @@ High
 No contradictory content found.
 
 ## Evolution Constraints
-Avoid evolving into a traditional CRM (screens/tabs/dashboards); if it starts looking like one, the product has “lost the plot.” Analytics dashboards are explicitly deprioritized “at least not upfront,” implying sequencing constraints (execution first).
+Avoid drifting into traditional CRM patterns; adding tabs/dashboards or looking like a traditional CRM indicates the product is off-course. Analytics dashboards are explicitly deprioritized “at least not upfront.”
 
 ### Confidence
 Medium
 
-**Evidence:** “if we start adding tabs + dashboards we’re probably drifting”; “random note: if it starts looking like a traditional CRM again, we’ve probably lost the plot”; “analytics dashboards (at least not upfront).”
+**Evidence:** “if we start adding tabs + dashboards we’re probably drifting”; “if it starts looking like a traditional CRM again, we’ve probably lost the plot”; “analytics dashboards (at least not upfront).”
 
 ### Contradictions
 No contradictory content found.
 
 ## Integrity Checks
-Use the stated “gut checks” as acceptance tests for changes: remove screens vs add; action-immediacy; reduced input; reject features that don’t lead to action. Treat “needs training” and “user has to fill fields/type in fields” as failure conditions.
+Implied “failure conditions” and gut checks are used to validate changes: if a change adds screens, increases manual input, adds non-actionable/reporting features, or requires user training, it violates the charter.
 
 ### Confidence
 Medium
 
-**Evidence:** “decision rules (gut checks)…”; “If someone needs training, we probably failed.”; “if user has to fill fields → something went wrong”; “if user has to type things in fields, we probably failed.”
+**Evidence:** “decision rules (gut checks)”; “if user has to fill fields → something went wrong”; “If someone needs training, we probably failed”; “if it doesn’t lead to action → probably shouldn’t exist”; “if we start adding tabs + dashboards we’re probably drifting.”
 
 ### Contradictions
 No contradictory content found.
 
 ### Completeness
 
-Complete
+Partial
 
 ### Strength
 
-High
+Medium
 
 ## Suggestion
-- Define explicit non-goals around data export/import, integrations, and customization limits (what’s allowed vs “endlessly customizable”) to prevent scope creep.
-- Turn the “gut checks” into a concrete pre-ship checklist (e.g., max number of choices shown, max steps to execute an action, “no new screens” rule).
-- Add explicit rules for when (if ever) analytics/reporting can appear, to operationalize “not upfront” into a measurable sequencing constraint.
-- Specify minimum explanation behavior for “why this?” (length, content, and what must be avoided) to keep it from becoming “a report.”
-- Define a small set of measurable integrity thresholds (e.g., % activities auto-logged, % pipeline stages auto-updated, time-to-next-action) to validate “automation by default” and “minimal thinking required.”
+- Convert the “gut checks” into explicit release/PR acceptance criteria (e.g., checklist that must pass before shipping).
+- Define a clear exception policy for when (if ever) screens/dashboards are allowed (“at least not upfront” is ambiguous).
+- Add explicit decision rules for conflicts (e.g., speed vs accuracy, automation vs user control, proactive suggestions vs user trust).
+- Specify minimal required transparency/explainability for recommendations (beyond “short explanation”) to protect user trust.
+- Add measurable integrity metrics tied to charter (e.g., max number of steps per action, % activities auto-logged, zero required fields).
