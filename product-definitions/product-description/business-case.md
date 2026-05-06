@@ -1,62 +1,57 @@
 ## Business Rationale
 
-Current CRMs (e.g., Salesforce/HubSpot) create heavy manual/admin overhead (clicking, field updates, navigation) that distracts from selling, leads to low adoption, untrusted/inaccurate pipeline data, and the emergence of “shadow systems.” The initiative exists to redefine CRM from a system-of-record into a “system-of-action/execution” that reduces cognitive load and tells users the next best action.
+Current CRMs (e.g., Salesforce/HubSpot) create heavy administrative burden (clicking, manual data entry, complex navigation) that pulls time away from selling, leading to low rep adoption, untrusted/inaccurate pipeline data, and the emergence of “shadow systems.” The initiative exists to replace “system-of-record” CRMs with a conversational “system-of-action” that reduces cognitive load and tells reps exactly what to do next.
 
 ### Confidence
-
 High
 
-**Evidence:** “CRM as it exists today (like Salesforce etc.) is kind of broken… too much clicking around, updating fields… feels like admin work instead of helping you sell.” / “Heavy manual data entry… Time spent updating instead of selling… Complex navigation” / “Reps avoid logging activities… Managers don’t trust CRM data… Pipeline is inaccurate… Shadow systems… emerge” / “Shift from system-of-record… We want CRM as a system of execution.”
+**Evidence:** “CRM as it exists today… is kind of broken… It’s too much clicking around, updating fields… feels like admin work instead of helping you sell.” / “Heavy manual data entry… Time spent updating instead of selling… Complex navigation” / “Reps avoid logging activities… Managers don’t trust CRM data… Pipeline is inaccurate… Shadow systems… emerge” / “Shift from system-of-record… We want CRM as a system of execution.”
 
 ### Contradictions
-
 No contradictory content found.
 
 ## Expected Value
 
-A faster, lower-friction CRM experience that drives daily usage/adoption, reduces cognitive load and “CRM fatigue,” minimizes training/onboarding, improves pipeline accuracy via automation, and supports revenue growth by prompting timely follow-ups and execution.
+Reduced CRM fatigue and cognitive load; increased daily CRM usage/adoption; faster execution of sales follow-ups and tasks via prioritized “next best action”; reduced onboarding/training needs; improved data quality via automatic logging and background pipeline updates; potential revenue uplift by enabling more consistent follow-up and execution.
 
 ### Confidence
-
 Medium
 
-**Evidence:** “reduce the general fatigue people have with CRM” / “get reps to actually use the system daily” / “increase revenue per rep (if they follow up more, this should happen)” / “make onboarding basically nonexistent or very fast” / “Everything logs automatically… pipeline updates itself… no admin overhead” / “We need to to reduce cognitive load, not just time”
+**Evidence:** “Main goals are: reduce the general fatigue… get reps to actually use the system daily… increase revenue per rep (if they follow up more, this should happen)… make onboarding basically nonexistent or very fast” / “reduce cognitive load, not just time” / “automatic logging of emails / calls… pipeline updates happening in the background” / “action executes immediately… everything logs automatically… pipeline updates itself.”
 
 ### Contradictions
-
 No contradictory content found.
 
 ## Assumptions
 
-Value depends on (a) conversational UI being sufficient as the primary interface (avoiding traditional screens/dashboards), (b) automation reliably capturing emails/calls and updating pipelines without user input, (c) “next best action” recommendations are correct enough to be trusted and acted upon, and (d) increased follow-up/execution translates into improved revenue per rep.
+- If the system reduces admin work/cognitive load and provides clear prioritized next actions, reps will use it daily.
+- Increased follow-up/activity execution will increase revenue per rep.
+- Automatic capture of emails/calls and background updates can be implemented reliably enough that “zero data entry” is feasible.
+- Avoiding traditional dashboards/screens will not prevent necessary visibility (at least initially).
 
 ### Confidence
-
 Medium
 
-**Evidence:** “conversation-first… No real ‘screens’” / “automatic logging of emails / calls… pipeline updates happening in the background” / “tell you your next best action” / “increase revenue per rep (if they follow up more, this should happen)” / “If someone needs training, we probably failed.” / “system suggests actions before you ask (ideally)”
+**Evidence:** “increase revenue per rep (if they follow up more, this should happen)” / “get reps to actually use the system daily” / “keep the pipeline updated without you touching it” / “basically zero data entry” / “We’re intentionally not doing… analytics dashboards (at least not upfront).”
 
 ### Contradictions
-
 No contradictory content found.
 
 ## Measurable Business Outcomes
 
-Stated targets include subscription revenue increase (EUR 50,000 per quarter), user registrations (20k new registered users this year), additional investment required (EUR 200k), and NPS improvement (from 7 to 9). Other outcomes are mentioned without explicit metrics (e.g., daily usage, reduced fatigue, faster onboarding).
+Stated target outcomes include: increased subscription revenue of EUR 50,000 per quarter, 20k new registered users this year from new features, additional investments of EUR 200k, and improving NPS from 7 to 9.
 
 ### Confidence
-
 High
 
-**Evidence:** “Increase of revenu of EUR 50.000,- per quarter in subscriptions” / “New features result in 20k new registred users this year” / “Additional investments EUR 200k” / “NPS score from 7 to a 9” / “get reps to actually use the system daily” / “make onboarding basically nonexistent or very fast”
+**Evidence:** “Increase of revenu of EUR 50.000,- per quarter in subscriptions” / “New features result in 20k new registred users this year” / “Additional investments EUR 200k” / “NPS score from 7 to a 9”
 
 ### Contradictions
-
 No contradictory content found.
 
 ### Completeness
 
-Partial
+Complete
 
 ### Strength
 
@@ -64,8 +59,8 @@ Medium
 
 ## Suggestion
 
-- Define explicit success metrics for “daily usage,” “reduced fatigue/cognitive load,” and “onboarding basically nonexistent” (e.g., DAU/WAU targets, time-to-first-value, time spent in CRM, training time).
-- Make key assumptions testable: quality threshold for “next best action,” required automation coverage (email/call capture rate), and acceptable error rates for pipeline stage updates.
-- Clarify causal chain for revenue impact (how action recommendations increase follow-up volume/quality and how that maps to EUR 50k/quarter).
-- Add baseline/current-state benchmarks (e.g., current logging compliance, pipeline accuracy, time spent in CRM) to quantify improvement.
-- Specify the measurement plan and timeframe for the stated targets (EUR 50k/quarter, 20k users/year, NPS 7→9) and how attribution to Neo-CRM will be determined.
+- Define baseline and measurement method/timeframe for each outcome (e.g., revenue baseline, what counts as “registered user,” NPS survey method).
+- Tie product goals to leading indicators (e.g., daily active use, % activities auto-logged, % pipeline fields updated without manual input, follow-up SLA adherence).
+- Make key assumptions testable with explicit hypotheses (e.g., “reducing manual updates by X minutes/day increases daily usage to Y%”).
+- Clarify target segment and initial go-to-market scope (sales reps vs founders) with segment-specific success metrics.
+- Add constraints/risks that could break the value chain (e.g., data capture accuracy, integration coverage with email/calendar, user trust in suggested actions).

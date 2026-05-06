@@ -1,46 +1,47 @@
 ## Mission
-Replace complex, admin-heavy CRM tools with a conversational “system of action/execution” that reduces cognitive load and tells users what to do next.
+Replace complex, admin-heavy CRMs with a conversational “system of action/execution” that tells users what to do next and minimizes cognitive load.
 
 ### Confidence
 High
 
-**Evidence:** “Replace complex CRM software with a conversational system that tells you exactly what to do next.” / “Traditional CRMs are systems of record (store data). We want CRM as a system of execution.” / “We need to reduce cognitive load, not just time”
+**Evidence:** “Replace complex CRM software with a conversational system that tells you exactly what to do next.” / “We want CRM as a system of execution.” / “We need to reduce cognitive load, not just time”
 
 ### Contradictions
 No contradictory content found.
 
 ## Target Customer
-Initially: sales reps who hate CRM admin and founders doing their own sales (especially early stage). Potential later expansion to customer success.
+Initially: sales reps who dislike CRM admin and founders doing their own sales (especially early stage). Potential later expansion: customer success people. More broadly: teams using Salesforce/HubSpot who face heavy manual entry and complex navigation.
 
 ### Confidence
 High
 
-**Evidence:** “sales reps who hate CRM admin” / “founders doing their own sales (especially early stage)” / “maybe customer success people later”
+**Evidence:** “sales reps who hate CRM admin” / “founders doing their own sales (especially early stage)” / “maybe customer success people later” / “Teams using systems like Salesforce or HubSpot often experience…”
 
 ### Contradictions
 No contradictory content found.
 
 ## Value Proposition
-A conversation-first CRM that removes dashboards/navigation and manual updating by automatically capturing activity and keeping the pipeline updated, while giving prioritized “next best actions” and enabling fast execution—so users spend less time on CRM admin and more time selling (and feel calmer/in control).
+A conversation-first CRM that removes dashboards, manual updates, and navigation by providing prioritized “next best actions,” enabling immediate execution (send/call/schedule), and automatically logging activity and updating the pipeline—reducing stress/fatigue and increasing daily usage and revenue.
 
 ### Confidence
 High
 
-**Evidence:** “too much clicking around… feels like admin work instead of helping you sell” / “something that just… tells you what to do next” / “log stuff automatically (calls, emails etc.)” / “keep the pipeline updated without you touching it” / “everything points to: → remove searching → remove updating → remove deciding … and replace it with: → clear next action → immediate execution → no admin overhead” / “ideal state = calm, clear, just doing the next thing”
+**Evidence:** “One interface (chat) One output (next action) Minimal thinking required” / “tell you your next best action” / “log stuff automatically (calls, emails etc.)” / “keep the pipeline updated without you touching it” / “Less ‘viewing’, more ‘doing’.” / “reduce the general fatigue people have with CRM… get reps to actually use the system daily… increase revenue per rep”
 
 ### Contradictions
 No contradictory content found.
 
 ## Strategic Pillars
-- Conversation-first interface (chat as the primary/only interface; avoid traditional screens/tabs/dashboards).
-- Actions over insights (prioritized next action; convert signals into executable tasks, not reporting).
-- Automation by default (automatic capture/logging; background pipeline updates; minimal/zero data entry).
-- Speed and low friction execution (quick actions; minimal onboarding/training; reduce choices).
+- Conversation-first interface (chat now; voice possibly later); avoid traditional screens/tabs/dashboards.
+- Actions over insights: deliver clear, prioritized next steps tied to execution, not reporting/analytics.
+- Automation by default: capture emails/calls, generate/suggest notes, update deal stages/pipeline invisibly with near-zero data entry.
+- Reduce cognitive load and choices: “minimal thinking,” focused/direct tone, system can suggest actions proactively.
+- Fast execution: quick actions/one-command workflows; remove switching/searching/updating/deciding.
 
 ### Confidence
 High
 
-**Evidence:** “conversation first, always… no screens if we can avoid it” / “actions > insights… avoid anything that looks like reporting” / “automation by default… capture stuff, not ask… if user has to fill fields → something went wrong” / “let you execute things quickly” / “make onboarding basically nonexistent or very fast… If someone needs training, we probably failed.” / “reduce choices, don’t give users 10 options”
+**Evidence:** “conversation first, always… no screens if we can avoid it” / “actions > insights… avoid anything that looks like reporting” / “automation by default… if user has to fill fields → something went wrong” / “system suggests actions before you ask (ideally)” / “reduce choices, don’t give users 10 options” / “remove searching… remove updating… remove deciding… replace it with… clear next action… immediate execution… no admin overhead”
 
 ### Contradictions
 No contradictory content found.
@@ -50,23 +51,23 @@ No contradictory content found.
 - “New features result in 20k new registred users this year”
 - “Additional investments EUR 200k”
 - “NPS score from 7 to a 9”
-- Also stated goals (non-quantified in the text): “get reps to actually use the system daily”; “increase revenue per rep”
+- Qualitative/operational goals (not quantified): daily usage; onboarding time near-zero/very fast; increased revenue per rep.
 
 ### Confidence
 Medium
 
-**Evidence:** “Increase of revenu of EUR 50.000,- per quarter in subscriptions” / “20k new registred users this year” / “Additional investments EUR 200k” / “NPS score from 7 to a 9” / “get reps to actually use the system daily” / “increase revenue per rep”
+**Evidence:** “Increase of revenu of EUR 50.000,- per quarter in subscriptions” / “20k new registred users this year” / “Additional investments EUR 200k” / “NPS score from 7 to a 9” / “get reps to actually use the system daily” / “make onboarding basically nonexistent or very fast”
 
 ### Contradictions
 No contradictory content found.
 
 ## Long-term Vision
-CRM becomes “invisible” over time: it proactively suggests what to do, stays out of the way, and feels calm/direct—more like an assistant that manages workflow than a tool users manage. Potentially expands beyond sales reps/founders to customer success later.
+Make CRM “invisible” over time: a calm, decisive assistant that proactively tells you what to do and “gets out of the way,” redefining CRM from a system-of-record to a system-of-execution.
 
 ### Confidence
 Medium
 
-**Evidence:** “Feels like CRM should become kind of invisible over time. Like it’s there, but you don’t really think about it.” / “system suggests actions before you ask (ideally)” / “people don’t want to use a system… they want the system to tell them what to do and then get out of the way” / “maybe customer success people later”
+**Evidence:** “Feels like CRM should become kind of invisible over time.” / “The best tools disappear—they don’t feel like tools.” / “We can’t win by building another better CRM—we need to redefine what a CRM is.”
 
 ### Contradictions
 No contradictory content found.
@@ -77,10 +78,11 @@ Complete
 
 ### Strength
 
-High
+Medium
 
 ## Suggestion
-- Define the primary ICP more tightly (e.g., role, company size, sales motion) since multiple target segments are mentioned (reps vs founders; CS later).
-- Add product adoption metrics explicitly (e.g., daily active use rate, % activities auto-logged, time-to-first-value) to match stated goals like “use the system daily” and “onboarding… very fast.”
-- Clarify the “system of execution” boundary: what actions are in-product (send email, schedule, call) vs handed off to existing tools.
-- Reconcile/clarify whether “no dashboards” is absolute or “not upfront,” and what minimal manager visibility exists without becoming reporting/BI.
+- Define a single primary ICP for v1 (e.g., SDRs vs AEs vs founder-led sales) and the initial use cases to prioritize.
+- Convert qualitative goals (“use daily,” “onboarding nonexistent”) into explicit measurable KPIs (e.g., DAU/WAU, time-to-first-value, % activities auto-logged, pipeline accuracy).
+- Clarify the business model assumptions tied to the stated revenue metric (pricing, conversion targets, retention).
+- Specify the minimum “system of execution” integrations required for table-stakes automation (email, calendar, calling) and how success is measured per integration.
+- Add a time horizon for the “CRM becomes invisible” vision (what’s true in 6/12/24 months).

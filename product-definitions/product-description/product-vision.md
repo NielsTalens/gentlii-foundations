@@ -1,107 +1,71 @@
 ## Vision Statement
-
-Replace complex CRM software with a conversational system that tells users exactly what to do next, shifting CRM from a “system of record” to a “system of action/execution” that becomes largely invisible and reduces cognitive load.
-
+Replace complex CRM software with a conversational system that tells you exactly what to do next, shifting CRM from a “system of record” to a “system of action/execution” that reduces cognitive load and becomes “invisible.”
 ### Confidence
-
 High
-
-**Evidence:** “Replace complex CRM software with a conversational system that tells you exactly what to do next.” / “Shift from system-of-record → … We want CRM as a system of execution.” / “Feels like CRM should become kind of invisible over time.”
-
+**Evidence:** “Replace complex CRM software with a conversational system that tells you exactly what to do next.” / “Shift from system-of-record … of-action” / “We want CRM as a system of execution.” / “Feels like CRM should become kind of invisible over time.”
 ### Contradictions
-
 No contradictory content found.
 
 ## Target Groups
-
-- Sales reps who dislike CRM administration (teams using Salesforce/HubSpot implied)
-- Founders doing their own sales (especially early stage)
+- Sales reps who dislike CRM admin work (incl. teams currently using Salesforce/HubSpot)
+- Founders doing their own sales (especially early-stage)
 - Potentially customer success people later
-
 ### Confidence
-
 High
-
 **Evidence:** “sales reps who hate CRM admin” / “founders doing their own sales (especially early stage)” / “maybe customer success people later” / “Teams using systems like Salesforce or HubSpot…”
-
 ### Contradictions
-
 No contradictory content found.
 
 ## Needs
-
-- Reduce manual CRM admin work (data entry, updating fields/pipeline, logging activities)
-- Eliminate complex navigation and fragmented workflows across tools
-- Provide clear, prioritized “next best action” so users don’t have to decide what to do
-- Keep pipeline accurate and trusted (avoid inaccurate pipeline and shadow systems)
-- Reduce cognitive load and stress/guilt; help users feel calm and in control
-- Enable speed (fast input/output; quick execution of follow-ups)
-
+- Reduce manual data entry and “admin work” associated with traditional CRMs
+- Eliminate complex navigation/dashboards and fragmented workflow (CRM + email + calendar + Slack)
+- Provide clear, prioritized “what to do next” guidance to prevent missed follow-ups
+- Improve trust/accuracy of CRM data by ensuring activities get logged and pipeline stays current
+- Reduce cognitive load/overwhelm; help users feel in control and calm
 ### Confidence
-
 High
-
-**Evidence:** “Heavy manual data entry” / “Time spent updating instead of selling” / “Complex navigation” / “tell you what to do next” / “Reps avoid logging activities… Pipeline is inaccurate… Shadow systems…” / “We need to reduce cognitive load” / “CRM = stress + guilt… ideal state = calm, clear”
-
+**Evidence:** “too much clicking around, updating fields, checking dashboards… feels like admin work” / “Heavy manual data entry” / “Complex navigation (menus, fields, pipelines)” / “they want to know what to do next, clearly” / “Reps avoid logging activities… Managers don’t trust CRM data… Pipeline is inaccurate” / “We need to to reduce cognitive load” / “CRM = stress + guilt… ideal state = calm, clear”
 ### Contradictions
-
 No contradictory content found.
 
 ## Product Features
-
-- Conversation-first interaction (chat as primary interface; potential voice input later)
-- Next-best-action recommendations (including proactive suggestions and prioritization)
-- Automatic activity capture/logging (emails, calls; notes generated or suggested)
-- Automatic background pipeline updates (deal stage updates without manual input)
-- Fast execution of actions from suggestions (send follow-up, schedule, call)
-- Deal monitoring that converts risk signals into executable actions (e.g., “deal going cold” → action)
-
+- Conversation-first interaction (chat as primary interface; possible voice input later)
+- “Next best action” recommendations (ideally proactive), prioritized to minimize user decision-making
+- Contextual action suggestions (who + context + suggested message/next step)
+- Fast execution of actions from the system (send follow-up, call, schedule)
+- Automatic capture/logging of emails and calls; suggested/generated notes
+- Automatic background pipeline and deal-stage updates without manual field entry
+- Deal risk/cold flags converted into executable actions (not analytics)
+- Lightweight “why this?” explanations (brief rationale, not reporting)
 ### Confidence
-
 High
-
-**Evidence:** “conversation-first. Probably chat based, maybe voice later.” / “tell you your next best action” / “log stuff automatically (calls, emails etc.)” / “keep the pipeline updated without you touching it” / “let you execute things quickly (send follow-up, schedule, etc.)” / “system flags… converts that into actions, not insights”
-
+**Evidence:** “conversation-first. Probably chat based, maybe voice later” / “tell you your next best action” / “system suggests actions before you ask (ideally)” / “each item includes: who, context, suggested message or next step” / “let you execute things quickly (send follow-up, schedule, etc.)” / “log stuff automatically (calls, emails etc.)” / “pipeline updates happening in the background” / “notes generated or at least suggested” / “system flags… converts that into actions, not insights” / “if you ask ‘why this?’ → short explanation, not a report”
 ### Contradictions
-
 No contradictory content found.
 
 ## Business Goals
-
-- Reduce CRM fatigue and increase daily usage/adoption
-- Increase revenue per rep (via better follow-up/execution)
-- Make onboarding very fast / near-nonexistent
-- Subscription revenue increase (EUR 50,000 per quarter)
-- Grow registered users (20k new registered users this year)
-- Secure additional investment (EUR 200k)
-- Improve NPS (from 7 to 9)
-
+- Increase daily/consistent CRM usage by reps (adoption)
+- Reduce CRM fatigue/cognitive load and make onboarding minimal/fast (little to no training)
+- Increase revenue per rep; subscription revenue growth
+- User growth (new registered users)
+- Improve NPS
+- Secure additional investment
 ### Confidence
-
 Medium
-
-**Evidence:** “reduce the general fatigue people have with CRM” / “get reps to actually use the system daily” / “increase revenue per rep” / “make onboarding basically nonexistent or very fast” / “Increase of revenu of EUR 50.000,- per quarter in subscriptions… 20k new registred users… Additional investments EUR 200k… NPS score from 7 to a 9”
-
+**Evidence:** “get reps to actually use the system daily” / “reduce the general fatigue people have with CRM” / “make onboarding basically nonexistent or very fast” / “increase revenue per rep” / “Increase of revenu of EUR 50.000,- per quarter in subscriptions” / “20k new registred users this year” / “Additional investments EUR 200k” / “NPS score from 7 to a 9”
 ### Contradictions
-
 No contradictory content found.
 
 ## Differentiators
-
-- Conversational, minimal/no traditional screens (avoid tabs, dashboards, pipelines)
-- “Actions > insights”: outputs are executable next steps, not reporting/analytics
-- Automation by default: zero/near-zero data entry; background updates
-- Not highly configurable/customizable like traditional CRMs (“not another version of Salesforce”)
-- Product tone: short, direct, decisive guidance (not hype, not gamified)
-
+- Conversational, single-interface CRM (minimal/no traditional screens, tabs, or dashboards)
+- “System of execution/action” vs “system of record”; emphasizes doing over viewing/reporting
+- Automation-by-default: background updates and capture; near-zero data entry
+- Low-choice, decisive guidance (“tells you what to do next”) and minimal thinking required
+- Not a customizable, endlessly configurable Salesforce-like tool; not BI/reporting
 ### Confidence
-
 High
-
-**Evidence:** “conversation first… no screens if we can avoid it” / “We’re intentionally not doing: traditional screens… analytics dashboards… manual pipeline management” / “actions > insights” / “automation by default… if user has to fill fields → something went wrong” / “not something you customize endlessly… basically not another version of Salesforce” / “tone… short, direct… no hype… should NOT feel like… gamified… overly configurable”
-
+**Evidence:** “No real ‘screens’ in the traditional sense” / “We’re intentionally not doing: traditional screens… analytics dashboards… manual pipeline management” / “actions > insights… avoid anything that looks like reporting” / “automation by default… if user has to fill fields → something went wrong” / “One interface (chat) One output (next action) Minimal thinking required” / “not something you customize endlessly… basically not another version of Salesforce”
 ### Contradictions
-
 No contradictory content found.
 
 ### Completeness
@@ -113,9 +77,8 @@ Complete
 High
 
 ## Suggestion
-
-- Tighten the vision into a single canonical statement (1–2 sentences) that explicitly names the primary target (e.g., “sales reps and founders”) and the core promise (“next action + automatic capture + execution”).
-- Clarify prioritization logic for “next best action” (what signals/sources it uses: email/calendar/CRM history) to make the feature-to-need mapping more actionable.
-- Add explicit success outcomes beyond revenue (e.g., adoption/retention/accuracy) as business goals, since some metrics are listed but not connected to the narrative.
-- Define what “system of execution” includes/excludes at launch (e.g., email sending, calling, scheduling) to prevent scope drift while keeping the “no dashboards” principle.
-- State a clear competitive positioning line versus Salesforce/HubSpot/Pipedrive (who it replaces vs complements) to sharpen differentiation.
+- Clarify the initial product boundary (e.g., which channels are “table stakes” at launch: Gmail/Outlook, calendar, dialer) to make the core automation claims testable.
+- Define the “next best action” logic at a principle level (inputs used, prioritization rules, and how to handle uncertainty) to ensure consistent behavior.
+- Add explicit buyer/user persona prioritization (e.g., founder-led sales vs SDR vs AE) and the primary use case to focus sequencing and GTM.
+- State a concise differentiation sentence against Salesforce/HubSpot beyond “no dashboards” (e.g., “execution-first, proactive action queue + auto-updating pipeline”) to sharpen positioning.
+- Reconcile/confirm business goals formatting: keep either outcome goals (adoption, revenue per rep, onboarding) or specific targets (NPS, revenue, users) in one coherent goals section.
