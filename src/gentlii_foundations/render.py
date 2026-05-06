@@ -131,6 +131,7 @@ def _render_page_shell(
         f"          <div class=\"brand-kicker\">{html.escape(page_kicker)}</div>\n"
         f"          <h1 class=\"brand-title\">{html.escape(brand_title)}</h1>\n"
         f"          <p class=\"brand-subtitle\">{html.escape(subtitle)}</p>\n"
+        f"{_render_brand_links()}"
         "        </div>\n"
         "      </div>\n"
         f"{nav_markup}"
@@ -141,6 +142,16 @@ def _render_page_shell(
         "  </div>\n"
         "</body>\n"
         "</html>\n"
+    )
+
+
+def _render_brand_links() -> str:
+    return (
+        "          <div class=\"brand-links\" aria-label=\"Page links\">\n"
+        '            <a href="index.html">Foundations</a>\n'
+        '            <a href="product-guard.html">Product Guard</a>\n'
+        '            <a href="feature-validator.html">Feature Validator</a>\n'
+        "          </div>\n"
     )
 
 
@@ -583,6 +594,25 @@ a {
   max-width: 54ch;
   color: var(--muted);
   font-size: 0.96rem;
+}
+
+.brand-links {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+}
+
+.brand-links a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+
+.brand-links a:hover,
+.brand-links a:focus-visible {
+  color: var(--text);
 }
 
 .doc-nav {

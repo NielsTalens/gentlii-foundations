@@ -7,6 +7,8 @@ on:
 permissions:
   contents: read
   issues: write
+  pages: write
+  id-token: write
 
 jobs:
   validate:
@@ -59,3 +61,22 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh issue comment "${{ github.event.issue.number }}" --body-file product-definitions/product-description/feature-validator.md
+
+      - name: Stage pages source
+        run: |
+          mkdir -p pages-source
+          cp product-definitions/product-description/*.html pages-source/
+          cp product-definitions/product-description/styles.css pages-source/styles.css
+
+      - name: Upload staged pages source
+        uses: actions/upload-artifact@v4
+        with:
+          name: feature-validation-pages-source
+          path: pages-source
+
+  publish:
+    needs: validate
+    uses: ./.github/workflows/publish-pages.yml
+    with:
+      artifact_name: feature-validation-pages-source
+    secrets: inherit

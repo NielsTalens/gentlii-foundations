@@ -45,12 +45,11 @@ def test_product_guard_workflow_runs_after_foundations_and_deploys_pages():
     assert "python -m gentlii_foundations.html_security" not in workflow
     assert "github.event.workflow_run.head_branch" not in workflow
     assert "github.event.workflow_run.head_sha" not in workflow
-    assert "actions/configure-pages" in workflow
-    assert "actions/upload-pages-artifact" in workflow
-    assert "actions/deploy-pages" in workflow
-    assert "product-definitions/product-description/index.html" in workflow
-    assert "product-definitions/product-description/product-guard.html" in workflow
-    assert "product-definitions/product-description/styles.css" in workflow
+    assert "uses: ./.github/workflows/publish-pages.yml" in workflow
+    assert "actions/configure-pages" not in workflow
+    assert "actions/upload-pages-artifact" not in workflow
+    assert "actions/deploy-pages" not in workflow
+    assert "cp product-definitions/product-description/*.html pages-source/" in workflow
     assert "git add product-definitions/product-description/product-guard.md" in workflow
     assert "git add product-definitions/product-description/product-guard.html" in workflow
     assert 'git commit -m "chore: refresh product guard"' in workflow
@@ -72,3 +71,21 @@ def test_feature_validation_workflow_runs_on_issue_open_and_comments_result():
     assert "gentlii-foundations feature-validate product-definitions" in workflow
     assert "product-definitions/product-description/feature-validator.md" in workflow
     assert "gh issue comment" in workflow
+    assert "uses: ./.github/workflows/publish-pages.yml" in workflow
+    assert "cp product-definitions/product-description/*.html pages-source/" in workflow
+
+
+def test_publish_pages_workflow_is_reusable_and_tolerates_missing_html_files():
+    workflow = Path(".github/workflows/publish-pages.yml").read_text(encoding="utf-8")
+
+    assert "workflow_call:" in workflow
+    assert "artifact_name:" in workflow
+    assert "page_files:" not in workflow
+    assert "pages: write" in workflow
+    assert "id-token: write" in workflow
+    assert "actions/configure-pages" in workflow
+    assert "actions/upload-pages-artifact" in workflow
+    assert "actions/deploy-pages" in workflow
+    assert "site-source/styles.css" in workflow
+    assert "logo.png" in workflow
+    assert "cp site-source/*.html _site/" in workflow

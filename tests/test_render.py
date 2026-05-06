@@ -26,6 +26,8 @@ def test_write_artifact_page_creates_standalone_product_guard_html(tmp_path):
     assert "<p>Aligned.</p>" in html
     assert '<link rel="stylesheet" href="styles.css" />' in html
     assert 'href="index.html"' in html
+    assert 'href="product-guard.html"' in html
+    assert 'href="feature-validator.html"' in html
 
 
 def test_write_artifact_page_refreshes_existing_stylesheet(tmp_path):
@@ -87,7 +89,9 @@ def test_write_artifacts_renders_combined_html_content(tmp_path):
     assert "<li>Two</li>" in html
     assert "<hr />" in html
     assert "title: Product Vision" not in html
+    assert 'href="index.html"' in html
     assert 'href="product-guard.html"' in html
+    assert 'href="feature-validator.html"' in html
 
 
 def test_write_artifacts_uses_logo_png_for_favicon_and_brand_logo(tmp_path):
