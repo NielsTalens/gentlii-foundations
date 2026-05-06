@@ -1,9 +1,16 @@
 name: Product Guard
 
 on:
-  workflow_run:
-    workflows: ["Foundations"]
-    types: [completed]
+  push:
+    branches:
+      - main
+    paths:
+      - product-definitions/product-description/strategy.md
+      - product-definitions/product-description/business-case.md
+      - product-definitions/product-description/product-vision.md
+      - product-definitions/product-description/product-charter.md
+      - product-definitions/product-description/index.html
+      - product-definitions/product-description/styles.css
 
 permissions:
   contents: write
@@ -12,14 +19,11 @@ permissions:
 
 jobs:
   guard:
-    if: github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
 
     steps:
       - name: Check out repository
         uses: actions/checkout@v5
-        with:
-          ref: ${{ github.event.workflow_run.head_branch }}
 
       - name: Set up Python
         uses: actions/setup-python@v6

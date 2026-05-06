@@ -30,14 +30,21 @@ def test_foundations_workflow_builds_and_commits_generated_site():
 def test_product_guard_workflow_runs_after_foundations_and_deploys_pages():
     workflow = Path(".github/workflows/product-guard.yml").read_text(encoding="utf-8")
 
-    assert "workflow_run:" in workflow
-    assert 'workflows: ["Foundations"]' in workflow
-    assert "types: [completed]" in workflow
-    assert "github.event.workflow_run.conclusion == 'success'" in workflow
+    assert "workflow_run:" not in workflow
+    assert "push:" in workflow
+    assert "branches:" in workflow
+    assert "main" in workflow
+    assert "product-definitions/product-description/strategy.md" in workflow
+    assert "product-definitions/product-description/business-case.md" in workflow
+    assert "product-definitions/product-description/product-vision.md" in workflow
+    assert "product-definitions/product-description/product-charter.md" in workflow
+    assert "github.event.workflow_run.conclusion == 'success'" not in workflow
     assert "pages: write" in workflow
     assert "id-token: write" in workflow
     assert "gentlii-foundations guard product-definitions" in workflow
     assert "python -m gentlii_foundations.html_security" not in workflow
+    assert "github.event.workflow_run.head_branch" not in workflow
+    assert "github.event.workflow_run.head_sha" not in workflow
     assert "actions/configure-pages" in workflow
     assert "actions/upload-pages-artifact" in workflow
     assert "actions/deploy-pages" in workflow
