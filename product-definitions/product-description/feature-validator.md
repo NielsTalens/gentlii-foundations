@@ -1,83 +1,91 @@
-# Feature Request: Email forwarding to create/update contact info
+# Feature Validator
+
 ### Decision
 Revise
+
 ### Alignment score
 4/5
+
 ### Confidence
-High
+Medium
+
+The request aligns with the product’s “automation by default” and “reduce admin / avoid traditional CRM navigation” intent, but it needs tighter constraints to avoid drifting into manual data-entry workflows and to ensure it produces executable outcomes (not just stored data).
 
 ## Strategic alignment
+
 ### Confidence
 High
 
-**Evidence:** Strategy emphasizes “Automation by default” and removing “dashboards/navigation and manual updating,” aiming for “automatic capture/logging.” The feature enables input via an existing daily tool (email) “instead of having to go to the CRM system (and possibly login).”
+**Evidence:** Mission/value proposition emphasize reducing admin and making CRM “invisible” via automatic capture and minimal navigation: “Replace complex… CRM… with a conversational system… reducing cognitive load” and “automatic logging of emails / calls” and “pipeline updates happening in the background.”  
+**Evidence:** Feature request reduces needing to “go to the CRM system (and possibly login)” by forwarding an email to capture contact info.
 
 ### Contradictions
 No contradictory content found.
 
 ## Business Case alignment
+
 ### Confidence
 Medium
 
-**Evidence:** Business case targets “daily usage/adoption,” “minimizes training/onboarding,” and reducing “manual/admin overhead.” Email forwarding reduces friction and avoids “after work” CRM updates by capturing contact info without logging into CRM.
+**Evidence:** Expected value depends on “reducing CRM fatigue,” “increase daily adoption,” and “automatic capture/logging (emails, calls).” Email-forward ingestion supports capture and reduces friction, but the request doesn’t connect to adoption metrics or execution speed explicitly.
 
 ### Contradictions
 No contradictory content found.
 
 ## Product Vision fit
-### Confidence
-High
 
-**Evidence:** Vision includes “automatic activity capture/logging (emails, calls)” and “automation by default: zero/near-zero data entry.” Extracting “contact info from mail senders” is consistent with automatic capture from email.
+### Confidence
+Medium
+
+**Evidence:** Vision features include “Automatic activity capture/logging (emails, calls)” and reducing manual updating; email-based capture is consistent with that direction.  
+**Evidence:** However, the vision emphasizes “next best action” and “fast execution,” while the request is framed as “input information” and only “take contact info,” with no action/output described.
 
 ### Contradictions
 No contradictory content found.
 
 ## Product Charter compliance
+
 ### Confidence
 Medium
 
-**Evidence:** Charter says “conversation-first interface as the default/primary mode” and “One interface (chat).” Email forwarding introduces an additional interaction surface outside chat, even if it reduces friction. Charter also says “system should capture and update data without asking the user to do manual entry,” which this supports (forwarding is a lightweight action, not field-filling).
+**Evidence:** Charter boundaries: “Not a place for manual data entry (fields)” and “Automation by default… capture/log/update in the background; user data entry is treated as a failure state.”  
+Forwarding an email *could* be considered “using existing tools” rather than filling CRM fields, but it can also become an alternate manual-entry channel if not constrained.
 
 ### Contradictions
 No contradictory content found.
 
 ## Risks introduced
-### Confidence
-High
 
-**Evidence:** Not explicitly covered in artifacts; risks inferred from the request’s mechanism and charter boundaries.
-- Creates a second “interface” pattern (email ingestion) that may dilute “one interface (chat)” and lead to sprawl (“use the tools they already use” could expand beyond email).
-- Potential for increased user choice/ambiguity (“forward an email that contains specific info”)—users must remember formatting/what to forward, which can increase cognitive load.
-- Could become a manual workaround rather than “invisible” automation if forwarding is required frequently.
+### Confidence
+Medium
+
+**Evidence:** Risk of becoming a “manual data entry” workaround (users forwarding structured emails to populate CRM), conflicting with “zero/near-zero data entry.”  
+**Evidence:** Risk of increasing complexity/training (“forward an email that contains specific info”) conflicting with “Training required is treated as a product failure signal.”  
+**Evidence:** Potential drift from “One interface (chat) One output (next action)” if this becomes a separate ingestion workflow without action output.
 
 ### Contradictions
 No contradictory content found.
 
 ## Missing justification
+
 ### Confidence
 High
 
-**Evidence:** The request lacks details needed to confirm it reduces cognitive load and stays within boundaries:
-- Not found: how this remains conversation-first (e.g., confirmation/next action delivered via chat).
-- Not found: how the system ensures “minimal thinking required” (format rules, parsing reliability).
-- Not found: how it leads to “immediate user action/execution” beyond data capture (charter making rule).
-- Not found: explicit scope limits (it says “existing tools,” but only first version email contact info—needs boundary to prevent drift).
+**Evidence:** Not found: how this leads to “immediate action” or “next best action” (a charter making rule: “Accept features only if they help users take immediate action.”).  
+**Evidence:** Not found: whether this replaces or complements automatic email capture/logging already planned (“automatic logging of emails/calls”).  
+**Evidence:** Not found: boundaries to prevent “specific info” templates and ongoing manual CRM population.
 
 ### Contradictions
 No contradictory content found.
 
 ## Minimal change to make this valid
+
 ### Confidence
 High
 
-**Evidence:** Based on charter decision rules and vision features (conversation-first, actions, automation).
-- Reframe as **automation-first email capture** (auto-detect new contacts from connected inbox) with **email forwarding only as a fallback**, not the primary workflow.  
-  **Evidence:** “Automation by default… system should just capture stuff, not ask”; “CRM becomes ‘invisible’… stays out of the way.”
-- Ensure the user experience remains **chat-centered**: after ingestion, surface a concise chat message with a single recommended next action (e.g., “Add contact + schedule follow-up?”).  
-  **Evidence:** “One interface (chat) / One output (next action)”; “execute actions quickly via chat commands.”
-- Add explicit scope guardrails: “Only contact creation/enrichment from sender metadata in v1; no custom parsing/templates; no multi-tool ingestion yet.”  
-  **Evidence:** “Scope discipline: ‘Not trying to boil the ocean here’”; “reduce choices.”
+**Evidence:** Charter requires action-orientation and low cognitive load; revise to ensure this ingestion triggers actions and stays “automation-first.”
 
-### Contradictions
-No contradictory content found.
+- Reframe as **email ingestion for automatic contact creation + immediate next-step suggestion**, not “input information.”
+- Constrain v1 to **zero required formatting/templates** (no “specific info” the user must remember); if forwarded, the system should extract what it can and ask at most 1 clarifying question in chat when uncertain.
+- Specify how it complements/uses **automatic email capture** (e.g., forwarding is only for unconnected mailboxes or historical threads) to avoid duplicative workflows.
+- Add a drift guardrail: forwarding **must not become a general field-update mechanism** (no “populate CRM fields via email” beyond minimal contact identity enrichment).

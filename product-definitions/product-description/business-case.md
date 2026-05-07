@@ -1,54 +1,69 @@
 ## Business Rationale
 
-Existing CRMs (e.g., Salesforce/HubSpot) are described as “broken” for frontline users because they create heavy admin burden (clicking, manual updates, navigation) that reduces selling time, leads to low adoption, inaccurate pipelines, and “shadow systems.” The initiative exists to redefine CRM from a system-of-record into a “system-of-action” that reduces cognitive load and tells users the next best action.
+Traditional CRMs (e.g., Salesforce/HubSpot) create heavy admin burden (manual entry, complex navigation) that distracts reps from selling, leading to low usage, poor data quality, inaccurate pipelines, and shadow systems. The initiative exists to redefine CRM from a “system of record” into a “system of action/execution” that reduces cognitive load and guides users to the next best action.
 
 ### Confidence
+
 High
 
-**Evidence:** “CRM as it exists today (like Salesforce etc.) is kind of broken… It’s too much clicking around, updating fields”; “Teams using systems like Salesforce or HubSpot often experience: Heavy manual data entry… Time spent updating instead of selling… Complex navigation”; “Reps avoid logging activities… Pipeline is inaccurate… Shadow systems… emerge”; “Shift from system-of-record… We want CRM as a system of execution.”
+**Evidence:** “CRM as it exists today (like Salesforce etc.) is kind of broken… It’s too much clicking around… feels like admin work instead of helping you sell.” / “Heavy manual data entry… Time spent updating instead of selling… Complex navigation” / “Reps avoid logging activities… Managers don’t trust CRM data… Pipeline is inaccurate… Shadow systems… emerge” / “We want CRM as a system of execution.”
 
 ### Contradictions
-No contradictory content found.
+
+The product direction de-emphasizes dashboards/insights, but the customer event notes users want more insights and to create dashboards. **Evidence:** “they don’t want dashboards” vs. “Users want to have more insights in the process” and “Users want to create their own dashboards”.
 
 ## Expected Value
 
-Value is primarily improved sales productivity and execution (less admin, more follow-up and action), higher CRM adoption and data reliability (automatic capture, background updates), reduced cognitive load/stress (“calm, clear”), and faster onboarding due to a conversation-first interface that minimizes training and manual input.
+Create value by reducing CRM fatigue and cognitive load, increasing daily adoption and execution speed, improving data capture/accuracy via automation, accelerating onboarding, and (as a consequence) improving sales productivity and revenue per rep. Also expected product/business value includes subscriptions revenue growth, user registrations growth, and improved NPS.
 
 ### Confidence
-High
 
-**Evidence:** “tell you your next best action”; “log stuff automatically… keep the pipeline updated without you touching it”; “reduce the general fatigue people have with CRM”; “get reps to actually use the system daily”; “increase revenue per rep”; “make onboarding basically nonexistent or very fast”; “We need to to reduce cognitive load, not just time”; “users don’t just want efficiency… feel in control… not feel overwhelmed… CRM = stress + guilt… ideal state = calm, clear.”
+Medium
+
+**Evidence:** “reduce the general fatigue people have with CRM” / “get reps to actually use the system daily” / “increase revenue per rep (if they follow up more, this should happen)” / “make onboarding basically nonexistent or very fast” / “Everything logs automatically… pipeline updates itself… basically zero data entry” / “Increase of revenu of EUR 50.000,- per quarter in subscriptions… 20k new registred users this year… NPS score from 7 to a 9”.
 
 ### Contradictions
-No contradictory content found.
+
+There is tension between “avoid dashboards / not a reporting tool” and expressed demand for “more insights” and “create their own dashboards.” **Evidence:** “they don’t want dashboards” / “avoid anything that looks like reporting” vs. “Users want to have more insights… create their own dashboards”.
 
 ## Assumptions
 
-The business case assumes that (1) reducing admin/friction and cognitive load will increase daily usage; (2) increased usage plus automated capture will improve CRM data trust/accuracy; (3) better prioritization (“next action”) and faster execution will drive more follow-up and increase revenue per rep; (4) a chat-first/no-screens approach is acceptable/preferable for target users; (5) automation can keep pipeline stages and activity logging accurate “in the background” with minimal user correction.
+- If the system reduces admin (searching, updating, deciding) through conversation-first interaction and automation, reps will use it daily.
+- If reps follow up more consistently (prompted by “next best action”), revenue per rep will increase.
+- Fast/no-training onboarding is achievable; if training is required, the product is considered to have failed the usability goal.
+- Automatic capture of emails/calls and background pipeline updates are feasible and sufficient to maintain an accurate pipeline without manual management.
 
 ### Confidence
+
 Medium
 
-**Evidence:** “increase revenue per rep (if they follow up more, this should happen)”; “get reps to actually use the system daily”; “everything logs automatically in background… pipeline updates itself”; “conversation first, always… no screens if we can avoid it”; “If someone needs training, we probably failed.”
+**Evidence:** “increase revenue per rep (if they follow up more, this should happen)” / “get reps to actually use the system daily” (paired with “reduce… fatigue”) / “make onboarding basically nonexistent… If someone needs training, we probably failed.” / “automatic logging of emails / calls… pipeline updates happening in the background… basically zero data entry”.
 
 ### Contradictions
+
 No contradictory content found.
 
 ## Measurable Business Outcomes
 
-Stated target outcomes include increased subscription revenue (EUR 50,000 per quarter), user growth (20k new registered users this year), increased investment (EUR 200k), and improved NPS (from 7 to 9). Additional outcome-like goals are mentioned without explicit metrics (e.g., daily usage/adoption, revenue per rep, faster onboarding).
+- Increase subscription revenue by EUR 50,000 per quarter.
+- Gain 20,000 new registered users this year.
+- NPS improvement from 7 to 9.
+- Additional investments of EUR 200k (not an outcome metric but a stated financial input/constraint).
+- Qualitative/behavioral outcome stated without metric: “get reps to actually use the system daily” (no target defined).
 
 ### Confidence
-High
 
-**Evidence:** “Increase of revenu of EUR 50.000,- per quarter in subscriptions”; “New features result in 20k new registred users this year”; “Additional investments EUR 200k”; “NPS score from 7 to a 9”; “get reps to actually use the system daily”; “increase revenue per rep”; “make onboarding basically nonexistent or very fast.”
+Medium
+
+**Evidence:** “Increase of revenu of EUR 50.000,- per quarter in subscriptions” / “20k new registred users this year” / “NPS score from 7 to a 9” / “Additional investments EUR 200k” / “get reps to actually use the system daily”.
 
 ### Contradictions
+
 No contradictory content found.
 
 ### Completeness
 
-Complete
+Partial
 
 ### Strength
 
@@ -56,8 +71,8 @@ Medium
 
 ## Suggestion
 
-- Define baseline and target for “daily usage” (e.g., % active reps/day, activities logged per rep) to make adoption goals measurable.
-- Make assumptions testable by stating causal hypotheses explicitly (e.g., “next-action recommendations increase follow-up rate by X%, leading to EUR Y uplift”).
-- Clarify how the listed outcomes relate (EUR 200k “additional investments” is a cost/input; add ROI framing tying costs to revenue/user/NPS targets).
-- Add explicit time-to-onboard target (e.g., time to first value, time to first logged deal) to support the “no training” claim.
-- Specify data-quality outcomes (e.g., pipeline accuracy, manager trust proxy metrics) since inaccurate pipeline is a stated pain point.
+- Add explicit success metrics for adoption/productivity (e.g., daily active use rate, % activities auto-logged, pipeline accuracy) to support “use the system daily” and “reduce fatigue.”
+- Make key assumptions testable (e.g., define what “follow up more” means and how it links to “increase revenue per rep”).
+- Resolve/position the dashboards tension: clarify whether “insights/dashboards” are out of scope, delayed, or replaced by “actionable insights” in chat.
+- Clarify timeframe/ownership for the stated business targets (EUR 50k/quarter, 20k users/year, NPS 7→9) and how the product drives each.
+- Separate inputs vs outcomes (e.g., EUR 200k investment) and state expected ROI or payback logic tied to the outcomes.

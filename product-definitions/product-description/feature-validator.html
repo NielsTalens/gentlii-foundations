@@ -16,6 +16,11 @@
           <div class="brand-kicker">Feature Validator</div>
           <h1 class="brand-title">Feature Validator</h1>
           <p class="brand-subtitle">Standalone export of the Product Guard review.</p>
+          <div class="brand-links" aria-label="Page links">
+            <a href="index.html">Foundations</a>
+            <a href="product-guard.html">Product Guard</a>
+            <a href="feature-validator.html">Feature Validator</a>
+          </div>
         </div>
       </div>
       <nav class="doc-nav" aria-label="Document navigation">
@@ -30,60 +35,59 @@
       <section class="doc-card" id="feature-validator">
         <div class="panel-eyebrow">feature validator</div>
         <div class="doc-content">
-          <div class="doc-dual-section-grid"><section class="doc-side-section"><h3>Alignment score</h3><p class="metric-line"><span class="metric-value metric-pill score-pill score-4">4/5</span></p></section><section class="doc-side-section"><h3>Confidence</h3><p class="metric-line"><span class="metric-value metric-pill metric-high">High</span></p></section></div>
-          <h1>Feature Request: Email forwarding to create/update contact info</h1>
+          <div class="doc-dual-section-grid"><section class="doc-side-section"><h3>Alignment score</h3><p class="metric-line"><span class="metric-value metric-pill score-pill score-4">4/5</span></p></section><section class="doc-side-section"><h3>Confidence</h3><p class="metric-line"><span class="metric-value metric-pill metric-medium">Medium</span></p></section></div>
+          <h1>Feature Validator</h1>
           <h3>Decision</h3>
           <p class="metric-line"><span class="metric-value metric-pill metric-medium">Revise</span></p>
+          <p>The request aligns with the product’s “automation by default” and “reduce admin / avoid traditional CRM navigation” intent, but it needs tighter constraints to avoid drifting into manual data-entry workflows and to ensure it produces executable outcomes (not just stored data).</p>
           <h2>Strategic alignment</h2>
           <h3>Confidence</h3>
           <p class="metric-line"><span class="metric-value metric-pill metric-high">High</span></p>
-          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Strategy emphasizes “Automation by default” and removing “dashboards/navigation and manual updating,” aiming for “automatic capture/logging.” The feature enables input via an existing daily tool (email) “instead of having to go to the CRM system (and possibly login).”</p></div></details>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Mission/value proposition emphasize reducing admin and making CRM “invisible” via automatic capture and minimal navigation: “Replace complex… CRM… with a conversational system… reducing cognitive load” and “automatic logging of emails / calls” and “pipeline updates happening in the background.”</p></div></details>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Feature request reduces needing to “go to the CRM system (and possibly login)” by forwarding an email to capture contact info.</p></div></details>
           <h3>Contradictions</h3>
           <p>No contradictory content found.</p>
           <h2>Business Case alignment</h2>
           <h3>Confidence</h3>
           <p class="metric-line"><span class="metric-value metric-pill metric-medium">Medium</span></p>
-          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Business case targets “daily usage/adoption,” “minimizes training/onboarding,” and reducing “manual/admin overhead.” Email forwarding reduces friction and avoids “after work” CRM updates by capturing contact info without logging into CRM.</p></div></details>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Expected value depends on “reducing CRM fatigue,” “increase daily adoption,” and “automatic capture/logging (emails, calls).” Email-forward ingestion supports capture and reduces friction, but the request doesn’t connect to adoption metrics or execution speed explicitly.</p></div></details>
           <h3>Contradictions</h3>
           <p>No contradictory content found.</p>
           <h2>Product Vision fit</h2>
           <h3>Confidence</h3>
-          <p class="metric-line"><span class="metric-value metric-pill metric-high">High</span></p>
-          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Vision includes “automatic activity capture/logging (emails, calls)” and “automation by default: zero/near-zero data entry.” Extracting “contact info from mail senders” is consistent with automatic capture from email.</p></div></details>
+          <p class="metric-line"><span class="metric-value metric-pill metric-medium">Medium</span></p>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Vision features include “Automatic activity capture/logging (emails, calls)” and reducing manual updating; email-based capture is consistent with that direction.</p></div></details>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>However, the vision emphasizes “next best action” and “fast execution,” while the request is framed as “input information” and only “take contact info,” with no action/output described.</p></div></details>
           <h3>Contradictions</h3>
           <p>No contradictory content found.</p>
           <h2>Product Charter compliance</h2>
           <h3>Confidence</h3>
           <p class="metric-line"><span class="metric-value metric-pill metric-medium">Medium</span></p>
-          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Charter says “conversation-first interface as the default/primary mode” and “One interface (chat).” Email forwarding introduces an additional interaction surface outside chat, even if it reduces friction. Charter also says “system should capture and update data without asking the user to do manual entry,” which this supports (forwarding is a lightweight action, not field-filling).</p></div></details>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Charter boundaries: “Not a place for manual data entry (fields)” and “Automation by default… capture/log/update in the background; user data entry is treated as a failure state.”</p></div></details>
+          <p>Forwarding an email *could* be considered “using existing tools” rather than filling CRM fields, but it can also become an alternate manual-entry channel if not constrained.</p>
           <h3>Contradictions</h3>
           <p>No contradictory content found.</p>
           <h2>Risks introduced</h2>
           <h3>Confidence</h3>
-          <p class="metric-line"><span class="metric-value metric-pill metric-high">High</span></p>
-          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Not explicitly covered in artifacts; risks inferred from the request’s mechanism and charter boundaries.</p></div></details>
-          <ul><li>Creates a second “interface” pattern (email ingestion) that may dilute “one interface (chat)” and lead to sprawl (“use the tools they already use” could expand beyond email).</li><li>Potential for increased user choice/ambiguity (“forward an email that contains specific info”)—users must remember formatting/what to forward, which can increase cognitive load.</li><li>Could become a manual workaround rather than “invisible” automation if forwarding is required frequently.</li></ul>
+          <p class="metric-line"><span class="metric-value metric-pill metric-medium">Medium</span></p>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Risk of becoming a “manual data entry” workaround (users forwarding structured emails to populate CRM), conflicting with “zero/near-zero data entry.”</p></div></details>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Risk of increasing complexity/training (“forward an email that contains specific info”) conflicting with “Training required is treated as a product failure signal.”</p></div></details>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Potential drift from “One interface (chat) One output (next action)” if this becomes a separate ingestion workflow without action output.</p></div></details>
           <h3>Contradictions</h3>
           <p>No contradictory content found.</p>
           <h2>Missing justification</h2>
           <h3>Confidence</h3>
           <p class="metric-line"><span class="metric-value metric-pill metric-high">High</span></p>
-          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>The request lacks details needed to confirm it reduces cognitive load and stays within boundaries:</p></div></details>
-          <ul><li>Not found: how this remains conversation-first (e.g., confirmation/next action delivered via chat).</li><li>Not found: how the system ensures “minimal thinking required” (format rules, parsing reliability).</li><li>Not found: how it leads to “immediate user action/execution” beyond data capture (charter making rule).</li><li>Not found: explicit scope limits (it says “existing tools,” but only first version email contact info—needs boundary to prevent drift).</li></ul>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Not found: how this leads to “immediate action” or “next best action” (a charter making rule: “Accept features only if they help users take immediate action.”).</p></div></details>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Not found: whether this replaces or complements automatic email capture/logging already planned (“automatic logging of emails/calls”).</p></div></details>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Not found: boundaries to prevent “specific info” templates and ongoing manual CRM population.</p></div></details>
           <h3>Contradictions</h3>
           <p>No contradictory content found.</p>
           <h2>Minimal change to make this valid</h2>
           <h3>Confidence</h3>
           <p class="metric-line"><span class="metric-value metric-pill metric-high">High</span></p>
-          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Based on charter decision rules and vision features (conversation-first, actions, automation).</p></div></details>
-          <ul><li>Reframe as **automation-first email capture** (auto-detect new contacts from connected inbox) with **email forwarding only as a fallback**, not the primary workflow.</li></ul>
-          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>“Automation by default… system should just capture stuff, not ask”; “CRM becomes ‘invisible’… stays out of the way.”</p></div></details>
-          <ul><li>Ensure the user experience remains **chat-centered**: after ingestion, surface a concise chat message with a single recommended next action (e.g., “Add contact + schedule follow-up?”).</li></ul>
-          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>“One interface (chat) / One output (next action)”; “execute actions quickly via chat commands.”</p></div></details>
-          <ul><li>Add explicit scope guardrails: “Only contact creation/enrichment from sender metadata in v1; no custom parsing/templates; no multi-tool ingestion yet.”</li></ul>
-          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>“Scope discipline: ‘Not trying to boil the ocean here’”; “reduce choices.”</p></div></details>
-          <h3>Contradictions</h3>
-          <p>No contradictory content found.</p>
+          <details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Charter requires action-orientation and low cognitive load; revise to ensure this ingestion triggers actions and stays “automation-first.”</p></div></details>
+          <ul><li>Reframe as **email ingestion for automatic contact creation + immediate next-step suggestion**, not “input information.”</li><li>Constrain v1 to **zero required formatting/templates** (no “specific info” the user must remember); if forwarded, the system should extract what it can and ask at most 1 clarifying question in chat when uncertain.</li><li>Specify how it complements/uses **automatic email capture** (e.g., forwarding is only for unconnected mailboxes or historical threads) to avoid duplicative workflows.</li><li>Add a drift guardrail: forwarding **must not become a general field-update mechanism** (no “populate CRM fields via email” beyond minimal contact identity enrichment).</li></ul>
         </div>
       </section>
     </main>
