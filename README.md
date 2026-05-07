@@ -1,3 +1,10 @@
+[![CI](https://github.com/NielsTalens/gentlii-foundations/actions/workflows/ci.yml/badge.svg)](https://github.com/NielsTalens/gentlii-foundations/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/NielsTalens/gentlii-foundations/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/NielsTalens/gentlii-foundations/actions/workflows/github-code-scanning/codeql)
+[![Dependabot Updates](https://github.com/NielsTalens/gentlii-foundations/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/NielsTalens/gentlii-foundations/actions/workflows/dependabot/dependabot-updates)
+[![Dependency Graph](https://github.com/NielsTalens/gentlii-foundations/actions/workflows/dependabot/update-graph/badge.svg)](https://github.com/NielsTalens/gentlii-foundations/actions/workflows/dependabot/update-graph)
+[![Feature Validation](https://github.com/NielsTalens/gentlii-foundations/actions/workflows/feature-validation.yml/badge.svg)](https://github.com/NielsTalens/gentlii-foundations/actions/workflows/feature-validation.yml)
+[![Foundations](https://github.com/NielsTalens/gentlii-foundations/actions/workflows/foundations.yml/badge.svg)](https://github.com/NielsTalens/gentlii-foundations/actions/workflows/foundations.yml)
+
 # Gentlii Foundations
 
 `gentlii-foundations` is a local Python CLI that turns source documents in a product repository into a structured product-definition package.
