@@ -69,11 +69,11 @@ Do not assume missing intent.
 ## Output
 
 For each subject below, use this structure:
-- `#` heading for the subject name
-- a `### Decision` heading followed by exactly one score line
 - a `### Alignment score` heading followed by exactly one score line
 - a `### Confidence` heading followed by exactly one confidence line
+- a `### Decision` heading followed by exactly one score line
 - If there are 'Alignment suggestions', return them as a bulleted list.
+- `#` heading for the subject name
 - one or more normal paragraphs with extracted content, or `Not found`
 
 Write the value directly below `### Decision` as exactly one of `Approve`, `Reject`, `Revise`.
