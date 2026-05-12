@@ -147,8 +147,8 @@ def test_write_artifacts_places_completeness_and_strength_side_by_side(tmp_path)
     css = (tmp_path / "styles.css").read_text(encoding="utf-8")
 
     assert '<div class="doc-dual-section-grid">' in html
-    assert '<section class="doc-side-section"><h3>Completeness</h3>' in html
-    assert '<section class="doc-side-section"><h3>Strength</h3>' in html
+    assert '<section class="doc-side-section"><h3 class="metric-heading">Completeness: <span class="metric-value metric-pill metric-high">Complete</span></h3></section>' in html
+    assert '<section class="doc-side-section"><h3 class="metric-heading">Strength: <span class="metric-value metric-pill metric-medium">Medium</span></h3></section>' in html
     assert ".doc-dual-section-grid" in css
     assert ".doc-side-section" in css
 
@@ -175,8 +175,7 @@ def test_write_artifacts_colorizes_metric_values(tmp_path):
 
     assert '<span class="metric-value metric-pill metric-high">Complete</span>' in html
     assert '<span class="metric-value metric-pill metric-medium">Medium</span>' in html
-    assert '<h3>Confidence</h3>' in html
-    assert '<p class="metric-line"><span class="metric-value metric-pill metric-low">Low</span></p>' in html
+    assert '<h3 class="metric-heading">Confidence: <span class="metric-value metric-pill metric-low">Low</span></h3>' in html
     assert ".metric-value" in css
     assert ".metric-pill" in css
     assert ".metric-high" in css
@@ -206,8 +205,7 @@ def test_write_artifact_page_colorizes_feature_validator_decision_as_metric_pill
     )
     html = (tmp_path / "feature-validator.html").read_text(encoding="utf-8")
 
-    assert '<h3>Decision</h3>' in html
-    assert '<p class="metric-line"><span class="metric-value metric-pill metric-high">Approve</span></p>' in html
+    assert '<h3 class="metric-heading">Decision: <span class="metric-value metric-pill metric-high">Approve</span></h3>' in html
 
 
 def test_write_artifact_page_places_alignment_score_and_confidence_side_by_side(tmp_path):
@@ -230,8 +228,8 @@ def test_write_artifact_page_places_alignment_score_and_confidence_side_by_side(
     css = (tmp_path / "styles.css").read_text(encoding="utf-8") if (tmp_path / "styles.css").exists() else ""
 
     assert '<div class="doc-dual-section-grid">' in html
-    assert '<section class="doc-side-section"><h3>Alignment score</h3><p class="metric-line"><span class="metric-value metric-pill score-pill score-4">4/5</span></p></section>' in html
-    assert '<section class="doc-side-section"><h3>Confidence</h3><p class="metric-line"><span class="metric-value metric-pill metric-high">High</span></p></section>' in html
+    assert '<section class="doc-side-section"><h3 class="metric-heading">Alignment score: <span class="metric-value metric-pill score-pill score-4">4/5</span></h3></section>' in html
+    assert '<section class="doc-side-section"><h3 class="metric-heading">Confidence: <span class="metric-value metric-pill metric-high">High</span></h3>' in html
     assert '<details class="evidence-accordion"><summary>Evidence</summary>' in html
     assert ".doc-dual-section-grid" in css
 
@@ -253,10 +251,9 @@ def test_write_artifacts_keeps_confidence_and_evidence_separate_without_blank_li
     html = (tmp_path / "index.html").read_text(encoding="utf-8")
     css = (tmp_path / "styles.css").read_text(encoding="utf-8")
 
-    assert '<h3>Confidence</h3>' in html
-    assert '<p class="metric-line"><span class="metric-value metric-pill metric-high">High</span></p>' in html
+    assert '<h3 class="metric-heading">Confidence: <span class="metric-value metric-pill metric-high">High</span></h3>' in html
     assert '<details class="evidence-accordion"><summary>Evidence</summary><div class="evidence-body"><p>Explicit support from source.</p></div></details>' in html
-    assert "<h3>Confidence</h3><p class=\"metric-line\"><span class=\"metric-value metric-pill metric-high\">High</span></p>**Evidence:**" not in html
+    assert '<h3 class="metric-heading">Confidence: <span class="metric-value metric-pill metric-high">High</span></h3>**Evidence:**' not in html
     assert ".evidence-accordion" in css
     assert ".evidence-body" in css
 
@@ -279,8 +276,8 @@ def test_write_artifacts_keeps_suggestion_below_side_by_side_blocks(tmp_path):
     html = (tmp_path / "index.html").read_text(encoding="utf-8")
 
     assert '<div class="doc-dual-section-grid">' in html
-    assert '<section class="doc-side-section"><h3>Completeness</h3><p class="metric-line"><span class="metric-value metric-pill metric-high">Complete</span></p></section>' in html
-    assert '<section class="doc-side-section"><h3>Strength</h3><p class="metric-line"><span class="metric-value metric-pill metric-medium">Medium</span></p></section>' in html
+    assert '<section class="doc-side-section"><h3 class="metric-heading">Completeness: <span class="metric-value metric-pill metric-high">Complete</span></h3></section>' in html
+    assert '<section class="doc-side-section"><h3 class="metric-heading">Strength: <span class="metric-value metric-pill metric-medium">Medium</span></h3></section>' in html
     assert "<h2>Suggestion</h2>" in html
     assert "<p>Clarify the strategic trade-offs in a short paragraph.</p>" in html
     assert html.index('<div class="doc-dual-section-grid">') < html.index("<h2>Suggestion</h2>")

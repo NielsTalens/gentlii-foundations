@@ -183,6 +183,13 @@ a {
   margin: 0 0 0.82rem;
 }
 
+.metric-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
 .score-callout {
   display: inline-flex;
   align-items: baseline;

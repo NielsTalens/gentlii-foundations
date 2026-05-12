@@ -1,12 +1,8 @@
 # Feature Request
 
 ## Summary
-goal: to let people input information through existing tools
+Goal: to improve the feedback of feature validation so it becomes more constructive and helping rather than judgmental
 
-Context:
-The idea is to let people use the tools they already use a lot in their daily work, to input the information in the CRM if they need.
+It would work better if the results of a feature validation were more on how to improve it instead of telling what is wrong with it.
 
-The first version will only take contact info from mail senders in account.
-
-So instead of having to go to the CRM system (and possibly login) they can also forward an email that contains specific info.
 

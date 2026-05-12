@@ -9,7 +9,9 @@ from gentlii_foundations.models import ArtifactName, GeneratedArtifact
 _ORDERED_LIST_PATTERN = re.compile(r"^\d+\. (.+)$")
 _SLUG_SAFE_ARTIFACT_NAME_PATTERN = re.compile(r"^[a-z0-9-]+$")
 _BOLD_PATTERN = re.compile(r"\*\*(.+?)\*\*")
-_H3_HEADING_PATTERN = re.compile(r"^<h3>(.+)</h3>$")
+_H3_HEADING_PATTERN = re.compile(r'^<h3(?: class="metric-heading")?>(.+)</h3>$')
+_METRIC_LINE_PATTERN = re.compile(r'^<p class="metric-line">(.+)</p>$')
+_HTML_TAG_PATTERN = re.compile(r"<[^>]+>")
 _SIDE_BY_SIDE_H3_TITLE_PAIRS = {
     frozenset({"Completeness", "Strength"}),
     frozenset({"Alignment score", "Confidence"}),
@@ -269,7 +271,7 @@ def _markdown_to_html(markdown: str) -> str:
         paragraph.append(line)
 
     flush_all()
-    grouped_blocks = _group_side_by_side_sections(blocks)
+    grouped_blocks = _group_side_by_side_sections(_merge_metric_headings(blocks))
     return "\n".join(_move_dual_section_grid_to_top(grouped_blocks))
 
 
@@ -349,12 +351,8 @@ def _render_metric_block(text: str) -> str | None:
                 f'<div class="evidence-body"><p>{html.escape(value)}</p></div>'
                 "</details>"
             )
-        return (
-            '<p class="metric-line">'
-            f"<strong>{html.escape(label)}:</strong> "
-            f"{_render_metric_value(value)}"
-            "</p>"
-        )
+        rendered_value = _render_alignment_score_value(value) if label == "Alignment score" else _render_metric_value(value)
+        return _render_metric_heading(label, rendered_value)
     stripped = text.strip()
     if _ALIGNMENT_SCORE_PATTERN.fullmatch(stripped) is not None:
         return f'<p class="metric-line">{_render_alignment_score_value(stripped)}</p>'
@@ -384,6 +382,26 @@ def _render_alignment_score_value(value: str) -> str:
     if _ALIGNMENT_SCORE_PATTERN.fullmatch(score) is None:
         return html.escape(score)
     return f'<span class="metric-value metric-pill score-pill score-{score[0]}">{html.escape(score)}</span>'
+
+
+def _render_metric_heading(label: str, rendered_value: str) -> str:
+    return f'<h3 class="metric-heading">{html.escape(label)}: {rendered_value}</h3>'
+
+
+def _merge_metric_headings(blocks: list[str]) -> list[str]:
+    merged: list[str] = []
+    index = 0
+    while index < len(blocks):
+        title = _extract_h3_title(blocks[index])
+        if title is not None and index + 1 < len(blocks):
+            metric_match = _METRIC_LINE_PATTERN.fullmatch(blocks[index + 1])
+            if metric_match is not None:
+                merged.append(_render_metric_heading(title, metric_match.group(1)))
+                index += 2
+                continue
+        merged.append(blocks[index])
+        index += 1
+    return merged
 
 
 def _group_side_by_side_sections(blocks: list[str]) -> list[str]:
@@ -446,11 +464,14 @@ def _extract_h3_title(block: str) -> str | None:
     match = _H3_HEADING_PATTERN.fullmatch(block)
     if match is None:
         return None
-    return html.unescape(match.group(1))
+    title = html.unescape(_HTML_TAG_PATTERN.sub("", match.group(1))).strip()
+    if block.startswith('<h3 class="metric-heading">'):
+        return title.partition(":")[0].strip()
+    return title
 
 
 def _is_heading_block(block: str) -> bool:
-    return block.startswith("<h1>") or block.startswith("<h2>") or block.startswith("<h3>") or block.startswith("<h4>") or block.startswith("<h5>") or block.startswith("<h6>")
+    return bool(re.match(r"^<h[1-6](?:>| )", block))
 
 
 def _starts_new_side_section(block: str) -> bool:
@@ -688,6 +709,13 @@ a {
 
 .metric-line {
   margin: 0 0 0.82rem;
+}
+
+.metric-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
 }
 
 .score-callout {
