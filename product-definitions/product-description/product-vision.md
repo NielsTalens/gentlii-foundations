@@ -1,100 +1,80 @@
 ## Vision Statement
-Replace complex CRM software with a conversational system that tells you exactly what to do next; a “system-of-action/system of execution” that becomes effectively invisible by minimizing navigation, decisions, and admin work.
-
+Reduce the cognitive load of product professionals and improve product development quality by creating a trusted, concise product definition (product description) and continuously guarding alignment so teams build the right things.
 ### Confidence
-High
-
-**Evidence:** “Replace complex CRM software with a conversational system that tells you exactly what to do next.” / “Shift from system-of-record … We want CRM as a system of execution.” / “Feels like CRM should become kind of invisible over time.”
-
+Medium
+**Evidence:** “This product is about reducing cognitive load of product professionals.” / “The product will create strategic, product vision, product charter documents…” / “The product will guard alignment…”
 ### Contradictions
 No contradictory content found.
 
 ## Target Groups
-- Sales reps who dislike CRM admin work (esp. those using Salesforce/HubSpot-like CRMs)
-- Founders doing their own sales (especially early stage)
-- Possibly customer success people later
-- Sales teams (implied by quotes and pain points around reps/managers)
-
+- Product professionals (product people)
+- Stakeholders (as consumers of quick verification/feedback on feature requests)
 ### Confidence
 High
-
-**Evidence:** “sales reps who hate CRM admin” / “founders doing their own sales (especially early stage)” / “maybe customer success people later” / “Teams using systems like Salesforce or HubSpot often experience…”
-
+**Evidence:** “We want to help product professionals…” / “It will provide stakeholders a way to quickly verify a feature requests possibility.”
 ### Contradictions
 No contradictory content found.
 
 ## Needs
-- Reduce manual data entry and “admin work” required to keep CRM updated
-- Avoid complex navigation/dashboards/pipelines and fragmentation across tools
-- Provide clear, prioritized “next best action” so users don’t need to decide what to do
-- Ensure activities are captured so managers can trust CRM data and pipeline accuracy improves
-- Reduce cognitive load and feelings of overwhelm/stress/guilt; increase calm/control
-
+- Reduce cognitive load; users lack time/headspace for necessary thinking, planning, and brainstorming.
+- Gather sufficient product context before building (avoid starting too early / spec-driven without “what comes before”).
+- Create a concise, trusted product definition/product description.
+- Define outcomes (outcome-over-output).
+- Validate ideas/feature requests for alignment with product definition to avoid building wrong features.
 ### Confidence
 High
-
-**Evidence:** “Heavy manual data entry” / “Time spent updating instead of selling” / “Complex navigation” / “what should I do now?” / “Reps avoid logging activities… Managers don’t trust CRM data… Pipeline is inaccurate” / “We need to reduce cognitive load” / “CRM = stress + guilt… ideal state = calm, clear”
-
+**Evidence:** “reducing cognitive load…” / “most people do not have the time nor the head space…” / “start building too early without enough product context.” / “need a very concise product definition… trust that.” / “Defining outcomes is very important. More important than output.” / “validate feature requests against the product description.”
 ### Contradictions
 No contradictory content found.
 
 ## Product Features
-- Conversation-first interaction (chat as primary interface; possible voice later)
-- Next-best-action recommendations (ideally proactive), prioritized list of actions with context
-- Fast execution of sales actions from the conversation (send follow-up, call, schedule)
-- Automatic capture/logging of emails, calls, and notes (notes generated or suggested)
-- Automatic pipeline/deal-stage updates in the background (no manual pipeline management)
-- Deal risk/attention detection converted into executable actions (e.g., “deal is going cold”)
-
+- Ingest/collect product-related inputs (e.g., files) to gather needed information.
+- Automatically generate an “opinionated product definition” / “product description” consisting of strategy, product vision, business case, and product charter.
+- Extract meaning from “all available data” to create these documents.
+- Guard/ensure alignment across the generated documents.
+- Validate feature requests/ideas against the product description; provide quick verification/feedback for stakeholders.
+- Detect changes in product input files (CRUD) to trigger guarding/updates.
+- Integrate into existing tools/workflows (avoid being an additional standalone UI-heavy app).
 ### Confidence
 High
-
-**Evidence:** “It’s basically a CRM but conversation-first. Probably chat based, maybe voice later.” / “tell you your next best action” / “get list of actions already prioritized… includes: who, context, suggested message” / “let you execute things quickly (send follow-up, schedule, etc.)” / “log stuff automatically (calls, emails etc.)” / “pipeline updates happening in the background… pipeline updates itself” / “system flags… converts that into actions, not insights”
-
+**Evidence:** “providing help in gathering the needed information… opinionated product definition.” / “A user uploads all types of files…” / “create: Strategy, Product Vision, Business case, Product charter… called the `product description`” / “extracting the meaning from all available data.” / “guard alignment…” / “validate feature requests against the product description.” / “If there is any change (crud) detected in product input files” / “integrate within existing tools and workflows… not be an additional app…”
 ### Contradictions
 No contradictory content found.
 
 ## Business Goals
-- Reduce CRM fatigue and cognitive load
-- Increase daily adoption/usage by reps
-- Increase revenue per rep (and subscription revenue growth targets are mentioned)
-- Make onboarding/training minimal or unnecessary
-- Improve NPS
-
+- Reduce time to create proper product context/description (by 75%).
+- Improve quality of product description to be “confidently right” and backed by data.
+- Reduce building features that are not the right solution (by 50%), saving time and money.
+- Improve product with less code; reduce operations/bugs costs (claimed 25% savings).
+- Extend/scale product thinking consultancy beyond consultant-led engagement.
 ### Confidence
-Medium
-
-**Evidence:** “reduce the general fatigue people have with CRM” / “get reps to actually use the system daily” / “increase revenue per rep” / “make onboarding basically nonexistent or very fast” / “NPS score from 7 to a 9” / “Increase of revenu of EUR 50.000,- per quarter in subscriptions”
-
+High
+**Evidence:** “Reduce the time to create a proper product description/context by 75%.” / “prove (backed up by data) that the quality… will improve…” / “reduce the amount of features that will be build… by 50%… time and money saved.” / “Better features with less code save 25%…” / “Gentlii could be a extension of the product thinking consultancy work.”
 ### Contradictions
 No contradictory content found.
 
 ## Differentiators
-- System-of-action/execution vs traditional system-of-record
-- Action-first: “tells you what to do next” vs dashboards/analytics/insights
-- Minimal/no traditional screens, tabs, fields, and manual updating; automation by default
-- Reduced choices and cognitive load; calm, direct, decisive guidance (tone principle)
-- Not endlessly configurable; explicitly “not another version of Salesforce”
-
+- Focus on product thinking/context and outcomes (not spec-driven, not output-over-outcome).
+- Not another agile backlog tool.
+- Low/no additional UI burden: integrates into existing tools/workflows; “invisible” where possible.
+- “Opinionated” product definition with trusted quality “without any required action.”
 ### Confidence
 High
-
-**Evidence:** “We want CRM as a system of execution.” / “One interface (chat) One output (next action)” / “We’re intentionally not doing: traditional screens… analytics dashboards… manual pipeline management” / “automation by default… if user has to fill fields → something went wrong” / “not something you customize endlessly… basically not another version of Salesforce”
-
+**Evidence:** “focus is on spec-driven… start building too early without enough product context.” / “Output over outcome…” / “The product is not another agile backlog product tool.” / “should integrate within existing tools and workflows.” / “Wherever we can make the product invisible…” / “rely on the quality… without any required action” / “opinionated product definition.”
 ### Contradictions
 No contradictory content found.
 
 ### Completeness
 
-Complete
+Partial
 
 ### Strength
 
-High
+Medium
 
 ## Suggestion
-- Clarify primary target segment for v1 (e.g., SMB sales teams vs founders) and the initial “jobs to be done” to prioritize scope.
-- Make the differentiator measurable with 2–3 explicit product promises (e.g., “zero manual pipeline updates,” “<X minutes/day in CRM,” “next action always available”).
-- Tighten business goals by linking them to the core behaviors (e.g., which actions drive “increase revenue per rep,” what “daily use” means).
-- Specify the minimal integration requirements implied by “automatic logging” (email, calendar, dialer) without dropping into implementation detail.
-- Add explicit non-goals/guardrails for future requests (e.g., when/if analytics appears) to prevent drift back to “traditional CRM.”
+- Add a single, explicit one-sentence product vision statement that ties together cognitive-load reduction, trusted product description generation, and alignment/validation outcomes.
+- Clarify primary target segments (e.g., PMs, product owners, product ops, founders) and the main usage context (new product vs existing product).
+- Make differentiators more concrete versus alternatives (consultants, PRD tools, AI doc generators), specifying what “opinionated” means in practice.
+- Connect features to needs explicitly (e.g., how alignment-guarding and validation reduce cognitive load and prevent spec-driven premature building).
+- Consolidate and prioritize business goals (which 1–2 outcomes matter most) and define success criteria at a high level (without adding detailed metrics).

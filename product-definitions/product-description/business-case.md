@@ -1,12 +1,12 @@
 ## Business Rationale
 
-Current CRM tools (e.g., Salesforce/HubSpot) create heavy admin burden (manual data entry, complex navigation) that pulls time away from selling, leads to low adoption, inaccurate pipelines, and shadow tracking systems. The initiative exists to redefine CRM from a “system of record” into a “system of action/execution” that reduces cognitive load and tells users the next best action.
+Gentlii exists to help product professionals deliver value faster by reducing the thinking/planning burden needed for “faster value delivery,” in an environment where people lack time and headspace. It also responds to industry trends that over-focus on spec-driven development and AI-generated output rather than improving product quality and outcomes. Additionally, it is positioned as an extension of existing “product thinking consultancy,” reducing reliance on consultants to drive the process.
 
 ### Confidence
 
 High
 
-**Evidence:** “CRM as it exists today … is kind of broken… It’s too much clicking around… feels like admin work instead of helping you sell.” / “Heavy manual data entry… Time spent updating instead of selling… Complex navigation” / “Reps avoid logging activities… Pipeline is inaccurate… Shadow systems… emerge” / “Shift from system-of-record … to … system-of-action… We want CRM as a system of execution.”
+**Evidence:** “the agile promise of faster value delivery does not come from the processes like scrum”; “it requires much more thinking and planning”; “most people do not have the time nor the head space”; “One of the trends… focus is on spec-driven development… start building too early without enough product context”; “focus mainly on the amount of output AI can generate… not on how to improve the quality of the products”; “Gentlii could be a extension of the product thinking consultancy work… too much embedded in the consultant pulling the process.”
 
 ### Contradictions
 
@@ -14,13 +14,13 @@ No contradictory content found.
 
 ## Expected Value
 
-A conversational, action-oriented CRM that reduces CRM fatigue and cognitive load, increases daily usage/adoption, improves pipeline accuracy and follow-through, and enables faster onboarding by minimizing training and manual work. Value is created through automation (auto-capture/logging, background pipeline updates) and prioritization (clear “next action”) that increases sales execution speed.
+Reduced cognitive load for product professionals and improved product development quality through a reliable, concise “product definition/product description” that aligns strategy/vision/charter and validates feature requests against that definition. It aims to improve decision-making and alignment, provide faster clarity/feedback to stakeholders, avoid building the wrong features, and improve products with less code (reducing operational/bus/defect costs).
 
 ### Confidence
 
 High
 
-**Evidence:** “reduce the general fatigue people have with CRM” / “get reps to actually use the system daily” / “increase revenue per rep (if they follow up more, this should happen)” / “make onboarding basically nonexistent or very fast” / “reduce cognitive load, not just time” / “Everything logs automatically in background… pipeline updates itself… basically zero data entry.”
+**Evidence:** “This product is about reducing cognitive load of product professionals”; “need a very concise product definition”; “The product will guard alignment”; “The product will validate feature requests against the product description”; “give clarity and quick feedback”; “reduce the amount of features that will be build that are not the right solution… time and money saved”; “Better features with less code save… op operations, bugs and other expensive stuff.”
 
 ### Contradictions
 
@@ -28,13 +28,13 @@ No contradictory content found.
 
 ## Assumptions
 
-Value depends on (a) reps/founders preferring a chat-first interface over dashboards/screens, (b) automation being accurate enough to capture emails/calls and keep pipeline updated “in the background,” (c) providing prioritized “next actions” will increase follow-up behavior, and (d) reduced friction will translate into daily usage and improved outcomes. There is also an implied assumption that avoiding analytics/reporting early will not block managers’ needs.
+Users can gather and upload sufficient “all available data” (files) to extract meaning and generate strategy/vision/business case/charter documents; integrations into existing tools/workflows are feasible so the product is “invisible” (not an additional UI/account); and the generated product description can be trusted for quality “without any required action,” enabling feature validation and alignment guarding.
 
 ### Confidence
 
 Medium
 
-**Evidence:** “increase revenue per rep (if they follow up more, this should happen)” / “automatic logging of emails / calls (this is table stakes imo)” / “pipeline updates happening in the background” / “if user has to fill fields → something went wrong” / “analytics dashboards (at least not upfront).”
+**Evidence:** “A user uploads all types of files they can find that state something about the product”; “created by extracting the meaning from all available data”; “should integrate within existing tools and workflows”; “should not be an additional app with an UI that needs an account”; “making sure they can rely on the quality of this product definition without any required action”; “Wherever we can make the product invisible we will do that.”
 
 ### Contradictions
 
@@ -42,13 +42,13 @@ No contradictory content found.
 
 ## Measurable Business Outcomes
 
-Targets are stated for subscription revenue uplift, user registrations, investment amount, and NPS improvement.
+Targets include reducing time to create a proper product description/context by 75%; reducing the number of features built that are not the right solution by 50% (measured via “feature requests… marked Not good”); and saving 25% on operations/bugs/other expensive costs via better features with less code. There is also an intended outcome to “prove (backed up by data)” that the product description quality improves to a confidently correct state.
 
 ### Confidence
 
 High
 
-**Evidence:** “Increase of revenu of EUR 50.000,- per quarter in subscriptions” / “New features result in 20k new registred users this year” / “Additional investments EUR 200k” / “NPS score from 7 to a 9.”
+**Evidence:** “Reduce the time to create a proper product description/context by 75%”; “reduce the amount of features… not the right solution by 50% (we can register how many feature requests are marked Not good)”; “Better features with less code save 25% op operations, bugs and other expensive stuff”; “prove (bakced up by data) that the quality… will improve to a state where it is confidently right on all facets.”
 
 ### Contradictions
 
@@ -56,16 +56,16 @@ No contradictory content found.
 
 ### Completeness
 
-Partial
+Complete -> all core elements clearly present
 
 ### Strength
 
-Medium
+Medium → partially defined, some ambiguity
 
 ## Suggestion
 
-- Define baseline/current-state metrics and measurement method for each target (e.g., current quarterly subscription revenue, current registered users, current NPS sampling method).
-- Make assumptions explicit and testable (e.g., % of activities that can be auto-captured correctly; what accuracy is required for “background” pipeline updates).
-- Clarify the causal chain from “next action” → increased follow-up → revenue (e.g., expected increase in follow-up rate, cycle time reduction).
-- Add adoption/usage outcomes aligned to the rationale (e.g., daily active usage rate, % reps logging activity, reduction in shadow systems).
-- Specify the primary buyer/user segment for the initial release and tie the outcomes to that segment (sales reps vs founders vs CS).
+- Define how “quality of the product description… confidently right on all facets” will be measured (rubric, review process, error rate, stakeholder agreement score, etc.).
+- Clarify baseline assumptions for the % targets (current time-to-context, current “wrong feature” rate, what counts as “operations” savings) and who the target users/teams are.
+- Make key assumptions explicit and testable (e.g., minimum viable input data needed, integration constraints, acceptable levels of “no required action” human oversight).
+- Link each outcome metric to a specific mechanism in the product flow (upload → document generation → alignment guarding → feature validation) to strengthen causal coherence.
+- Add a timeframe for achieving the targets (e.g., within X weeks/months of adoption) and how measurement will be instrumented.
