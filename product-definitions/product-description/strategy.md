@@ -1,75 +1,92 @@
 ## Mission
-Replace complex, admin-heavy CRMs with a conversation-first “system of action/execution” that reduces cognitive load and tells users what to do next.
+
+Help product professionals reduce cognitive load and deliver better product outcomes by creating and maintaining an opinionated, high-quality product definition (product description) that enables smarter planning and alignment.
 
 ### Confidence
+
 High
 
-**Evidence:** “Replace complex CRM software with a conversational system that tells you exactly what to do next.” / “We want CRM as a system of execution.” / “We need to to reduce cognitive load, not just time”
+**Evidence:** “This product is about reducing cognitive load of product professionals.” / “We want to help product professionals by… providing help in gathering the needed information for solid product development… capture this in a opinionated product definition… making sure they can rely on the quality… providing a way… to check whether any idea aligns with the product definition”
 
 ### Contradictions
+
 No contradictory content found.
 
 ## Target Customer
-Initially sales reps who dislike CRM admin work and founders doing their own early-stage sales; possibly customer success people later. Also broadly framed as teams using Salesforce/HubSpot-type CRMs.
+
+Product professionals involved in digital product development (including those working with stakeholders and feature requests).
 
 ### Confidence
+
 High
 
-**Evidence:** “sales reps who hate CRM admin” / “founders doing their own sales (especially early stage)” / “maybe customer success people later” / “Teams using systems like Salesforce or HubSpot often experience…”
+**Evidence:** “Gentlii focusses on digital product development.” / “We want to help product professionals…” / “It will provide stakeholders a way to quickly verify a feature requests possibility.”
 
 ### Contradictions
+
 No contradictory content found.
 
 ## Value Proposition
-A chat-first (possibly voice later) CRM that removes dashboards/screens and manual data entry, automatically captures activities and updates the pipeline, and delivers prioritized “next best actions” with fast execution—reducing stress/guilt and helping users focus on selling.
+
+Gentlii creates key product artifacts (strategy, product vision, business case, product charter) by extracting meaning from existing data/files, producing a concise “product description” that users can trust; it then guards alignment and validates feature requests against that product description—reducing time, waste, and misaligned building.
 
 ### Confidence
+
 High
 
-**Evidence:** “It’s basically a CRM but conversation-first… Probably chat based, maybe voice later.” / “tell you your next best action” / “log stuff automatically (calls, emails etc.)” / “keep the pipeline updated without you touching it” / “everything logs automatically in background” / “CRM = stress + guilt… ideal state = calm, clear, just doing the next thing.”
+**Evidence:** “The product will create strategic, product vision, product charter documents that are created by extracting the meaning from all available data.” / “The product will guard alignment between all mentioned output documents” / “The product will validate feature requests against the product description.” / “The users… need a very concise product definition.”
 
 ### Contradictions
+
 No contradictory content found.
 
 ## Strategic Pillars
-- Conversation-first interface (chat/language; avoid screens/tabs/dashboards).
-- Actions over insights (system-of-record → system-of-action/execution; deliver next step, not reporting).
-- Automation by default (capture emails/calls, background updates; “zero data entry”).
-- Reduce cognitive load by reducing choices and navigation (prioritized actions; minimal thinking).
-- Fast execution loop (quick actions; “send/call/schedule” directly from chat).
+
+- Reduce cognitive load by being “invisible”: integrate into existing tools/workflows; avoid being an additional UI-heavy app.
+- Opinionated, trustworthy product definition: create the “right” concise product definition and ensure users can rely on its quality “without any required action.”
+- Outcome-first product thinking: emphasize outcomes over output; avoid “spec-driven” and “start building too early without enough product context.”
+- Alignment and governance: continuously guard alignment across product artifacts and validate new feature requests against the product description.
+- Data-driven synthesis from existing materials: ingest/upload “all types of files” and extract meaning to generate the core documents.
 
 ### Confidence
+
 High
 
-**Evidence:** “conversation first, always… no screens if we can avoid it” / “actions > insights” / “automation by default” / “Shift from system-of-record → system-of-action” / “One interface (chat) One output (next action) Minimal thinking required” / “quick actions… one click or one command” / “reduce choices, don’t give users 10 options”
+**Evidence:** “Therefore it should not be an additional app with an UI that needs an account and so on.” / “Wherever possible the product should integrate within existing tools and workflows.” / “making sure they can rely on the quality… without any required action” / “Output over outcome while is must be the other way around.” / “start building too early without enough product context.” / “A user uploads all types of files… Gentlii will use different agent to create: Strategy, Product Vision, Business case, Product charter”
 
 ### Contradictions
+
 No contradictory content found.
 
 ## Success Metrics
-- “Increase of revenu of EUR 50.000,- per quarter in subscriptions”
-- “New features result in 20k new registred users this year”
-- “Additional investments EUR 200k”
-- “NPS score from 7 to a 9”
-- Implied product/business outcomes (not quantified): daily usage, increased revenue per rep, fast/nonexistent onboarding
+
+- Reduce time to create a proper product description/context by 75%.
+- Reduce the amount of features built that are not the right solution by 50% (tracked via feature requests marked “Not good”).
+- Save 25% of operations/bugs/“other expensive stuff” via “better features with less code.”
+- Improve product-description quality to a state where it is “confidently right on all facets” (claimed to be “backed up by data,” but no explicit measurement method defined).
 
 ### Confidence
-Medium
 
-**Evidence:** “Increase of revenu of EUR 50.000,- per quarter in subscriptions” / “20k new registred users this year” / “Additional investments EUR 200k” / “NPS score from 7 to a 9” / “get reps to actually use the system daily” / “increase revenue per rep” / “make onboarding basically nonexistent or very fast”
+High
+
+**Evidence:** “Reduce the time to create a proper product description/context by 75%.” / “reduce the amount of features that will be build that are not the right solution by 50% (we can register how many feature requests are marked Not good)” / “Better features with less code save 25% op operations, bugs and other expensive stuff.” / “prove (bakced up by data) that the quality of the product description will improve…”
 
 ### Contradictions
+
 No contradictory content found.
 
 ## Long-term Vision
-CRM becomes “invisible” and disappears into the workflow: the system proactively suggests prioritized actions, users simply execute, and background automation keeps everything updated with minimal cognitive effort.
+
+Become an extension of product-thinking consultancy by embedding product thinking into an automated (or low-effort) system that continuously creates and guards core product artifacts and alignment, while staying integrated/invisible within existing workflows.
 
 ### Confidence
-High
 
-**Evidence:** “Feels like CRM should become kind of invisible over time… you don’t really think about it. You just act.” / “system suggests actions before you ask (ideally)” / “everything updates in background, invisible” / “The best tools disappear—they don’t feel like tools.”
+Medium
+
+**Evidence:** “Gentlii could be a extension of the product thinking consultancy work.” / “Wherever we can make the product invisible we will do that.” / “The product will guard alignment…”
 
 ### Contradictions
+
 No contradictory content found.
 
 ### Completeness
@@ -81,8 +98,8 @@ Complete
 High
 
 ## Suggestion
-- Define a single primary ICP for v1 (e.g., SMB outbound reps vs founders) and explicitly state initial segment constraints (team size, sales motion, channels).
-- Clarify the “system tells you what to do” mechanism (rules-based vs AI-driven) and what data sources are required (email, calendar, dialer, Slack).
-- Turn implied goals into measurable targets (daily active use rate, time saved, follow-up rate lift, onboarding time).
-- Reconcile/clarify business metrics context (time horizon, baseline, and ownership for “EUR 50k/quarter”, “20k users”, “EUR 200k investments”).
-- Specify v1 non-goals and boundaries more crisply (e.g., “no dashboards for first 6 months” and what minimal reporting, if any, is allowed).
+
+- Define how “quality of the product description” will be measured (e.g., rubric, stakeholder agreement rate, defect/decision reversal rate) to make that metric auditable.
+- Clarify the “existing tools and workflows” to integrate with (e.g., Jira, Confluence, Notion, Google Drive) and what “invisible” specifically means (plugin, API, slack bot, background service).
+- Specify governance behavior when misalignment is detected (e.g., alerts, required approvals, suggested edits) and who is accountable for resolution.
+- Add explicit outcome metrics tied to the “outcome over output” pillar (e.g., cycle time to validated learning, outcome attainment rate vs roadmap completion).

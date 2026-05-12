@@ -1,12 +1,12 @@
 ## Business Rationale
 
-Current CRM tools (e.g., Salesforce/HubSpot) create heavy admin burden (manual data entry, complex navigation) that pulls time away from selling, leads to low adoption, inaccurate pipelines, and shadow tracking systems. The initiative exists to redefine CRM from a “system of record” into a “system of action/execution” that reduces cognitive load and tells users the next best action.
+Agile methods alone (e.g., Scrum) are not delivering the promised faster value; faster value delivery requires additional thinking, planning, and smart choices, but product professionals lack time and “head space,” and their environment doesn’t support that work. Gentlii exists to reduce cognitive load and provide reliable, opinionated product definition and alignment support, and it can also extend existing “product thinking consultancy” work that is currently too dependent on the consultant driving the process.
 
 ### Confidence
 
 High
 
-**Evidence:** “CRM as it exists today … is kind of broken… It’s too much clicking around… feels like admin work instead of helping you sell.” / “Heavy manual data entry… Time spent updating instead of selling… Complex navigation” / “Reps avoid logging activities… Pipeline is inaccurate… Shadow systems… emerge” / “Shift from system-of-record … to … system-of-action… We want CRM as a system of execution.”
+**Evidence:** “the agile promise of faster value delivery does not come from the processes like scrum”; “it requires much more thinking and planning and making smart choices”; “most people do not have the time nor the head space”; “The environment doesn't allow it.”; “This product is about reducing cognitive load of product professionals.”; “Gentlii could be a extension of the product thinking consultancy work.”; “the whole concepts is to[o] much embedded in the consultant pulling the process.”
 
 ### Contradictions
 
@@ -14,13 +14,13 @@ No contradictory content found.
 
 ## Expected Value
 
-A conversational, action-oriented CRM that reduces CRM fatigue and cognitive load, increases daily usage/adoption, improves pipeline accuracy and follow-through, and enables faster onboarding by minimizing training and manual work. Value is created through automation (auto-capture/logging, background pipeline updates) and prioritization (clear “next action”) that increases sales execution speed.
+Reduced cognitive load and time savings for product professionals; improved quality and reliability of product definition/context; better alignment and decision support by validating ideas/feature requests against the product description; reduced waste from building the wrong features; improved product outcomes through “better features with less code,” lowering operational/bug-related costs. Also provides stakeholders clarity and quick feedback on feature request feasibility.
 
 ### Confidence
 
 High
 
-**Evidence:** “reduce the general fatigue people have with CRM” / “get reps to actually use the system daily” / “increase revenue per rep (if they follow up more, this should happen)” / “make onboarding basically nonexistent or very fast” / “reduce cognitive load, not just time” / “Everything logs automatically in background… pipeline updates itself… basically zero data entry.”
+**Evidence:** “reducing cognitive load of product professionals”; “help in gathering the needed information for solid product development”; “rely on the quality of this product definition without any required action”; “check whether any idea aligns with the product definition”; “validate feature requests against the product description”; “give clarity and quick feedback”; “reduce the amount of features that will be build that are not the right solution”; “Better features with less code save 25% op operations, bugs and other expensive stuff.”
 
 ### Contradictions
 
@@ -28,13 +28,13 @@ No contradictory content found.
 
 ## Assumptions
 
-Value depends on (a) reps/founders preferring a chat-first interface over dashboards/screens, (b) automation being accurate enough to capture emails/calls and keep pipeline updated “in the background,” (c) providing prioritized “next actions” will increase follow-up behavior, and (d) reduced friction will translate into daily usage and improved outcomes. There is also an implied assumption that avoiding analytics/reporting early will not block managers’ needs.
+Users can supply “all types of files” containing sufficient product/idea context, and Gentlii can “extract the meaning from all available data” to generate high-quality strategy/vision/charter (and related artifacts) that users can trust “without any required action.” Assumes integration into existing tools/workflows (to avoid becoming an additional UI/account burden) is feasible and will support adoption and cognitive-load reduction. Assumes “Not good” feature-request markings can be tracked to quantify prevented wrong builds.
 
 ### Confidence
 
 Medium
 
-**Evidence:** “increase revenue per rep (if they follow up more, this should happen)” / “automatic logging of emails / calls (this is table stakes imo)” / “pipeline updates happening in the background” / “if user has to fill fields → something went wrong” / “analytics dashboards (at least not upfront).”
+**Evidence:** “A user uploads all types of files they can find that state something about the product or ideas for a product”; “created by extracting the meaning from all available data”; “rely on the quality of this product definition without any required action”; “Wherever possible the product should integrate within existing tools and workflows.”; “we can register how many feature requests are marked Not good”
 
 ### Contradictions
 
@@ -42,13 +42,16 @@ No contradictory content found.
 
 ## Measurable Business Outcomes
 
-Targets are stated for subscription revenue uplift, user registrations, investment amount, and NPS improvement.
+- Reduce the time to create a proper product description/context by 75%.
+- Reduce the number of features built that are “not the right solution” by 50% (tracked via feature requests marked “Not good”).
+- Improve operational/bug/other expensive costs by 25% through “better features with less code.”
+- Quality improvement of the product description to a level that is “confidently right on all facets” (stated as data-backed, but no explicit metric/threshold defined).
 
 ### Confidence
 
 High
 
-**Evidence:** “Increase of revenu of EUR 50.000,- per quarter in subscriptions” / “New features result in 20k new registred users this year” / “Additional investments EUR 200k” / “NPS score from 7 to a 9.”
+**Evidence:** “Reduce the time to create a proper product description/context by 75%.”; “reduce the amount of features that will be build that are not the right solution by 50% (we can register how many feature requests are marked Not good)”; “Better features with less code save 25% op operations, bugs and other expensive stuff.”; “prove (bakced up by data) that the quality of the product description will improve to a state where it is confidently right on all facets.”
 
 ### Contradictions
 
@@ -56,7 +59,7 @@ No contradictory content found.
 
 ### Completeness
 
-Partial
+Complete
 
 ### Strength
 
@@ -64,8 +67,8 @@ Medium
 
 ## Suggestion
 
-- Define baseline/current-state metrics and measurement method for each target (e.g., current quarterly subscription revenue, current registered users, current NPS sampling method).
-- Make assumptions explicit and testable (e.g., % of activities that can be auto-captured correctly; what accuracy is required for “background” pipeline updates).
-- Clarify the causal chain from “next action” → increased follow-up → revenue (e.g., expected increase in follow-up rate, cycle time reduction).
-- Add adoption/usage outcomes aligned to the rationale (e.g., daily active usage rate, % reps logging activity, reduction in shadow systems).
-- Specify the primary buyer/user segment for the initial release and tie the outcomes to that segment (sales reps vs founders vs CS).
+- Define an explicit, measurable quality metric for “confidently right on all facets” (e.g., stakeholder approval rate, defect rate in requirements, rework %, alignment score).
+- Make key assumptions testable (e.g., minimum viable input set, data quality thresholds, integration points required to stay “invisible”).
+- Specify baseline and measurement approach for the 75% time reduction and 25% ops/bugs savings (what is measured, over what period, compared to what).
+- Clarify primary business beneficiary and value capture (e.g., consultancy extension revenue model vs end-user productivity savings) to strengthen the causal chain.
+- Add outcome/impact measures beyond feature rejection counts (e.g., lead time to decision, % roadmap items aligned to strategy, stakeholder satisfaction/clarity).
