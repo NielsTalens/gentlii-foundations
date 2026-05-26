@@ -5,11 +5,77 @@
 [![Feature Validation](https://github.com/NielsTalens/gentlii-foundations/actions/workflows/feature-validation.yml/badge.svg)](https://github.com/NielsTalens/gentlii-foundations/actions/workflows/feature-validation.yml)
 [![Foundations](https://github.com/NielsTalens/gentlii-foundations/actions/workflows/foundations.yml/badge.svg)](https://github.com/NielsTalens/gentlii-foundations/actions/workflows/foundations.yml)
 
-# Gentlii Foundations
+
+# Product thinking made easy
+Product Thinking takes time. Most teams don’t have it. 
+Gentlii structures the groundwork and automates validation, so teams can make better decisions with less effort.
+
+## Gentlii Feature Validation
+Ideas are often judged by intuition. This leads to inconsistency. 
+Gentlii Feature Validation replaces intuition with structured evaluation.
+
+### Fast and complete validation
+Fast decisions often reduce quality. Careful decisions often take too long. 
+Gentlii Feature Validator removes that trade-off by checking every feature request against the full product definition. Every idea gets the same structured evaluation: clear reasoning, no guesswork.
+
+## Gentlii Product Guard
+Product definitions are not static. Without continuous validation, misalignment goes unnoticed and building the wrong things become a great risk.
+
+### Continuous validation
+Gentlii Product Guard continuously validates alignment across all product definition elements. It automatically detects gaps, conflicts, and inconsistencies, ensuring the product remains coherent as it evolves.
+
+## Gentlii Foundations
+Strong product decisions require strong foundations. In reality, those foundations are often missing, outdated, or fragmented. Without this, every decision becomes a guess.
+
+Gentlii Foundations creates a structured, living product definition. It organizes your product into a fixed set of core documents. Together, these form a coherent system that defines why the product exists, who it serves and what it should do. When these elements are aligned, every new idea can be evaluated with clarity and consistency. This is where Gentlii Feature Validation takes the stage.
+
+### Just drop in your existing documents
+Any type of document. Any type of information. Gentlii structures, connects, and highlights gaps.
+No invention. Just clarity and structure.
+
+## Works with your existing tools
+Gentlii runs entirely within your existing tools. No separate UI, database, or infrastructure.
+There’s nothing new to learn or adopt, and Gentlii operates within your existing security and compliance boundaries. Product definitions are created and live in your version control. Feature validation happens where work already happens: creating an issue automatically triggers validation.
+
+# Gentlii
 
 `gentlii-foundations` is a local Python CLI that turns source documents in a product repository into a structured product-definition package.
 
 It reads source files from `product-definitions/foundations-input`, extracts text, generates artifact markdown with OpenAI, renders a publishable static site in `product-definitions/product-description`, and can run separate validation passes over the generated markdown artifacts.
+
+## Index
+
+- [Module Functionality](#module-functionality)
+- [Technical Description](#technical-description)
+- [What It Produces](#what-it-produces)
+- [Repository Structure](#repository-structure)
+- [How It Works](#how-it-works)
+- [Architecture](#architecture)
+- [Input and Output Contract](#input-and-output-contract)
+- [Configuration](#configuration)
+- [Running Locally](#running-locally)
+- [GitHub Actions](#github-actions)
+- [Tests](#tests)
+
+## Module Functionality
+
+The CLI exposes three user-facing modules:
+
+- `foundations`
+  The `build` command generates the core product foundation set from source documents in `product-definitions/foundations-input`. It produces the four primary artifacts: `strategy.md`, `business-case.md`, `product-vision.md`, and `product-charter.md`, and then renders them into the combined `index.html` site.
+- `guard`
+  The `guard` command reviews the generated product-description markdown as a system. It checks whether the core foundation artifacts reinforce each other, identifies contradictions or missing links, and writes the result to `product-guard.md` and `product-guard.html`.
+- `feature validation`
+  The `feature-validate` command evaluates a single feature request against the generated foundations. It uses the existing product artifacts plus a feature request markdown file to produce an alignment decision, risks, missing justification, and revision guidance in `feature-validator.md` and `feature-validator.html`.
+
+## Technical Description
+
+- `foundations`
+  Implemented by `build_foundations(...)` in [src/gentlii_foundations/pipeline.py](src/gentlii_foundations/pipeline.py). The flow resolves `foundations-input` and `product-description`, discovers supported files, extracts their text, loads settings, builds one prompt per target artifact, calls the OpenAI client, writes the markdown artifacts, and renders `index.html` plus `styles.css`.
+- `guard`
+  Implemented by `run_product_guard(...)` in [src/gentlii_foundations/pipeline.py](src/gentlii_foundations/pipeline.py). It does not read source documents again. Instead, it loads generated markdown from `product-description`, excludes any prior `product-guard.md`, sends the remaining artifacts through the same artifact-generation pipeline with the `product-guard` prompt template, and renders a standalone HTML page for the result.
+- `feature validation`
+  Implemented by `run_feature_validator(...)` in [src/gentlii_foundations/pipeline.py](src/gentlii_foundations/pipeline.py). It loads the generated markdown artifacts from `product-description`, excludes prior validator outputs, appends the requested feature file as an additional `ExtractedDocument`, generates a single `feature-validator` artifact through the OpenAI client, and renders both markdown and a standalone HTML page.
 
 ## What It Produces
 
