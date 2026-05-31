@@ -2,7 +2,7 @@ name: Feature Validation
 
 on:
   issues:
-    types: [labeled]
+    types: [labeled, edited]
 
 permissions:
   contents: read
@@ -12,7 +12,9 @@ permissions:
 
 jobs:
   validate:
-    if: github.event.label.name == 'feature-validation'
+    if: >
+      (github.event.action == 'labeled' && github.event.label.name == 'feature-validation') ||
+      (github.event.action == 'edited' && contains(github.event.issue.labels.*.name, 'feature-validation'))
     runs-on: ubuntu-latest
 
     steps:

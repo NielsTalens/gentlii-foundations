@@ -57,8 +57,10 @@ def test_feature_validation_workflow_runs_on_feature_validation_label_and_commen
     workflow = Path(".github/workflows/feature-validation.yml").read_text(encoding="utf-8")
 
     assert "issues:" in workflow
-    assert "types: [labeled]" in workflow
+    assert "types: [labeled, edited]" in workflow
     assert "github.event.label.name == 'feature-validation'" in workflow
+    assert "github.event.action == 'edited'" in workflow
+    assert "contains(github.event.issue.labels.*.name, 'feature-validation')" in workflow
     assert "issues: write" in workflow
     assert "actions/checkout@v5" in workflow
     assert "actions/setup-python@v6" in workflow
