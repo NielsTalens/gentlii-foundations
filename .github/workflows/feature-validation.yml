@@ -58,6 +58,44 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: gentlii-foundations feature-validate product-definitions feature-request.md
 
+      - name: Label issue with alignment score
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          report_path="product-definitions/product-description/feature-validator.md"
+          alignment_score="$(
+            awk '
+              found && NF { print; exit }
+              /^### Alignment score$/ { found = 1 }
+            ' "$report_path"
+          )"
+
+          case "$alignment_score" in
+            1/5) label_color="b60205" ;;
+            2/5) label_color="d93f0b" ;;
+            3/5) label_color="fbca04" ;;
+            4/5) label_color="0e8a16" ;;
+            5/5) label_color="0e8a16" ;;
+            *)
+              echo "::error::Could not extract a valid alignment score from $report_path"
+              exit 1
+              ;;
+          esac
+
+          target_label="alignment: $alignment_score"
+          for score_label in "alignment: 1/5" "alignment: 2/5" "alignment: 3/5" "alignment: 4/5" "alignment: 5/5"; do
+            if [ "$score_label" != "$target_label" ]; then
+              gh issue edit "$ISSUE_NUMBER" --remove-label "$score_label" || true
+            fi
+          done
+
+          gh label create "$target_label" \
+            --color "$label_color" \
+            --description "Feature validation alignment score $alignment_score" \
+            --force
+          gh issue edit "$ISSUE_NUMBER" --add-label "$target_label"
+
       - name: Comment feature validation result on issue
         env:
           GH_TOKEN: ${{ github.token }}

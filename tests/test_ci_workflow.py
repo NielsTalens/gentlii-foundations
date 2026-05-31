@@ -70,6 +70,11 @@ def test_feature_validation_workflow_runs_on_feature_validation_label_and_commen
     assert "gentlii-foundations feature-validate product-definitions" in workflow
     assert "product-definitions/product-description/feature-validator.md" in workflow
     assert "gh issue comment" in workflow
+    assert "Label issue with alignment score" in workflow
+    assert "alignment: 1/5" in workflow
+    assert "alignment: 5/5" in workflow
+    assert "gh label create" in workflow
+    assert "gh issue edit" in workflow
     assert "uses: ./.github/workflows/publish-pages.yml" in workflow
     assert "cp product-definitions/product-description/*.html pages-source/" in workflow
 
