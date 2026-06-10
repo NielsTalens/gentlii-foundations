@@ -1,88 +1,94 @@
 ## Vision Statement
-Gentlii aims to reduce the cognitive load on product professionals in digital product development by creating and maintaining a concise, high-quality product definition (“product description”) from existing data, and using it to keep ideas/features aligned with intended outcomes.
+
+Replace complex CRM software with a conversational system that tells you exactly what to do next; shift CRM from a “system of record” to a “system of action/execution” that becomes almost invisible and reduces cognitive load.
 
 ### Confidence
 High
 
-**Evidence:** “This product is about reducing cognitive load of product professionals.” + “The product will create strategic, product vision, product charter documents… extracting the meaning from all available data.” + “The product will guard alignment… validate feature requests against the product description.”
+**Evidence:** “Replace complex CRM software with a conversational system that tells you exactly what to do next.” / “We want CRM as a system of execution.” / “Feels like CRM should become kind of invisible over time.”
 
 ### Contradictions
-No contradictory content found.
+Some tension exists between “avoid dashboards/reporting” and user requests for more insights/dashboards in later research. **Evidence:** “avoid anything that looks like reporting” vs “Users want to have more insights in the process” and “Users want to create their own dashboards.”
 
 ## Target Groups
-- Product professionals (in digital product development)
-- Stakeholders reviewing/validating feature requests (implied as users of verification capability)
-- Product thinking consultants / consultancy context (as an extension of existing consultancy work)
+
+- Sales reps who dislike CRM admin work.
+- Founders doing their own sales (especially early stage).
+- Potentially customer success people later.
+- Teams using Salesforce/HubSpot-like CRMs (implied current users).
 
 ### Confidence
 High
 
-**Evidence:** “We want to help product professionals…” + “provide stakeholders a way to quickly verify a feature requests possibility” + “Gentlii could be a extension of the product thinking consultancy work.”
+**Evidence:** “sales reps who hate CRM admin” / “founders doing their own sales (especially early stage)” / “maybe customer success people later” / “Teams using systems like Salesforce or HubSpot often experience…”
 
 ### Contradictions
 No contradictory content found.
 
 ## Needs
-- Reduce cognitive load / time and “head space” required for product thinking, planning, and making smart choices.
-- Ensure solid product development context exists before building (avoid building too early / lacking product context).
-- Create a concise, trusted product definition without requiring extra user effort.
-- Maintain alignment between product artifacts and incoming ideas/feature requests.
-- Shift focus from output/specs to outcomes and product quality.
+
+- Reduce manual data entry and admin burden (logging activities, updating pipeline).
+- Avoid complex navigation (menus/fields/pipelines), “clicking around,” dashboards.
+- Get clear, prioritized “next best action” guidance (reduce deciding/searching).
+- Increase speed and reduce cognitive load; minimize tool fragmentation.
+- Improve data trust/accuracy by increasing actual usage and logging (avoid shadow systems).
+- Emotional needs: feel in control, not overwhelmed; reduce “stress + guilt” from being behind.
 
 ### Confidence
 High
 
-**Evidence:** “reducing cognitive load of product professionals” + “most people do not have the time nor the head space…” + “capture this in a opinionated product definition… rely on the quality… without any required action” + “start building too early without enough product context” + “Output over outcome…”
+**Evidence:** “Heavy manual data entry” / “Time spent updating instead of selling” / “Complex navigation (menus, fields, pipelines)” / “tell you what to do next” / “everything points to: → remove searching → remove updating → remove deciding” / “Managers don’t trust CRM data… Pipeline is inaccurate… Shadow systems…”
 
 ### Contradictions
-No contradictory content found.
+A stated need to avoid dashboards conflicts with later user feedback wanting more insights and custom dashboards. **Evidence:** “they don’t want dashboards” vs “Users want to have more insights in the process” and “Users want to create their own dashboards.”
 
 ## Product Features
-- Ingest/collect existing product-related inputs (e.g., uploaded files) as source data.
-- Automatically generate an “opinionated product definition” / “product description” set including: strategy, product vision, business case, product charter.
-- Extract meaning from “all available data” to create these documents.
-- Guard/ensure alignment across the generated documents.
-- Validate feature requests/ideas against the product description and provide quick verification/feedback to stakeholders.
-- Detect changes (CRUD) in product input files to support ongoing “product description guarding.”
-- Integrate into existing tools/workflows (avoid being a standalone app requiring accounts/UI).
+
+- Conversation-first CRM interaction (chat as primary interface; voice possibly later).
+- Next-best-action recommendations (ideally proactive), prioritized to reduce thinking.
+- Automatic activity capture/logging (emails, calls) and suggested/generated notes.
+- Background pipeline updates (deal stage/pipeline stays current without manual updates).
+- Fast execution of actions from recommendations (send follow-up, schedule, call).
+- Deal monitoring that flags risks/staleness and converts signals into executable actions (not “insights”).
 
 ### Confidence
 High
 
-**Evidence:** “A user uploads all types of files…” + “create: Strategy, Product Vision, Business case, Product charter… called the `product description`” + “created by extracting the meaning from all available data” + “guard alignment… validate feature requests” + “If there is any change (crud) detected in product input files” + “Wherever possible the product should integrate within existing tools and workflows… not be an additional app…”
+**Evidence:** “It’s basically a CRM but conversation-first. Probably chat based, maybe voice later.” / “tell you your next best action” / “log stuff automatically (calls, emails etc.)” / “keep the pipeline updated without you touching it” / “system suggests actions before you ask (ideally)” / “system flags… converts that into actions, not insights”
 
 ### Contradictions
-No contradictory content found.
+Customer feedback indicates desire for insights/dashboards, while the product principles explicitly deprioritize/avoid them (at least initially). **Evidence:** “We’re intentionally not doing… analytics dashboards (at least not upfront)” vs “Users want to create their own dashboards.”
 
 ## Business Goals
-- Reduce time to create proper product context/description (stated target: 75%).
-- Improve quality of product descriptions to a “confidently right” state, backed by data.
-- Reduce building the wrong features (stated target: 50%), saving time and money.
-- Improve product outcomes/quality with less code (claimed operational savings: 25% via fewer bugs/ops costs).
-- Extend/scale product thinking consultancy by embedding the approach into a product.
+
+- Reduce CRM fatigue and cognitive load.
+- Increase daily adoption/usage by reps.
+- Increase revenue per rep (and subscription revenue growth).
+- Make onboarding/training minimal or unnecessary.
+- Improve NPS.
 
 ### Confidence
-High
+Medium
 
-**Evidence:** “Reduce the time to create a proper product description/context by 75%.” + “prove (backed up by data) that the quality… will improve…” + “reduce the amount of features that will be build that are not the right solution by 50%” + “Better features with less code save 25%…” + “Gentlii could be a extension of the product thinking consultancy work.”
+**Evidence:** “reduce the general fatigue people have with CRM” / “get reps to actually use the system daily” / “increase revenue per rep” / “make onboarding basically nonexistent or very fast” / “NPS score from 7 to a 9” / “Increase of revenu of EUR 50.000,- per quarter in subscriptions”
 
 ### Contradictions
 No contradictory content found.
 
 ## Differentiators
-- Not a backlog/agile tool; focuses on pre-build product context and outcome-oriented product thinking.
-- “Invisible” integration into existing workflows/tools (not another app with account/UI overhead).
-- Opinionated, concise product definition users can trust “without any required action.”
-- Data-backed quality claims for the produced product definition.
-- Alignment guarding and feature-request validation against the maintained product description.
+
+- Redefines CRM as “system of action/execution” vs traditional “system of record.”
+- Conversation-first with minimal/no traditional screens, tabs, pipelines, or dashboards (especially upfront).
+- Automation-by-default: capture and update happens invisibly; near-zero data entry.
+- Actions > insights: focuses on telling users what to do and enabling execution, not reporting/BI.
 
 ### Confidence
 High
 
-**Evidence:** “The product is not another agile backlog product tool.” + “should not be an additional app with an UI that needs an account” + “integrate within existing tools and workflows… make the product invisible” + “opinionated product definition” + “rely on the quality… without any required action” + “prove (bakced up by data)…”
+**Evidence:** “Shift from system-of-record… We want CRM as a system of execution.” / “conversation first, always… no screens if we can avoid it” / “automation by default… if user has to fill fields → something went wrong” / “actions > insights… avoid anything that looks like reporting”
 
 ### Contradictions
-No contradictory content found.
+Differentiation away from dashboards/reporting conflicts with user requests for dashboards/insights in the customer event notes. **Evidence:** “not a reporting tool… avoid anything that looks like reporting” vs “Users want to create their own dashboards.”
 
 ### Completeness
 
@@ -90,11 +96,12 @@ Complete
 
 ### Strength
 
-High
+Medium
 
 ## Suggestion
-- Clarify the single-sentence positioning/vision statement in the source (explicitly naming outcomes and who it’s for) to reduce reliance on stitched-together statements.
-- Define what “opinionated product definition” means (e.g., required sections, decision rules, governance) so “quality” is testable and repeatable.
-- Specify the primary integration targets (e.g., docs/wiki, ticketing, chat) since “integrate within existing tools” is central to differentiation.
-- Add explicit differentiation vs “spec-driven development” tooling (what Gentlii does before/around specs) to sharpen the market contrast.
-- Resolve/document how “no required action” coexists with “user uploads files” and ongoing change detection (what minimal user action is still required).
+
+- Clarify stance on “insights/dashboards” vs “actions-only” given explicit customer demand for dashboards/insights; define if/when lightweight insights are allowed.
+- Tighten the vision into a single concise statement that includes the “system-of-action” framing and “invisible CRM” end-state.
+- Make business goals consistent: separate aspirational goals (adoption, reduced fatigue) from the numeric targets in the PDF (revenue, users, NPS) and confirm which are in-scope.
+- Define the initial target segment more precisely (e.g., team size, sales motion) to guide prioritization.
+- Explicitly list top differentiators versus Salesforce/HubSpot/Pipedrive in one place (e.g., proactive next actions + automatic capture + execution-in-chat).

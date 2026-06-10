@@ -1,78 +1,77 @@
 ## Mission
-Help product professionals reduce cognitive load and enable faster, higher-quality digital product development by producing and maintaining a reliable, opinionated product definition (product description) and ensuring alignment of ideas and requests to it.
+Replace complex, admin-heavy CRM workflows with a conversational “system of action/execution” that tells users exactly what to do next, reducing cognitive load and CRM fatigue.
 
 ### Confidence
 High
 
-**Evidence:** “This product is about reducing cognitive load of product professionals.” / “We want to help product professionals by… providing help in gathering the needed information for solid product development… [and] making sure they can rely on the quality of this product definition… [and] providing a way for them to check whether any idea aligns with the product definition.”
+**Evidence:** “Replace complex CRM software with a conversational system that tells you exactly what to do next.” / “We want CRM as a system of execution.” / “Main goals are: reduce the general fatigue people have with CRM”
 
 ### Contradictions
-No contradictory content found.
+A customer event notes users “want to have more insights in the process” and “want to create their own dashboards,” which conflicts with the mission direction of avoiding dashboards and focusing on next actions. **Evidence:** “Users want to have more insights in the process” + “Users want to create their own dashboards” vs “they don’t want dashboards” and “avoid anything that looks like reporting”.
 
 ## Target Customer
-Product professionals involved in digital product development (including those currently served via product thinking consultancy engagements).
+Initially: sales reps who dislike CRM admin and founders doing their own sales (especially early stage). Potentially later: customer success.
 
 ### Confidence
 High
 
-**Evidence:** “Gentlii focusses on digital product development.” / “We want to help product professionals…” / “Now we do product thinking consultancy…”
+**Evidence:** “sales reps who hate CRM admin” / “founders doing their own sales (especially early stage)” / “maybe customer success people later”
 
 ### Contradictions
 No contradictory content found.
 
 ## Value Proposition
-- Produces a concise, opinionated “product description” (strategy, product vision, business case, product charter) by extracting meaning from available data/files.
-- Reduces time and effort (cognitive load) required to create solid product context/definition.
-- Improves confidence/quality of the product definition without requiring user action.
-- Guards alignment across product documents and validates feature requests against the product description to reduce wasted build effort and improve outcome-over-output.
+A fast, conversation-first CRM that eliminates manual updates and navigation by automatically capturing activities (emails/calls), keeping the pipeline updated in the background, and delivering prioritized “next best actions” with quick execution—helping users sell more with less cognitive load and stress.
 
 ### Confidence
 High
 
-**Evidence:** “providing help in gathering the needed information… capture this in a opinionated product definition.” / “making sure they can rely on the quality… without any required action” / “The product will create strategic, product vision, product charter documents… by extracting the meaning from all available data.” / “The product will guard alignment…” / “The product will validate feature requests against the product description.” / “Output over outcome… must be the other way around.”
+**Evidence:** “One interface (chat) One output (next action) Minimal thinking required” / “tell you your next best action” / “log stuff automatically (calls, emails etc.)” / “keep the pipeline updated without you touching it” / “everything points to: → remove searching → remove updating → remove deciding … → clear next action → immediate execution → no admin overhead”
 
 ### Contradictions
-No contradictory content found.
+Some source input suggests demand for dashboards/insights, which can conflict with the stated value proposition of “actions > insights” and “they don’t want dashboards.” **Evidence:** “Users want to have more insights in the process” / “Users want to create their own dashboards” vs “actions > insights” and “avoid anything that looks like reporting”.
 
 ## Strategic Pillars
-- **Minimize user burden / integrate into existing workflows:** avoid being “another app”; integrate into existing tools; “invisible” where possible.
-- **Outcome-first product thinking:** emphasize defining outcomes over generating output; avoid “building too early without enough product context.”
-- **Opinionated, trustworthy product definition:** create a concise product definition and ensure users can “trust that” it’s right.
-- **Automated document generation from existing artifacts/data:** ingest many file types and extract meaning to generate core strategy/vision/charter artifacts.
-- **Continuous alignment/guardrails:** detect changes in inputs and guard/validate alignment, including feature request validation.
+- Conversation-first interface: chat as the primary UI; minimize/avoid traditional screens, tabs, and dashboards.
+- Actions over insights: optimize for “what to do next” and execution rather than reporting/analytics.
+- Automation by default: automatic capture/logging and background updates; “zero data entry” as a bar.
+- Reduce cognitive load and choices: prioritize/rank actions; minimal decisions; calm/direct product feel and tone.
 
 ### Confidence
 High
 
-**Evidence:** “should not be an additional app with an UI that needs an account” / “integrate within existing tools and workflows” / “Wherever we can make the product invisible we will do that.” / “Defining outcomes is very important. More important than output.” / “The users… need a very concise product definition… make sure we create the right one and trust that.” / “A user uploads all types of files… Gentlii will use different agent to create: Strategy, Product Vision, Business case, Product charter” / “The product will guard alignment… validate feature requests…” / “If there is any change (crud) detected in product input files…”
+**Evidence:** “conversation first, always… everything through chat / language, no screens” / “actions > insights” / “automation by default… if user has to fill fields → something went wrong” / “reduce choices, don’t give users 10 options” / “We need to reduce cognitive load, not just time” / “product should feel like… focused… calm… decisive”
 
 ### Contradictions
-No contradictory content found.
+A stated desire from a customer event for “more insights” and “create their own dashboards” conflicts with pillars like “actions > insights” and “avoid anything that looks like reporting.” **Evidence:** “Users want to create their own dashboards” vs “avoid anything that looks like reporting” and “if we start adding tabs + dashboards we’re probably drifting”.
 
 ## Success Metrics
-- Reduce time to create a proper product description/context by **75%**.
-- Improve product description quality “to a state where it is confidently right on all facets” (supported by data).
-- Reduce features built that are not the right solution by **50%** (tracked via feature requests marked “Not good”).
-- Save **25%** in “operations, bugs and other expensive stuff” via “better features with less code.”
-
-### Confidence
-High
-
-**Evidence:** “Reduce the time to create a proper product description/context by 75%.” / “prove (bakced up by data) that the quality… will improve…” / “reduce the amount of features that will be build that are not the right solution by 50%” / “Better features with less code save 25% op operations, bugs and other expensive stuff.”
-
-### Contradictions
-No contradictory content found.
-
-## Long-term Vision
-Become an extension of (or productized form of) product thinking consultancy by automating/operationalizing the creation and ongoing governance of core product strategy artifacts and alignment, embedded into existing workflows rather than as a standalone backlog/agile tool.
+- “Increase of revenu of EUR 50.000,- per quarter in subscriptions”
+- “New features result in 20k new registred users this year”
+- “Additional investments EUR 200k”
+- “NPS score from 7 to a 9”
+- Qualitative/behavioral goals (non-metric): daily usage; faster/nonexistent onboarding; increased revenue per rep.
 
 ### Confidence
 Medium
 
-**Evidence:** “Gentlii could be a extension of the product thinking consultancy work.” / “The product is not another agile backlog product tool.” / “Wherever possible the product should integrate within existing tools and workflows.”
+**Evidence:** “Increase of revenu of EUR 50.000,- per quarter in subscriptions” / “20k new registred users this year” / “NPS score from 7 to a 9” / “get reps to actually use the system daily” / “increase revenue per rep” / “make onboarding basically nonexistent or very fast”
+
+### Contradictions
+No explicit contradictions found (though some goals are qualitative without defined measurement approach). **Evidence:** No supporting evidence found
+
+## Long-term Vision
+CRM becomes “invisible” over time—always present but not felt like a tool—proactively suggesting actions (ideally before being asked) with background updates and minimal user effort.
+
+### Confidence
+High
+
+**Evidence:** “Feels like CRM should become kind of invisible over time.” / “The best tools disappear—they don’t feel like tools.” / “system suggests actions before you ask (ideally)”
 
 ### Contradictions
 No contradictory content found.
+
+---
 
 ### Completeness
 
@@ -80,10 +79,11 @@ Complete
 
 ### Strength
 
-High
+Medium
 
 ## Suggestion
-- Define the primary buyer/user persona more precisely (e.g., product manager vs product owner vs product lead; company stage/size) to sharpen targeting.
-- Make the “quality… confidently right on all facets” metric operational by specifying a measurable rubric (e.g., completeness, consistency, stakeholder agreement score, downstream change rate).
-- Clarify the governance loop implied by “change detected” (what triggers re-generation, what approvals exist, and how conflicts are resolved) to strengthen strategic clarity.
-- Specify which “existing tools and workflows” are top-priority integrations to make the “invisible” strategy actionable.
+- Define how “daily use,” “onboarding basically nonexistent,” and “increase revenue per rep” will be measured (e.g., activation time, D7 retention, tasks executed per rep, follow-up SLA, uplift methodology).
+- Resolve the explicit tension between “no dashboards/avoid reporting” and customer requests for “more insights”/custom dashboards by clarifying if/when insight views exist (and in what minimal, action-tied form).
+- Clarify the initial ICP boundaries (team size, sales motion, channel stack like Gmail/Outlook, HubSpot/Salesforce replacement vs layer-on).
+- Specify the product’s proactive behavior rules (“suggest actions before you ask”) and prioritization logic at an MVP level.
+- Add explicit competitive positioning choice: replace CRM vs integrate and synchronize (system of record elsewhere) to reduce ambiguity.
