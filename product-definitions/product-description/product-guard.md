@@ -7,37 +7,28 @@
 High
 
 ## Alignment themes
-Both documents reinforce the same core intent: reduce cognitive load for product professionals by generating a concise, trustworthy “product description” (strategy/vision/business case/charter) from available inputs, integrate into existing workflows (avoid UI-heavy standalone app), and continuously guard alignment + validate feature requests to prevent waste and shift from “output over outcome” to outcomes.
-
+Both documents share the same core causal chain: reduce cognitive load by generating a concise, opinionated “product description” from existing data, then use it to guard alignment and validate ideas/feature requests so teams avoid building the wrong things and shift from output to outcomes. They also both position Gentlii as an extension/productization of product-thinking consultancy and emphasize integration into existing workflows (not “another app”).  
 ### Confidence
-High
+High  
+**Evidence:** Strategy mission/value prop: “reduce cognitive load… producing and maintaining a reliable, opinionated product definition… ensuring alignment of ideas and requests to it.” Business rationale/expected value: “reduce cognitive load… capture this in a opinionated product definition… check whether any idea aligns… validate feature requests… Output over outcome.” Both: “Gentlii could be a extension of the product thinking consultancy work.” Both: “integrate within existing tools and workflows… make the product invisible.”
 
-**Evidence:** Strategy: “reducing cognitive load of product professionals”; “create strategic, product vision, product charter documents… extracting the meaning from all available data”; “guard alignment”; “validate feature requests”; “integrate within existing tools and workflows… make the product invisible”. Business case: “This product is about reducing cognitive load”; “need a very concise product definition”; “Defining outcomes is very important. More important than output.”; “guard alignment”; “validate feature requests against the product description”; “integrate within existing tools and workflows”.
-
-### Contradictions
-No contradictory content found.
-
+## Detected contradictions
+No contradictory content found.  
 ### Confidence
-High
-
-**Evidence:** No contradictory content found.
+High  
+**Evidence:** Both sources consistently repeat the same intent (cognitive load reduction, opinionated product definition, alignment guarding, integration/invisibility, not a backlog tool).
 
 ## Missing links
-- The business case states several outcomes (e.g., “Save 25% on operations/bugs…”) but lacks a clear causal/measurement bridge that ties those savings to the strategy’s mechanisms beyond general claims.
-- Specific first integrations/tools are not named in either document, making the “integrate/invisible” strategy hard to operationalize.
-
+Business Case does not explicitly trace each Strategy “strategic pillar” to a measurable outcome (beyond overlapping narrative/metrics), and it lacks explicit baselines/time horizons for the targets it repeats (75%/50%/25%).  
 ### Confidence
-Medium
-
-**Evidence:** Business case: “Better features with less code save 25% op operations, bugs and other expensive stuff.” Strategy: “Wherever possible the product should integrate within existing tools and workflows” (no tools specified).
+Medium  
+**Evidence:** Business outcomes list targets but no baselines/time horizons; pillars are only explicit in Strategy (“Strategic Pillars…”), while Business Case frames similar ideas as rationale/assumptions.
 
 ## Minimal change to improve coherence
-Add a short, explicit causal chain + measurement note in the Business Case that maps: “product description generation + alignment guarding + feature validation” → “fewer wrong features” → “less code/ops/bugs,” including how the 25% savings will be measured.
-
+Add a short crosswalk section in the Business Case mapping each Strategy pillar (integration/invisibility; opinionated trustworthy definition; automated generation; continuous guardrails; outcome-first) to one metric/assumption and how it will be measured (including baseline + time horizon).  
 ### Confidence
-Medium
-
-**Evidence:** Business case lists outcomes but notes measurement gaps: “confidently right on all facets,” “backed up by data” (method not specified); “save 25% op operations, bugs…” (no method specified).
+Medium  
+**Evidence:** Strategy has explicit “Strategic Pillars” and “Success Metrics”; Business Case suggests measurement gaps: “Provide faster stakeholder feedback… (measurable directionally, but no explicit target…)” and no baselines/time horizons.
 
 
 # Business Case ↔ Product Vision
@@ -49,37 +40,28 @@ Medium
 High
 
 ## Alignment themes
-The Product Vision directly implements the Business Case rationale and outcomes via concrete capabilities: ingest inputs, generate the artifact set, guard alignment, validate feature requests, and integrate invisibly into existing workflows—explicitly aiming to reduce cognitive load and improve outcome-focused product development.
-
+The Product Vision largely restates the Business Case logic and scope: target product professionals (and stakeholders for verification), reduce cognitive load by generating/maintaining a concise “product description” from existing data, and validate/guard alignment so teams don’t build too early or optimize output over outcomes. Both also include the same business goals/targets (75% time reduction, 50% fewer wrong features, 25% ops/bugs savings) and the same differentiator (not a backlog/agile tool; “invisible” integration).  
 ### Confidence
-High
+High  
+**Evidence:** Business Case expected value vs Vision statement: “reduce cognitive load… opinionated product definition… alignment checks/validate feature requests.” Vision differentiators: “not another agile backlog product tool… integrate… invisible… rely on the quality… without any required action.” Shared goals: “Reduce the time… by 75%… reduce… not the right solution by 50%… save 25%…”
 
-**Evidence:** Business case: “reducing cognitive load”; “create… documents… extracting the meaning from all available data”; “guard alignment”; “validate feature requests… provide stakeholders a way to quickly verify”. Product vision: “reducing their cognitive load… outcome-focused”; features include “upload… input files”; “generate strategy, product vision, business case, and product charter”; “Guard alignment”; “Validate feature requests/ideas… quick feedback to stakeholders”; “Integrate within existing tools and workflows”.
-
-### Contradictions
-No contradictory content found.
-
+## Detected contradictions
+No contradictory content found.  
 ### Confidence
-High
-
-**Evidence:** No contradictory content found.
+High  
+**Evidence:** No opposing claims; Vision’s “Product Features” match Business Case assumptions/expected value (upload files, generate docs, guard alignment, validate requests, integrate).
 
 ## Missing links
-- Vision repeats the strong “trust/quality without required action” promise but does not define how quality is assessed or proven, which the Business Case also leaves unspecified.
-- The Business Case frames the product as scaling consultancy; the Vision mentions this only indirectly (not as a clear positioning or go-to-market anchor).
-
+The Business Case mentions industry trend context (agile not delivering value; spec-driven development/AI output volume) more explicitly than the Product Vision; the Vision doesn’t clearly preserve that “market/problem framing” as part of its narrative (it’s implied via needs/differentiators but not stated as the same rationale).  
 ### Confidence
-Medium
-
-**Evidence:** Business case: “prove (bakced up by data) that the quality… will improve…” and consultancy extension framing. Product vision: “rely on the quality… without any required action” and “confidently correct… (backed by data)” without describing how; no explicit consultancy-scaling positioning text.
+Medium  
+**Evidence:** Business rationale: “agile promise… does not come from the processes… focus is on spec-driven development…” Vision: includes “Output over outcome” and “avoid building too early,” but doesn’t restate the broader industry framing as explicitly.
 
 ## Minimal change to improve coherence
-Add a single short section in the Product Vision that (a) defines “quality” dimensions for the product description and (b) states how “backed by data” will be demonstrated (even at a high level).
-
+Add 1–2 sentences to the Product Vision explicitly carrying over the Business Case rationale about spec-driven development/output-volume and why Gentlii’s “product context before build” approach is needed.  
 ### Confidence
-Medium
-
-**Evidence:** Both documents make the claim “backed up by data” / “without any required action” without specifying a method.
+Medium  
+**Evidence:** Business rationale contains this explicit framing; Vision currently focuses on needs/features without the same explicit industry-rationale wording.
 
 
 # Product Vision ↔ Product Charter
@@ -91,34 +73,25 @@ Medium
 High
 
 ## Alignment themes
-Strong reinforcement between what the product should do (Vision features) and how it should behave (Charter principles/boundaries/rules): reduce cognitive load, prioritize outcomes over output, produce concise/trustworthy artifacts, integrate invisibly into existing workflows, avoid becoming a UI-heavy app or backlog tool, and provide alignment guarding + feature validation.
-
+They strongly reinforce the same operating principles and boundaries: cognitive-load reduction via a concise, trusted product definition; outcome-over-output; avoid building too early; integration/invisibility (not a standalone UI/account product); and governance via alignment guarding + feature-request validation. Charter rules also mirror Vision feature set (generate strategy/vision/business case/charter from “all available data,” detect file changes, output markdown/HTML).  
 ### Confidence
-High
+High  
+**Evidence:** Vision: “reduce cognitive load… creating and maintaining a concise… product definition… guard alignment… validate feature requests.” Charter principles/boundaries: “reduce cognitive load… concise… ‘confidently right’… outcomes over output… integrate… invisible… not… UI… not… backlog tool.” Charter behavioral rules mirror Vision features: “extract meaning from ‘all available data’… guard alignment… validate feature requests… change (crud) detected… markdown… html.”
 
-**Evidence:** Vision: “reducing their cognitive load”; “outcome-focused”; features: “generate… strategy… business case… charter”; “Guard alignment”; “Validate feature requests”; “Integrate within existing tools… avoid… standalone UI/app”. Charter: principles “Reduce cognitive load”; “Prefer outcome over output”; “rely on the quality… without any required action”; boundaries “Not an additional app with a UI…” and “Not another agile backlog product tool”; behavioral rules include “integrate… invisible”; “guard alignment”; “validate feature requests”; “generate… markdown… HTML”.
-
-### Contradictions
-No contradictory content found.
-
+## Detected contradictions
+A tension is present between “without any required action” and the Vision’s explicit user action of uploading files (and ongoing change detection), but it is not resolved in either document.  
 ### Confidence
-High
-
-**Evidence:** No contradictory content found.
+Medium  
+**Evidence:** Charter behavioral rules: “rely on the quality… without any required action.” Vision features: “A user uploads all types of files…” plus “Detect changes (CRUD) in product input files…”
 
 ## Missing links
-- Charter has “Making Rules: Not found,” leaving gaps in decision/trade-off guidance (e.g., what to do if invisibility conflicts with required UX for trust/validation).
-- Both documents commit to “trustworthy/confidently right” outputs, but neither defines enforceable integrity/quality gates; the Charter only implies checks via change detection + guarding.
-
+The Charter lacks explicit decision/governance rules for how alignment is enforced when inputs/documents conflict (despite “guard alignment” being central), and it does not define language/tone standards (explicitly “Not found”). These gaps weaken operational coherence with the Vision’s promise of “trusted quality” and “quick verification/feedback.”  
 ### Confidence
-Medium
-
-**Evidence:** Charter: “Making Rules — Not found”; “confidently right on all facets”; “If there is any change (crud) detected…” (implied integrity). Vision: “rely on the quality… without any required action” (no gates described).
+High  
+**Evidence:** Charter suggestion notes missing governance: “Define explicit decision rules for conflicts…” and “Specify concrete integrity checks…”; Charter “Language and Tone: Not found.” Vision claims: “concise, high-quality… trusted quality… quick feedback.”
 
 ## Minimal change to improve coherence
-Add a minimal “Making Rules” section to the Product Charter defining 2–3 trade-off rules (conciseness vs completeness, invisibility vs necessary UI for trust, automation vs human review) and one simple pass/fail quality gate for “confidently right.”
-
+Add a small “Governance & conflict resolution” section to the Product Charter defining (a) what happens when source files contradict (authority/recency rules or escalation), and (b) minimum integrity checks/acceptance criteria for “trusted quality”; optionally add 2–3 tone/format rules for generated documents to support “concise” outputs.  
 ### Confidence
-Medium
-
-**Evidence:** Charter: “Making Rules — Not found”; both Charter and Vision emphasize “rely on the quality… without any required action” without operational criteria.
+High  
+**Evidence:** Charter currently contains “guard alignment” but no explicit conflict-resolution rules; it explicitly has “Language and Tone: Not found,” while Vision repeatedly emphasizes “concise” and “trusted quality” and “quick feedback.”
