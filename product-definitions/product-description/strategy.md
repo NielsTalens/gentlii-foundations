@@ -1,73 +1,72 @@
 ## Mission
-Help product professionals reduce cognitive load and do the “thinking and planning and making smart choices” required for solid digital product development by creating and maintaining an opinionated, high-quality product definition/context.
+Help product professionals reduce cognitive load and deliver better digital products by capturing the necessary context into an opinionated, trustworthy product definition and using it to guide decisions.
 
 ### Confidence
 High
 
-**Evidence:** “This product is about reducing cognitive load of product professionals.” / “We want to help product professionals by… providing help in gathering the needed information for solid product development… capture this in a opinionated product definition.”
+**Evidence:** “This product is about reducing cognitive load of product professionals.” / “Gentlii focusses on digital product development.” / “We want to help product professionals by… providing help in gathering the needed information for solid product development… capture this in a opinionated product definition.”
 
 ### Contradictions
 No contradictory content found.
 
 ## Target Customer
-Product professionals involved in digital product development (including those currently supported via product thinking consultancy).
+Product professionals working on digital product development (including stakeholders interacting with feature requests).
 
 ### Confidence
 High
 
-**Evidence:** “Gentlii focusses on digital product development.” / “We want to help product professionals…” / “Now we do product thinking consultancy…”
+**Evidence:** “We want to help product professionals…” / “This product is about reducing cognitive load of product professionals.” / “It will provide stakeholders a way to quickly verify a feature requests possibility.”
 
 ### Contradictions
 No contradictory content found.
 
 ## Value Proposition
-- Creates concise, trusted “product description” artifacts (strategy, product vision, business case, product charter) by extracting meaning from available data, reducing the effort/time needed for solid product context.
-- Guards alignment across the produced documents and validates feature requests/ideas against the product description, giving stakeholders quick clarity/feedback and reducing waste (building the wrong things, excess code/ops/bugs).
-- Minimizes user burden by integrating into existing tools/workflows and being “invisible” rather than another UI-heavy app.
+An “invisible”/integrated product that automatically creates a concise, high-quality “product description” (strategy, vision, etc.), maintains alignment across artifacts, and validates ideas/feature requests against that definition—reducing time spent, improving decision quality, and preventing misaligned building.
 
 ### Confidence
 High
 
-**Evidence:** “The product will create strategic, product vision, product charter documents… by extracting the meaning from all available data.” / “The product will guard alignment…” / “The product will validate feature requests…” / “Wherever possible the product should integrate within existing tools and workflows… Wherever we can make the product invisible we will do that.”
+**Evidence:** “Wherever possible the product should integrate within existing tools and workflows.” / “The users… need a very concise product definition.” / “The product will create strategic, product vision, product charter documents…” / “The product will guard alignment…” / “The product will validate feature requests against the product description.”
 
 ### Contradictions
 No contradictory content found.
 
 ## Strategic Pillars
-- Outcome-over-output orientation and improved product quality (avoid building too early without context; emphasize outcomes).
-- Opinionated, high-quality product definition users can rely on “without any required action.”
-- Workflow integration / low-friction experience (not an additional UI-heavy backlog tool; “invisible” where possible).
-- Continuous alignment/validation: check whether ideas/features align with the product definition; guard alignment between documents.
+- **Outcome over output / avoid premature building:** emphasize outcomes and product context before specs.
+- **Opinionated, reliable product definition:** gather needed information and ensure users can “rely on the quality… without any required action.”
+- **Workflow-integrated and low-friction (“invisible”):** not another UI-heavy backlog/app; integrate into existing tools.
+- **Automated artifact creation from existing data:** extract meaning from “all available data” to generate core documents.
+- **Alignment and governance:** guard alignment between artifacts and validate feature requests against the product description.
 
 ### Confidence
 High
 
-**Evidence:** “Output over outcome… it must be the other way around.” / “making sure they can rely on the quality of this product definition without any required action” / “not be an additional app with an UI… integrate within existing tools” / “providing a way for them to check whether any idea aligns with the product definition” / “The product is not another agile backlog product tool.”
+**Evidence:** “Output over outcome while is must be the other way around.” / “making sure they can rely on the quality of this product definition without any required action” / “Wherever we can make the product invisible we will do that.” / “created by extracting the meaning from all available data.” / “guard alignment… validate feature requests…”
 
 ### Contradictions
 No contradictory content found.
 
 ## Success Metrics
-- “Reduce the time to create a proper product description/context by 75%.”
-- “Reduce the amount of features that will be build that are not the right solution by 50% (we can register how many feature requests are marked Not good).”
-- “Better features with less code save 25% op operations, bugs and other expensive stuff.”
-- Quality improvement target stated qualitatively: “prove… that the quality of the product description will improve to a state where it is confidently right on all facets.”
+- Reduce time to create a proper product description/context by **75%**.
+- Reduce misaligned features built by **50%** (track feature requests marked “Not good”).
+- Save **25%** in operations/bugs/“expensive stuff” by “better features with less code.”
+- Improve product description quality “to a state where it is confidently right on all facets” (qualitative, “backed up by data”).
 
 ### Confidence
 High
 
-**Evidence:** “Reduce the time… by 75%.” / “reduce the amount of features… by 50%” / “save 25% op operations, bugs…” / “prove (bakced up by data) that the quality… will improve…”
+**Evidence:** “Reduce the time… by 75%.” / “reduce the amount of features… by 50% (we can register how many feature requests are marked Not good)” / “save 25% op operations, bugs…” / “prove (bakced up by data) that the quality… will improve…”
 
 ### Contradictions
 No contradictory content found.
 
 ## Long-term Vision
-A product that becomes an extension of their product thinking consultancy by automating/embedding product thinking: continuously generating and guarding a central “product description” from all available inputs and integrating into existing workflows (rather than being a standalone app).
+A productized extension of product-thinking consultancy that continuously builds and guards a living “product description” from organization inputs, ensuring ongoing alignment and fast validation of new ideas/requests—without adding tool friction.
 
 ### Confidence
 Medium
 
-**Evidence:** “Gentlii could be a extension of the product thinking consultancy work.” / “Wherever possible the product should integrate within existing tools and workflows.” / “If there is any change (crud) detected in product input files…”
+**Evidence:** “Gentlii could be a extension of the product thinking consultancy work.” / “If there is any change (crud) detected in product input files” / “The set of documents is called the `product description`”
 
 ### Contradictions
 No contradictory content found.
@@ -81,8 +80,7 @@ Complete
 High
 
 ## Suggestion
-- Define how “quality of the product description… confidently right on all facets” is measured (e.g., rubric, stakeholder agreement rate, rework rate, downstream metric impact).
-- Clarify primary customer segment(s) (e.g., PMs vs product owners vs heads of product; company size/type) and the initial go-to-market wedge.
-- Specify the “existing tools and workflows” intended for first integrations (e.g., Jira/Linear/Confluence/Notion/Google Drive) to sharpen strategic focus.
-- Add explicit retention/adoption metrics (e.g., weekly active teams, % feature requests validated through Gentlii) to complement the outcome metrics.
-- Make the “product description guarding” loop explicit (what triggers re-generation, who approves changes, and how conflicts across sources are resolved).
+- Specify which “existing tools and workflows” Gentlii will integrate with first (e.g., Google Drive/Confluence/Jira/Slack) to clarify GTM focus.
+- Define how “quality… confidently right on all facets” will be measured (e.g., stakeholder rating, defect rate in requirements, decision cycle time).
+- Clarify the “product description guarding” loop (what triggers re-generation, who approves changes, and how versioning/audit works).
+- Add one north-star metric that ties outcomes together (e.g., % of feature requests aligned/approved within X hours, or reduction in cycle time from idea → decision).

@@ -80,7 +80,6 @@ Write the value directly below `### Decision` as exactly one of `Approve`, `Reje
 Write the value directly below `### Alignment score` as exactly one of `1/5`, `2/5`, `3/5`, `4/5`, `5/5`.
 Write the value directly below `### Confidence` as exactly one of `Low`, `Medium`, `High`.
 
-
 ### Decision
 [Approve | Reject | Revise]
 
@@ -93,6 +92,12 @@ Write the value directly below `### Confidence` as exactly one of `Low`, `Medium
 ## Alignment suggestions
 [Smallest change that would make this feature acceptable or "Not found"]
 
+## Risks introduced
+[Concrete risks or "Not found"]
+
+## Missing justification
+[What must be clarified or "Not found"]
+
 ## Strategic alignment
 [Extracted evidence or "Not found"]
 
@@ -104,12 +109,6 @@ Write the value directly below `### Confidence` as exactly one of `Low`, `Medium
 
 ## Product Charter compliance
 [Extracted evidence or "Not found"]
-
-## Risks introduced
-[Concrete risks or "Not found"]
-
-## Missing justification
-[What must be clarified or "Not found"]
 
 ---
 

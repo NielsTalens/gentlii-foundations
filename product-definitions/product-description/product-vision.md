@@ -1,81 +1,101 @@
 ## Vision Statement
-Help product professionals deliver higher-quality digital products by reducing their cognitive load and enabling outcome-focused product development through a reliable, concise product definition and alignment checking.
+Gentlii aims to reduce the cognitive load and time burden on product professionals by automatically creating a concise, trusted “product description” (strategy, vision, charter, etc.) from existing product inputs, and by ensuring ongoing alignment and validation of ideas/features against that definition.
+
 ### Confidence
-Medium
-**Evidence:** “This product is about reducing cognitive load of product professionals.” / “We want to help product professionals by… providing help in gathering the needed information… capture this in a opinionated product definition… making sure they can rely on the quality… providing a way… to check whether any idea aligns with the product definition”
+High
+
+**Evidence:** “This product is about reducing cognitive load of product professionals…”, “The users… need a very concise product definition.”, “The product will create strategic, product vision, product charter documents… by extracting the meaning from all available data.”, “The product will guard alignment…”, “The product will validate feature requests against the product description.”
+
 ### Contradictions
 No contradictory content found.
 
 ## Target Groups
-- Product professionals (in digital product development)
-- Stakeholders (as verifiers of feature-request fit)
+- Product professionals (product people) involved in digital product development
+- Stakeholders who need quick verification/feedback on feature requests
+
 ### Confidence
 High
-**Evidence:** “Gentlii focusses on digital product development.” / “We want to help product professionals…” / “It will provide stakeholders a way to quickly verify a feature requests possibility.”
+
+**Evidence:** “Gentlii focusses on digital product development.”, “We want to help product professionals…”, “It will provide stakeholders a way to quickly verify a feature requests possibility.”
+
 ### Contradictions
 No contradictory content found.
 
 ## Needs
-- Reduce cognitive load / lack of time and headspace for thinking, planning, and brainstorming
-- Gather and synthesize needed product context before building (avoid building too early / spec-driven bias)
-- Create a concise, trusted product definition/context
-- Define outcomes (over output)
-- Maintain alignment between strategy/vision/charter and downstream decisions
-- Quickly validate feature requests against the product description to avoid building the wrong things
+- Reduce cognitive load / lack of time and headspace for product thinking, planning, and brainstorming
+- Get a solid, concise product definition and be able to rely on its quality without extra effort
+- Avoid building too early without enough product context (counter “spec-driven” over-focus)
+- Ensure ideas/feature requests align with product definition; get quick clarity/feedback
+- Focus on outcomes over output
+
 ### Confidence
 High
-**Evidence:** “most people do not have the time nor the head space…” / “start building too early without enough product context.” / “need a very concise product definition… trust that.” / “Defining outcomes is very important. More important than output.” / “guard alignment…” / “validate feature requests against the product description.”
+
+**Evidence:** “most people do not have the time nor the head space…”, “providing help in gathering the needed information…”, “rely on the quality… without any required action”, “check whether any idea aligns…”, “start building too early without enough product context”, “Output over outcome…”, “Defining outcomes is very important. More important than output.”
+
 ### Contradictions
 No contradictory content found.
 
 ## Product Features
-- Ingest/upload diverse product-related input files
-- Automatically extract meaning from available data to generate strategy, product vision, business case, and product charter (“product description”)
-- Provide an opinionated product definition and ensure users can rely on its quality without required action
-- Guard alignment across generated product documents
-- Validate feature requests/ideas against the product description and provide quick feedback to stakeholders
-- Detect changes (CRUD) in product input files (change monitoring)
-- Deliver documents in Markdown and generated HTML
-- Integrate within existing tools and workflows (avoid being an additional standalone UI/app)
+- Ingest/upload diverse product-related source files as inputs
+- Automatically generate an opinionated product definition / “product description” set:
+  - Strategy
+  - Product vision
+  - Business case
+  - Product charter
+- Produce outputs in multiple formats (markdown and generated HTML)
+- Guard/maintain alignment across the generated documents
+- Validate feature requests/ideas against the product description and provide quick feedback
+- Integrate into existing tools/workflows; remain “invisible” rather than a standalone app
+
 ### Confidence
 High
-**Evidence:** “A user uploads all types of files…” / “create… Strategy, Product Vision, Business case, Product charter… extracting the meaning from all available data.” / “opinionated product definition… rely on the quality… without any required action” / “guard alignment…” / “validate feature requests…” / “If there is any change (crud) detected in product input files” / “written both in markdown as in a generated html page” / “should integrate within existing tools and workflows.”
+
+**Evidence:** “A user uploads all types of files…”, “create: Strategy, Product Vision, Business case, Product charter… called the ‘product description’”, “written both in markdown as in a generated html page”, “guard alignment…”, “validate feature requests against the product description.”, “integrate within existing tools and workflows…”, “not be an additional app with an UI that needs an account…”, “Wherever we can make the product invisible we will do that.”
+
 ### Contradictions
 No contradictory content found.
 
 ## Business Goals
-- Reduce time to create proper product description/context by 75%
-- Improve product description quality to a confidently correct state (backed by data)
-- Reduce building non-right-solution features by 50% (save time and money)
-- Improve product with less code; save 25% on operations/bugs/other expensive costs
+- Reduce time to create proper product context/description (stated target: 75%)
+- Improve quality of the product description to be “confidently right” (backed by data)
+- Reduce misaligned/unnecessary features being built (stated target: 50%)
+- Save time and money by preventing wrong builds and enabling faster stakeholder decisions
+- Improve product outcomes with less code; reduce operations/bugs costs (stated target: 25%)
+
 ### Confidence
 High
-**Evidence:** “Reduce the time… by 75%.” / “prove (bakced up by data) that the quality… will improve…” / “reduce the amount of features… not the right solution by 50%” / “save 25% op operations, bugs…”
+
+**Evidence:** “Reduce the time… by 75%.”, “quality… improve… confidently right…”, “reduce the amount of features… by 50%… time and money saved.”, “provide stakeholders a way to quickly verify…”, “Better features with less code save 25% op operations, bugs…”
+
 ### Contradictions
 No contradictory content found.
 
 ## Differentiators
-- Not a backlog/agile tool; focuses on pre-build context and outcome over output
-- “Invisible” product that integrates into existing tools/workflows (not another app requiring an account/UI)
-- Opinionated product definition with claimed high reliability “without any required action”
-- Alignment guarding and feature-request validation against a unified product description
+- Not another agile backlog/spec/output-generation tool; emphasizes product thinking, context, and outcomes
+- “Invisible” integration into existing workflows rather than a separate UI-heavy app
+- Opinionated, automatically generated product definition with quality users can rely on “without any required action”
+- Continuous alignment guarding and validation of feature requests against the product definition
+
 ### Confidence
 High
-**Evidence:** “The product is not another agile backlog product tool.” / “should not be an additional app with an UI that needs an account” / “integrate within existing tools and workflows.” / “Output over outcome… must be the other way around.” / “rely on the quality… without any required action” / “guard alignment… validate feature requests…”
+
+**Evidence:** “The product is not another agile backlog product tool.”, “should not be an additional app with an UI that needs an account…”, “integrate within existing tools and workflows.”, “capture this in a opinionated product definition.”, “rely on the quality… without any required action”, “guard alignment… validate feature requests…”
+
 ### Contradictions
 No contradictory content found.
 
 ### Completeness
 
-Partial
+Complete
 
 ### Strength
 
-Medium
+High
 
 ## Suggestion
-- Add a single explicit, concise vision statement (one sentence) that unifies “reduce cognitive load,” “outcome over output,” and “trusted product definition + alignment.”
-- Clarify the primary target segment (e.g., product managers vs broader “product professionals”) and the main usage contexts (enterprise vs SMB, new products vs existing).
-- Define what “quality” of the product description means (dimensions/criteria) since it is a core promise (“confidently right on all facets”).
-- Make differentiators more concrete by naming the “existing tools/workflows” to integrate with (categories are sufficient: docs, issue trackers, chat).
-- Tighten alignment between trends/problems and features by explicitly stating how the product counters “spec-driven development” (e.g., required context gates or outcome checks).
+- Add a single, explicit one-sentence vision statement (as written in the docs today it’s implied across multiple lines).
+- Clarify primary vs secondary target users (e.g., product managers vs product owners vs heads of product vs stakeholders) and the main use cases per group.
+- Define what “opinionated product definition” means (e.g., which frameworks/standards it follows) to make differentiation more concrete.
+- Specify how “quality” is determined or validated (what evidence/data signals back the claim of “confidently right”).
+- Resolve/complete the “product description guarding” flow (the provided flow ends mid-sentence: “If there is any change (crud) detected…”).

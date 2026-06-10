@@ -1,14 +1,14 @@
 ## Core Principles
 
-- Reduce cognitive load for product professionals.
-- Prefer outcome over output; defining outcomes is prioritized.
-- Trustworthy, “confidently right” product definition created from available data, without requiring user action.
+- Reduce the cognitive load of product professionals.
+- Prioritize outcome over output; defining outcomes is “very important” and “more important than output”.
+- Ensure a “solid” and “opinionated product definition” that users can rely on “without any required action”.
 
 ### Confidence
 
-High
+Medium
 
-**Evidence:** “This product is about reducing cognitive load of product professionals.” / “Defining outcomes is very important. More important than output.” / “making sure they can rely on the quality of this product definition without any required action” / “extracting the meaning from all available data” / “confidently right on all facets”
+**Evidence:** “This product is about reducing cognitive load of product professionals.” / “Defining outcomes is very important. More important than output.” / “We will capture this in a opinionated product definition.” / “making sure they can rely on the quality of this product definition without any required action”
 
 ### Contradictions
 
@@ -18,13 +18,12 @@ No contradictory content found.
 
 - Not an additional app with a UI that needs an account.
 - Not another agile backlog product tool.
-- Avoid extensive descriptions; product definition should be concise.
 
 ### Confidence
 
 High
 
-**Evidence:** “it should not be an additional app with an UI that needs an account and so on.” / “The product is not another agile backlog product tool.” / “The users do not need very extensive descriptions but need a very concise product definition.”
+**Evidence:** “Therefore it should not be an additional app with an UI that needs an account and so on.” / “The product is not another agile backlog product tool.”
 
 ### Contradictions
 
@@ -32,17 +31,19 @@ No contradictory content found.
 
 ## Behavioral Rules
 
-- Integrate into existing tools and workflows where possible; make the product “invisible” where possible.
-- Create strategy, product vision, business case, and product charter by extracting meaning from all available data; together these documents form the “product description.”
-- Guard alignment between the output documents (product description).
+- Integrate into existing tools/workflows wherever possible; make the product “invisible” where possible.
+- Produce a concise (not extensive) product definition.
+- Create product documents by extracting meaning from “all available data”.
+- Guard alignment between output documents in the “product description”.
 - Validate feature requests against the product description.
-- On user upload of input files, generate the document set in markdown and generated HTML.
+- Provide a way to check whether an idea aligns with the product definition.
+- When changes (CRUD) are detected in product input files, trigger “product description guarding” behavior (details not provided).
 
 ### Confidence
 
-High
+Medium
 
-**Evidence:** “Wherever possible the product should integrate within existing tools and workflows.” / “Wherever we can make the product invisible we will do that.” / “The product will create strategic, product vision, product charter documents… by extracting the meaning from all available data.” / “The set of documents is called the `product description`” / “These are written both in markdown as in a generated html page” / “The product will guard alignment between all mentioned output documents” / “The product will validate feature requests against the product description.”
+**Evidence:** “Wherever possible the product should integrate within existing tools and workflows.” / “Wherever we can make the product invisible we will do that.” / “The users do not need very extensive descriptions but need a very concise product definition.” / “created by extracting the meaning from all available data.” / “will guard alignment between all mentioned output documents” / “will validate feature requests against the product description.” / “providing a way for them to check whether any idea aligns with the product definition” / “If there is any change (crud) detected in product input files”
 
 ### Contradictions
 
@@ -50,13 +51,13 @@ No contradictory content found.
 
 ## Making Rules
 
-Not found
+- Resolve trade-offs in favor of outcomes over output.
 
 ### Confidence
 
 Low
 
-**Evidence:** No supporting evidence found
+**Evidence:** “Defining outcomes is very important. More important than output.”
 
 ### Contradictions
 
@@ -64,13 +65,14 @@ No contradictory content found.
 
 ## Product Character
 
-- Should feel lightweight/non-intrusive: “invisible,” integrated, and concise rather than verbose.
+- Should feel “invisible” (minimally intrusive) by integrating into existing tools and avoiding a standalone UI/account flow.
+- Should provide “clarity and quick feedback” to stakeholders verifying feature request feasibility/fit.
 
 ### Confidence
 
 Medium
 
-**Evidence:** “Wherever we can make the product invisible we will do that.” / “integrate within existing tools and workflows.” / “very concise product definition.”
+**Evidence:** “Wherever we can make the product invisible we will do that.” / “should not be an additional app with an UI that needs an account” / “give clarity and quick feedback.”
 
 ### Contradictions
 
@@ -78,7 +80,7 @@ No contradictory content found.
 
 ## Language and Tone
 
-- Product definition should be concise (implied tone: concise over extensive).
+- Output should be concise (not extensive descriptions).
 
 ### Confidence
 
@@ -92,13 +94,14 @@ No contradictory content found.
 
 ## Evolution Constraints
 
-- Growth should bias toward integration/invisibility rather than becoming a standalone UI/app requiring accounts.
+- Grow primarily via integration into existing tools/workflows (avoid becoming a standalone app/UI with accounts).
+- Maintain “less code” as an improvement direction (implied constraint on evolution).
 
 ### Confidence
 
-Medium
+Low
 
-**Evidence:** “it should not be an additional app with an UI that needs an account” / “integrate within existing tools and workflows” / “make the product invisible”
+**Evidence:** “Wherever possible the product should integrate within existing tools and workflows.” / “should not be an additional app with an UI that needs an account” / “It will improve the product with less code.”
 
 ### Contradictions
 
@@ -106,14 +109,14 @@ No contradictory content found.
 
 ## Integrity Checks
 
-- If changes are detected in product input files, trigger “product description guarding” (implied integrity mechanism).
-- Validate feature requests against the product description (alignment check).
+- Validate ideas/feature requests against the product definition/product description.
+- Guard alignment between the generated output documents; detect changes in inputs (CRUD) to trigger guarding.
 
 ### Confidence
 
 Medium
 
-**Evidence:** “Product description guarding” / “If there is any change (crud) detected in product input files” / “validate feature requests against the product description.” / “guard alignment between all mentioned output documents”
+**Evidence:** “providing a way for them to check whether any idea aligns with the product definition” / “will guard alignment between all mentioned output documents” / “will validate feature requests against the product description.” / “If there is any change (crud) detected in product input files”
 
 ### Contradictions
 
@@ -129,8 +132,8 @@ Medium
 
 ## Suggestion
 
-- Define explicit decision rules for trade-offs (e.g., when “integration/invisible” conflicts with needed UI, accuracy, or speed).
-- Specify concrete integrity checks and pass/fail criteria for “quality” and “alignment” (e.g., validation steps, thresholds, human review gates).
-- Add clear behavioral rules for change handling when “crud detected” (what updates, what is blocked, notifications, audit trail/versioning).
-- Provide explicit language/tone guidelines for generated artifacts (e.g., required sections, max length, terminology, reading level).
-- Clarify evolution constraints (what new document types or capabilities are allowed vs explicitly out of scope).
+- Define explicit decision rules for conflicts (e.g., “when accuracy vs speed conflicts, prefer X; when stakeholder requests conflict with charter, do Y”).
+- Specify concrete integrity checks (alignment rules, validation criteria, thresholds, and what happens on failure).
+- Clarify the “CRUD detected” flow: what is re-generated, what is compared, and how changes are approved/published.
+- Add explicit evolution guardrails (what integrations are allowed, what “invisible” must/should never break, when a UI is acceptable).
+- Provide tone/style guidance beyond “concise” (e.g., target reading level, structure, required sections, forbidden jargon).
