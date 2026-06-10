@@ -1,86 +1,85 @@
 ## Vision Statement
-Gentlii aims to reduce the cognitive load and time burden on product professionals by automatically creating a concise, trusted “product description” (strategy, vision, charter, etc.) from existing product inputs, and by ensuring ongoing alignment and validation of ideas/features against that definition.
+Gentlii aims to reduce the cognitive load on product professionals in digital product development by creating and maintaining a concise, high-quality product definition (“product description”) from existing data, and using it to keep ideas/features aligned with intended outcomes.
 
 ### Confidence
 High
 
-**Evidence:** “This product is about reducing cognitive load of product professionals…”, “The users… need a very concise product definition.”, “The product will create strategic, product vision, product charter documents… by extracting the meaning from all available data.”, “The product will guard alignment…”, “The product will validate feature requests against the product description.”
+**Evidence:** “This product is about reducing cognitive load of product professionals.” + “The product will create strategic, product vision, product charter documents… extracting the meaning from all available data.” + “The product will guard alignment… validate feature requests against the product description.”
 
 ### Contradictions
 No contradictory content found.
 
 ## Target Groups
-- Product professionals (product people) involved in digital product development
-- Stakeholders who need quick verification/feedback on feature requests
+- Product professionals (in digital product development)
+- Stakeholders reviewing/validating feature requests (implied as users of verification capability)
+- Product thinking consultants / consultancy context (as an extension of existing consultancy work)
 
 ### Confidence
 High
 
-**Evidence:** “Gentlii focusses on digital product development.”, “We want to help product professionals…”, “It will provide stakeholders a way to quickly verify a feature requests possibility.”
+**Evidence:** “We want to help product professionals…” + “provide stakeholders a way to quickly verify a feature requests possibility” + “Gentlii could be a extension of the product thinking consultancy work.”
 
 ### Contradictions
 No contradictory content found.
 
 ## Needs
-- Reduce cognitive load / lack of time and headspace for product thinking, planning, and brainstorming
-- Get a solid, concise product definition and be able to rely on its quality without extra effort
-- Avoid building too early without enough product context (counter “spec-driven” over-focus)
-- Ensure ideas/feature requests align with product definition; get quick clarity/feedback
-- Focus on outcomes over output
+- Reduce cognitive load / time and “head space” required for product thinking, planning, and making smart choices.
+- Ensure solid product development context exists before building (avoid building too early / lacking product context).
+- Create a concise, trusted product definition without requiring extra user effort.
+- Maintain alignment between product artifacts and incoming ideas/feature requests.
+- Shift focus from output/specs to outcomes and product quality.
 
 ### Confidence
 High
 
-**Evidence:** “most people do not have the time nor the head space…”, “providing help in gathering the needed information…”, “rely on the quality… without any required action”, “check whether any idea aligns…”, “start building too early without enough product context”, “Output over outcome…”, “Defining outcomes is very important. More important than output.”
+**Evidence:** “reducing cognitive load of product professionals” + “most people do not have the time nor the head space…” + “capture this in a opinionated product definition… rely on the quality… without any required action” + “start building too early without enough product context” + “Output over outcome…”
 
 ### Contradictions
 No contradictory content found.
 
 ## Product Features
-- Ingest/upload diverse product-related source files as inputs
-- Automatically generate an opinionated product definition / “product description” set:
-  - Strategy
-  - Product vision
-  - Business case
-  - Product charter
-- Produce outputs in multiple formats (markdown and generated HTML)
-- Guard/maintain alignment across the generated documents
-- Validate feature requests/ideas against the product description and provide quick feedback
-- Integrate into existing tools/workflows; remain “invisible” rather than a standalone app
+- Ingest/collect existing product-related inputs (e.g., uploaded files) as source data.
+- Automatically generate an “opinionated product definition” / “product description” set including: strategy, product vision, business case, product charter.
+- Extract meaning from “all available data” to create these documents.
+- Guard/ensure alignment across the generated documents.
+- Validate feature requests/ideas against the product description and provide quick verification/feedback to stakeholders.
+- Detect changes (CRUD) in product input files to support ongoing “product description guarding.”
+- Integrate into existing tools/workflows (avoid being a standalone app requiring accounts/UI).
 
 ### Confidence
 High
 
-**Evidence:** “A user uploads all types of files…”, “create: Strategy, Product Vision, Business case, Product charter… called the ‘product description’”, “written both in markdown as in a generated html page”, “guard alignment…”, “validate feature requests against the product description.”, “integrate within existing tools and workflows…”, “not be an additional app with an UI that needs an account…”, “Wherever we can make the product invisible we will do that.”
+**Evidence:** “A user uploads all types of files…” + “create: Strategy, Product Vision, Business case, Product charter… called the `product description`” + “created by extracting the meaning from all available data” + “guard alignment… validate feature requests” + “If there is any change (crud) detected in product input files” + “Wherever possible the product should integrate within existing tools and workflows… not be an additional app…”
 
 ### Contradictions
 No contradictory content found.
 
 ## Business Goals
-- Reduce time to create proper product context/description (stated target: 75%)
-- Improve quality of the product description to be “confidently right” (backed by data)
-- Reduce misaligned/unnecessary features being built (stated target: 50%)
-- Save time and money by preventing wrong builds and enabling faster stakeholder decisions
-- Improve product outcomes with less code; reduce operations/bugs costs (stated target: 25%)
+- Reduce time to create proper product context/description (stated target: 75%).
+- Improve quality of product descriptions to a “confidently right” state, backed by data.
+- Reduce building the wrong features (stated target: 50%), saving time and money.
+- Improve product outcomes/quality with less code (claimed operational savings: 25% via fewer bugs/ops costs).
+- Extend/scale product thinking consultancy by embedding the approach into a product.
 
 ### Confidence
 High
 
-**Evidence:** “Reduce the time… by 75%.”, “quality… improve… confidently right…”, “reduce the amount of features… by 50%… time and money saved.”, “provide stakeholders a way to quickly verify…”, “Better features with less code save 25% op operations, bugs…”
+**Evidence:** “Reduce the time to create a proper product description/context by 75%.” + “prove (backed up by data) that the quality… will improve…” + “reduce the amount of features that will be build that are not the right solution by 50%” + “Better features with less code save 25%…” + “Gentlii could be a extension of the product thinking consultancy work.”
 
 ### Contradictions
 No contradictory content found.
 
 ## Differentiators
-- Not another agile backlog/spec/output-generation tool; emphasizes product thinking, context, and outcomes
-- “Invisible” integration into existing workflows rather than a separate UI-heavy app
-- Opinionated, automatically generated product definition with quality users can rely on “without any required action”
-- Continuous alignment guarding and validation of feature requests against the product definition
+- Not a backlog/agile tool; focuses on pre-build product context and outcome-oriented product thinking.
+- “Invisible” integration into existing workflows/tools (not another app with account/UI overhead).
+- Opinionated, concise product definition users can trust “without any required action.”
+- Data-backed quality claims for the produced product definition.
+- Alignment guarding and feature-request validation against the maintained product description.
 
 ### Confidence
 High
 
-**Evidence:** “The product is not another agile backlog product tool.”, “should not be an additional app with an UI that needs an account…”, “integrate within existing tools and workflows.”, “capture this in a opinionated product definition.”, “rely on the quality… without any required action”, “guard alignment… validate feature requests…”
+**Evidence:** “The product is not another agile backlog product tool.” + “should not be an additional app with an UI that needs an account” + “integrate within existing tools and workflows… make the product invisible” + “opinionated product definition” + “rely on the quality… without any required action” + “prove (bakced up by data)…”
 
 ### Contradictions
 No contradictory content found.
@@ -94,8 +93,8 @@ Complete
 High
 
 ## Suggestion
-- Add a single, explicit one-sentence vision statement (as written in the docs today it’s implied across multiple lines).
-- Clarify primary vs secondary target users (e.g., product managers vs product owners vs heads of product vs stakeholders) and the main use cases per group.
-- Define what “opinionated product definition” means (e.g., which frameworks/standards it follows) to make differentiation more concrete.
-- Specify how “quality” is determined or validated (what evidence/data signals back the claim of “confidently right”).
-- Resolve/complete the “product description guarding” flow (the provided flow ends mid-sentence: “If there is any change (crud) detected…”).
+- Clarify the single-sentence positioning/vision statement in the source (explicitly naming outcomes and who it’s for) to reduce reliance on stitched-together statements.
+- Define what “opinionated product definition” means (e.g., required sections, decision rules, governance) so “quality” is testable and repeatable.
+- Specify the primary integration targets (e.g., docs/wiki, ticketing, chat) since “integrate within existing tools” is central to differentiation.
+- Add explicit differentiation vs “spec-driven development” tooling (what Gentlii does before/around specs) to sharpen the market contrast.
+- Resolve/document how “no required action” coexists with “user uploads files” and ongoing change detection (what minimal user action is still required).
